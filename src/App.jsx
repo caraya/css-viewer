@@ -30,7 +30,9 @@ function App() {
   const supportedItems = allItems.filter(item => {
     if (view !== 'browser-support') return false;
     if (!item.compatibility || !item.compatibility.supported) return false;
-    return item.name.toLowerCase().includes(search.toLowerCase());
+    const matchesSearch = item.name.toLowerCase().includes(search.toLowerCase());
+    const matchesCategory = category === 'all' || item.type === category;
+    return matchesSearch && matchesCategory;
   });
 
   const itemsToDisplay = view === 'properties' ? filteredItems : supportedItems;
@@ -219,14 +221,25 @@ function App() {
                 <p className="mb-4">This may be a more rational place to begin analyzing what CSS4 (and follow on versions) should be like. Use the features that are supported as the starting point and then build from there.</p>
             </div>
 
-            <div className="mb-4">
+            <div className="flex flex-col md:flex-row gap-4 mb-4">
                 <input
                     type="text"
                     placeholder="Search supported features..."
-                    className="w-full p-2 border rounded"
+                    className="flex-grow p-2 border rounded"
                     value={search}
                     onChange={handleSearchChange}
                 />
+                <select 
+                    value={category} 
+                    onChange={(e) => handleCategoryChange(e.target.value)}
+                    className="p-2 border rounded bg-white"
+                >
+                    <option value="all">All Categories</option>
+                    <option value="property">Properties</option>
+                    <option value="value">Values</option>
+                    <option value="function">Functions</option>
+                    <option value="at-rule">At-Rules</option>
+                </select>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

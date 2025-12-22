@@ -1,11 +1,11 @@
 {
   "name": "css-viewer",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build && workbox generateSW workbox-config.cjs",
+    "prepare-data": "node scripts/prepare-data.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -29,6 +29,7 @@
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
     "postcss": "^8.5.6",
+    "sonda": "^0.10.1",
     "tailwindcss": "^3.4.19",
     "vite": "^7.2.4",
     "workbox-cli": "^7.4.0"

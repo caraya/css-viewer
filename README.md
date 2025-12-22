@@ -1,16 +1,58 @@
-# React + Vite
+# CSS Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that provides a comprehensive view of CSS properties, combining W3C specifications with MDN browser compatibility data.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js (v18+ recommended)
+- npm
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone the repository
+2. Install dependencies:
 
-## Expanding the ESLint configuration
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Data Preparation
+
+Before running the application, you need to generate the data files. This process fetches the latest CSS specifications and browser compatibility data.
+
+```bash
+npm run prepare-data
+```
+
+This script performs the following steps:
+
+1. Fetches raw data from W3C Webref and MDN.
+2. Patches known issues (broken links, missing functions).
+3. Filters for browser support (requires support in at least 2 major browsers).
+4. Generates `src/data.json`.
+
+## Running the Application
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:2509`.
+
+## Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## Automation
+
+This project includes a GitHub Action (`.github/workflows/weekly-data-update.yml`) that automatically runs the data preparation script every Sunday at 00:00 UTC to keep the dataset current.
+
+## Architecture
+
+For a deeper dive into the project structure and data pipeline, please refer to [explainer](EXPLAINER.md).
