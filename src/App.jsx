@@ -7,6 +7,7 @@ function App() {
   const [view, setView] = useState('properties'); // 'properties', 'specs', 'browser-support'
   const [category, setCategory] = useState('all'); // 'all', 'property', 'value', 'function', 'at-rule'
   const [currentPage, setCurrentPage] = useState(1);
+  const [paginationEnabled, setPaginationEnabled] = useState(true);
   const ITEMS_PER_PAGE = 9;
 
   if (loading) return <div className="p-4">Loading CSS data...</div>;
@@ -37,10 +38,12 @@ function App() {
 
   const itemsToDisplay = view === 'properties' ? filteredItems : supportedItems;
   const totalPages = Math.ceil(itemsToDisplay.length / ITEMS_PER_PAGE);
-  const currentItems = itemsToDisplay.slice(
-      (currentPage - 1) * ITEMS_PER_PAGE,
-      currentPage * ITEMS_PER_PAGE
-  );
+  const currentItems = paginationEnabled 
+      ? itemsToDisplay.slice(
+          (currentPage - 1) * ITEMS_PER_PAGE,
+          currentPage * ITEMS_PER_PAGE
+      )
+      : itemsToDisplay;
 
   const handleSearchChange = (e) => {
       setSearch(e.target.value);
@@ -134,6 +137,18 @@ function App() {
                     <option value="function">Functions</option>
                     <option value="at-rule">At-Rules</option>
                 </select>
+                <div className="flex items-center space-x-2 bg-white p-2 border rounded">
+                    <input
+                        type="checkbox"
+                        id="pagination-toggle-props"
+                        checked={paginationEnabled}
+                        onChange={(e) => setPaginationEnabled(e.target.checked)}
+                        className="h-4 w-4 text-blue-600"
+                    />
+                    <label htmlFor="pagination-toggle-props" className="text-sm text-gray-700 select-none cursor-pointer">
+                        Pagination
+                    </label>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -188,7 +203,7 @@ function App() {
                 <p className="text-center text-gray-500 mt-8">No items found matching "{search}"</p>
             )}
 
-            {filteredItems.length > 0 && (
+            {filteredItems.length > 0 && paginationEnabled && (
                 <div className="flex justify-center items-center space-x-4 mt-8">
                     <button
                         onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
@@ -215,10 +230,14 @@ function App() {
       {view === 'browser-support' && (
         <>  
             
-            <div className="border border-200 rounded p-4 mb-6 text-sm text-900">
-              <h2 class="text-2xl mb-4">Browser Support</h2>
-                <p className="mb-4">This list shows CSS features that are implemented in at least 2 major browsers (Chrome, Firefox, Safari).</p>
-                <p className="mb-4">This may be a more rational place to begin analyzing what CSS4 (and follow on versions) should be like. Use the features that are supported as the starting point and then build from there.</p>
+            <div>
+              <h2 className="text-2xl mb-4">Browser Supported Features</h2>
+              <p className="mb-4 text-gray-700">
+                This list shows CSS features that are implemented in at least 2 major browsers (Chrome, Firefox, Safari).
+              </p>
+              <p className="mb-4 text-gray-700">
+                This may be a more rational place to begin analyzing what CSS4 (and follow on versions) should be like. Use the features that are supported as the starting point and then build from there.
+              </p>
             </div>
 
             <div className="flex flex-col md:flex-row gap-4 mb-4">
@@ -240,6 +259,18 @@ function App() {
                     <option value="function">Functions</option>
                     <option value="at-rule">At-Rules</option>
                 </select>
+                <div className="flex items-center space-x-2 bg-white p-2 border rounded">
+                    <input
+                        type="checkbox"
+                        id="pagination-toggle-support"
+                        checked={paginationEnabled}
+                        onChange={(e) => setPaginationEnabled(e.target.checked)}
+                        className="h-4 w-4 text-blue-600"
+                    />
+                    <label htmlFor="pagination-toggle-support" className="text-sm text-gray-700 select-none cursor-pointer">
+                        Pagination
+                    </label>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -289,7 +320,7 @@ function App() {
                 <p className="text-center text-gray-500 mt-8">No supported items found matching "{search}"</p>
             )}
 
-            {itemsToDisplay.length > 0 && (
+            {itemsToDisplay.length > 0 && paginationEnabled && (
                 <div className="flex justify-center items-center space-x-4 mt-8">
                     <button
                         onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
