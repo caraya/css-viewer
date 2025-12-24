@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useCssData } from './hooks/useCssData';
 
 const OFFICIAL_SPECS = [
@@ -151,11 +151,30 @@ const OFFICIAL_SPECS = [
 function App() {
   const { data, loading, error } = useCssData();
   const [search, setSearch] = useState('');
-  const [view, setView] = useState('properties'); // 'properties', 'specs', 'browser-support', 'definition'
+  
+  // Initialize view from hash if present
+  const [view, setView] = useState(() => {
+    const hash = typeof window !== 'undefined' ? window.location.hash.slice(1) : '';
+    return ['properties', 'specs', 'browser-support', 'definition'].includes(hash) ? hash : 'properties';
+  });
+  
   const [category, setCategory] = useState('all'); // 'all', 'property', 'value', 'function', 'at-rule'
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationEnabled, setPaginationEnabled] = useState(true);
   const ITEMS_PER_PAGE = 9;
+
+  // Handle hash changes (e.g. back/forward button)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (['properties', 'specs', 'browser-support', 'definition'].includes(hash)) {
+        setView(hash);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   if (loading) return <div className="p-4">Loading CSS data...</div>;
   if (error) return <div className="p-4 text-red-500">Error loading data: {error.message}</div>;
@@ -199,6 +218,7 @@ function App() {
 
   const handleViewChange = (newView) => {
       setView(newView);
+      window.location.hash = newView;
       setSearch('');
       setCurrentPage(1);
   };
