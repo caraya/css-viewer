@@ -556,17 +556,17 @@ function App() {
 
       {view === 'definition' && (
           <div>
-              <div className="bg-blue-50 border border-blue-200 rounded p-6 mb-8">
-                  <h3 className="text-xl font-bold mb-4 text-blue-900">Cascading Style Sheets (CSS) — The Official Definition</h3>
-                  <p className="mb-4 text-blue-800">
+              <div className="mb-8">
+                  <h3 className="text-xl font-bold mb-4 text-900">Cascading Style Sheets (CSS) — The Official Definition</h3>
+                  <p className="mb-4 text-800">
                       According to the <a href="https://www.w3.org/TR/css-2025/#css-official" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">CSS Snapshot 2025</a>:
                   </p>
-                  <blockquote className="border-l-4 border-blue-300 pl-4 italic text-blue-800 mb-4">
+                  <blockquote className="border-l-4 border-300 pl-4 italic text-800 mb-4">
                       <p className="mb-2">
                           This profile includes only specifications that the CSS Working Group considers stable and for which they have enough implementation experience that they are sure of that stability.
                       </p>
                   </blockquote>
-                  <p className="text-blue-800">
+                  <p className="text-800">
                       As of 2025, Cascading Style Sheets (CSS) is defined by the specifications listed in the official snapshot.
                   </p>
               </div>
