@@ -153,6 +153,7 @@
           "WebkitAlignItems",
           "webkitAlignItems"
         ],
+        "value": "normal | stretch | <baseline-position> | <overflow-position>? <self-position>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -168,6 +169,7 @@
           "WebkitAlignContent",
           "webkitAlignContent"
         ],
+        "value": "normal | <baseline-position> | <content-distribution> | <overflow-position>? <content-position>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -183,6 +185,7 @@
           "WebkitAlignSelf",
           "webkitAlignSelf"
         ],
+        "value": "auto | normal | stretch | <baseline-position> | <overflow-position>? <self-position>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -198,6 +201,7 @@
           "WebkitAnimationName",
           "webkitAnimationName"
         ],
+        "value": "[ none | <keyframes-name> ]#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -213,6 +217,7 @@
           "WebkitAnimationDuration",
           "webkitAnimationDuration"
         ],
+        "value": "<time [0s,∞]>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -228,6 +233,7 @@
           "WebkitAnimationTimingFunction",
           "webkitAnimationTimingFunction"
         ],
+        "value": "<easing-function>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -243,6 +249,7 @@
           "WebkitAnimationIterationCount",
           "webkitAnimationIterationCount"
         ],
+        "value": "<single-animation-iteration-count>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -258,6 +265,7 @@
           "WebkitAnimationDirection",
           "webkitAnimationDirection"
         ],
+        "value": "<single-animation-direction>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -273,6 +281,7 @@
           "WebkitAnimationPlayState",
           "webkitAnimationPlayState"
         ],
+        "value": "<single-animation-play-state>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -288,6 +297,7 @@
           "WebkitAnimationDelay",
           "webkitAnimationDelay"
         ],
+        "value": "<time>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -303,6 +313,7 @@
           "WebkitAnimationFillMode",
           "webkitAnimationFillMode"
         ],
+        "value": "<single-animation-fill-mode>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -318,6 +329,7 @@
           "WebkitAnimation",
           "webkitAnimation"
         ],
+        "value": "<single-animation>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -333,6 +345,7 @@
           "WebkitBackfaceVisibility",
           "webkitBackfaceVisibility"
         ],
+        "value": "visible | hidden",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -348,6 +361,7 @@
           "WebkitBackgroundClip",
           "webkitBackgroundClip"
         ],
+        "value": "<visual-box>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -363,6 +377,7 @@
           "WebkitBackgroundOrigin",
           "webkitBackgroundOrigin"
         ],
+        "value": "<visual-box>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -378,6 +393,7 @@
           "WebkitBackgroundSize",
           "webkitBackgroundSize"
         ],
+        "value": "<bg-size>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -393,6 +409,7 @@
           "WebkitBorderBottomLeftRadius",
           "webkitBorderBottomLeftRadius"
         ],
+        "value": "<border-radius>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -408,6 +425,7 @@
           "WebkitBorderBottomRightRadius",
           "webkitBorderBottomRightRadius"
         ],
+        "value": "<border-radius>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -423,6 +441,7 @@
           "WebkitBorderTopLeftRadius",
           "webkitBorderTopLeftRadius"
         ],
+        "value": "<border-radius>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -438,6 +457,7 @@
           "WebkitBorderTopRightRadius",
           "webkitBorderTopRightRadius"
         ],
+        "value": "<border-radius>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -453,6 +473,7 @@
           "WebkitBorderRadius",
           "webkitBorderRadius"
         ],
+        "value": "<length-percentage [0,∞]>{1,4} [ / <length-percentage [0,∞]>{1,4} ]?",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -468,6 +489,7 @@
           "WebkitBoxShadow",
           "webkitBoxShadow"
         ],
+        "value": "<spread-shadow>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -483,6 +505,7 @@
           "WebkitBoxSizing",
           "webkitBoxSizing"
         ],
+        "value": "content-box | border-box",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -498,6 +521,7 @@
           "WebkitFlex",
           "webkitFlex"
         ],
+        "value": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -513,6 +537,7 @@
           "WebkitFlexBasis",
           "webkitFlexBasis"
         ],
+        "value": "content | <'width'>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -528,6 +553,7 @@
           "WebkitFlexDirection",
           "webkitFlexDirection"
         ],
+        "value": "row | row-reverse | column | column-reverse",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -543,6 +569,7 @@
           "WebkitFlexFlow",
           "webkitFlexFlow"
         ],
+        "value": "<'flex-direction'> || <'flex-wrap'>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -558,6 +585,7 @@
           "WebkitFlexGrow",
           "webkitFlexGrow"
         ],
+        "value": "<number [0,∞]>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -573,6 +601,7 @@
           "WebkitFlexShrink",
           "webkitFlexShrink"
         ],
+        "value": "<number [0,∞]>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -588,6 +617,7 @@
           "WebkitFlexWrap",
           "webkitFlexWrap"
         ],
+        "value": "nowrap | wrap | wrap-reverse",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -603,6 +633,7 @@
           "WebkitFilter",
           "webkitFilter"
         ],
+        "value": "none | <filter-value-list>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -618,6 +649,7 @@
           "WebkitJustifyContent",
           "webkitJustifyContent"
         ],
+        "value": "normal | <content-distribution> | <overflow-position>? [ <content-position> | left | right ]",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -633,6 +665,7 @@
           "WebkitMask",
           "webkitMask"
         ],
+        "value": "<mask-layer>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -648,6 +681,7 @@
           "WebkitMaskBoxImage",
           "webkitMaskBoxImage"
         ],
+        "value": "<'mask-border-source'> || <'mask-border-slice'> [ / <'mask-border-width'>? [ / <'mask-border-outset'> ]? ]? || <'mask-border-repeat'> || <'mask-border-mode'>",
         "compatibility": {
           "supported": true,
           "browsers": 2,
@@ -668,6 +702,7 @@
           "WebkitMaskBoxImageOutset",
           "webkitMaskBoxImageOutset"
         ],
+        "value": "[ <length> | <number> ]{1,4}",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -683,6 +718,7 @@
           "WebkitMaskBoxImageRepeat",
           "webkitMaskBoxImageRepeat"
         ],
+        "value": "[ stretch | repeat | round | space ]{1,2}",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -698,6 +734,7 @@
           "WebkitMaskBoxImageSlice",
           "webkitMaskBoxImageSlice"
         ],
+        "value": "[ <number> | <percentage> ]{1,4} fill?",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -713,6 +750,7 @@
           "WebkitMaskBoxImageSource",
           "webkitMaskBoxImageSource"
         ],
+        "value": "none | <image>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -728,6 +766,7 @@
           "WebkitMaskBoxImageWidth",
           "webkitMaskBoxImageWidth"
         ],
+        "value": "[ <length-percentage> | <number> | auto ]{1,4}",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -743,6 +782,7 @@
           "WebkitMaskClip",
           "webkitMaskClip"
         ],
+        "value": "[ <coord-box> | no-clip ]#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -758,6 +798,7 @@
           "WebkitMaskComposite",
           "webkitMaskComposite"
         ],
+        "value": "<compositing-operator>#",
         "compatibility": {
           "supported": true,
           "browsers": 2,
@@ -778,6 +819,7 @@
           "WebkitMaskImage",
           "webkitMaskImage"
         ],
+        "value": "<mask-reference>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -793,6 +835,7 @@
           "WebkitMaskOrigin",
           "webkitMaskOrigin"
         ],
+        "value": "<coord-box>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -808,6 +851,7 @@
           "WebkitMaskPosition",
           "webkitMaskPosition"
         ],
+        "value": "<position>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -823,6 +867,7 @@
           "WebkitMaskRepeat",
           "webkitMaskRepeat"
         ],
+        "value": "<repeat-style>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -838,6 +883,7 @@
           "WebkitMaskSize",
           "webkitMaskSize"
         ],
+        "value": "<bg-size>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -853,6 +899,7 @@
           "WebkitOrder",
           "webkitOrder"
         ],
+        "value": "<integer>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -868,6 +915,7 @@
           "WebkitPerspective",
           "webkitPerspective"
         ],
+        "value": "none | <length [0,∞]>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -883,6 +931,7 @@
           "WebkitPerspectiveOrigin",
           "webkitPerspectiveOrigin"
         ],
+        "value": "<position>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -898,6 +947,7 @@
           "WebkitTransformOrigin",
           "webkitTransformOrigin"
         ],
+        "value": "[ left | center | right | top | bottom | <length-percentage> ] | [ left | center | right | <length-percentage> ] [ top | center | bottom | <length-percentage> ] <length>? | [ [ center | left | right ] && [ center | top | bottom ] ] <length>?",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -913,6 +963,7 @@
           "WebkitTransformStyle",
           "webkitTransformStyle"
         ],
+        "value": "flat | preserve-3d",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -928,6 +979,7 @@
           "WebkitTransform",
           "webkitTransform"
         ],
+        "value": "none | <transform-list>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -943,6 +995,7 @@
           "WebkitTransitionDelay",
           "webkitTransitionDelay"
         ],
+        "value": "<time>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -958,6 +1011,7 @@
           "WebkitTransitionDuration",
           "webkitTransitionDuration"
         ],
+        "value": "<time [0s,∞]>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -973,6 +1027,7 @@
           "WebkitTransitionProperty",
           "webkitTransitionProperty"
         ],
+        "value": "none | <single-transition-property>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -988,6 +1043,7 @@
           "WebkitTransitionTimingFunction",
           "webkitTransitionTimingFunction"
         ],
+        "value": "<easing-function>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -1003,6 +1059,7 @@
           "WebkitTransition",
           "webkitTransition"
         ],
+        "value": "<single-transition>#",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -1018,6 +1075,7 @@
           "WebkitTextSizeAdjust",
           "webkitTextSizeAdjust"
         ],
+        "value": "auto | none | <percentage [0,∞]>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -1174,59 +1232,6 @@
       }
     ]
   },
-  "css-images-5": {
-    "spec": {
-      "title": "CSS Images Module Level 5",
-      "url": "https://drafts.csswg.org/css-images-5/"
-    },
-    "properties": [
-      {
-        "name": "object-view-box",
-        "href": "https://drafts.csswg.org/css-images-5/#propdef-object-view-box",
-        "value": "none | <basic-shape-rect>",
-        "initial": "none",
-        "appliesTo": "replaced elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "specified keyword, or computed <basic-shape> function",
-        "canonicalOrder": "per grammar",
-        "animationType": "as <basic-shape> if possible, otherwise discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The element does not have a view box.",
-            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<basic-shape-rect>",
-            "prose": "If the element does not have both a natural width and a natural height, this value has no effect, similar to none. Otherwise, specifies a view box for the element. First, resolve the <basic-shape-rect> against a reference box formed by the element’s natural sizes to obtain the element’s view box. For all purposes, the element is now treated as having natural sizes equal to the view box’s width and height. If the element had a natural aspect ratio, it’s now treated as instead having the same ratio as the view box. Further adjustments to the size/position of the element’s contents, such as object-position or object-fit, are similarly performed on the view box instead. When the element is painted, its contents are scaled and translated such that the element’s contents retain the same position and size, relative to the view box’s final size and position, that they had when the view box was determined (above). Have not yet defined what happens if the view box is zero-area. It’s an error case, so precise behavior isn’t important; just need to see what impls want to do about it.",
-            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-basic-shape-rect",
-            "type": "value",
-            "value": "<basic-shape-rect>"
-          }
-        ],
-        "styleDeclaration": [
-          "object-view-box",
-          "objectViewBox"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": false
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": []
-  },
   "css-shapes-2": {
     "spec": {
       "title": "CSS Shapes Module Level 2",
@@ -1326,6 +1331,127 @@
     "selectors": [],
     "values": []
   },
+  "css-gcpm-4": {
+    "spec": {
+      "title": "CSS Generated Content for Paged Media Module Level 4",
+      "url": "https://drafts.csswg.org/css-gcpm-4/"
+    },
+    "properties": [
+      {
+        "name": "copy-into",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into",
+        "value": "none | [ [ <custom-ident> <content-level>] [, <custom-ident> <content-level>]* ]?",
+        "initial": "none",
+        "appliesTo": "all elements and pseudo-elements, but not ::first-line or ::first-letter.",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "styleDeclaration": [
+          "copy-into",
+          "copyInto"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [
+      {
+        "name": ":nth-of-page()",
+        "value": ":nth-of-page(n)",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-nth-of-page-n"
+      },
+      {
+        "name": ":first-of-page",
+        "prose": "Same as :nth-of-page(n), but where n = 1 (it is the first matched element on the page).",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-first-of-page",
+        "value": ":first-of-page"
+      },
+      {
+        "name": ":last-of-page",
+        "prose": "The element is the last matched element on the page.",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-last-of-page",
+        "value": ":last-of-page"
+      },
+      {
+        "name": ":start-of-page",
+        "prose": "The element is the first matched element on the page, and neither it nor its ancestors have any previous siblings that appear on the page.",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-start-of-page",
+        "value": ":start-of-page"
+      }
+    ],
+    "values": [
+      {
+        "name": "<content-level>",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#typedef-content-level",
+        "type": "type",
+        "value": "element | content | text | <attr()> | <counter>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
+  "css-images-5": {
+    "spec": {
+      "title": "CSS Images Module Level 5",
+      "url": "https://drafts.csswg.org/css-images-5/"
+    },
+    "properties": [
+      {
+        "name": "object-view-box",
+        "href": "https://drafts.csswg.org/css-images-5/#propdef-object-view-box",
+        "value": "none | <basic-shape-rect>",
+        "initial": "none",
+        "appliesTo": "replaced elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified keyword, or computed <basic-shape> function",
+        "canonicalOrder": "per grammar",
+        "animationType": "as <basic-shape> if possible, otherwise discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The element does not have a view box.",
+            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<basic-shape-rect>",
+            "prose": "If the element does not have both a natural width and a natural height, this value has no effect, similar to none. Otherwise, specifies a view box for the element. First, resolve the <basic-shape-rect> against a reference box formed by the element’s natural sizes to obtain the element’s view box. For all purposes, the element is now treated as having natural sizes equal to the view box’s width and height. If the element had a natural aspect ratio, it’s now treated as instead having the same ratio as the view box. Further adjustments to the size/position of the element’s contents, such as object-position or object-fit, are similarly performed on the view box instead. When the element is painted, its contents are scaled and translated such that the element’s contents retain the same position and size, relative to the view box’s final size and position, that they had when the view box was determined (above). Have not yet defined what happens if the view box is zero-area. It’s an error case, so precise behavior isn’t important; just need to see what impls want to do about it.",
+            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-basic-shape-rect",
+            "type": "value",
+            "value": "<basic-shape-rect>"
+          }
+        ],
+        "styleDeclaration": [
+          "object-view-box",
+          "objectViewBox"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": []
+  },
   "css-color-6": {
     "spec": {
       "title": "CSS Color Module Level 6",
@@ -1403,74 +1529,6 @@
         "href": "https://drafts.csswg.org/css-color-6/#funcdef-color-layers",
         "type": "function",
         "value": "color-layers([ <blend-mode>, ]? <color># )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
-  "css-gcpm-4": {
-    "spec": {
-      "title": "CSS Generated Content for Paged Media Module Level 4",
-      "url": "https://drafts.csswg.org/css-gcpm-4/"
-    },
-    "properties": [
-      {
-        "name": "copy-into",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into",
-        "value": "none | [ [ <custom-ident> <content-level>] [, <custom-ident> <content-level>]* ]?",
-        "initial": "none",
-        "appliesTo": "all elements and pseudo-elements, but not ::first-line or ::first-letter.",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "styleDeclaration": [
-          "copy-into",
-          "copyInto"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [
-      {
-        "name": ":nth-of-page()",
-        "value": ":nth-of-page(n)",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-nth-of-page-n"
-      },
-      {
-        "name": ":first-of-page",
-        "prose": "Same as :nth-of-page(n), but where n = 1 (it is the first matched element on the page).",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-first-of-page",
-        "value": ":first-of-page"
-      },
-      {
-        "name": ":last-of-page",
-        "prose": "The element is the last matched element on the page.",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-last-of-page",
-        "value": ":last-of-page"
-      },
-      {
-        "name": ":start-of-page",
-        "prose": "The element is the first matched element on the page, and neither it nor its ancestors have any previous siblings that appear on the page.",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-start-of-page",
-        "value": ":start-of-page"
-      }
-    ],
-    "values": [
-      {
-        "name": "<content-level>",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#typedef-content-level",
-        "type": "type",
-        "value": "element | content | text | <attr()> | <counter>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -1673,648 +1731,6 @@
     "atrules": [],
     "selectors": [],
     "values": []
-  },
-  "css-animations-2": {
-    "spec": {
-      "title": "CSS Animations Module Level 2",
-      "url": "https://drafts.csswg.org/css-animations-2/"
-    },
-    "properties": [
-      {
-        "name": "animation-duration",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-duration",
-        "value": "[ auto | <time [0s,∞]> ]#",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "list, each item either a time or the keyword auto",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "For time-driven animations, equivalent to 0s. For scroll-driven animations, equivalent to the duration necessary to fill the timeline in consideration of animation-range, animation-delay, and animation-iteration-count. See Scroll-driven Animations § 4.1 Finite Timeline Calculations.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-duration-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "<time [0s,∞]>",
-            "prose": "For time-driven animations, specifies the length of time that an animation takes to complete one cycle. A negative <time> is invalid. For scroll-driven animations, treated as auto.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-duration-time-0s",
-            "type": "value",
-            "value": "<time [0s,∞]>"
-          }
-        ],
-        "styleDeclaration": [
-          "animation-duration",
-          "animationDuration"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "animation-composition",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-composition",
-        "value": "<single-animation-composition>#",
-        "initial": "replace",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "list, each item a keyword as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "animation-composition",
-          "animationComposition"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "animation-timeline",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-timeline",
-        "value": "<single-animation-timeline>#",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "animation-timeline",
-          "animationTimeline"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": true,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "animation-trigger",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-trigger",
-        "value": "[ none | [ <dashed-ident> <animation-action>+ ]+ ]#",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The corresponding animation is not a triggered animation.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-trigger-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "[ <dashed-ident> <animation-action>+ ]+",
-            "prose": "The corresponding animation is a triggered animation, responding to the triggers named by each <dashed-ident>, and responding by taking the action named by the corresponding <animation-action>. (See § 5.1 Trigger Name Scoping: the trigger-scope property for how <dashed-ident>s are resolved to triggers.) How many <animation-action>s a trigger accepts, and what exactly activates them, is determined by the type of the trigger. (Event triggers take one and possibly an optional second, depending on whether they’re stateless or stateful; timeline triggers take one and optionally a second.) Specifying the wrong number of actions (too many or too few) is valid syntactically, but causes the trigger to have no effect. If multiple triggers occur simultaneously, they take effect in the order specified. If the same <dashed-ident> is specified multiple times, all but the last have no effect.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-trigger--dashed-ident-animation-action",
-            "type": "value",
-            "value": "[ <dashed-ident> <animation-action>+ ]+"
-          }
-        ],
-        "styleDeclaration": [
-          "animation-trigger",
-          "animationTrigger"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "trigger-scope",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-trigger-scope",
-        "value": "none | all | <dashed-ident>#",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "none",
-            "prose": "No changes in trigger name scope.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-trigger-scope-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "all",
-            "prose": "Specifies that all trigger names defined by this element or its descendants—​whose scope is not already limited by a descendant using trigger-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match trigger names to triggers within this subtree. This value only affects trigger names in the same tree scope, as if it were a strictly matched tree-scoped name. (That is, trigger-scope: all acts identically to trigger-scope: --foo, --bar, ..., listing all relevant trigger names.)",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-trigger-scope-all",
-            "type": "value",
-            "value": "all"
-          },
-          {
-            "name": "<dashed-ident>",
-            "prose": "Specifies that a matching trigger name defined by this element or its descendants—​whose scope is not already limited by a descendant using trigger-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match these trigger names to triggers within this subtree. The <dashed-ident> represents a strictly matched tree-scoped name, i.e. it can only match against trigger names in the same shadow tree.[CSS-SCOPING-1]",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-trigger-scope-dashed-ident",
-            "type": "value",
-            "value": "<dashed-ident>"
-          }
-        ],
-        "styleDeclaration": [
-          "trigger-scope",
-          "triggerScope"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "timeline-trigger-name",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-name",
-        "value": "none | <dashed-ident>#",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "timeline-trigger-name",
-          "timelineTriggerName"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "timeline-trigger-source",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-source",
-        "value": "<single-animation-timeline>#",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "timeline-trigger-source",
-          "timelineTriggerSource"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "timeline-trigger-range",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-range",
-        "value": "[ <'timeline-trigger-range-start'> <'timeline-trigger-range-end'>? ]#",
-        "initial": "see individual properties",
-        "appliesTo": "see individual properties",
-        "inherited": "see individual properties",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "styleDeclaration": [
-          "timeline-trigger-range",
-          "timelineTriggerRange"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "timeline-trigger-range-start",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-range-start",
-        "value": "[ normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#",
-        "initial": "normal",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
-        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "timeline-trigger-range-start",
-          "timelineTriggerRangeStart"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "timeline-trigger-range-end",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-range-end",
-        "value": "[ normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#",
-        "initial": "normal",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
-        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "timeline-trigger-range-end",
-          "timelineTriggerRangeEnd"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "timeline-trigger-exit-range",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-exit-range",
-        "value": "[ <'timeline-trigger-exit-range-start'> <'timeline-trigger-exit-range-end'>? ]#",
-        "initial": "see individual properties",
-        "appliesTo": "see individual properties",
-        "inherited": "see individual properties",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "The start (for timeline-trigger-exit-range-start) or end (for timeline-trigger-exit-range-end) is equal to the start/end of the timeline trigger’s enter range.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-timeline-trigger-exit-range-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "timeline-trigger-exit-range",
-          "timelineTriggerExitRange"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "timeline-trigger-exit-range-start",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-exit-range-start",
-        "value": "[ auto | normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
-        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "The start (for timeline-trigger-exit-range-start) or end (for timeline-trigger-exit-range-end) is equal to the start/end of the timeline trigger’s enter range.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-timeline-trigger-exit-range-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "timeline-trigger-exit-range-start",
-          "timelineTriggerExitRangeStart"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "timeline-trigger-exit-range-end",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-exit-range-end",
-        "value": "[ auto | normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
-        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "The start (for timeline-trigger-exit-range-start) or end (for timeline-trigger-exit-range-end) is equal to the start/end of the timeline trigger’s enter range.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-timeline-trigger-exit-range-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "timeline-trigger-exit-range-end",
-          "timelineTriggerExitRangeEnd"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "timeline-trigger",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger",
-        "value": "none | [ <'timeline-trigger-name'> <'timeline-trigger-source'> <'timeline-trigger-range'> [ '/' <'timeline-trigger-exit-range'> ]? ]#",
-        "initial": "see individual properties",
-        "appliesTo": "see individual properties",
-        "inherited": "see individual properties",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "values": [
-          {
-            "name": "none",
-            "prose": "A value of none is equivalent to none none normal.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-timeline-trigger-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "timeline-trigger",
-          "timelineTrigger"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "event-trigger-name",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-event-trigger-name",
-        "value": "none | <dashed-ident>#",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "event-trigger-name",
-          "eventTriggerName"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "event-trigger-source",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-event-trigger-source",
-        "value": "[ none | <event-trigger-event>+ [ / <event-trigger-event>+ ]? ]#",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The corresponding entry in the coordinated value list does not define a trigger.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-event-trigger-source-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<event-trigger-event>+ [ / <event-trigger-event>+ ]?",
-            "prose": "Defines what event(s) the event trigger responds to. If a / is used in the value, the event trigger is stateful; the set of events before the / are the event trigger’s enter events, while those after the / are the exit events. (The same events can occur in both sets.) Otherwise, the event trigger is stateless, and the provided events are its enter events.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-event-trigger-source-event-trigger-event--event-trigger-event",
-            "type": "value",
-            "value": "<event-trigger-event>+ [ / <event-trigger-event>+ ]?"
-          }
-        ],
-        "styleDeclaration": [
-          "event-trigger-source",
-          "eventTriggerSource"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "event-trigger",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-event-trigger",
-        "value": "none | [ <'event-trigger-name'> <'event-trigger-source'> ]#",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "none",
-            "prose": "A value of none is equivalent to none none.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-event-trigger-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "event-trigger",
-          "eventTrigger"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<single-animation-composition>",
-        "value": "replace | add | accumulate",
-        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation-composition",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<single-animation-timeline>",
-        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation-timeline",
-        "type": "type",
-        "value": "auto | none | <dashed-ident> | <scroll()> | <view()>",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "The animation’s timeline is a DocumentTimeline, more specifically the default document timeline.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "none",
-            "prose": "The animation is not associated with a timeline.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<dashed-ident>",
-            "prose": "If a named scroll progress timeline or view progress timeline is in scope on this element, use the referenced timeline as defined in Scroll-driven Animations § Declaring a Named Timeline’s Scope: the timeline-scope property. Otherwise the animation is not associated with a timeline.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-dashed-ident",
-            "type": "value",
-            "value": "<dashed-ident>"
-          },
-          {
-            "name": "<scroll()>",
-            "prose": "Use the scroll progress timeline indicated by the given scroll() function. See Scroll-driven Animations § 2.2.1 The scroll() notation.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-scroll",
-            "type": "value",
-            "value": "<scroll()>"
-          },
-          {
-            "name": "<view()>",
-            "prose": "Use the view progress timeline indicated by the given view() function. See Scroll-driven Animations § 3.3.1 The view() notation.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-view",
-            "type": "value",
-            "value": "<view()>"
-          }
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<animation-action>",
-        "prose": "The possible <animation-action> values, and what effect they have in each animation state:",
-        "href": "https://drafts.csswg.org/css-animations-2/#typedef-animation-action",
-        "type": "type",
-        "values": [
-          {
-            "name": "none",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "play",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-play",
-            "type": "value",
-            "value": "play"
-          },
-          {
-            "name": "play-once",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-play-once",
-            "type": "value",
-            "value": "play-once"
-          },
-          {
-            "name": "play-forwards",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-play-forwards",
-            "type": "value",
-            "value": "play-forwards"
-          },
-          {
-            "name": "play-backwards",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-play-backwards",
-            "type": "value",
-            "value": "play-backwards"
-          },
-          {
-            "name": "pause",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-pause",
-            "type": "value",
-            "value": "pause"
-          },
-          {
-            "name": "reset",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-reset",
-            "type": "value",
-            "value": "reset"
-          },
-          {
-            "name": "replay",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-replay",
-            "type": "value",
-            "value": "replay"
-          }
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<single-animation>",
-        "value": "<'animation-duration'> || <easing-function> || <'animation-delay'> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state> || [ none | <keyframes-name> ] || <single-animation-timeline>",
-        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<event-trigger-event>",
-        "href": "https://drafts.csswg.org/css-animations-2/#typedef-event-trigger-event",
-        "type": "type",
-        "value": "activate | click | touch | dblclick | keypress(<string>) | ...",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
   },
   "css-anchor-position-2": {
     "spec": {
@@ -3650,71 +3066,494 @@
       }
     ]
   },
-  "css-color-5": {
+  "css-animations-2": {
     "spec": {
-      "title": "CSS Color Module Level 5",
-      "url": "https://drafts.csswg.org/css-color-5/"
+      "title": "CSS Animations Module Level 2",
+      "url": "https://drafts.csswg.org/css-animations-2/"
     },
-    "properties": [],
-    "atrules": [
+    "properties": [
       {
-        "name": "@color-profile",
-        "prose": "The @color-profile rule defines and names a color profile which can later be used in the color() function to specify a color.",
-        "href": "https://drafts.csswg.org/css-color-5/#at-ruledef-profile",
-        "descriptors": [
+        "name": "animation-duration",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-duration",
+        "value": "[ auto | <time [0s,∞]> ]#",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "list, each item either a time or the keyword auto",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
           {
-            "name": "src",
-            "href": "https://drafts.csswg.org/css-color-5/#descdef-color-profile-src",
-            "for": "@color-profile",
-            "value": "<url>",
-            "initial": "n/a"
+            "name": "auto",
+            "prose": "For time-driven animations, equivalent to 0s. For scroll-driven animations, equivalent to the duration necessary to fill the timeline in consideration of animation-range, animation-delay, and animation-iteration-count. See Scroll-driven Animations § 4.1 Finite Timeline Calculations.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-duration-auto",
+            "type": "value",
+            "value": "auto"
           },
           {
-            "name": "rendering-intent",
-            "href": "https://drafts.csswg.org/css-color-5/#descdef-color-profile-rendering-intent",
-            "for": "@color-profile",
-            "value": "relative-colorimetric | absolute-colorimetric | perceptual | saturation",
-            "initial": "relative-colorimetric",
-            "values": [
-              {
-                "name": "relative-colorimetric",
-                "prose": "Media-relative colorimetric is required to leave source colors that fall inside the destination medium gamut unchanged relative to the respective media white points. Source colors that are out of the destination medium gamut are mapped to colors on the gamut boundary using a variety of different methods. The media-relative colorimetric rendering intent is often used with black point compensation, where the source medium black point is mapped to the destination medium black point as well. This method must map the source white point to the destination white point. If black point compensation is in use, the source black point must also be mapped to the destination black point. Adaptation algorithms should be used to adjust for the change in white point. Relative relationships of colors inside both source and destination gamuts should be preserved. Relative relationships of colors outside the destination gamut may be changed.",
-                "href": "https://drafts.csswg.org/css-color-5/#valdef-color-profile-rendering-intent-relative-colorimetric",
-                "type": "value",
-                "value": "relative-colorimetric"
-              },
-              {
-                "name": "absolute-colorimetric",
-                "prose": "ICC-absolute colorimetric is required to leave source colors that fall inside the destination medium gamut unchanged relative to the adopted white (a perfect reflecting diffuser). Source colors that are out of the destination medium gamut are mapped to colors on the gamut boundary using a variety of different methods. This method produces the most accurate color matching of in-gamut colors, but will result in highlight clipping if the destination medium white point is lower than the source medium white point. For this reason it is recommended for use only in applications that need exact color matching and where highlight clipping is not a concern. This method MUST disable white point matching and black point matching when converting colors. In general, this option is not recommended except for testing purposes.",
-                "href": "https://drafts.csswg.org/css-color-5/#valdef-color-profile-rendering-intent-absolute-colorimetric",
-                "type": "value",
-                "value": "absolute-colorimetric"
-              },
-              {
-                "name": "perceptual",
-                "prose": "This method is often the preferred choice for images, especially when there are substantial differences between the source and destination (such as a screen display image reproduced on a reflection print). It takes the colors of the source image and re-optimizes the appearance for the destination medium using proprietary methods. This re-optimization may result in colors within both the source and destination gamuts being changed, although perceptual transforms are supposed to maintain the basic artistic intent of the original in the reproduction. They will not attempt to correct errors in the source image. This method should maintain relative color values among the pixels as they are mapped to the target device gamut. This method may change pixel values that were originally within the target device gamut, in order to avoid hue shifts and discontinuities and to preserve as much as possible the overall appearance of the scene.",
-                "href": "https://drafts.csswg.org/css-color-5/#valdef-color-profile-rendering-intent-perceptual",
-                "type": "value",
-                "value": "perceptual"
-              },
-              {
-                "name": "saturation",
-                "prose": "This option was created to preserve the relative saturation (chroma) of the original, and to keep solid colors pure. However, it experienced interoperability problems like the perceptual intent, and as solid color preservation is not amenable to a reference medium solution using v4 profiles does not solve the problem. Use of this rendering intent is not recommended unless the specific source and destination profiles to be used have been checked to ensure the combination produces the desired result. This option should preserve the relative saturation (chroma) values of the original pixels. Out of gamut colors should be converted to colors that have the same saturation but fall just inside the gamut.",
-                "href": "https://drafts.csswg.org/css-color-5/#valdef-color-profile-rendering-intent-saturation",
-                "type": "value",
-                "value": "saturation"
-              }
-            ]
-          },
-          {
-            "name": "components",
-            "href": "https://drafts.csswg.org/css-color-5/#descdef-color-profile-components",
-            "for": "@color-profile",
-            "value": "<ident>#",
-            "initial": "n/a"
+            "name": "<time [0s,∞]>",
+            "prose": "For time-driven animations, specifies the length of time that an animation takes to complete one cycle. A negative <time> is invalid. For scroll-driven animations, treated as auto.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-duration-time-0s",
+            "type": "value",
+            "value": "<time [0s,∞]>"
           }
         ],
-        "value": "@color-profile [<dashed-ident> | device-cmyk] { <declaration-list> }",
+        "styleDeclaration": [
+          "animation-duration",
+          "animationDuration"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "animation-composition",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-composition",
+        "value": "<single-animation-composition>#",
+        "initial": "replace",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "list, each item a keyword as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "animation-composition",
+          "animationComposition"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "animation-timeline",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-timeline",
+        "value": "<single-animation-timeline>#",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "animation-timeline",
+          "animationTimeline"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": true,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "animation-trigger",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-trigger",
+        "value": "[ none | [ <dashed-ident> <animation-action>+ ]+ ]#",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The corresponding animation is not a triggered animation.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-trigger-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "[ <dashed-ident> <animation-action>+ ]+",
+            "prose": "The corresponding animation is a triggered animation, responding to the triggers named by each <dashed-ident>, and responding by taking the action named by the corresponding <animation-action>. (See § 5.1 Trigger Name Scoping: the trigger-scope property for how <dashed-ident>s are resolved to triggers.) How many <animation-action>s a trigger accepts, and what exactly activates them, is determined by the type of the trigger. (Event triggers take one and possibly an optional second, depending on whether they’re stateless or stateful; timeline triggers take one and optionally a second.) Specifying the wrong number of actions (too many or too few) is valid syntactically, but causes the trigger to have no effect. If multiple triggers occur simultaneously, they take effect in the order specified. If the same <dashed-ident> is specified multiple times, all but the last have no effect.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-trigger--dashed-ident-animation-action",
+            "type": "value",
+            "value": "[ <dashed-ident> <animation-action>+ ]+"
+          }
+        ],
+        "styleDeclaration": [
+          "animation-trigger",
+          "animationTrigger"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "trigger-scope",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-trigger-scope",
+        "value": "none | all | <dashed-ident>#",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
+          {
+            "name": "none",
+            "prose": "No changes in trigger name scope.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-trigger-scope-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "all",
+            "prose": "Specifies that all trigger names defined by this element or its descendants—​whose scope is not already limited by a descendant using trigger-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match trigger names to triggers within this subtree. This value only affects trigger names in the same tree scope, as if it were a strictly matched tree-scoped name. (That is, trigger-scope: all acts identically to trigger-scope: --foo, --bar, ..., listing all relevant trigger names.)",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-trigger-scope-all",
+            "type": "value",
+            "value": "all"
+          },
+          {
+            "name": "<dashed-ident>",
+            "prose": "Specifies that a matching trigger name defined by this element or its descendants—​whose scope is not already limited by a descendant using trigger-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match these trigger names to triggers within this subtree. The <dashed-ident> represents a strictly matched tree-scoped name, i.e. it can only match against trigger names in the same shadow tree.[CSS-SCOPING-1]",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-trigger-scope-dashed-ident",
+            "type": "value",
+            "value": "<dashed-ident>"
+          }
+        ],
+        "styleDeclaration": [
+          "trigger-scope",
+          "triggerScope"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "timeline-trigger-name",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-name",
+        "value": "none | <dashed-ident>#",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "timeline-trigger-name",
+          "timelineTriggerName"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "timeline-trigger-source",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-source",
+        "value": "<single-animation-timeline>#",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "timeline-trigger-source",
+          "timelineTriggerSource"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "timeline-trigger-range",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-range",
+        "value": "[ <'timeline-trigger-range-start'> <'timeline-trigger-range-end'>? ]#",
+        "initial": "see individual properties",
+        "appliesTo": "see individual properties",
+        "inherited": "see individual properties",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "styleDeclaration": [
+          "timeline-trigger-range",
+          "timelineTriggerRange"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "timeline-trigger-range-start",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-range-start",
+        "value": "[ normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#",
+        "initial": "normal",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "timeline-trigger-range-start",
+          "timelineTriggerRangeStart"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "timeline-trigger-range-end",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-range-end",
+        "value": "[ normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#",
+        "initial": "normal",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "timeline-trigger-range-end",
+          "timelineTriggerRangeEnd"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "timeline-trigger-exit-range",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-exit-range",
+        "value": "[ <'timeline-trigger-exit-range-start'> <'timeline-trigger-exit-range-end'>? ]#",
+        "initial": "see individual properties",
+        "appliesTo": "see individual properties",
+        "inherited": "see individual properties",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "The start (for timeline-trigger-exit-range-start) or end (for timeline-trigger-exit-range-end) is equal to the start/end of the timeline trigger’s enter range.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-timeline-trigger-exit-range-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "timeline-trigger-exit-range",
+          "timelineTriggerExitRange"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "timeline-trigger-exit-range-start",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-exit-range-start",
+        "value": "[ auto | normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "The start (for timeline-trigger-exit-range-start) or end (for timeline-trigger-exit-range-end) is equal to the start/end of the timeline trigger’s enter range.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-timeline-trigger-exit-range-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "timeline-trigger-exit-range-start",
+          "timelineTriggerExitRangeStart"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "timeline-trigger-exit-range-end",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger-exit-range-end",
+        "value": "[ auto | normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "The start (for timeline-trigger-exit-range-start) or end (for timeline-trigger-exit-range-end) is equal to the start/end of the timeline trigger’s enter range.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-timeline-trigger-exit-range-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "timeline-trigger-exit-range-end",
+          "timelineTriggerExitRangeEnd"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "timeline-trigger",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-timeline-trigger",
+        "value": "none | [ <'timeline-trigger-name'> <'timeline-trigger-source'> <'timeline-trigger-range'> [ '/' <'timeline-trigger-exit-range'> ]? ]#",
+        "initial": "see individual properties",
+        "appliesTo": "see individual properties",
+        "inherited": "see individual properties",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "values": [
+          {
+            "name": "none",
+            "prose": "A value of none is equivalent to none none normal.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-timeline-trigger-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "timeline-trigger",
+          "timelineTrigger"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "event-trigger-name",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-event-trigger-name",
+        "value": "none | <dashed-ident>#",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "event-trigger-name",
+          "eventTriggerName"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "event-trigger-source",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-event-trigger-source",
+        "value": "[ none | <event-trigger-event>+ [ / <event-trigger-event>+ ]? ]#",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The corresponding entry in the coordinated value list does not define a trigger.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-event-trigger-source-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<event-trigger-event>+ [ / <event-trigger-event>+ ]?",
+            "prose": "Defines what event(s) the event trigger responds to. If a / is used in the value, the event trigger is stateful; the set of events before the / are the event trigger’s enter events, while those after the / are the exit events. (The same events can occur in both sets.) Otherwise, the event trigger is stateless, and the provided events are its enter events.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-event-trigger-source-event-trigger-event--event-trigger-event",
+            "type": "value",
+            "value": "<event-trigger-event>+ [ / <event-trigger-event>+ ]?"
+          }
+        ],
+        "styleDeclaration": [
+          "event-trigger-source",
+          "eventTriggerSource"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "event-trigger",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-event-trigger",
+        "value": "none | [ <'event-trigger-name'> <'event-trigger-source'> ]#",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
+          {
+            "name": "none",
+            "prose": "A value of none is equivalent to none none.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-event-trigger-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "event-trigger",
+          "eventTrigger"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -3722,14 +3561,14 @@
         }
       }
     ],
+    "atrules": [],
     "selectors": [],
     "values": [
       {
-        "name": "<color>",
-        "prose": "Colors in CSS are represented by the <color> type:",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-color",
+        "name": "<single-animation-composition>",
+        "value": "replace | add | accumulate",
+        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation-composition",
         "type": "type",
-        "value": "<color-base> | currentColor | <system-color> | <contrast-color()> | <device-cmyk()> | <light-dark()>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -3737,318 +3576,45 @@
         }
       },
       {
-        "name": "<color-base>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-color-base",
+        "name": "<single-animation-timeline>",
+        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation-timeline",
         "type": "type",
-        "value": "<hex-color> | <color-function> | <named-color> | <color-mix()> | transparent",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "color-mix()",
-        "value": "color-mix( <color-interpolation-method>? , [ <color> && <percentage [0,100]>? ]#)",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-color-mix",
-        "type": "function",
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "<modern-rgb-syntax>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-rgb-syntax",
-        "type": "type",
-        "value": "rgb( [ from <color> ]? [ <number> | <percentage> | none]{3} [ / [<alpha-value> | none] ]? )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<modern-rgba-syntax>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-rgba-syntax",
-        "type": "type",
-        "value": "rgba( [ from <color> ]? [ <number> | <percentage> | none]{3} [ / [<alpha-value> | none] ]? )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<modern-hsl-syntax>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-hsl-syntax",
-        "type": "type",
-        "value": "hsl([from <color>]? [<hue> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<modern-hsla-syntax>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-hsla-syntax",
-        "type": "type",
-        "value": "hsla([from <color>]? [<hue> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "hwb()",
-        "value": "hwb([from <color>]? [<hue> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-hwb",
-        "type": "function",
+        "value": "auto | none | <dashed-ident> | <scroll()> | <view()>",
         "values": [
           {
-            "name": "h",
-            "prose": "h is a <number> that corresponds to the origin color’s HWB hue, in degrees, after conversion, if required to sRGB, normalized to a [0, 360] range. 90 is equivalent to 90deg.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-hwb-h",
+            "name": "auto",
+            "prose": "The animation’s timeline is a DocumentTimeline, more specifically the default document timeline.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-auto",
             "type": "value",
-            "value": "h"
+            "value": "auto"
           },
           {
-            "name": "w",
-            "prose": "w and b are <number>s that correspond to the origin color’s HWB whiteness and blackness after conversion, if required to sRGB. 100 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-hwb-w",
+            "name": "none",
+            "prose": "The animation is not associated with a timeline.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-none",
             "type": "value",
-            "value": "w"
+            "value": "none"
           },
           {
-            "name": "b",
-            "prose": "w and b are <number>s that correspond to the origin color’s HWB whiteness and blackness after conversion, if required to sRGB. 100 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-hwb-b",
+            "name": "<dashed-ident>",
+            "prose": "If a named scroll progress timeline or view progress timeline is in scope on this element, use the referenced timeline as defined in Scroll-driven Animations § Declaring a Named Timeline’s Scope: the timeline-scope property. Otherwise the animation is not associated with a timeline.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-dashed-ident",
             "type": "value",
-            "value": "b"
+            "value": "<dashed-ident>"
           },
           {
-            "name": "alpha",
-            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-hwb-alpha",
+            "name": "<scroll()>",
+            "prose": "Use the scroll progress timeline indicated by the given scroll() function. See Scroll-driven Animations § 2.2.1 The scroll() notation.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-scroll",
             "type": "value",
-            "value": "alpha"
-          }
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "lab()",
-        "value": "lab([from <color>]? [<percentage> | <number> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-lab",
-        "type": "function",
-        "values": [
-          {
-            "name": "l",
-            "prose": "l is a <number> that corresponds to the origin color’s CIE Lightness after conversion, if required, to CIE Lab. 100 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-lab-l",
-            "type": "value",
-            "value": "l"
+            "value": "<scroll()>"
           },
           {
-            "name": "a",
-            "prose": "a and b are <number>s that correspond to the origin color’s CIE Lab a and b axes after conversion, if required, to CIE Lab. 125 is equivalent to 100%, while -125 is equivalent to -100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-lab-a",
+            "name": "<view()>",
+            "prose": "Use the view progress timeline indicated by the given view() function. See Scroll-driven Animations § 3.3.1 The view() notation.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-view",
             "type": "value",
-            "value": "a"
-          },
-          {
-            "name": "b",
-            "prose": "a and b are <number>s that correspond to the origin color’s CIE Lab a and b axes after conversion, if required, to CIE Lab. 125 is equivalent to 100%, while -125 is equivalent to -100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-lab-b",
-            "type": "value",
-            "value": "b"
-          },
-          {
-            "name": "alpha",
-            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-lab-alpha",
-            "type": "value",
-            "value": "alpha"
-          }
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "oklab()",
-        "value": "oklab([from <color>]? [<percentage> | <number> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-oklab",
-        "type": "function",
-        "values": [
-          {
-            "name": "l",
-            "prose": "l is a <number> that corresponds to the origin color’s Oklab Lightness after conversion, if required, to Oklab. 1.0 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklab-l",
-            "type": "value",
-            "value": "l"
-          },
-          {
-            "name": "a",
-            "prose": "a and b are <number>s that correspond to the origin color’s Oklab a and b axes after conversion, if required, to Oklab. 0.4 is equivalent to 100%, while -0.4 is equivalent to -100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklab-a",
-            "type": "value",
-            "value": "a"
-          },
-          {
-            "name": "b",
-            "prose": "a and b are <number>s that correspond to the origin color’s Oklab a and b axes after conversion, if required, to Oklab. 0.4 is equivalent to 100%, while -0.4 is equivalent to -100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklab-b",
-            "type": "value",
-            "value": "b"
-          },
-          {
-            "name": "alpha",
-            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklab-alpha",
-            "type": "value",
-            "value": "alpha"
-          }
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "lch()",
-        "value": "lch([from <color>]? [<percentage> | <number> | none] [<percentage> | <number> | none] [<hue> | none] [ / [<alpha-value> | none] ]? )",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-lch",
-        "type": "function",
-        "values": [
-          {
-            "name": "l",
-            "prose": "l is a <number> that corresponds to the origin color’s CIE Lightness after conversion, if required, to CIE LCH. 100 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-lch-l",
-            "type": "value",
-            "value": "l"
-          },
-          {
-            "name": "c",
-            "prose": "c is a <number> that corresponds to the origin color’s LCH chroma after conversion, if required, to CIE LCH. 150 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-lch-c",
-            "type": "value",
-            "value": "c"
-          },
-          {
-            "name": "h",
-            "prose": "h is a <number> that corresponds to the origin color’s LCH hue, in degrees, after conversion, if required, to CIE LCH, normalized to a [0, 360] range. 90 is equivalent to 90deg.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-lch-h",
-            "type": "value",
-            "value": "h"
-          },
-          {
-            "name": "alpha",
-            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-lch-alpha",
-            "type": "value",
-            "value": "alpha"
-          }
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "oklch()",
-        "value": "oklch([from <color>]? [<percentage> | <number> | none] [<percentage> | <number> | none] [<hue> | none] [ / [<alpha-value> | none] ]? )",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-oklch",
-        "type": "function",
-        "values": [
-          {
-            "name": "l",
-            "prose": "l is a <number> that corresponds to the origin color’s Oklab Lightness after conversion, if required, to OkLCh. 1.0 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklch-l",
-            "type": "value",
-            "value": "l"
-          },
-          {
-            "name": "c",
-            "prose": "c is a <number> that corresponds to the origin color’s OkLCh chroma after conversion, if required, to OkLCh. 0.4 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklch-c",
-            "type": "value",
-            "value": "c"
-          },
-          {
-            "name": "h",
-            "prose": "h is a <number> that corresponds to the origin color’s OkLCh hue, in degrees, after conversion, if required, to OkLCh, normalized to a [0, 360] range. 90 is equivalent to 90deg.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklch-h",
-            "type": "value",
-            "value": "h"
-          },
-          {
-            "name": "alpha",
-            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklch-alpha",
-            "type": "value",
-            "value": "alpha"
-          }
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "alpha()",
-        "value": "alpha([from <color>] [ / [<alpha-value> | none] ]? )",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-alpha",
-        "type": "function",
-        "values": [
-          {
-            "name": "alpha",
-            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-alpha-alpha",
-            "type": "value",
-            "value": "alpha"
+            "value": "<view()>"
           }
         ],
         "compatibility": {
@@ -4058,77 +3624,71 @@
         }
       },
       {
-        "name": "color()",
-        "value": "color( [from <color>]? <colorspace-params> [ / [ <alpha-value> | none ] ]? )",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-color",
-        "type": "function",
+        "name": "<animation-action>",
+        "prose": "The possible <animation-action> values, and what effect they have in each animation state:",
+        "href": "https://drafts.csswg.org/css-animations-2/#typedef-animation-action",
+        "type": "type",
         "values": [
           {
-            "name": "r",
-            "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to the predefined RGB color space. The value 1.0 corresponds to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-r",
+            "name": "none",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-none",
             "type": "value",
-            "value": "r"
+            "value": "none"
           },
           {
-            "name": "g",
-            "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to the predefined RGB color space. The value 1.0 corresponds to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-g",
+            "name": "play",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-play",
             "type": "value",
-            "value": "g"
+            "value": "play"
           },
           {
-            "name": "b",
-            "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to the predefined RGB color space. The value 1.0 corresponds to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-b",
+            "name": "play-once",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-play-once",
             "type": "value",
-            "value": "b"
+            "value": "play-once"
           },
           {
-            "name": "x",
-            "prose": "x, y, z are all <number>s that correspond to the origin color’s X, Y and Z components after conversion, if required to relative CIE XYZ color space adapted to the relevant white point. The value 1.0 corresponds to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-x",
+            "name": "play-forwards",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-play-forwards",
             "type": "value",
-            "value": "x"
+            "value": "play-forwards"
           },
           {
-            "name": "y",
-            "prose": "x, y, z are all <number>s that correspond to the origin color’s X, Y and Z components after conversion, if required to relative CIE XYZ color space adapted to the relevant white point. The value 1.0 corresponds to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-y",
+            "name": "play-backwards",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-play-backwards",
             "type": "value",
-            "value": "y"
+            "value": "play-backwards"
           },
           {
-            "name": "z",
-            "prose": "x, y, z are all <number>s that correspond to the origin color’s X, Y and Z components after conversion, if required to relative CIE XYZ color space adapted to the relevant white point. The value 1.0 corresponds to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-z",
+            "name": "pause",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-pause",
             "type": "value",
-            "value": "z"
+            "value": "pause"
           },
           {
-            "name": "alpha",
-            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
-            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-alpha",
+            "name": "reset",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-reset",
             "type": "value",
-            "value": "alpha"
+            "value": "reset"
+          },
+          {
+            "name": "replay",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-action-replay",
+            "type": "value",
+            "value": "replay"
           }
         ],
         "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
         }
       },
       {
-        "name": "<colorspace-params>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-colorspace-params",
+        "name": "<single-animation>",
+        "value": "<'animation-duration'> || <easing-function> || <'animation-delay'> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state> || [ none | <keyframes-name> ] || <single-animation-timeline>",
+        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation",
         "type": "type",
-        "value": "[<custom-params> | <predefined-rgb-params> | <xyz-params>]",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -4136,253 +3696,15 @@
         }
       },
       {
-        "name": "<custom-params>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-custom-params",
+        "name": "<event-trigger-event>",
+        "href": "https://drafts.csswg.org/css-animations-2/#typedef-event-trigger-event",
         "type": "type",
-        "value": "<dashed-ident> [ <number> | <percentage> | none ]+",
+        "value": "activate | click | touch | dblclick | keypress(<string>) | ...",
         "compatibility": {
           "supported": false,
           "browsers": 0,
           "flagged": false
         }
-      },
-      {
-        "name": "<predefined-rgb-params>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-predefined-rgb-params",
-        "type": "type",
-        "value": "<predefined-rgb> [ <number> | <percentage> | none ]{3}",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<xyz-params>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-xyz-params",
-        "type": "type",
-        "value": "<xyz-space> [ <number> | <percentage> | none ]{3}",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "device-cmyk()",
-        "value": "<legacy-device-cmyk-syntax> | <modern-device-cmyk-syntax>",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-device-cmyk",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<legacy-device-cmyk-syntax>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-legacy-device-cmyk-syntax",
-        "type": "type",
-        "value": "device-cmyk( <number>#{4} )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<modern-device-cmyk-syntax>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-device-cmyk-syntax",
-        "type": "type",
-        "value": "device-cmyk( <cmyk-component>{4} [ / [ <alpha-value> | none ] ]? )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<cmyk-component>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-cmyk-component",
-        "type": "type",
-        "value": "<number> | <percentage> | none",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "light-dark()",
-        "value": "light-dark( <color>, <color> )",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-light-dark",
-        "type": "function",
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "contrast-color()",
-        "value": "contrast-color( <color> )",
-        "href": "https://drafts.csswg.org/css-color-5/#funcdef-contrast-color",
-        "type": "function",
-        "compatibility": {
-          "supported": true,
-          "browsers": 2,
-          "flagged": false,
-          "support": {
-            "chrome": false,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "<color-space>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-color-space",
-        "type": "type",
-        "value": "<rectangular-color-space> | <polar-color-space> | <custom-color-space>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<rectangular-color-space>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-rectangular-color-space",
-        "type": "type",
-        "value": "srgb | srgb-linear | display-p3 | display-p3-linear | a98-rgb | prophoto-rgb | rec2020 | lab | oklab | <xyz-space>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<polar-color-space>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-polar-color-space",
-        "type": "type",
-        "value": "hsl | hwb | lch | oklch",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<custom-color-space>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-custom-color-space",
-        "type": "type",
-        "value": "<dashed-ident>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<hue-interpolation-method>",
-        "href": "https://drafts.csswg.org/css-color-5/#typedef-hue-interpolation-method",
-        "type": "type",
-        "value": "[ shorter | longer | increasing | decreasing ] hue",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<color-interpolation-method>",
-        "href": "https://drafts.csswg.org/css-color-5/#color-interpolation-method",
-        "type": "type",
-        "value": "in [ <rectangular-color-space> | <polar-color-space> <hue-interpolation-method>? | <custom-color-space> ]",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "warnings": [
-      {
-        "msg": "Dangling value",
-        "name": "r",
-        "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to sRGB. 255.0 is equivalent to 100%.",
-        "href": "https://drafts.csswg.org/css-color-5/#valdef-rgb-r",
-        "type": "value",
-        "value": "r",
-        "for": "rgb()"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "g",
-        "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to sRGB. 255.0 is equivalent to 100%.",
-        "href": "https://drafts.csswg.org/css-color-5/#valdef-rgb-g",
-        "type": "value",
-        "value": "g",
-        "for": "rgb()"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "b",
-        "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to sRGB. 255.0 is equivalent to 100%.",
-        "href": "https://drafts.csswg.org/css-color-5/#valdef-rgb-b",
-        "type": "value",
-        "value": "b",
-        "for": "rgb()"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "alpha",
-        "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
-        "href": "https://drafts.csswg.org/css-color-5/#valdef-rgb-alpha",
-        "type": "value",
-        "value": "alpha",
-        "for": "rgb()"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "h",
-        "prose": "h is a <number> that corresponds to the origin color’s HSL hue, in degrees, after conversion, if required to sRGB, normalized to a [0, 360] range. 90 is equivalent to 90deg.",
-        "href": "https://drafts.csswg.org/css-color-5/#valdef-hsl-h",
-        "type": "value",
-        "value": "h",
-        "for": "hsl()"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "s",
-        "prose": "s and l are <number>s that correspond to the origin color’s HSL saturation and lightness, after conversion, if required to sRGB. 100 is equivalent to 100%.",
-        "href": "https://drafts.csswg.org/css-color-5/#valdef-hsl-s",
-        "type": "value",
-        "value": "s",
-        "for": "hsl()"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "l",
-        "prose": "s and l are <number>s that correspond to the origin color’s HSL saturation and lightness, after conversion, if required to sRGB. 100 is equivalent to 100%.",
-        "href": "https://drafts.csswg.org/css-color-5/#valdef-hsl-l",
-        "type": "value",
-        "value": "l",
-        "for": "hsl()"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "alpha",
-        "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency 1.0 is equivalent to 100%.",
-        "href": "https://drafts.csswg.org/css-color-5/#valdef-hsl-alpha",
-        "type": "value",
-        "value": "alpha",
-        "for": "hsl()"
       }
     ]
   },
@@ -5326,6 +4648,742 @@
           "browsers": 0,
           "flagged": false
         }
+      }
+    ]
+  },
+  "css-color-5": {
+    "spec": {
+      "title": "CSS Color Module Level 5",
+      "url": "https://drafts.csswg.org/css-color-5/"
+    },
+    "properties": [],
+    "atrules": [
+      {
+        "name": "@color-profile",
+        "prose": "The @color-profile rule defines and names a color profile which can later be used in the color() function to specify a color.",
+        "href": "https://drafts.csswg.org/css-color-5/#at-ruledef-profile",
+        "descriptors": [
+          {
+            "name": "src",
+            "href": "https://drafts.csswg.org/css-color-5/#descdef-color-profile-src",
+            "for": "@color-profile",
+            "value": "<url>",
+            "initial": "n/a"
+          },
+          {
+            "name": "rendering-intent",
+            "href": "https://drafts.csswg.org/css-color-5/#descdef-color-profile-rendering-intent",
+            "for": "@color-profile",
+            "value": "relative-colorimetric | absolute-colorimetric | perceptual | saturation",
+            "initial": "relative-colorimetric",
+            "values": [
+              {
+                "name": "relative-colorimetric",
+                "prose": "Media-relative colorimetric is required to leave source colors that fall inside the destination medium gamut unchanged relative to the respective media white points. Source colors that are out of the destination medium gamut are mapped to colors on the gamut boundary using a variety of different methods. The media-relative colorimetric rendering intent is often used with black point compensation, where the source medium black point is mapped to the destination medium black point as well. This method must map the source white point to the destination white point. If black point compensation is in use, the source black point must also be mapped to the destination black point. Adaptation algorithms should be used to adjust for the change in white point. Relative relationships of colors inside both source and destination gamuts should be preserved. Relative relationships of colors outside the destination gamut may be changed.",
+                "href": "https://drafts.csswg.org/css-color-5/#valdef-color-profile-rendering-intent-relative-colorimetric",
+                "type": "value",
+                "value": "relative-colorimetric"
+              },
+              {
+                "name": "absolute-colorimetric",
+                "prose": "ICC-absolute colorimetric is required to leave source colors that fall inside the destination medium gamut unchanged relative to the adopted white (a perfect reflecting diffuser). Source colors that are out of the destination medium gamut are mapped to colors on the gamut boundary using a variety of different methods. This method produces the most accurate color matching of in-gamut colors, but will result in highlight clipping if the destination medium white point is lower than the source medium white point. For this reason it is recommended for use only in applications that need exact color matching and where highlight clipping is not a concern. This method MUST disable white point matching and black point matching when converting colors. In general, this option is not recommended except for testing purposes.",
+                "href": "https://drafts.csswg.org/css-color-5/#valdef-color-profile-rendering-intent-absolute-colorimetric",
+                "type": "value",
+                "value": "absolute-colorimetric"
+              },
+              {
+                "name": "perceptual",
+                "prose": "This method is often the preferred choice for images, especially when there are substantial differences between the source and destination (such as a screen display image reproduced on a reflection print). It takes the colors of the source image and re-optimizes the appearance for the destination medium using proprietary methods. This re-optimization may result in colors within both the source and destination gamuts being changed, although perceptual transforms are supposed to maintain the basic artistic intent of the original in the reproduction. They will not attempt to correct errors in the source image. This method should maintain relative color values among the pixels as they are mapped to the target device gamut. This method may change pixel values that were originally within the target device gamut, in order to avoid hue shifts and discontinuities and to preserve as much as possible the overall appearance of the scene.",
+                "href": "https://drafts.csswg.org/css-color-5/#valdef-color-profile-rendering-intent-perceptual",
+                "type": "value",
+                "value": "perceptual"
+              },
+              {
+                "name": "saturation",
+                "prose": "This option was created to preserve the relative saturation (chroma) of the original, and to keep solid colors pure. However, it experienced interoperability problems like the perceptual intent, and as solid color preservation is not amenable to a reference medium solution using v4 profiles does not solve the problem. Use of this rendering intent is not recommended unless the specific source and destination profiles to be used have been checked to ensure the combination produces the desired result. This option should preserve the relative saturation (chroma) values of the original pixels. Out of gamut colors should be converted to colors that have the same saturation but fall just inside the gamut.",
+                "href": "https://drafts.csswg.org/css-color-5/#valdef-color-profile-rendering-intent-saturation",
+                "type": "value",
+                "value": "saturation"
+              }
+            ]
+          },
+          {
+            "name": "components",
+            "href": "https://drafts.csswg.org/css-color-5/#descdef-color-profile-components",
+            "for": "@color-profile",
+            "value": "<ident>#",
+            "initial": "n/a"
+          }
+        ],
+        "value": "@color-profile [<dashed-ident> | device-cmyk] { <declaration-list> }",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<color>",
+        "prose": "Colors in CSS are represented by the <color> type:",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-color",
+        "type": "type",
+        "value": "<color-base> | currentColor | <system-color> | <contrast-color()> | <device-cmyk()> | <light-dark()>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<color-base>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-color-base",
+        "type": "type",
+        "value": "<hex-color> | <color-function> | <named-color> | <color-mix()> | transparent",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "color-mix()",
+        "value": "color-mix( <color-interpolation-method>? , [ <color> && <percentage [0,100]>? ]#)",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-color-mix",
+        "type": "function",
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "<modern-rgb-syntax>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-rgb-syntax",
+        "type": "type",
+        "value": "rgb( [ from <color> ]? [ <number> | <percentage> | none]{3} [ / [<alpha-value> | none] ]? )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<modern-rgba-syntax>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-rgba-syntax",
+        "type": "type",
+        "value": "rgba( [ from <color> ]? [ <number> | <percentage> | none]{3} [ / [<alpha-value> | none] ]? )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<modern-hsl-syntax>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-hsl-syntax",
+        "type": "type",
+        "value": "hsl([from <color>]? [<hue> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<modern-hsla-syntax>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-hsla-syntax",
+        "type": "type",
+        "value": "hsla([from <color>]? [<hue> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "hwb()",
+        "value": "hwb([from <color>]? [<hue> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-hwb",
+        "type": "function",
+        "values": [
+          {
+            "name": "h",
+            "prose": "h is a <number> that corresponds to the origin color’s HWB hue, in degrees, after conversion, if required to sRGB, normalized to a [0, 360] range. 90 is equivalent to 90deg.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-hwb-h",
+            "type": "value",
+            "value": "h"
+          },
+          {
+            "name": "w",
+            "prose": "w and b are <number>s that correspond to the origin color’s HWB whiteness and blackness after conversion, if required to sRGB. 100 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-hwb-w",
+            "type": "value",
+            "value": "w"
+          },
+          {
+            "name": "b",
+            "prose": "w and b are <number>s that correspond to the origin color’s HWB whiteness and blackness after conversion, if required to sRGB. 100 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-hwb-b",
+            "type": "value",
+            "value": "b"
+          },
+          {
+            "name": "alpha",
+            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-hwb-alpha",
+            "type": "value",
+            "value": "alpha"
+          }
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "lab()",
+        "value": "lab([from <color>]? [<percentage> | <number> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-lab",
+        "type": "function",
+        "values": [
+          {
+            "name": "l",
+            "prose": "l is a <number> that corresponds to the origin color’s CIE Lightness after conversion, if required, to CIE Lab. 100 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-lab-l",
+            "type": "value",
+            "value": "l"
+          },
+          {
+            "name": "a",
+            "prose": "a and b are <number>s that correspond to the origin color’s CIE Lab a and b axes after conversion, if required, to CIE Lab. 125 is equivalent to 100%, while -125 is equivalent to -100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-lab-a",
+            "type": "value",
+            "value": "a"
+          },
+          {
+            "name": "b",
+            "prose": "a and b are <number>s that correspond to the origin color’s CIE Lab a and b axes after conversion, if required, to CIE Lab. 125 is equivalent to 100%, while -125 is equivalent to -100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-lab-b",
+            "type": "value",
+            "value": "b"
+          },
+          {
+            "name": "alpha",
+            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-lab-alpha",
+            "type": "value",
+            "value": "alpha"
+          }
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "oklab()",
+        "value": "oklab([from <color>]? [<percentage> | <number> | none] [<percentage> | <number> | none] [<percentage> | <number> | none] [ / [<alpha-value> | none] ]? )",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-oklab",
+        "type": "function",
+        "values": [
+          {
+            "name": "l",
+            "prose": "l is a <number> that corresponds to the origin color’s Oklab Lightness after conversion, if required, to Oklab. 1.0 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklab-l",
+            "type": "value",
+            "value": "l"
+          },
+          {
+            "name": "a",
+            "prose": "a and b are <number>s that correspond to the origin color’s Oklab a and b axes after conversion, if required, to Oklab. 0.4 is equivalent to 100%, while -0.4 is equivalent to -100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklab-a",
+            "type": "value",
+            "value": "a"
+          },
+          {
+            "name": "b",
+            "prose": "a and b are <number>s that correspond to the origin color’s Oklab a and b axes after conversion, if required, to Oklab. 0.4 is equivalent to 100%, while -0.4 is equivalent to -100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklab-b",
+            "type": "value",
+            "value": "b"
+          },
+          {
+            "name": "alpha",
+            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklab-alpha",
+            "type": "value",
+            "value": "alpha"
+          }
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "lch()",
+        "value": "lch([from <color>]? [<percentage> | <number> | none] [<percentage> | <number> | none] [<hue> | none] [ / [<alpha-value> | none] ]? )",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-lch",
+        "type": "function",
+        "values": [
+          {
+            "name": "l",
+            "prose": "l is a <number> that corresponds to the origin color’s CIE Lightness after conversion, if required, to CIE LCH. 100 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-lch-l",
+            "type": "value",
+            "value": "l"
+          },
+          {
+            "name": "c",
+            "prose": "c is a <number> that corresponds to the origin color’s LCH chroma after conversion, if required, to CIE LCH. 150 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-lch-c",
+            "type": "value",
+            "value": "c"
+          },
+          {
+            "name": "h",
+            "prose": "h is a <number> that corresponds to the origin color’s LCH hue, in degrees, after conversion, if required, to CIE LCH, normalized to a [0, 360] range. 90 is equivalent to 90deg.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-lch-h",
+            "type": "value",
+            "value": "h"
+          },
+          {
+            "name": "alpha",
+            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-lch-alpha",
+            "type": "value",
+            "value": "alpha"
+          }
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "oklch()",
+        "value": "oklch([from <color>]? [<percentage> | <number> | none] [<percentage> | <number> | none] [<hue> | none] [ / [<alpha-value> | none] ]? )",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-oklch",
+        "type": "function",
+        "values": [
+          {
+            "name": "l",
+            "prose": "l is a <number> that corresponds to the origin color’s Oklab Lightness after conversion, if required, to OkLCh. 1.0 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklch-l",
+            "type": "value",
+            "value": "l"
+          },
+          {
+            "name": "c",
+            "prose": "c is a <number> that corresponds to the origin color’s OkLCh chroma after conversion, if required, to OkLCh. 0.4 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklch-c",
+            "type": "value",
+            "value": "c"
+          },
+          {
+            "name": "h",
+            "prose": "h is a <number> that corresponds to the origin color’s OkLCh hue, in degrees, after conversion, if required, to OkLCh, normalized to a [0, 360] range. 90 is equivalent to 90deg.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklch-h",
+            "type": "value",
+            "value": "h"
+          },
+          {
+            "name": "alpha",
+            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-oklch-alpha",
+            "type": "value",
+            "value": "alpha"
+          }
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "alpha()",
+        "value": "alpha([from <color>] [ / [<alpha-value> | none] ]? )",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-alpha",
+        "type": "function",
+        "values": [
+          {
+            "name": "alpha",
+            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-alpha-alpha",
+            "type": "value",
+            "value": "alpha"
+          }
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "color()",
+        "value": "color( [from <color>]? <colorspace-params> [ / [ <alpha-value> | none ] ]? )",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-color",
+        "type": "function",
+        "values": [
+          {
+            "name": "r",
+            "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to the predefined RGB color space. The value 1.0 corresponds to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-r",
+            "type": "value",
+            "value": "r"
+          },
+          {
+            "name": "g",
+            "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to the predefined RGB color space. The value 1.0 corresponds to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-g",
+            "type": "value",
+            "value": "g"
+          },
+          {
+            "name": "b",
+            "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to the predefined RGB color space. The value 1.0 corresponds to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-b",
+            "type": "value",
+            "value": "b"
+          },
+          {
+            "name": "x",
+            "prose": "x, y, z are all <number>s that correspond to the origin color’s X, Y and Z components after conversion, if required to relative CIE XYZ color space adapted to the relevant white point. The value 1.0 corresponds to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-x",
+            "type": "value",
+            "value": "x"
+          },
+          {
+            "name": "y",
+            "prose": "x, y, z are all <number>s that correspond to the origin color’s X, Y and Z components after conversion, if required to relative CIE XYZ color space adapted to the relevant white point. The value 1.0 corresponds to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-y",
+            "type": "value",
+            "value": "y"
+          },
+          {
+            "name": "z",
+            "prose": "x, y, z are all <number>s that correspond to the origin color’s X, Y and Z components after conversion, if required to relative CIE XYZ color space adapted to the relevant white point. The value 1.0 corresponds to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-z",
+            "type": "value",
+            "value": "z"
+          },
+          {
+            "name": "alpha",
+            "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-color-alpha",
+            "type": "value",
+            "value": "alpha"
+          }
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "<colorspace-params>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-colorspace-params",
+        "type": "type",
+        "value": "[<custom-params> | <predefined-rgb-params> | <xyz-params>]",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<custom-params>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-custom-params",
+        "type": "type",
+        "value": "<dashed-ident> [ <number> | <percentage> | none ]+",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<predefined-rgb-params>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-predefined-rgb-params",
+        "type": "type",
+        "value": "<predefined-rgb> [ <number> | <percentage> | none ]{3}",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<xyz-params>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-xyz-params",
+        "type": "type",
+        "value": "<xyz-space> [ <number> | <percentage> | none ]{3}",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "device-cmyk()",
+        "value": "<legacy-device-cmyk-syntax> | <modern-device-cmyk-syntax>",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-device-cmyk",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<legacy-device-cmyk-syntax>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-legacy-device-cmyk-syntax",
+        "type": "type",
+        "value": "device-cmyk( <number>#{4} )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<modern-device-cmyk-syntax>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-modern-device-cmyk-syntax",
+        "type": "type",
+        "value": "device-cmyk( <cmyk-component>{4} [ / [ <alpha-value> | none ] ]? )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<cmyk-component>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-cmyk-component",
+        "type": "type",
+        "value": "<number> | <percentage> | none",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "light-dark()",
+        "value": "light-dark( <color>, <color> )",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-light-dark",
+        "type": "function",
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "contrast-color()",
+        "value": "contrast-color( <color> )",
+        "href": "https://drafts.csswg.org/css-color-5/#funcdef-contrast-color",
+        "type": "function",
+        "compatibility": {
+          "supported": true,
+          "browsers": 2,
+          "flagged": false,
+          "support": {
+            "chrome": false,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "<color-space>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-color-space",
+        "type": "type",
+        "value": "<rectangular-color-space> | <polar-color-space> | <custom-color-space>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<rectangular-color-space>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-rectangular-color-space",
+        "type": "type",
+        "value": "srgb | srgb-linear | display-p3 | display-p3-linear | a98-rgb | prophoto-rgb | rec2020 | lab | oklab | <xyz-space>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<polar-color-space>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-polar-color-space",
+        "type": "type",
+        "value": "hsl | hwb | lch | oklch",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<custom-color-space>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-custom-color-space",
+        "type": "type",
+        "value": "<dashed-ident>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<hue-interpolation-method>",
+        "href": "https://drafts.csswg.org/css-color-5/#typedef-hue-interpolation-method",
+        "type": "type",
+        "value": "[ shorter | longer | increasing | decreasing ] hue",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<color-interpolation-method>",
+        "href": "https://drafts.csswg.org/css-color-5/#color-interpolation-method",
+        "type": "type",
+        "value": "in [ <rectangular-color-space> | <polar-color-space> <hue-interpolation-method>? | <custom-color-space> ]",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "msg": "Dangling value",
+        "name": "r",
+        "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to sRGB. 255.0 is equivalent to 100%.",
+        "href": "https://drafts.csswg.org/css-color-5/#valdef-rgb-r",
+        "type": "value",
+        "value": "r",
+        "for": "rgb()"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "g",
+        "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to sRGB. 255.0 is equivalent to 100%.",
+        "href": "https://drafts.csswg.org/css-color-5/#valdef-rgb-g",
+        "type": "value",
+        "value": "g",
+        "for": "rgb()"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "b",
+        "prose": "r, g, and b are all <number>s that correspond to the origin color’s red, green, and blue components after conversion, if required to sRGB. 255.0 is equivalent to 100%.",
+        "href": "https://drafts.csswg.org/css-color-5/#valdef-rgb-b",
+        "type": "value",
+        "value": "b",
+        "for": "rgb()"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "alpha",
+        "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency. 1.0 is equivalent to 100%.",
+        "href": "https://drafts.csswg.org/css-color-5/#valdef-rgb-alpha",
+        "type": "value",
+        "value": "alpha",
+        "for": "rgb()"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "h",
+        "prose": "h is a <number> that corresponds to the origin color’s HSL hue, in degrees, after conversion, if required to sRGB, normalized to a [0, 360] range. 90 is equivalent to 90deg.",
+        "href": "https://drafts.csswg.org/css-color-5/#valdef-hsl-h",
+        "type": "value",
+        "value": "h",
+        "for": "hsl()"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "s",
+        "prose": "s and l are <number>s that correspond to the origin color’s HSL saturation and lightness, after conversion, if required to sRGB. 100 is equivalent to 100%.",
+        "href": "https://drafts.csswg.org/css-color-5/#valdef-hsl-s",
+        "type": "value",
+        "value": "s",
+        "for": "hsl()"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "l",
+        "prose": "s and l are <number>s that correspond to the origin color’s HSL saturation and lightness, after conversion, if required to sRGB. 100 is equivalent to 100%.",
+        "href": "https://drafts.csswg.org/css-color-5/#valdef-hsl-l",
+        "type": "value",
+        "value": "l",
+        "for": "hsl()"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "alpha",
+        "prose": "alpha is a <number> that corresponds to the origin color’s alpha transparency 1.0 is equivalent to 100%.",
+        "href": "https://drafts.csswg.org/css-color-5/#valdef-hsl-alpha",
+        "type": "value",
+        "value": "alpha",
+        "for": "hsl()"
       }
     ]
   },
@@ -7516,431 +7574,6 @@
       }
     ]
   },
-  "css-fonts-5": {
-    "spec": {
-      "title": "CSS Fonts Module Level 5",
-      "url": "https://drafts.csswg.org/css-fonts-5/"
-    },
-    "properties": [
-      {
-        "name": "font-size-adjust",
-        "href": "https://drafts.csswg.org/css-fonts-5/#propdef-font-size-adjust",
-        "value": "none | [ ex-height | cap-height | ch-width | ic-width | ic-height ]? [ from-font | <number [0,∞]> ]",
-        "initial": "none",
-        "appliesTo": "all elements and text",
-        "inherited": "yes",
-        "percentages": "N/A",
-        "computedValue": "the keyword none, or a pair of a metric keyword and a <number>",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete if the keywords differ, otherwise by computed value type",
-        "values": [
-          {
-            "name": "none",
-            "prose": "No special font-size adjustment is applied.",
-            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "ex-height | cap-height | ch-width | ic-width | ic-height",
-            "prose": "Specifies the font metric to normalize, defaulting to ex-height: w3c/csswg-drafts/6384[css-fonts-5] font-size-adjust with missing metrics",
-            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ex-height--cap-height--ch-width--ic-width--ic-height",
-            "type": "value",
-            "value": "ex-height | cap-height | ch-width | ic-width | ic-height"
-          },
-          {
-            "name": "ex-height",
-            "prose": "Normalize the aspect value of the fonts, using the x-height divided by the font size.",
-            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ex-height",
-            "type": "value",
-            "value": "ex-height"
-          },
-          {
-            "name": "cap-height",
-            "prose": "Normalize the cap-height of the fonts, using the cap-height by the font size.",
-            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-cap-height",
-            "type": "value",
-            "value": "cap-height"
-          },
-          {
-            "name": "ch-width",
-            "prose": "Normalize the horizontal narrow pitch of the fonts, using the advance width of “0” (ZERO, U+0030) divided by the font size.",
-            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ch-width",
-            "type": "value",
-            "value": "ch-width"
-          },
-          {
-            "name": "ic-width",
-            "prose": "Normalize the horizontal wide pitch of the font, using the advance width of “水” (CJK water ideograph, U+6C34) divided by the font size.",
-            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ic-width",
-            "type": "value",
-            "value": "ic-width"
-          },
-          {
-            "name": "ic-height",
-            "prose": "Normalize the vertical wide pitch of the font, using the advance height of “水” (CJK water ideograph, U+6C34) divided by the font size.",
-            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ic-height",
-            "type": "value",
-            "value": "ic-height"
-          },
-          {
-            "name": "<number [0,∞]>",
-            "prose": "Each font’s used size is normalized to match the chosen font metric to this specified proportion of the computed font-size. In other words, for each glyph, the adjusted font size to use u is calculated as: u = ( m / m′ ) s where: s = computed 'font-size!!property' value m = metric as specified by the 'font-size-adjust' property m′ = metric as specified in the actual font u = adjusted font-size to use Negative values are invalid.",
-            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-number-0",
-            "type": "value",
-            "value": "<number [0,∞]>"
-          },
-          {
-            "name": "from-font",
-            "prose": "Computes to the <number> corresponding to the specified metric of the first available font, if it exists. Otherwise, the same as none.",
-            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-from-font",
-            "type": "value",
-            "value": "from-font"
-          }
-        ],
-        "styleDeclaration": [
-          "font-size-adjust",
-          "fontSizeAdjust"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [
-      {
-        "name": "@font-face",
-        "href": "https://drafts.csswg.org/css-fonts-5/#at-font-face-rule",
-        "descriptors": [
-          {
-            "name": "font-size",
-            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-font-size",
-            "for": "@font-face",
-            "value": "auto | [<number>]{1,2}",
-            "initial": "auto",
-            "values": [
-              {
-                "name": "auto",
-                "prose": "The font matches any font size",
-                "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-face-font-size-auto",
-                "type": "value",
-                "value": "auto"
-              },
-              {
-                "name": "<number>",
-                "prose": "If a single <number> is given the font matches that specific font size, only. If two <number>s are given, they specify a range of font sizes which will match.",
-                "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-face-font-size-number",
-                "type": "value",
-                "value": "<number>"
-              }
-            ]
-          },
-          {
-            "name": "size-adjust",
-            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-size-adjust",
-            "for": "@font-face",
-            "value": "<percentage [0,∞]>",
-            "initial": "100%"
-          },
-          {
-            "name": "ascent-override",
-            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-ascent-override",
-            "for": "@font-face",
-            "value": "[ normal | <percentage [0,∞]> ]{1,2}",
-            "initial": "normal"
-          },
-          {
-            "name": "descent-override",
-            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-descent-override",
-            "for": "@font-face",
-            "value": "[ normal | <percentage [0,∞]> ]{1,2}",
-            "initial": "normal"
-          },
-          {
-            "name": "line-gap-override",
-            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-line-gap-override",
-            "for": "@font-face",
-            "value": "[ normal | <percentage [0,∞]> ]{1,2}",
-            "initial": "normal"
-          },
-          {
-            "name": "superscript-position-override",
-            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-superscript-position-override",
-            "for": "@font-face",
-            "value": "[ normal | from-font | <percentage> ]{1,2}",
-            "initial": "normal"
-          },
-          {
-            "name": "subscript-position-override",
-            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-subscript-position-override",
-            "for": "@font-face",
-            "value": "[ normal | from-font | <percentage> ]{1,2}",
-            "initial": "normal"
-          },
-          {
-            "name": "superscript-size-override",
-            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-superscript-size-override",
-            "for": "@font-face",
-            "value": "[ normal | from-font | <percentage [0,∞]> ]{1,2}",
-            "initial": "normal"
-          },
-          {
-            "name": "subscript-size-override",
-            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-subscript-size-override",
-            "for": "@font-face",
-            "value": "[ normal | from-font | <percentage [0,∞]> ]{1,2}",
-            "initial": "normal"
-          }
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<font-format>",
-        "href": "https://drafts.csswg.org/css-fonts-5/#font-format-values",
-        "type": "type",
-        "value": "[<string> | collection | embedded-opentype | opentype | svg | truetype | woff | woff2 ]",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<font-tech>",
-        "href": "https://drafts.csswg.org/css-fonts-5/#font-tech-values",
-        "type": "type",
-        "value": "[<font-features-tech> | <color-font-tech> | variations | palettes | incremental ]",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<font-features-tech>",
-        "href": "https://drafts.csswg.org/css-fonts-5/#font-features-tech-values",
-        "type": "type",
-        "value": "[features-opentype | features-aat | features-graphite]",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<color-font-tech>",
-        "href": "https://drafts.csswg.org/css-fonts-5/#color-font-tech-values",
-        "type": "type",
-        "value": "[color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "warnings": [
-      {
-        "msg": "Dangling value",
-        "name": "xxx",
-        "prose": "Placeholder text for the xxx generic font family.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-family-xxx",
-        "type": "value",
-        "value": "xxx",
-        "for": "font-family"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "xxx",
-        "prose": "Placeholder text for the xxx generic font family.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-family-xxx",
-        "type": "value",
-        "value": "xxx",
-        "for": "<generic-family>"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The corresponding metric value is obtained from the font as usual, as if this descriptor were absent from the @font-face block.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "ascent-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The corresponding metric value is obtained from the font as usual, as if this descriptor were absent from the @font-face block.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "descent-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The corresponding metric value is obtained from the font as usual, as if this descriptor were absent from the @font-face block.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "line-gap-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "<percentage>",
-        "prose": "The corresponding metric is replaced by the given percentage multiplied by the effective font size after adjustment.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-percentage",
-        "type": "value",
-        "value": "<percentage>",
-        "for": "ascent-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "<percentage>",
-        "prose": "The corresponding metric is replaced by the given percentage multiplied by the effective font size after adjustment.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-percentage",
-        "type": "value",
-        "value": "<percentage>",
-        "for": "descent-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "<percentage>",
-        "prose": "The corresponding metric is replaced by the given percentage multiplied by the effective font size after adjustment.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-percentage",
-        "type": "value",
-        "value": "<percentage>",
-        "for": "line-gap-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The UA determines what metrics value to use, whether derived from the font or from some heuristic.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "superscript-position-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The UA determines what metrics value to use, whether derived from the font or from some heuristic.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "subscript-position-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The UA determines what metrics value to use, whether derived from the font or from some heuristic.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "superscript-size-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The UA determines what metrics value to use, whether derived from the font or from some heuristic.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "subscript-size-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "from-font",
-        "prose": "The corresponding metric in the font data is used, if any. (If the metric is missing, same as normal.)",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-from-font",
-        "type": "value",
-        "value": "from-font",
-        "for": "superscript-position-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "from-font",
-        "prose": "The corresponding metric in the font data is used, if any. (If the metric is missing, same as normal.)",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-from-font",
-        "type": "value",
-        "value": "from-font",
-        "for": "subscript-position-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "from-font",
-        "prose": "The corresponding metric in the font data is used, if any. (If the metric is missing, same as normal.)",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-from-font",
-        "type": "value",
-        "value": "from-font",
-        "for": "superscript-size-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "from-font",
-        "prose": "The corresponding metric in the font data is used, if any. (If the metric is missing, same as normal.)",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-from-font",
-        "type": "value",
-        "value": "from-font",
-        "for": "subscript-size-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "<percentage>",
-        "prose": "The corresponding metric is replaced by the given percentage multiplied by the used font size.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-percentage",
-        "type": "value",
-        "value": "<percentage>",
-        "for": "superscript-position-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "<percentage>",
-        "prose": "The corresponding metric is replaced by the given percentage multiplied by the used font size.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-percentage",
-        "type": "value",
-        "value": "<percentage>",
-        "for": "subscript-position-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "<percentage>",
-        "prose": "The corresponding metric is replaced by the given percentage multiplied by the used font size.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-percentage",
-        "type": "value",
-        "value": "<percentage>",
-        "for": "superscript-size-override!!descriptor"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "<percentage>",
-        "prose": "The corresponding metric is replaced by the given percentage multiplied by the used font size.",
-        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-percentage",
-        "type": "value",
-        "value": "<percentage>",
-        "for": "subscript-size-override!!descriptor"
-      }
-    ]
-  },
   "css-grid-3": {
     "spec": {
       "title": "CSS Grid Layout Module Level 3",
@@ -7982,8 +7615,8 @@
         "href": "https://drafts.csswg.org/css-grid-3/#propdef-display"
       },
       {
-        "name": "item-tolerance",
-        "href": "https://drafts.csswg.org/css-grid-3/#propdef-item-tolerance",
+        "name": "flow-tolerance",
+        "href": "https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance",
         "value": "normal | <length-percentage> | infinite",
         "initial": "normal",
         "appliesTo": "grid lanes containers",
@@ -7992,9 +7625,32 @@
         "computedValue": "a computed <length-percentage> value",
         "canonicalOrder": "per grammar",
         "animationType": "as length",
+        "values": [
+          {
+            "name": "<length-percentage>",
+            "prose": "Specifies the tie threshold for the grid lanes container. Placement positions are considered to be equally good (“tied”) if they are within the specified distance from the shortest position.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-length-percentage",
+            "type": "value",
+            "value": "<length-percentage>"
+          },
+          {
+            "name": "normal",
+            "prose": "Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-normal",
+            "type": "value",
+            "value": "normal"
+          },
+          {
+            "name": "infinite",
+            "prose": "Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-infinite",
+            "type": "value",
+            "value": "infinite"
+          }
+        ],
         "styleDeclaration": [
-          "item-tolerance",
-          "itemTolerance"
+          "flow-tolerance",
+          "flowTolerance"
         ],
         "compatibility": {
           "supported": false,
@@ -8295,7 +7951,7 @@
       {
         "name": "item-flow",
         "href": "https://drafts.csswg.org/css-grid-3/#propdef-item-flow",
-        "value": "<'item-direction'> || <'item-wrap'> || <'item-pack'> || <'item-tolerance'>",
+        "value": "<'item-direction'> || <'item-wrap'> || <'item-pack'> || <'flow-tolerance'>",
         "initial": "see individual properties",
         "appliesTo": "see individual properties",
         "inherited": "see individual properties",
@@ -8338,33 +7994,440 @@
         "type": "value",
         "value": "normal",
         "for": "grid-auto-flow"
+      }
+    ]
+  },
+  "css-fonts-5": {
+    "spec": {
+      "title": "CSS Fonts Module Level 5",
+      "url": "https://drafts.csswg.org/css-fonts-5/"
+    },
+    "properties": [
+      {
+        "name": "font-size-adjust",
+        "href": "https://drafts.csswg.org/css-fonts-5/#propdef-font-size-adjust",
+        "value": "none | [ ex-height | cap-height | ch-width | ic-width | ic-height ]? [ from-font | <number [0,∞]> ]",
+        "initial": "none",
+        "appliesTo": "all elements and text",
+        "inherited": "yes",
+        "percentages": "N/A",
+        "computedValue": "the keyword none, or a pair of a metric keyword and a <number>",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete if the keywords differ, otherwise by computed value type",
+        "values": [
+          {
+            "name": "none",
+            "prose": "No special font-size adjustment is applied.",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "ex-height | cap-height | ch-width | ic-width | ic-height",
+            "prose": "Specifies the font metric to normalize, defaulting to ex-height: w3c/csswg-drafts/6384[css-fonts-5] font-size-adjust with missing metrics",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ex-height--cap-height--ch-width--ic-width--ic-height",
+            "type": "value",
+            "value": "ex-height | cap-height | ch-width | ic-width | ic-height"
+          },
+          {
+            "name": "ex-height",
+            "prose": "Normalize the aspect value of the fonts, using the x-height divided by the font size.",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ex-height",
+            "type": "value",
+            "value": "ex-height"
+          },
+          {
+            "name": "cap-height",
+            "prose": "Normalize the cap-height of the fonts, using the cap-height by the font size.",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-cap-height",
+            "type": "value",
+            "value": "cap-height"
+          },
+          {
+            "name": "ch-width",
+            "prose": "Normalize the horizontal narrow pitch of the fonts, using the advance width of “0” (ZERO, U+0030) divided by the font size.",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ch-width",
+            "type": "value",
+            "value": "ch-width"
+          },
+          {
+            "name": "ic-width",
+            "prose": "Normalize the horizontal wide pitch of the font, using the advance width of “水” (CJK water ideograph, U+6C34) divided by the font size.",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ic-width",
+            "type": "value",
+            "value": "ic-width"
+          },
+          {
+            "name": "ic-height",
+            "prose": "Normalize the vertical wide pitch of the font, using the advance height of “水” (CJK water ideograph, U+6C34) divided by the font size.",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-ic-height",
+            "type": "value",
+            "value": "ic-height"
+          },
+          {
+            "name": "<number [0,∞]>",
+            "prose": "Each font’s used size is normalized to match the chosen font metric to this specified proportion of the computed font-size. In other words, for each glyph, the adjusted font size to use u is calculated as: u = ( m / m′ ) s where: s = computed 'font-size!!property' value m = metric as specified by the 'font-size-adjust' property m′ = metric as specified in the actual font u = adjusted font-size to use Negative values are invalid.",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-number-0",
+            "type": "value",
+            "value": "<number [0,∞]>"
+          },
+          {
+            "name": "from-font",
+            "prose": "Computes to the <number> corresponding to the specified metric of the first available font, if it exists. Otherwise, the same as none.",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-size-adjust-from-font",
+            "type": "value",
+            "value": "from-font"
+          }
+        ],
+        "styleDeclaration": [
+          "font-size-adjust",
+          "fontSizeAdjust"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "atrules": [
+      {
+        "name": "@font-face",
+        "href": "https://drafts.csswg.org/css-fonts-5/#at-font-face-rule",
+        "descriptors": [
+          {
+            "name": "font-size",
+            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-font-size",
+            "for": "@font-face",
+            "value": "auto | [<number>]{1,2}",
+            "initial": "auto",
+            "values": [
+              {
+                "name": "auto",
+                "prose": "The font matches any font size",
+                "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-face-font-size-auto",
+                "type": "value",
+                "value": "auto"
+              },
+              {
+                "name": "<number>",
+                "prose": "If a single <number> is given the font matches that specific font size, only. If two <number>s are given, they specify a range of font sizes which will match.",
+                "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-face-font-size-number",
+                "type": "value",
+                "value": "<number>"
+              }
+            ]
+          },
+          {
+            "name": "size-adjust",
+            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-size-adjust",
+            "for": "@font-face",
+            "value": "<percentage [0,∞]>",
+            "initial": "100%"
+          },
+          {
+            "name": "ascent-override",
+            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-ascent-override",
+            "for": "@font-face",
+            "value": "[ normal | <percentage [0,∞]> ]{1,2}",
+            "initial": "normal"
+          },
+          {
+            "name": "descent-override",
+            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-descent-override",
+            "for": "@font-face",
+            "value": "[ normal | <percentage [0,∞]> ]{1,2}",
+            "initial": "normal"
+          },
+          {
+            "name": "line-gap-override",
+            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-line-gap-override",
+            "for": "@font-face",
+            "value": "[ normal | <percentage [0,∞]> ]{1,2}",
+            "initial": "normal"
+          },
+          {
+            "name": "superscript-position-override",
+            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-superscript-position-override",
+            "for": "@font-face",
+            "value": "[ normal | from-font | <percentage> ]{1,2}",
+            "initial": "normal"
+          },
+          {
+            "name": "subscript-position-override",
+            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-subscript-position-override",
+            "for": "@font-face",
+            "value": "[ normal | from-font | <percentage> ]{1,2}",
+            "initial": "normal"
+          },
+          {
+            "name": "superscript-size-override",
+            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-superscript-size-override",
+            "for": "@font-face",
+            "value": "[ normal | from-font | <percentage [0,∞]> ]{1,2}",
+            "initial": "normal"
+          },
+          {
+            "name": "subscript-size-override",
+            "href": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-subscript-size-override",
+            "for": "@font-face",
+            "value": "[ normal | from-font | <percentage [0,∞]> ]{1,2}",
+            "initial": "normal"
+          }
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<font-format>",
+        "href": "https://drafts.csswg.org/css-fonts-5/#font-format-values",
+        "type": "type",
+        "value": "[<string> | collection | embedded-opentype | opentype | svg | truetype | woff | woff2 ]",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<font-tech>",
+        "href": "https://drafts.csswg.org/css-fonts-5/#font-tech-values",
+        "type": "type",
+        "value": "[<font-features-tech> | <color-font-tech> | variations | palettes | incremental ]",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<font-features-tech>",
+        "href": "https://drafts.csswg.org/css-fonts-5/#font-features-tech-values",
+        "type": "type",
+        "value": "[features-opentype | features-aat | features-graphite]",
+        "values": [
+          {
+            "name": "avar2",
+            "prose": "The avar2 tech refers to support for version 2 of OpenType axis variations [avar2], for flexible variation axis remapping.",
+            "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-features-tech-avar2",
+            "type": "value",
+            "value": "avar2"
+          }
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<color-font-tech>",
+        "href": "https://drafts.csswg.org/css-fonts-5/#color-font-tech-values",
+        "type": "type",
+        "value": "[color-COLRv0 | color-COLRv1 | color-SVG | color-sbix | color-CBDT ]",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "msg": "Dangling value",
+        "name": "xxx",
+        "prose": "Placeholder text for the xxx generic font family.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-family-xxx",
+        "type": "value",
+        "value": "xxx",
+        "for": "font-family"
       },
       {
         "msg": "Dangling value",
-        "name": "<length-percentage>",
-        "prose": "Specifies the tie threshold for the grid lanes container. Placement positions are considered to be equally good (“tied”) if they are within the specified distance from the shortest position.",
-        "href": "https://drafts.csswg.org/css-grid-3/#valdef-item-slack-length-percentage",
+        "name": "xxx",
+        "prose": "Placeholder text for the xxx generic font family.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-font-family-xxx",
         "type": "value",
-        "value": "<length-percentage>",
-        "for": "item-slack"
+        "value": "xxx",
+        "for": "<generic-family>"
       },
       {
         "msg": "Dangling value",
         "name": "normal",
-        "prose": "Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.",
-        "href": "https://drafts.csswg.org/css-grid-3/#valdef-item-slack-normal",
+        "prose": "The corresponding metric value is obtained from the font as usual, as if this descriptor were absent from the @font-face block.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-normal",
         "type": "value",
         "value": "normal",
-        "for": "item-slack"
+        "for": "ascent-override!!descriptor"
       },
       {
         "msg": "Dangling value",
-        "name": "infinite",
-        "prose": "Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.",
-        "href": "https://drafts.csswg.org/css-grid-3/#valdef-item-slack-infinite",
+        "name": "normal",
+        "prose": "The corresponding metric value is obtained from the font as usual, as if this descriptor were absent from the @font-face block.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-normal",
         "type": "value",
-        "value": "infinite",
-        "for": "item-slack"
+        "value": "normal",
+        "for": "descent-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "normal",
+        "prose": "The corresponding metric value is obtained from the font as usual, as if this descriptor were absent from the @font-face block.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-normal",
+        "type": "value",
+        "value": "normal",
+        "for": "line-gap-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "<percentage>",
+        "prose": "The corresponding metric is replaced by the given percentage multiplied by the effective font size after adjustment.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-percentage",
+        "type": "value",
+        "value": "<percentage>",
+        "for": "ascent-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "<percentage>",
+        "prose": "The corresponding metric is replaced by the given percentage multiplied by the effective font size after adjustment.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-percentage",
+        "type": "value",
+        "value": "<percentage>",
+        "for": "descent-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "<percentage>",
+        "prose": "The corresponding metric is replaced by the given percentage multiplied by the effective font size after adjustment.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-ascent-overridedescriptor-percentage",
+        "type": "value",
+        "value": "<percentage>",
+        "for": "line-gap-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "normal",
+        "prose": "The UA determines what metrics value to use, whether derived from the font or from some heuristic.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-normal",
+        "type": "value",
+        "value": "normal",
+        "for": "superscript-position-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "normal",
+        "prose": "The UA determines what metrics value to use, whether derived from the font or from some heuristic.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-normal",
+        "type": "value",
+        "value": "normal",
+        "for": "subscript-position-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "normal",
+        "prose": "The UA determines what metrics value to use, whether derived from the font or from some heuristic.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-normal",
+        "type": "value",
+        "value": "normal",
+        "for": "superscript-size-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "normal",
+        "prose": "The UA determines what metrics value to use, whether derived from the font or from some heuristic.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-normal",
+        "type": "value",
+        "value": "normal",
+        "for": "subscript-size-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "from-font",
+        "prose": "The corresponding metric in the font data is used, if any. (If the metric is missing, same as normal.)",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-from-font",
+        "type": "value",
+        "value": "from-font",
+        "for": "superscript-position-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "from-font",
+        "prose": "The corresponding metric in the font data is used, if any. (If the metric is missing, same as normal.)",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-from-font",
+        "type": "value",
+        "value": "from-font",
+        "for": "subscript-position-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "from-font",
+        "prose": "The corresponding metric in the font data is used, if any. (If the metric is missing, same as normal.)",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-from-font",
+        "type": "value",
+        "value": "from-font",
+        "for": "superscript-size-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "from-font",
+        "prose": "The corresponding metric in the font data is used, if any. (If the metric is missing, same as normal.)",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-from-font",
+        "type": "value",
+        "value": "from-font",
+        "for": "subscript-size-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "<percentage>",
+        "prose": "The corresponding metric is replaced by the given percentage multiplied by the used font size.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-percentage",
+        "type": "value",
+        "value": "<percentage>",
+        "for": "superscript-position-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "<percentage>",
+        "prose": "The corresponding metric is replaced by the given percentage multiplied by the used font size.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-percentage",
+        "type": "value",
+        "value": "<percentage>",
+        "for": "subscript-position-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "<percentage>",
+        "prose": "The corresponding metric is replaced by the given percentage multiplied by the used font size.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-percentage",
+        "type": "value",
+        "value": "<percentage>",
+        "for": "superscript-size-override!!descriptor"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "<percentage>",
+        "prose": "The corresponding metric is replaced by the given percentage multiplied by the used font size.",
+        "href": "https://drafts.csswg.org/css-fonts-5/#valdef-superscript-position-overridedescriptor-percentage",
+        "type": "value",
+        "value": "<percentage>",
+        "for": "subscript-size-override!!descriptor"
       }
     ]
   },
@@ -8502,14 +8565,6 @@
         "href": "https://drafts.csswg.org/css-images-4/#funcdef-image-set",
         "type": "function",
         "value": "image-set( <image-set-option># )",
-        "values": [
-          {
-            "name": "type()",
-            "value": "type( <string> )",
-            "href": "https://drafts.csswg.org/css-images-4/#funcdef-image-set-type",
-            "type": "function"
-          }
-        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -9471,12 +9526,6 @@
             "href": "https://drafts.csswg.org/css-overflow-4/#overflow-ellipsis",
             "type": "value",
             "value": "ellipsis"
-          },
-          {
-            "name": "fade()",
-            "value": "fade( [ <length-percentage> ] )",
-            "href": "https://drafts.csswg.org/css-overflow-4/#funcdef-text-overflow-fade",
-            "type": "function"
           },
           {
             "name": "fade",
@@ -10962,7 +11011,7 @@
         "prose": "The value of the transform property is a list of <transform-function>. The set of allowed transform functions is given below. Wherever <angle> is used in this specification, a <number> that is equal to zero is also allowed, which is treated the same as an angle of zero degrees. A percentage for horizontal translations is relative to the width of the reference box. A percentage for vertical translations is relative to the height of the reference box. A percentage in a scale function is equivalent to a number, and serializes as a number in specified values. For example, scale3d(50%, 100%, 150%) serializes as scale3d(0.5, 1, 1.5).",
         "href": "https://drafts.csswg.org/css-transforms-2/#typedef-transform-function",
         "type": "type",
-        "value": "<scale()> | <scaleX()> | <scaleY()> | <scaleZ()> | <translate3d()> | <translate()> | <translateX()> | <translateY()> | <translateZ()> | <rotate3d()> <rotate()> | <rotateX()> | <rotateY()> | <rotateZ()> | <skew()> | <skewX()> | <skewY()> | <matrix3d()> | <matrix()> | <perspective()>",
+        "value": "<scale3d()> | <scale()> | <scaleX()> | <scaleY()> | <scaleZ()> | <translate3d()> | <translate()> | <translateX()> | <translateY()> | <translateZ()> | <rotate3d()> | <rotate()> | <rotateX()> | <rotateY()> | <rotateZ()> | <skew()> | <skewX()> | <skewY()> | <matrix3d()> | <matrix()> | <perspective()>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -11115,83 +11164,6 @@
             "value": "none"
           }
         ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
-  "css-transitions-2": {
-    "spec": {
-      "title": "CSS Transitions Module Level 2",
-      "url": "https://drafts.csswg.org/css-transitions-2/"
-    },
-    "properties": [
-      {
-        "name": "transition-behavior",
-        "href": "https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior",
-        "value": "<transition-behavior-value>#",
-        "initial": "normal",
-        "appliesTo": "All elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "transition-behavior",
-          "transitionBehavior"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [
-      {
-        "name": "@starting-style",
-        "prose": "The @starting-style rule is a grouping rule. The style rules inside it are used to establish styles to transition from, if the previous style change event did not establish a before-change style for the element whose styles are being computed.",
-        "href": "https://drafts.csswg.org/css-transitions-2/#at-ruledef-starting-style",
-        "descriptors": [],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<transition-behavior-value>",
-        "value": "normal | allow-discrete",
-        "href": "https://drafts.csswg.org/css-transitions-2/#typedef-transition-behavior-value",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<single-transition>",
-        "value": "[ none | <single-transition-property> ] || <time> || <easing-function> || <time> || <transition-behavior-value>",
-        "href": "https://drafts.csswg.org/css-transitions-2/#single-transition",
-        "type": "type",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -13906,6 +13878,83 @@
       }
     ]
   },
+  "css-transitions-2": {
+    "spec": {
+      "title": "CSS Transitions Module Level 2",
+      "url": "https://drafts.csswg.org/css-transitions-2/"
+    },
+    "properties": [
+      {
+        "name": "transition-behavior",
+        "href": "https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior",
+        "value": "<transition-behavior-value>#",
+        "initial": "normal",
+        "appliesTo": "All elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "transition-behavior",
+          "transitionBehavior"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "atrules": [
+      {
+        "name": "@starting-style",
+        "prose": "The @starting-style rule is a grouping rule. The style rules inside it are used to establish styles to transition from, if the previous style change event did not establish a before-change style for the element whose styles are being computed.",
+        "href": "https://drafts.csswg.org/css-transitions-2/#at-ruledef-starting-style",
+        "descriptors": [],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<transition-behavior-value>",
+        "value": "normal | allow-discrete",
+        "href": "https://drafts.csswg.org/css-transitions-2/#typedef-transition-behavior-value",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<single-transition>",
+        "value": "[ none | <single-transition-property> ] || <time> || <easing-function> || <time> || <transition-behavior-value>",
+        "href": "https://drafts.csswg.org/css-transitions-2/#single-transition",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
   "css-values-5": {
     "spec": {
       "title": "CSS Values and Units Module Level 5",
@@ -14719,14 +14768,6 @@
         "href": "https://drafts.csswg.org/css-values-5/#funcdef-attr",
         "type": "function",
         "value": "attr( <attr-name> <attr-type>? , <declaration-value>?)",
-        "values": [
-          {
-            "name": "type()",
-            "value": "type( <syntax> )",
-            "href": "https://drafts.csswg.org/css-values-5/#funcdef-attr-type",
-            "type": "function"
-          }
-        ],
         "compatibility": {
           "supported": true,
           "browsers": 3,
