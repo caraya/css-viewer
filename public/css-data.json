@@ -185,7 +185,7 @@
           "WebkitAlignSelf",
           "webkitAlignSelf"
         ],
-        "value": "auto | normal | stretch | <baseline-position> | <overflow-position>? <self-position>",
+        "value": "auto | <overflow-position>? [ normal | <self-position> ]| stretch | <baseline-position>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -1438,109 +1438,6 @@
       }
     ]
   },
-  "selectors-5": {
-    "spec": {
-      "title": "Selectors Level 5",
-      "url": "https://drafts.csswg.org/selectors-5/"
-    },
-    "properties": [],
-    "atrules": [],
-    "selectors": [
-      {
-        "name": ":local-link",
-        "prose": "The :local-link pseudo-class allows authors to style hyperlinks based on the users current location within a site and to differentiate site-internal versus site-external links.",
-        "href": "https://drafts.csswg.org/selectors-5/#local-link-pseudo",
-        "value": ":local-link"
-      },
-      {
-        "name": ":interest-source",
-        "prose": "The :interest-source pseudo-class applies to an interest source element that the user is currently \"showing interest\" in, and the :interest-target pseudo-class applies to the associated interest target of an element matching :interest-source.",
-        "href": "https://drafts.csswg.org/selectors-5/#selectordef-interest-source",
-        "value": ":interest-source"
-      },
-      {
-        "name": ":interest-target",
-        "prose": "The :interest-source pseudo-class applies to an interest source element that the user is currently \"showing interest\" in, and the :interest-target pseudo-class applies to the associated interest target of an element matching :interest-source.",
-        "href": "https://drafts.csswg.org/selectors-5/#selectordef-interest-target",
-        "value": ":interest-target"
-      },
-      {
-        "name": ":blank",
-        "prose": "The :blank pseudo-class applies to user-input elements whose input value is empty (consists of the empty string or otherwise null input).",
-        "href": "https://drafts.csswg.org/selectors-5/#blank-pseudo",
-        "value": ":blank"
-      },
-      {
-        "name": ":current",
-        "prose": "The :current pseudo-class represents the element, or an ancestor of the element, that is currently being displayed.",
-        "href": "https://drafts.csswg.org/selectors-5/#current-pseudo",
-        "value": ":current"
-      },
-      {
-        "name": ":current()",
-        "prose": "Its alternate form :current() takes a list of compound selectors as its argument: it represents the :current element that matches the argument or, if that does not match, the innermost ancestor of the :current element that does. (If neither the :current element nor its ancestors match the argument, then the selector does not represent anything.)",
-        "href": "https://drafts.csswg.org/selectors-5/#selectordef-current"
-      },
-      {
-        "name": ":past",
-        "prose": "The :past pseudo-class represents any element that is defined to occur entirely prior to a :current element. For example, the WebVTT spec defines the :past pseudo-class relative to the current playback position of a media element. If a time-based order of elements is not defined by the document language, then this represents any element that is a (possibly indirect) previous sibling of a :current element.",
-        "href": "https://drafts.csswg.org/selectors-5/#past-pseudo",
-        "value": ":past"
-      },
-      {
-        "name": ":future",
-        "prose": "The :future pseudo-class represents any element that is defined to occur entirely after a :current element. For example, the WebVTT spec defines the :future pseudo-class relative to the current playback position of a media element. If a time-based order of elements is not defined by the document language, then this represents any element that is a (possibly indirect) next sibling of a :current element.",
-        "href": "https://drafts.csswg.org/selectors-5/#future-pseudo",
-        "value": ":future"
-      },
-      {
-        "name": ":state()",
-        "value": ":state( <ident> )",
-        "href": "https://drafts.csswg.org/selectors-5/#state-pseudo"
-      },
-      {
-        "name": ":heading",
-        "prose": "The (non-functional) :heading pseudo-class matches an element which has a heading level, with respect to the semantics defined by the document language (e.g. [HTML5]).",
-        "href": "https://drafts.csswg.org/selectors-5/#heading-pseudo",
-        "value": ":heading"
-      },
-      {
-        "name": ":heading()",
-        "prose": "As a functional pseudo-class, :heading() notation represents elements that have a heading level among matching any of the provided integer values. The syntax is:",
-        "href": "https://drafts.csswg.org/selectors-5/#heading-functional-pseudo",
-        "value": ":heading( <level># )"
-      },
-      {
-        "name": "||",
-        "prose": "The column combinator, which consists of two pipes (||) represents the relationship of a column element to a cell element belonging to the column it represents. Column membership is determined based on the semantics of the document language only: whether and how the elements are presented is not considered. If a cell element belongs to more than one column, it is represented by a selector indicating membership in any of those columns.",
-        "href": "https://drafts.csswg.org/selectors-5/#selectordef-column",
-        "value": "'|' '|'"
-      },
-      {
-        "name": ":nth-col()",
-        "value": ":nth-col(An+B)",
-        "href": "https://drafts.csswg.org/selectors-5/#nth-col-pseudo"
-      },
-      {
-        "name": ":nth-last-col()",
-        "value": ":nth-last-col(An+B)",
-        "href": "https://drafts.csswg.org/selectors-5/#nth-last-col-pseudo"
-      }
-    ],
-    "values": [
-      {
-        "name": "<level>",
-        "prose": "where <level> is a <number-token> with its type flag set to \"integer\".",
-        "href": "https://drafts.csswg.org/selectors-5/#typedef-level",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
   "css-shapes-2": {
     "spec": {
       "title": "CSS Shapes Module Level 2",
@@ -1678,6 +1575,119 @@
     "selectors": [],
     "values": []
   },
+  "selectors-5": {
+    "spec": {
+      "title": "Selectors Level 5",
+      "url": "https://drafts.csswg.org/selectors-5/"
+    },
+    "properties": [],
+    "atrules": [],
+    "selectors": [
+      {
+        "name": ":local-link",
+        "prose": "The :local-link pseudo-class allows authors to style hyperlinks based on the users current location within a site and to differentiate site-internal versus site-external links.",
+        "href": "https://drafts.csswg.org/selectors-5/#local-link-pseudo",
+        "value": ":local-link"
+      },
+      {
+        "name": ":interest-source",
+        "prose": "The :interest-source pseudo-class applies to an interest source element that the user is currently \"showing interest\" in, and the :interest-target pseudo-class applies to the associated interest target of an element matching :interest-source.",
+        "href": "https://drafts.csswg.org/selectors-5/#selectordef-interest-source",
+        "value": ":interest-source"
+      },
+      {
+        "name": ":interest-target",
+        "prose": "The :interest-source pseudo-class applies to an interest source element that the user is currently \"showing interest\" in, and the :interest-target pseudo-class applies to the associated interest target of an element matching :interest-source.",
+        "href": "https://drafts.csswg.org/selectors-5/#selectordef-interest-target",
+        "value": ":interest-target"
+      },
+      {
+        "name": ":blank",
+        "prose": "The :blank pseudo-class applies to user-input elements whose input value is empty (consists of the empty string or otherwise null input).",
+        "href": "https://drafts.csswg.org/selectors-5/#blank-pseudo",
+        "value": ":blank"
+      },
+      {
+        "name": ":current",
+        "prose": "The :current pseudo-class represents the element, or an ancestor of the element, that is currently being displayed.",
+        "href": "https://drafts.csswg.org/selectors-5/#current-pseudo",
+        "value": ":current"
+      },
+      {
+        "name": ":current()",
+        "prose": "Its alternate form :current() takes a list of compound selectors as its argument: it represents the :current element that matches the argument or, if that does not match, the innermost ancestor of the :current element that does. (If neither the :current element nor its ancestors match the argument, then the selector does not represent anything.)",
+        "href": "https://drafts.csswg.org/selectors-5/#selectordef-current"
+      },
+      {
+        "name": ":past",
+        "prose": "The :past pseudo-class represents any element that is defined to occur entirely prior to a :current element. For example, the WebVTT spec defines the :past pseudo-class relative to the current playback position of a media element. If a time-based order of elements is not defined by the document language, then this represents any element that is a (possibly indirect) previous sibling of a :current element.",
+        "href": "https://drafts.csswg.org/selectors-5/#past-pseudo",
+        "value": ":past"
+      },
+      {
+        "name": ":future",
+        "prose": "The :future pseudo-class represents any element that is defined to occur entirely after a :current element. For example, the WebVTT spec defines the :future pseudo-class relative to the current playback position of a media element. If a time-based order of elements is not defined by the document language, then this represents any element that is a (possibly indirect) next sibling of a :current element.",
+        "href": "https://drafts.csswg.org/selectors-5/#future-pseudo",
+        "value": ":future"
+      },
+      {
+        "name": ":state()",
+        "value": ":state( <ident> )",
+        "href": "https://drafts.csswg.org/selectors-5/#state-pseudo"
+      },
+      {
+        "name": ":heading",
+        "prose": "The (non-functional) :heading pseudo-class matches an element which has a heading level, with respect to the semantics defined by the document language (e.g. [HTML5]).",
+        "href": "https://drafts.csswg.org/selectors-5/#heading-pseudo",
+        "value": ":heading"
+      },
+      {
+        "name": ":heading()",
+        "prose": "As a functional pseudo-class, :heading() notation represents elements that have a heading level among matching any of the provided integer values. The syntax is:",
+        "href": "https://drafts.csswg.org/selectors-5/#heading-functional-pseudo",
+        "value": ":heading( <level># )"
+      },
+      {
+        "name": "||",
+        "prose": "The column combinator, which consists of two pipes (||) represents the relationship of a column element to a cell element belonging to the column it represents. Column membership is determined based on the semantics of the document language only: whether and how the elements are presented is not considered. If a cell element belongs to more than one column, it is represented by a selector indicating membership in any of those columns.",
+        "href": "https://drafts.csswg.org/selectors-5/#selectordef-column",
+        "value": "'|' '|'"
+      },
+      {
+        "name": ":nth-col()",
+        "value": ":nth-col(An+B)",
+        "href": "https://drafts.csswg.org/selectors-5/#nth-col-pseudo"
+      },
+      {
+        "name": ":nth-last-col()",
+        "value": ":nth-last-col(An+B)",
+        "href": "https://drafts.csswg.org/selectors-5/#nth-last-col-pseudo"
+      }
+    ],
+    "values": [
+      {
+        "name": "<level>",
+        "prose": "where <level> is a <number-token> with its type flag set to \"integer\".",
+        "href": "https://drafts.csswg.org/selectors-5/#typedef-level",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
+  "fullscreen": {
+    "spec": {
+      "title": "Fullscreen API Standard",
+      "url": "https://fullscreen.spec.whatwg.org/"
+    },
+    "properties": [],
+    "atrules": [],
+    "selectors": [],
+    "values": []
+  },
   "html": {
     "spec": {
       "title": "HTML Standard",
@@ -1721,16 +1731,6 @@
         }
       }
     ]
-  },
-  "fullscreen": {
-    "spec": {
-      "title": "Fullscreen API Standard",
-      "url": "https://fullscreen.spec.whatwg.org/"
-    },
-    "properties": [],
-    "atrules": [],
-    "selectors": [],
-    "values": []
   },
   "css-anchor-position-2": {
     "spec": {
@@ -2826,6 +2826,59 @@
       }
     ]
   },
+  "css-cascade-6": {
+    "spec": {
+      "title": "CSS Cascading and Inheritance Module Level 6",
+      "url": "https://drafts.csswg.org/css-cascade-6/"
+    },
+    "properties": [],
+    "atrules": [
+      {
+        "name": "@scope",
+        "prose": "Scoped styles are described in CSS using the @scope block at-rule, which declares a scoping root and optional scoping limits associated with a set of style rules.",
+        "href": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-scope",
+        "descriptors": [],
+        "value": "@scope [(<scope-start>)]? [to (<scope-end>)]? { <block-contents> }",
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<scope-start>",
+        "prose": "<scope-start> is a <selector-list> selector used to identify the scoping root(s).",
+        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-start",
+        "type": "type",
+        "value": "<selector-list>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<scope-end>",
+        "prose": "<scope-end> is a <selector-list> selector used to identify any scoping limits.",
+        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-end",
+        "type": "type",
+        "value": "<selector-list>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
   "css-backgrounds-4": {
     "spec": {
       "title": "CSS Backgrounds Module Level 4",
@@ -3708,6 +3761,907 @@
       }
     ]
   },
+  "css-conditional-4": {
+    "spec": {
+      "title": "CSS Conditional Rules Module Level 4",
+      "url": "https://drafts.csswg.org/css-conditional-4/"
+    },
+    "properties": [],
+    "atrules": [],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<supports-feature>",
+        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-feature",
+        "type": "type",
+        "value": "<supports-selector-fn> | <supports-decl>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<supports-selector-fn>",
+        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-selector-fn",
+        "type": "type",
+        "value": "selector( <complex-selector> )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
+  "css-conditional-5": {
+    "spec": {
+      "title": "CSS Conditional Rules Module Level 5",
+      "url": "https://drafts.csswg.org/css-conditional-5/"
+    },
+    "properties": [
+      {
+        "name": "container-type",
+        "href": "https://drafts.csswg.org/css-conditional-5/#propdef-container-type",
+        "value": "normal | [ [ size | inline-size ] || scroll-state ]",
+        "initial": "normal",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
+          {
+            "name": "size",
+            "prose": "Establishes a query container for container size queries on both the inline and block axis. Applies style containment and size containment to the principal box, and establishes an independent formatting context.",
+            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-type-size",
+            "type": "value",
+            "value": "size"
+          },
+          {
+            "name": "inline-size",
+            "prose": "Establishes a query container for container size queries on the container’s own inline axis. Applies style containment and inline-size containment to the principal box, and establishes an independent formatting context.",
+            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-type-inline-size",
+            "type": "value",
+            "value": "inline-size"
+          },
+          {
+            "name": "scroll-state",
+            "prose": "Establishes a query container for container scroll-state queries",
+            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-type-scroll-state",
+            "type": "value",
+            "value": "scroll-state"
+          },
+          {
+            "name": "normal",
+            "prose": "The element is not a query container for any container size queries or container scroll-state queries, but remains a query container for container style queries.",
+            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-type-normal",
+            "type": "value",
+            "value": "normal"
+          }
+        ],
+        "styleDeclaration": [
+          "container-type",
+          "containerType"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "container-name",
+        "href": "https://drafts.csswg.org/css-conditional-5/#propdef-container-name",
+        "value": "none | <custom-ident>+",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "the keyword none, or an ordered list of identifiers",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The query container has no query container name.",
+            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-name-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<custom-ident>",
+            "prose": "Specifies a query container name as an identifier. The keywords none, and, not, and or are excluded from this <custom-ident>.",
+            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-name-custom-ident",
+            "type": "value",
+            "value": "<custom-ident>"
+          }
+        ],
+        "styleDeclaration": [
+          "container-name",
+          "containerName"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "container",
+        "href": "https://drafts.csswg.org/css-conditional-5/#propdef-container",
+        "value": "<'container-name'> [ / <'container-type'> ]?",
+        "initial": "see individual properties",
+        "appliesTo": "see individual properties",
+        "inherited": "see individual properties",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "styleDeclaration": [
+          "container"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "atrules": [
+      {
+        "name": "@when",
+        "prose": "The @when at-rule is a conditional group rule that generalizes the individual conditional group rules such as @media and @supports. It is defined as:",
+        "href": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-when",
+        "descriptors": [],
+        "value": "@when <boolean-condition> { <rule-list> }",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "@else",
+        "prose": "The @else rule is a conditional group rule used to form conditional rule chains, which associate multiple conditional group rules and guarantee that only the first one that matches will evaluate its condition as true. It is defined as:",
+        "href": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-else",
+        "descriptors": [],
+        "value": "@else <boolean-condition>? { <rule-list> }",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "@container",
+        "prose": "The @container rule is a conditional group rule whose condition contains a container query, which is a boolean combination of container size queries and/or container style queries. Style declarations within the <block-contents> block of an @container rule are filtered by its condition to only match when the container query is true for their element’s query container.",
+        "href": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-container",
+        "descriptors": [
+          {
+            "name": "width",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-width",
+            "for": "@container",
+            "value": "<length>",
+            "type": "range"
+          },
+          {
+            "name": "height",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-height",
+            "for": "@container",
+            "value": "<length>",
+            "type": "range"
+          },
+          {
+            "name": "inline-size",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-inline-size",
+            "for": "@container",
+            "value": "<length>",
+            "type": "range"
+          },
+          {
+            "name": "block-size",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-block-size",
+            "for": "@container",
+            "value": "<length>",
+            "type": "range"
+          },
+          {
+            "name": "aspect-ratio",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-aspect-ratio",
+            "for": "@container",
+            "value": "<ratio>",
+            "type": "range"
+          },
+          {
+            "name": "orientation",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-orientation",
+            "for": "@container",
+            "value": "portrait | landscape",
+            "type": "discrete",
+            "values": [
+              {
+                "name": "portrait",
+                "prose": "The orientation container feature is portrait when the value of the height container feature is greater than or equal to the value of the width container feature.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-orientation-portrait",
+                "type": "value",
+                "value": "portrait"
+              },
+              {
+                "name": "landscape",
+                "prose": "Otherwise orientation is landscape.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-orientation-landscape",
+                "type": "value",
+                "value": "landscape"
+              }
+            ]
+          },
+          {
+            "name": "stuck",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-stuck",
+            "for": "@container",
+            "value": "none | top | right | bottom | left | block-start | inline-start | block-end | inline-end",
+            "type": "discrete",
+            "values": [
+              {
+                "name": "none",
+                "prose": "The sticky container is not shifted in any direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-none",
+                "type": "value",
+                "value": "none"
+              },
+              {
+                "name": "top",
+                "prose": "The sticky container is shifted to stay inside the top edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-top",
+                "type": "value",
+                "value": "top"
+              },
+              {
+                "name": "right",
+                "prose": "The sticky container is shifted to stay inside the right edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-right",
+                "type": "value",
+                "value": "right"
+              },
+              {
+                "name": "bottom",
+                "prose": "The sticky container is shifted to stay inside the bottom edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-bottom",
+                "type": "value",
+                "value": "bottom"
+              },
+              {
+                "name": "left",
+                "prose": "The sticky container is shifted to stay inside the left edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-left",
+                "type": "value",
+                "value": "left"
+              },
+              {
+                "name": "block-start",
+                "prose": "The sticky container is shifted to stay inside the block-start edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-block-start",
+                "type": "value",
+                "value": "block-start"
+              },
+              {
+                "name": "inline-start",
+                "prose": "The sticky container is shifted to stay inside the inline-start edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-inline-start",
+                "type": "value",
+                "value": "inline-start"
+              },
+              {
+                "name": "block-end",
+                "prose": "The sticky container is shifted to stay inside the block-end edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-block-end",
+                "type": "value",
+                "value": "block-end"
+              },
+              {
+                "name": "inline-end",
+                "prose": "The sticky container is shifted to stay inside the inline-end edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-inline-end",
+                "type": "value",
+                "value": "inline-end"
+              }
+            ]
+          },
+          {
+            "name": "snapped",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-snapped",
+            "for": "@container",
+            "value": "none | x | y | block | inline | both",
+            "type": "discrete",
+            "values": [
+              {
+                "name": "none",
+                "prose": "The query container is not a snap target.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-none",
+                "type": "value",
+                "value": "none"
+              },
+              {
+                "name": "x",
+                "prose": "snapped container feature matches x if the query container is a horizontal snap target for its scroll container.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-x",
+                "type": "value",
+                "value": "x"
+              },
+              {
+                "name": "y",
+                "prose": "snapped container feature matches y if the query container is a vertical snap target for its scroll container.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-y",
+                "type": "value",
+                "value": "y"
+              },
+              {
+                "name": "block",
+                "prose": "snapped container feature matches block if the query container is a snap target for its scroll container. in the block direction of the scroll snap container.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-block",
+                "type": "value",
+                "value": "block"
+              },
+              {
+                "name": "inline",
+                "prose": "snapped container feature matches inline if the query container is a snap target for its scroll container in the inline direction of the scroll snap container.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-inline",
+                "type": "value",
+                "value": "inline"
+              },
+              {
+                "name": "both",
+                "prose": "snapped container feature matches both if the query container is a snap target for its scroll container in both directions of the scroll snap container.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-both",
+                "type": "value",
+                "value": "both"
+              }
+            ]
+          },
+          {
+            "name": "scrollable",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-scrollable",
+            "for": "@container",
+            "value": "none | top | right | bottom | left | block-start | inline-start | block-end | inline-end | x | y | block | inline",
+            "type": "discrete",
+            "values": [
+              {
+                "name": "none",
+                "prose": "The scroll container does not have scrollable overflow in any direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-none",
+                "type": "value",
+                "value": "none"
+              },
+              {
+                "name": "top",
+                "prose": "The scroll container has scrollable overflow past the top edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-top",
+                "type": "value",
+                "value": "top"
+              },
+              {
+                "name": "right",
+                "prose": "The scroll container has scrollable overflow past the right edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-right",
+                "type": "value",
+                "value": "right"
+              },
+              {
+                "name": "bottom",
+                "prose": "The scroll container has scrollable overflow past the bottom edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-bottom",
+                "type": "value",
+                "value": "bottom"
+              },
+              {
+                "name": "left",
+                "prose": "The scroll container has scrollable overflow past the left edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-left",
+                "type": "value",
+                "value": "left"
+              },
+              {
+                "name": "block-start",
+                "prose": "The scroll container has scrollable overflow past the block-start edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-block-start",
+                "type": "value",
+                "value": "block-start"
+              },
+              {
+                "name": "inline-start",
+                "prose": "The scroll container has scrollable overflow past the inline-start edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-inline-start",
+                "type": "value",
+                "value": "inline-start"
+              },
+              {
+                "name": "block-end",
+                "prose": "The scroll container has scrollable overflow past the block-end edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-block-end",
+                "type": "value",
+                "value": "block-end"
+              },
+              {
+                "name": "inline-end",
+                "prose": "The scroll container has scrollable overflow past the inline-end edge.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-inline-end",
+                "type": "value",
+                "value": "inline-end"
+              },
+              {
+                "name": "x",
+                "prose": "The scroll container has horizontally scrollable overflow.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-x",
+                "type": "value",
+                "value": "x"
+              },
+              {
+                "name": "y",
+                "prose": "The scroll container has vertically scrollable overflow.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-y",
+                "type": "value",
+                "value": "y"
+              },
+              {
+                "name": "block",
+                "prose": "The scroll container has scrollable overflow in its block direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-block",
+                "type": "value",
+                "value": "block"
+              },
+              {
+                "name": "inline",
+                "prose": "The scroll container has scrollable overflow in its inline direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-inline",
+                "type": "value",
+                "value": "inline"
+              }
+            ]
+          },
+          {
+            "name": "scrolled",
+            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-scrolled",
+            "for": "@container",
+            "value": "none | top | right | bottom | left | block-start | inline-start | block-end | inline-end | x | y | block | inline",
+            "type": "discrete",
+            "values": [
+              {
+                "name": "none",
+                "prose": "The query container has not had a relative scroll yet.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-none",
+                "type": "value",
+                "value": "none"
+              },
+              {
+                "name": "top",
+                "prose": "The most recent relative scroll was upwards.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-top",
+                "type": "value",
+                "value": "top"
+              },
+              {
+                "name": "right",
+                "prose": "The most recent relative scroll was to the right.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-right",
+                "type": "value",
+                "value": "right"
+              },
+              {
+                "name": "bottom",
+                "prose": "The most recent relative scroll was downwards.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-bottom",
+                "type": "value",
+                "value": "bottom"
+              },
+              {
+                "name": "left",
+                "prose": "The most recent relative scroll was to the left.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-left",
+                "type": "value",
+                "value": "left"
+              },
+              {
+                "name": "block-start",
+                "prose": "The most recent relative scroll was towards the block-start direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-block-start",
+                "type": "value",
+                "value": "block-start"
+              },
+              {
+                "name": "inline-start",
+                "prose": "The most recent relative scroll was towards the inline-start direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-inline-start",
+                "type": "value",
+                "value": "inline-start"
+              },
+              {
+                "name": "block-end",
+                "prose": "The most recent relative scroll was towards the block-end direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-block-end",
+                "type": "value",
+                "value": "block-end"
+              },
+              {
+                "name": "inline-end",
+                "prose": "The most recent relative scroll was towards the inline-end direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-inline-end",
+                "type": "value",
+                "value": "inline-end"
+              },
+              {
+                "name": "x",
+                "prose": "The most recent relative scroll was in the horizontal direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-x",
+                "type": "value",
+                "value": "x"
+              },
+              {
+                "name": "y",
+                "prose": "The most recent relative scroll was in the vertical direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-y",
+                "type": "value",
+                "value": "y"
+              },
+              {
+                "name": "block",
+                "prose": "The most recent relative scroll was in the block direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-block",
+                "type": "value",
+                "value": "block"
+              },
+              {
+                "name": "inline",
+                "prose": "The most recent relative scroll was in the inline direction.",
+                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-inline",
+                "type": "value",
+                "value": "inline"
+              }
+            ]
+          }
+        ],
+        "value": "@container <container-condition># { <block-contents> }",
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "@supports-condition",
+        "prose": "The @supports-condition at-rule is a conditional group rule that allows authors to define and name a supports query for later reuse, creating a named supports condition. This enables complex or frequently-used feature queries to be referenced by name, improving maintainability and readability.",
+        "href": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-supports-condition",
+        "descriptors": [],
+        "value": "@supports-condition <supports-condition-name> { <block-contents> }",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<supports-feature>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-feature",
+        "type": "type",
+        "value": "<supports-selector-fn> | <supports-font-tech-fn> | <supports-font-format-fn> | <supports-at-rule-fn> | <supports-named-feature-fn> | <supports-decl>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<supports-decl>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-decl",
+        "type": "type",
+        "value": "( [ <declaration> | <supports-condition-name> ] )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<supports-font-tech-fn>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-font-tech-fn",
+        "type": "type",
+        "value": "font-tech( <font-tech> )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<supports-font-format-fn>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-font-format-fn",
+        "type": "type",
+        "value": "font-format( <font-format> )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<supports-at-rule-fn>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-at-rule-fn",
+        "type": "type",
+        "value": "at-rule( <at-keyword-token> )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<supports-named-feature-fn>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-named-feature-fn",
+        "type": "type",
+        "value": "named-feature( <ident> )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<boolean-condition>",
+        "prose": "Where <boolean-condition> is a boolean algebra a la Media Queries 4 § 3 Syntax, but with media() and supports() functions as leaves.",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-boolean-condition",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "media()",
+        "value": "media( [ <mf-plain> | <mf-boolean> | <mf-range> ] )",
+        "href": "https://drafts.csswg.org/css-conditional-5/#funcdef-media",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "supports()",
+        "value": "supports( <declaration> )",
+        "href": "https://drafts.csswg.org/css-conditional-5/#funcdef-supports",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<container-condition>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-container-condition",
+        "type": "type",
+        "value": "[ <container-name>? <container-query>? ]!",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<container-name>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-container-name",
+        "type": "type",
+        "value": "<custom-ident>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<container-query>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-container-query",
+        "type": "type",
+        "value": "not <query-in-parens> | <query-in-parens> [ [ and <query-in-parens> ]* | [ or <query-in-parens> ]* ]",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<query-in-parens>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-query-in-parens",
+        "type": "type",
+        "value": "( <container-query> ) | ( <size-feature> ) | style( <style-query> ) | scroll-state( <scroll-state-query> ) | <general-enclosed>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<style-query>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-query",
+        "type": "type",
+        "value": "not <style-in-parens> | <style-in-parens> [ [ and <style-in-parens> ]* | [ or <style-in-parens> ]* ] | <style-feature>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<style-in-parens>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-in-parens",
+        "type": "type",
+        "value": "( <style-query> ) | ( <style-feature> ) | <general-enclosed>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<style-feature>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature",
+        "type": "type",
+        "value": "<style-feature-plain> | <style-feature-boolean> | <style-range>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<style-feature-plain>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature-plain",
+        "type": "type",
+        "value": "<style-feature-name> : <style-feature-value>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<style-feature-boolean>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature-boolean",
+        "type": "type",
+        "value": "<style-feature-name>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<style-range>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-range",
+        "type": "type",
+        "value": "<style-range-value> <mf-comparison> <style-range-value> | <style-range-value> <mf-lt> <style-range-value> <mf-lt> <style-range-value> | <style-range-value> <mf-gt> <style-range-value> <mf-gt> <style-range-value>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<style-range-value>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-range-value",
+        "type": "type",
+        "value": "<custom-property-name> | <style-feature-value>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<scroll-state-query>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-scroll-state-query",
+        "type": "type",
+        "value": "not <scroll-state-in-parens> | <scroll-state-in-parens> [ [ and <scroll-state-in-parens> ]* | [ or <scroll-state-in-parens> ]* ] | <scroll-state-feature>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<scroll-state-in-parens>",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-scroll-state-in-parens",
+        "type": "type",
+        "value": "( <scroll-state-query> ) | ( <scroll-state-feature> ) | <general-enclosed>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<size-feature>",
+        "prose": "A container size query allows querying the size of the query container’s principal box. It is a boolean combination of individual size features (<size-feature>) that each query a single, specific dimensional feature of the query container. The syntax of a <size-feature> is the same as for a media feature: a feature name, a comparator, and a value. [mediaqueries-5] The boolean syntax and logic combining size features into a size query is the same as for CSS feature queries. (See @supports. [css-conditional-3])",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-size-feature",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<style-feature-name>",
+        "prose": "A container style query allows querying the computed values of the query container. It is a boolean combination of individual style features (<style-feature>) that each query a single, specific property of the query container. The syntax of a <style-feature> is either the same as for a valid declaration[CSS-SYNTAX-3], a <style-feature-name> or a valid style range (<style-range>). The <style-feature-name> can be either a supported CSS property or a valid <custom-property-name>. The <style-feature-value> production matches any valid <declaration-value> as long as it doesn’t contain <mf-lt>, <mf-gt> and <mf-eq> tokens.",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature-name",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<style-feature-value>",
+        "prose": "A container style query allows querying the computed values of the query container. It is a boolean combination of individual style features (<style-feature>) that each query a single, specific property of the query container. The syntax of a <style-feature> is either the same as for a valid declaration[CSS-SYNTAX-3], a <style-feature-name> or a valid style range (<style-range>). The <style-feature-name> can be either a supported CSS property or a valid <custom-property-name>. The <style-feature-value> production matches any valid <declaration-value> as long as it doesn’t contain <mf-lt>, <mf-gt> and <mf-eq> tokens.",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature-value",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<scroll-state-feature>",
+        "prose": "A container scroll-state query allows querying a container for state that depends on scroll position. It is a boolean combination of individual scroll-state features (<scroll-state-feature>) that each query a single feature of the query container. The syntax of a <scroll-state-feature> is the same as for a media feature: a feature name, a comparator, and a value.",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-scroll-state-feature",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<supports-condition-name>",
+        "prose": "Where <supports-condition-name> is an <extension-name> that defines the name of the supports query.",
+        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-condition-name",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
   "css-color-5": {
     "spec": {
       "title": "CSS Color Module Level 5",
@@ -4441,59 +5395,6 @@
         "type": "value",
         "value": "alpha",
         "for": "hsl()"
-      }
-    ]
-  },
-  "css-cascade-6": {
-    "spec": {
-      "title": "CSS Cascading and Inheritance Module Level 6",
-      "url": "https://drafts.csswg.org/css-cascade-6/"
-    },
-    "properties": [],
-    "atrules": [
-      {
-        "name": "@scope",
-        "prose": "Scoped styles are described in CSS using the @scope block at-rule, which declares a scoping root and optional scoping limits associated with a set of style rules.",
-        "href": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-scope",
-        "descriptors": [],
-        "value": "@scope [(<scope-start>)]? [to (<scope-end>)]? { <block-contents> }",
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<scope-start>",
-        "prose": "<scope-start> is a <selector-list> selector used to identify the scoping root(s).",
-        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-start",
-        "type": "type",
-        "value": "<selector-list>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<scope-end>",
-        "prose": "<scope-end> is a <selector-list> selector used to identify any scoping limits.",
-        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-end",
-        "type": "type",
-        "value": "<selector-list>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
       }
     ]
   },
@@ -6494,907 +7395,6 @@
       }
     ],
     "note": "Current work is being done in css-color-4, but the recommendation is css-color-3."
-  },
-  "css-conditional-5": {
-    "spec": {
-      "title": "CSS Conditional Rules Module Level 5",
-      "url": "https://drafts.csswg.org/css-conditional-5/"
-    },
-    "properties": [
-      {
-        "name": "container-type",
-        "href": "https://drafts.csswg.org/css-conditional-5/#propdef-container-type",
-        "value": "normal | [ [ size | inline-size ] || scroll-state ]",
-        "initial": "normal",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "specified keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "size",
-            "prose": "Establishes a query container for container size queries on both the inline and block axis. Applies style containment and size containment to the principal box, and establishes an independent formatting context.",
-            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-type-size",
-            "type": "value",
-            "value": "size"
-          },
-          {
-            "name": "inline-size",
-            "prose": "Establishes a query container for container size queries on the container’s own inline axis. Applies style containment and inline-size containment to the principal box, and establishes an independent formatting context.",
-            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-type-inline-size",
-            "type": "value",
-            "value": "inline-size"
-          },
-          {
-            "name": "scroll-state",
-            "prose": "Establishes a query container for container scroll-state queries",
-            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-type-scroll-state",
-            "type": "value",
-            "value": "scroll-state"
-          },
-          {
-            "name": "normal",
-            "prose": "The element is not a query container for any container size queries or container scroll-state queries, but remains a query container for container style queries.",
-            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-type-normal",
-            "type": "value",
-            "value": "normal"
-          }
-        ],
-        "styleDeclaration": [
-          "container-type",
-          "containerType"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "container-name",
-        "href": "https://drafts.csswg.org/css-conditional-5/#propdef-container-name",
-        "value": "none | <custom-ident>+",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "the keyword none, or an ordered list of identifiers",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The query container has no query container name.",
-            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-name-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<custom-ident>",
-            "prose": "Specifies a query container name as an identifier. The keywords none, and, not, and or are excluded from this <custom-ident>.",
-            "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-name-custom-ident",
-            "type": "value",
-            "value": "<custom-ident>"
-          }
-        ],
-        "styleDeclaration": [
-          "container-name",
-          "containerName"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "container",
-        "href": "https://drafts.csswg.org/css-conditional-5/#propdef-container",
-        "value": "<'container-name'> [ / <'container-type'> ]?",
-        "initial": "see individual properties",
-        "appliesTo": "see individual properties",
-        "inherited": "see individual properties",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "styleDeclaration": [
-          "container"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [
-      {
-        "name": "@when",
-        "prose": "The @when at-rule is a conditional group rule that generalizes the individual conditional group rules such as @media and @supports. It is defined as:",
-        "href": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-when",
-        "descriptors": [],
-        "value": "@when <boolean-condition> { <rule-list> }",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "@else",
-        "prose": "The @else rule is a conditional group rule used to form conditional rule chains, which associate multiple conditional group rules and guarantee that only the first one that matches will evaluate its condition as true. It is defined as:",
-        "href": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-else",
-        "descriptors": [],
-        "value": "@else <boolean-condition>? { <rule-list> }",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "@container",
-        "prose": "The @container rule is a conditional group rule whose condition contains a container query, which is a boolean combination of container size queries and/or container style queries. Style declarations within the <block-contents> block of an @container rule are filtered by its condition to only match when the container query is true for their element’s query container.",
-        "href": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-container",
-        "descriptors": [
-          {
-            "name": "width",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-width",
-            "for": "@container",
-            "value": "<length>",
-            "type": "range"
-          },
-          {
-            "name": "height",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-height",
-            "for": "@container",
-            "value": "<length>",
-            "type": "range"
-          },
-          {
-            "name": "inline-size",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-inline-size",
-            "for": "@container",
-            "value": "<length>",
-            "type": "range"
-          },
-          {
-            "name": "block-size",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-block-size",
-            "for": "@container",
-            "value": "<length>",
-            "type": "range"
-          },
-          {
-            "name": "aspect-ratio",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-aspect-ratio",
-            "for": "@container",
-            "value": "<ratio>",
-            "type": "range"
-          },
-          {
-            "name": "orientation",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-orientation",
-            "for": "@container",
-            "value": "portrait | landscape",
-            "type": "discrete",
-            "values": [
-              {
-                "name": "portrait",
-                "prose": "The orientation container feature is portrait when the value of the height container feature is greater than or equal to the value of the width container feature.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-orientation-portrait",
-                "type": "value",
-                "value": "portrait"
-              },
-              {
-                "name": "landscape",
-                "prose": "Otherwise orientation is landscape.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-orientation-landscape",
-                "type": "value",
-                "value": "landscape"
-              }
-            ]
-          },
-          {
-            "name": "stuck",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-stuck",
-            "for": "@container",
-            "value": "none | top | right | bottom | left | block-start | inline-start | block-end | inline-end",
-            "type": "discrete",
-            "values": [
-              {
-                "name": "none",
-                "prose": "The sticky container is not shifted in any direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-none",
-                "type": "value",
-                "value": "none"
-              },
-              {
-                "name": "top",
-                "prose": "The sticky container is shifted to stay inside the top edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-top",
-                "type": "value",
-                "value": "top"
-              },
-              {
-                "name": "right",
-                "prose": "The sticky container is shifted to stay inside the right edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-right",
-                "type": "value",
-                "value": "right"
-              },
-              {
-                "name": "bottom",
-                "prose": "The sticky container is shifted to stay inside the bottom edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-bottom",
-                "type": "value",
-                "value": "bottom"
-              },
-              {
-                "name": "left",
-                "prose": "The sticky container is shifted to stay inside the left edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-left",
-                "type": "value",
-                "value": "left"
-              },
-              {
-                "name": "block-start",
-                "prose": "The sticky container is shifted to stay inside the block-start edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-block-start",
-                "type": "value",
-                "value": "block-start"
-              },
-              {
-                "name": "inline-start",
-                "prose": "The sticky container is shifted to stay inside the inline-start edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-inline-start",
-                "type": "value",
-                "value": "inline-start"
-              },
-              {
-                "name": "block-end",
-                "prose": "The sticky container is shifted to stay inside the block-end edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-block-end",
-                "type": "value",
-                "value": "block-end"
-              },
-              {
-                "name": "inline-end",
-                "prose": "The sticky container is shifted to stay inside the inline-end edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-stuck-inline-end",
-                "type": "value",
-                "value": "inline-end"
-              }
-            ]
-          },
-          {
-            "name": "snapped",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-snapped",
-            "for": "@container",
-            "value": "none | x | y | block | inline | both",
-            "type": "discrete",
-            "values": [
-              {
-                "name": "none",
-                "prose": "The query container is not a snap target.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-none",
-                "type": "value",
-                "value": "none"
-              },
-              {
-                "name": "x",
-                "prose": "snapped container feature matches x if the query container is a horizontal snap target for its scroll container.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-x",
-                "type": "value",
-                "value": "x"
-              },
-              {
-                "name": "y",
-                "prose": "snapped container feature matches y if the query container is a vertical snap target for its scroll container.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-y",
-                "type": "value",
-                "value": "y"
-              },
-              {
-                "name": "block",
-                "prose": "snapped container feature matches block if the query container is a snap target for its scroll container. in the block direction of the scroll snap container.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-block",
-                "type": "value",
-                "value": "block"
-              },
-              {
-                "name": "inline",
-                "prose": "snapped container feature matches inline if the query container is a snap target for its scroll container in the inline direction of the scroll snap container.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-inline",
-                "type": "value",
-                "value": "inline"
-              },
-              {
-                "name": "both",
-                "prose": "snapped container feature matches both if the query container is a snap target for its scroll container in both directions of the scroll snap container.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-snapped-both",
-                "type": "value",
-                "value": "both"
-              }
-            ]
-          },
-          {
-            "name": "scrollable",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-scrollable",
-            "for": "@container",
-            "value": "none | top | right | bottom | left | block-start | inline-start | block-end | inline-end | x | y | block | inline",
-            "type": "discrete",
-            "values": [
-              {
-                "name": "none",
-                "prose": "The scroll container does not have scrollable overflow in any direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-none",
-                "type": "value",
-                "value": "none"
-              },
-              {
-                "name": "top",
-                "prose": "The scroll container has scrollable overflow past the top edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-top",
-                "type": "value",
-                "value": "top"
-              },
-              {
-                "name": "right",
-                "prose": "The scroll container has scrollable overflow past the right edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-right",
-                "type": "value",
-                "value": "right"
-              },
-              {
-                "name": "bottom",
-                "prose": "The scroll container has scrollable overflow past the bottom edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-bottom",
-                "type": "value",
-                "value": "bottom"
-              },
-              {
-                "name": "left",
-                "prose": "The scroll container has scrollable overflow past the left edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-left",
-                "type": "value",
-                "value": "left"
-              },
-              {
-                "name": "block-start",
-                "prose": "The scroll container has scrollable overflow past the block-start edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-block-start",
-                "type": "value",
-                "value": "block-start"
-              },
-              {
-                "name": "inline-start",
-                "prose": "The scroll container has scrollable overflow past the inline-start edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-inline-start",
-                "type": "value",
-                "value": "inline-start"
-              },
-              {
-                "name": "block-end",
-                "prose": "The scroll container has scrollable overflow past the block-end edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-block-end",
-                "type": "value",
-                "value": "block-end"
-              },
-              {
-                "name": "inline-end",
-                "prose": "The scroll container has scrollable overflow past the inline-end edge.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-inline-end",
-                "type": "value",
-                "value": "inline-end"
-              },
-              {
-                "name": "x",
-                "prose": "The scroll container has horizontally scrollable overflow.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-x",
-                "type": "value",
-                "value": "x"
-              },
-              {
-                "name": "y",
-                "prose": "The scroll container has vertically scrollable overflow.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-y",
-                "type": "value",
-                "value": "y"
-              },
-              {
-                "name": "block",
-                "prose": "The scroll container has scrollable overflow in its block direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-block",
-                "type": "value",
-                "value": "block"
-              },
-              {
-                "name": "inline",
-                "prose": "The scroll container has scrollable overflow in its inline direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrollable-inline",
-                "type": "value",
-                "value": "inline"
-              }
-            ]
-          },
-          {
-            "name": "scrolled",
-            "href": "https://drafts.csswg.org/css-conditional-5/#descdef-container-scrolled",
-            "for": "@container",
-            "value": "none | top | right | bottom | left | block-start | inline-start | block-end | inline-end | x | y | block | inline",
-            "type": "discrete",
-            "values": [
-              {
-                "name": "none",
-                "prose": "The query container has not had a relative scroll yet.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-none",
-                "type": "value",
-                "value": "none"
-              },
-              {
-                "name": "top",
-                "prose": "The most recent relative scroll was upwards.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-top",
-                "type": "value",
-                "value": "top"
-              },
-              {
-                "name": "right",
-                "prose": "The most recent relative scroll was to the right.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-right",
-                "type": "value",
-                "value": "right"
-              },
-              {
-                "name": "bottom",
-                "prose": "The most recent relative scroll was downwards.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-bottom",
-                "type": "value",
-                "value": "bottom"
-              },
-              {
-                "name": "left",
-                "prose": "The most recent relative scroll was to the left.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-left",
-                "type": "value",
-                "value": "left"
-              },
-              {
-                "name": "block-start",
-                "prose": "The most recent relative scroll was towards the block-start direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-block-start",
-                "type": "value",
-                "value": "block-start"
-              },
-              {
-                "name": "inline-start",
-                "prose": "The most recent relative scroll was towards the inline-start direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-inline-start",
-                "type": "value",
-                "value": "inline-start"
-              },
-              {
-                "name": "block-end",
-                "prose": "The most recent relative scroll was towards the block-end direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-block-end",
-                "type": "value",
-                "value": "block-end"
-              },
-              {
-                "name": "inline-end",
-                "prose": "The most recent relative scroll was towards the inline-end direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-inline-end",
-                "type": "value",
-                "value": "inline-end"
-              },
-              {
-                "name": "x",
-                "prose": "The most recent relative scroll was in the horizontal direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-x",
-                "type": "value",
-                "value": "x"
-              },
-              {
-                "name": "y",
-                "prose": "The most recent relative scroll was in the vertical direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-y",
-                "type": "value",
-                "value": "y"
-              },
-              {
-                "name": "block",
-                "prose": "The most recent relative scroll was in the block direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-block",
-                "type": "value",
-                "value": "block"
-              },
-              {
-                "name": "inline",
-                "prose": "The most recent relative scroll was in the inline direction.",
-                "href": "https://drafts.csswg.org/css-conditional-5/#valdef-container-scrolled-inline",
-                "type": "value",
-                "value": "inline"
-              }
-            ]
-          }
-        ],
-        "value": "@container <container-condition># { <block-contents> }",
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "@supports-condition",
-        "prose": "The @supports-condition at-rule is a conditional group rule that allows authors to define and name a supports query for later reuse, creating a named supports condition. This enables complex or frequently-used feature queries to be referenced by name, improving maintainability and readability.",
-        "href": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-supports-condition",
-        "descriptors": [],
-        "value": "@supports-condition <supports-condition-name> { <block-contents> }",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<supports-feature>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-feature",
-        "type": "type",
-        "value": "<supports-selector-fn> | <supports-font-tech-fn> | <supports-font-format-fn> | <supports-at-rule-fn> | <supports-named-feature-fn> | <supports-decl>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<supports-decl>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-decl",
-        "type": "type",
-        "value": "( [ <declaration> | <supports-condition-name> ] )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<supports-font-tech-fn>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-font-tech-fn",
-        "type": "type",
-        "value": "font-tech( <font-tech> )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<supports-font-format-fn>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-font-format-fn",
-        "type": "type",
-        "value": "font-format( <font-format> )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<supports-at-rule-fn>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-at-rule-fn",
-        "type": "type",
-        "value": "at-rule( <at-keyword-token> )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<supports-named-feature-fn>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-named-feature-fn",
-        "type": "type",
-        "value": "named-feature( <ident> )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<boolean-condition>",
-        "prose": "Where <boolean-condition> is a boolean algebra a la Media Queries 4 § 3 Syntax, but with media() and supports() functions as leaves.",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-boolean-condition",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "media()",
-        "value": "media( [ <mf-plain> | <mf-boolean> | <mf-range> ] )",
-        "href": "https://drafts.csswg.org/css-conditional-5/#funcdef-media",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "supports()",
-        "value": "supports( <declaration> )",
-        "href": "https://drafts.csswg.org/css-conditional-5/#funcdef-supports",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<container-condition>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-container-condition",
-        "type": "type",
-        "value": "[ <container-name>? <container-query>? ]!",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<container-name>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-container-name",
-        "type": "type",
-        "value": "<custom-ident>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<container-query>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-container-query",
-        "type": "type",
-        "value": "not <query-in-parens> | <query-in-parens> [ [ and <query-in-parens> ]* | [ or <query-in-parens> ]* ]",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<query-in-parens>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-query-in-parens",
-        "type": "type",
-        "value": "( <container-query> ) | ( <size-feature> ) | style( <style-query> ) | scroll-state( <scroll-state-query> ) | <general-enclosed>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<style-query>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-query",
-        "type": "type",
-        "value": "not <style-in-parens> | <style-in-parens> [ [ and <style-in-parens> ]* | [ or <style-in-parens> ]* ] | <style-feature>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<style-in-parens>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-in-parens",
-        "type": "type",
-        "value": "( <style-query> ) | ( <style-feature> ) | <general-enclosed>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<style-feature>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature",
-        "type": "type",
-        "value": "<style-feature-plain> | <style-feature-boolean> | <style-range>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<style-feature-plain>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature-plain",
-        "type": "type",
-        "value": "<style-feature-name> : <style-feature-value>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<style-feature-boolean>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature-boolean",
-        "type": "type",
-        "value": "<style-feature-name>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<style-range>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-range",
-        "type": "type",
-        "value": "<style-range-value> <mf-comparison> <style-range-value> | <style-range-value> <mf-lt> <style-range-value> <mf-lt> <style-range-value> | <style-range-value> <mf-gt> <style-range-value> <mf-gt> <style-range-value>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<style-range-value>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-range-value",
-        "type": "type",
-        "value": "<custom-property-name> | <style-feature-value>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<scroll-state-query>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-scroll-state-query",
-        "type": "type",
-        "value": "not <scroll-state-in-parens> | <scroll-state-in-parens> [ [ and <scroll-state-in-parens> ]* | [ or <scroll-state-in-parens> ]* ] | <scroll-state-feature>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<scroll-state-in-parens>",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-scroll-state-in-parens",
-        "type": "type",
-        "value": "( <scroll-state-query> ) | ( <scroll-state-feature> ) | <general-enclosed>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<size-feature>",
-        "prose": "A container size query allows querying the size of the query container’s principal box. It is a boolean combination of individual size features (<size-feature>) that each query a single, specific dimensional feature of the query container. The syntax of a <size-feature> is the same as for a media feature: a feature name, a comparator, and a value. [mediaqueries-5] The boolean syntax and logic combining size features into a size query is the same as for CSS feature queries. (See @supports. [css-conditional-3])",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-size-feature",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<style-feature-name>",
-        "prose": "A container style query allows querying the computed values of the query container. It is a boolean combination of individual style features (<style-feature>) that each query a single, specific property of the query container. The syntax of a <style-feature> is either the same as for a valid declaration[CSS-SYNTAX-3], a <style-feature-name> or a valid style range (<style-range>). The <style-feature-name> can be either a supported CSS property or a valid <custom-property-name>. The <style-feature-value> production matches any valid <declaration-value> as long as it doesn’t contain <mf-lt>, <mf-gt> and <mf-eq> tokens.",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature-name",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<style-feature-value>",
-        "prose": "A container style query allows querying the computed values of the query container. It is a boolean combination of individual style features (<style-feature>) that each query a single, specific property of the query container. The syntax of a <style-feature> is either the same as for a valid declaration[CSS-SYNTAX-3], a <style-feature-name> or a valid style range (<style-range>). The <style-feature-name> can be either a supported CSS property or a valid <custom-property-name>. The <style-feature-value> production matches any valid <declaration-value> as long as it doesn’t contain <mf-lt>, <mf-gt> and <mf-eq> tokens.",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-style-feature-value",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<scroll-state-feature>",
-        "prose": "A container scroll-state query allows querying a container for state that depends on scroll position. It is a boolean combination of individual scroll-state features (<scroll-state-feature>) that each query a single feature of the query container. The syntax of a <scroll-state-feature> is the same as for a media feature: a feature name, a comparator, and a value.",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-scroll-state-feature",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<supports-condition-name>",
-        "prose": "Where <supports-condition-name> is an <extension-name> that defines the name of the supports query.",
-        "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-condition-name",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
-  "css-conditional-4": {
-    "spec": {
-      "title": "CSS Conditional Rules Module Level 4",
-      "url": "https://drafts.csswg.org/css-conditional-4/"
-    },
-    "properties": [],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<supports-feature>",
-        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-feature",
-        "type": "type",
-        "value": "<supports-selector-fn> | <supports-decl>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<supports-selector-fn>",
-        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-selector-fn",
-        "type": "type",
-        "value": "selector( <complex-selector> )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
   },
   "css-easing-2": {
     "spec": {
@@ -9841,6 +9841,90 @@
     ],
     "values": []
   },
+  "css-scroll-snap-2": {
+    "spec": {
+      "title": "CSS Scroll Snap Module Level 2",
+      "url": "https://drafts.csswg.org/css-scroll-snap-2/"
+    },
+    "properties": [
+      {
+        "name": "scroll-initial-target",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#propdef-scroll-initial-target",
+        "value": "none | nearest",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "animationType": "none",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The element is not an initial scroll target.",
+            "href": "https://drafts.csswg.org/css-scroll-snap-2/#valdef-scroll-initial-target-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "nearest",
+            "prose": "The element is potentially an initial scroll target for its nearest scroll container ancestor.",
+            "href": "https://drafts.csswg.org/css-scroll-snap-2/#valdef-scroll-initial-target-nearest",
+            "type": "value",
+            "value": "nearest"
+          }
+        ],
+        "styleDeclaration": [
+          "scroll-initial-target",
+          "scrollInitialTarget"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [
+      {
+        "name": ":snapped",
+        "prose": "The :snapped pseudo-class matches any scroll snap targets, regardless of axis. The longform physical and logical pseudo-class selectors allow for more finite snapped children styling as they can target an individual axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped",
+        "value": ":snapped"
+      },
+      {
+        "name": ":snapped-x",
+        "prose": "Matches the child snapped on the horizontal axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-x",
+        "value": ":snapped-x"
+      },
+      {
+        "name": ":snapped-y",
+        "prose": "Matches the child snapped on the vertical axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-y",
+        "value": ":snapped-y"
+      },
+      {
+        "name": ":snapped-inline",
+        "prose": "Matches the child snapped on the inline axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-inline",
+        "value": ":snapped-inline"
+      },
+      {
+        "name": ":snapped-block",
+        "prose": "Matches the child snapped on the block axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-block",
+        "value": ":snapped-block"
+      }
+    ],
+    "values": []
+  },
   "css-sizing-4": {
     "spec": {
       "title": "CSS Box Sizing Module Level 4",
@@ -10643,89 +10727,552 @@
       }
     ]
   },
-  "css-scroll-snap-2": {
+  "css-transitions-2": {
     "spec": {
-      "title": "CSS Scroll Snap Module Level 2",
-      "url": "https://drafts.csswg.org/css-scroll-snap-2/"
+      "title": "CSS Transitions Module Level 2",
+      "url": "https://drafts.csswg.org/css-transitions-2/"
     },
     "properties": [
       {
-        "name": "scroll-initial-target",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#propdef-scroll-initial-target",
-        "value": "none | nearest",
-        "initial": "none",
-        "appliesTo": "all elements",
+        "name": "transition-behavior",
+        "href": "https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior",
+        "value": "<transition-behavior-value>#",
+        "initial": "normal",
+        "appliesTo": "All elements",
         "inherited": "no",
         "percentages": "N/A",
-        "computedValue": "see individual properties",
+        "computedValue": "as specified",
         "canonicalOrder": "per grammar",
-        "animationType": "none",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The element is not an initial scroll target.",
-            "href": "https://drafts.csswg.org/css-scroll-snap-2/#valdef-scroll-initial-target-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "nearest",
-            "prose": "The element is potentially an initial scroll target for its nearest scroll container ancestor.",
-            "href": "https://drafts.csswg.org/css-scroll-snap-2/#valdef-scroll-initial-target-nearest",
-            "type": "value",
-            "value": "nearest"
-          }
-        ],
+        "animationType": "not animatable",
         "styleDeclaration": [
-          "scroll-initial-target",
-          "scrollInitialTarget"
+          "transition-behavior",
+          "transitionBehavior"
         ],
         "compatibility": {
-          "supported": false,
-          "browsers": 1,
+          "supported": true,
+          "browsers": 3,
           "flagged": false,
           "support": {
             "chrome": true,
-            "firefox": false,
-            "safari": false
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "atrules": [
+      {
+        "name": "@starting-style",
+        "prose": "The @starting-style rule is a grouping rule. The style rules inside it are used to establish styles to transition from, if the previous style change event did not establish a before-change style for the element whose styles are being computed.",
+        "href": "https://drafts.csswg.org/css-transitions-2/#at-ruledef-starting-style",
+        "descriptors": [],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<transition-behavior-value>",
+        "value": "normal | allow-discrete",
+        "href": "https://drafts.csswg.org/css-transitions-2/#typedef-transition-behavior-value",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<single-transition>",
+        "value": "[ none | <single-transition-property> ] || <time> || <easing-function> || <time> || <transition-behavior-value>",
+        "href": "https://drafts.csswg.org/css-transitions-2/#single-transition",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
+  "css-transforms-2": {
+    "spec": {
+      "title": "CSS Transforms Module Level 2",
+      "url": "https://drafts.csswg.org/css-transforms-2/"
+    },
+    "properties": [
+      {
+        "name": "translate",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-translate",
+        "value": "none | <length-percentage> [ <length-percentage> <length>? ]?",
+        "initial": "none",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "relative to the width of the reference box (for the first value) or the height (for the second value)",
+        "computedValue": "the keyword none or a pair of computed <length-percentage> values and an absolute length",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value, but see below for none",
+        "values": [
+          {
+            "name": "none",
+            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "translate"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "rotate",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-rotate",
+        "value": "none | <angle> | [ x | y | z | <number>{3} ] && <angle>",
+        "initial": "none",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "the keyword none, or an <angle> with an axis consisting of a list of three <number>s",
+        "canonicalOrder": "per grammar",
+        "animationType": "as SLERP, but see below for none",
+        "values": [
+          {
+            "name": "x",
+            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-x",
+            "type": "value",
+            "value": "x"
+          },
+          {
+            "name": "y",
+            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-y",
+            "type": "value",
+            "value": "y"
+          },
+          {
+            "name": "z",
+            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-z",
+            "type": "value",
+            "value": "z"
+          },
+          {
+            "name": "none",
+            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "rotate"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "scale",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-scale",
+        "value": "none | [ <number> | <percentage> ]{1,3}",
+        "initial": "none",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "the keyword none, or a list of 3 <number>s",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value, but see below for none",
+        "values": [
+          {
+            "name": "none",
+            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "scale"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "transform-style",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-transform-style",
+        "value": "flat | preserve-3d",
+        "initial": "flat",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "specified keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "usedValue": "flat if a grouping property is present, specified keyword otherwise",
+        "styleDeclaration": [
+          "transform-style",
+          "transformStyle"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "perspective",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective",
+        "value": "none | <length [0,∞]>",
+        "initial": "none",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "the keyword none or an absolute length",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value",
+        "values": [
+          {
+            "name": "<length [0,∞]>",
+            "prose": "Distance to the center of projection. Verify that projection is the distance to the center of projection. As very small <length> values can produce bizarre rendering results and stress the numerical accuracy of transform calculations, values less than 1px must be treated as 1px for rendering purposes. (This clamping does not affect the underlying value, so perspective: 0; in a stylesheet will still serialize back as 0.)",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-length-0",
+            "type": "value",
+            "value": "<length [0,∞]>"
+          },
+          {
+            "name": "none",
+            "prose": "No perspective transform is applied. The effect is mathematically similar to an infinite <length> value. All objects appear to be flat on the canvas.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "perspective"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "perspective-origin",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective-origin",
+        "value": "<position>",
+        "initial": "50% 50%",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "refer to the size of the reference box",
+        "computedValue": "see background-position",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value",
+        "values": [
+          {
+            "name": "<percentage>",
+            "prose": "A percentage for the horizontal perspective offset is relative to the width of the reference box. A percentage for the vertical offset is relative to height of the reference box. The value for the horizontal and vertical offset represent an offset from the top left corner of the reference box.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-percentage",
+            "type": "value",
+            "value": "<percentage>"
+          },
+          {
+            "name": "<length>",
+            "prose": "A length value gives a fixed length as the offset. The value for the horizontal and vertical offset represent an offset from the top left corner of the reference box.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-length",
+            "type": "value",
+            "value": "<length>"
+          },
+          {
+            "name": "top",
+            "prose": "Computes to 0% for the vertical position if one or two values are given, otherwise specifies the top edge as the origin for the next offset.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-top",
+            "type": "value",
+            "value": "top"
+          },
+          {
+            "name": "right",
+            "prose": "Computes to 100% for the horizontal position if one or two values are given, otherwise specifies the right edge as the origin for the next offset.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-right",
+            "type": "value",
+            "value": "right"
+          },
+          {
+            "name": "bottom",
+            "prose": "Computes to 100% for the vertical position if one or two values are given, otherwise specifies the bottom edge as the origin for the next offset.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-bottom",
+            "type": "value",
+            "value": "bottom"
+          },
+          {
+            "name": "left",
+            "prose": "Computes to 0% for the horizontal position if one or two values are given, otherwise specifies the left edge as the origin for the next offset.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-left",
+            "type": "value",
+            "value": "left"
+          },
+          {
+            "name": "center",
+            "prose": "Computes to 50% (left 50%) for the horizontal position if the horizontal position is not otherwise specified, or 50% (top 50%) for the vertical position if it is.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-center",
+            "type": "value",
+            "value": "center"
+          }
+        ],
+        "styleDeclaration": [
+          "perspective-origin",
+          "perspectiveOrigin"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "backface-visibility",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-backface-visibility",
+        "value": "visible | hidden",
+        "initial": "visible",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "specified keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "styleDeclaration": [
+          "backface-visibility",
+          "backfaceVisibility"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
           }
         }
       }
     ],
     "atrules": [],
-    "selectors": [
+    "selectors": [],
+    "values": [
       {
-        "name": ":snapped",
-        "prose": "The :snapped pseudo-class matches any scroll snap targets, regardless of axis. The longform physical and logical pseudo-class selectors allow for more finite snapped children styling as they can target an individual axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped",
-        "value": ":snapped"
+        "name": "<transform-function>",
+        "prose": "The value of the transform property is a list of <transform-function>. The set of allowed transform functions is given below. Wherever <angle> is used in this specification, a <number> that is equal to zero is also allowed, which is treated the same as an angle of zero degrees. A percentage for horizontal translations is relative to the width of the reference box. A percentage for vertical translations is relative to the height of the reference box. A percentage in a scale function is equivalent to a number, and serializes as a number in specified values. For example, scale3d(50%, 100%, 150%) serializes as scale3d(0.5, 1, 1.5).",
+        "href": "https://drafts.csswg.org/css-transforms-2/#typedef-transform-function",
+        "type": "type",
+        "value": "<scale3d()> | <scale()> | <scaleX()> | <scaleY()> | <scaleZ()> | <translate3d()> | <translate()> | <translateX()> | <translateY()> | <translateZ()> | <rotate3d()> | <rotate()> | <rotateX()> | <rotateY()> | <rotateZ()> | <skew()> | <skewX()> | <skewY()> | <matrix3d()> | <matrix()> | <perspective()>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       },
       {
-        "name": ":snapped-x",
-        "prose": "Matches the child snapped on the horizontal axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-x",
-        "value": ":snapped-x"
+        "name": "scale()",
+        "value": "scale( [ <number> | <percentage> ]#{1,2} )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scale",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       },
       {
-        "name": ":snapped-y",
-        "prose": "Matches the child snapped on the vertical axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-y",
-        "value": ":snapped-y"
+        "name": "scaleX()",
+        "value": "scaleX( [ <number> | <percentage> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scalex",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       },
       {
-        "name": ":snapped-inline",
-        "prose": "Matches the child snapped on the inline axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-inline",
-        "value": ":snapped-inline"
+        "name": "scaleY()",
+        "value": "scaleY( [ <number> | <percentage> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scaley",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       },
       {
-        "name": ":snapped-block",
-        "prose": "Matches the child snapped on the block axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-block",
-        "value": ":snapped-block"
+        "name": "matrix3d()",
+        "value": "matrix3d( <number>#{16} )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-matrix3d",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "translate3d()",
+        "value": "translate3d( <length-percentage> , <length-percentage> , <length> )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-translate3d",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "translateZ()",
+        "value": "translateZ( <length> )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-translatez",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "scale3d()",
+        "value": "scale3d( [ <number> | <percentage> ]#{3} )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scale3d",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "scaleZ()",
+        "value": "scaleZ( [ <number> | <percentage> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scalez",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "rotate3d()",
+        "value": "rotate3d( <number> , <number> , <number> , [ <angle> | <zero> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotate3d",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "rotateX()",
+        "value": "rotateX( [ <angle> | <zero> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatex",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "rotateY()",
+        "value": "rotateY( [ <angle> | <zero> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatey",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "rotateZ()",
+        "value": "rotateZ( [ <angle> | <zero> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatez",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "perspective()",
+        "value": "perspective( [ <length [0,∞]> | none ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-perspective",
+        "type": "function",
+        "values": [
+          {
+            "name": "none",
+            "prose": "perspective() = perspective( [ <length [0,∞]> | none ] )",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-func-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       }
-    ],
-    "values": []
+    ]
   },
   "css-text-decor-4": {
     "spec": {
@@ -11619,476 +12166,6 @@
         "type": "value",
         "value": "open",
         "for": "text-text-emphasis"
-      }
-    ]
-  },
-  "css-transforms-2": {
-    "spec": {
-      "title": "CSS Transforms Module Level 2",
-      "url": "https://drafts.csswg.org/css-transforms-2/"
-    },
-    "properties": [
-      {
-        "name": "translate",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-translate",
-        "value": "none | <length-percentage> [ <length-percentage> <length>? ]?",
-        "initial": "none",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "relative to the width of the reference box (for the first value) or the height (for the second value)",
-        "computedValue": "the keyword none or a pair of computed <length-percentage> values and an absolute length",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value, but see below for none",
-        "values": [
-          {
-            "name": "none",
-            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "translate"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "rotate",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-rotate",
-        "value": "none | <angle> | [ x | y | z | <number>{3} ] && <angle>",
-        "initial": "none",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "the keyword none, or an <angle> with an axis consisting of a list of three <number>s",
-        "canonicalOrder": "per grammar",
-        "animationType": "as SLERP, but see below for none",
-        "values": [
-          {
-            "name": "x",
-            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-x",
-            "type": "value",
-            "value": "x"
-          },
-          {
-            "name": "y",
-            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-y",
-            "type": "value",
-            "value": "y"
-          },
-          {
-            "name": "z",
-            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-z",
-            "type": "value",
-            "value": "z"
-          },
-          {
-            "name": "none",
-            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "rotate"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "scale",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-scale",
-        "value": "none | [ <number> | <percentage> ]{1,3}",
-        "initial": "none",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "the keyword none, or a list of 3 <number>s",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value, but see below for none",
-        "values": [
-          {
-            "name": "none",
-            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "scale"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "transform-style",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-transform-style",
-        "value": "flat | preserve-3d",
-        "initial": "flat",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "specified keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "usedValue": "flat if a grouping property is present, specified keyword otherwise",
-        "styleDeclaration": [
-          "transform-style",
-          "transformStyle"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "perspective",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective",
-        "value": "none | <length [0,∞]>",
-        "initial": "none",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "the keyword none or an absolute length",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value",
-        "values": [
-          {
-            "name": "<length [0,∞]>",
-            "prose": "Distance to the center of projection. Verify that projection is the distance to the center of projection. As very small <length> values can produce bizarre rendering results and stress the numerical accuracy of transform calculations, values less than 1px must be treated as 1px for rendering purposes. (This clamping does not affect the underlying value, so perspective: 0; in a stylesheet will still serialize back as 0.)",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-length-0",
-            "type": "value",
-            "value": "<length [0,∞]>"
-          },
-          {
-            "name": "none",
-            "prose": "No perspective transform is applied. The effect is mathematically similar to an infinite <length> value. All objects appear to be flat on the canvas.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "perspective"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "perspective-origin",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective-origin",
-        "value": "<position>",
-        "initial": "50% 50%",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "refer to the size of the reference box",
-        "computedValue": "see background-position",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value",
-        "values": [
-          {
-            "name": "<percentage>",
-            "prose": "A percentage for the horizontal perspective offset is relative to the width of the reference box. A percentage for the vertical offset is relative to height of the reference box. The value for the horizontal and vertical offset represent an offset from the top left corner of the reference box.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-percentage",
-            "type": "value",
-            "value": "<percentage>"
-          },
-          {
-            "name": "<length>",
-            "prose": "A length value gives a fixed length as the offset. The value for the horizontal and vertical offset represent an offset from the top left corner of the reference box.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-length",
-            "type": "value",
-            "value": "<length>"
-          },
-          {
-            "name": "top",
-            "prose": "Computes to 0% for the vertical position if one or two values are given, otherwise specifies the top edge as the origin for the next offset.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-top",
-            "type": "value",
-            "value": "top"
-          },
-          {
-            "name": "right",
-            "prose": "Computes to 100% for the horizontal position if one or two values are given, otherwise specifies the right edge as the origin for the next offset.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-right",
-            "type": "value",
-            "value": "right"
-          },
-          {
-            "name": "bottom",
-            "prose": "Computes to 100% for the vertical position if one or two values are given, otherwise specifies the bottom edge as the origin for the next offset.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-bottom",
-            "type": "value",
-            "value": "bottom"
-          },
-          {
-            "name": "left",
-            "prose": "Computes to 0% for the horizontal position if one or two values are given, otherwise specifies the left edge as the origin for the next offset.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-left",
-            "type": "value",
-            "value": "left"
-          },
-          {
-            "name": "center",
-            "prose": "Computes to 50% (left 50%) for the horizontal position if the horizontal position is not otherwise specified, or 50% (top 50%) for the vertical position if it is.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-center",
-            "type": "value",
-            "value": "center"
-          }
-        ],
-        "styleDeclaration": [
-          "perspective-origin",
-          "perspectiveOrigin"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "backface-visibility",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-backface-visibility",
-        "value": "visible | hidden",
-        "initial": "visible",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "specified keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "styleDeclaration": [
-          "backface-visibility",
-          "backfaceVisibility"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<transform-function>",
-        "prose": "The value of the transform property is a list of <transform-function>. The set of allowed transform functions is given below. Wherever <angle> is used in this specification, a <number> that is equal to zero is also allowed, which is treated the same as an angle of zero degrees. A percentage for horizontal translations is relative to the width of the reference box. A percentage for vertical translations is relative to the height of the reference box. A percentage in a scale function is equivalent to a number, and serializes as a number in specified values. For example, scale3d(50%, 100%, 150%) serializes as scale3d(0.5, 1, 1.5).",
-        "href": "https://drafts.csswg.org/css-transforms-2/#typedef-transform-function",
-        "type": "type",
-        "value": "<scale3d()> | <scale()> | <scaleX()> | <scaleY()> | <scaleZ()> | <translate3d()> | <translate()> | <translateX()> | <translateY()> | <translateZ()> | <rotate3d()> | <rotate()> | <rotateX()> | <rotateY()> | <rotateZ()> | <skew()> | <skewX()> | <skewY()> | <matrix3d()> | <matrix()> | <perspective()>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scale()",
-        "value": "scale( [ <number> | <percentage> ]#{1,2} )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scale",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scaleX()",
-        "value": "scaleX( [ <number> | <percentage> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scalex",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scaleY()",
-        "value": "scaleY( [ <number> | <percentage> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scaley",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "matrix3d()",
-        "value": "matrix3d( <number>#{16} )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-matrix3d",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "translate3d()",
-        "value": "translate3d( <length-percentage> , <length-percentage> , <length> )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-translate3d",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "translateZ()",
-        "value": "translateZ( <length> )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-translatez",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scale3d()",
-        "value": "scale3d( [ <number> | <percentage> ]#{3} )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scale3d",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scaleZ()",
-        "value": "scaleZ( [ <number> | <percentage> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scalez",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "rotate3d()",
-        "value": "rotate3d( <number> , <number> , <number> , [ <angle> | <zero> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotate3d",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "rotateX()",
-        "value": "rotateX( [ <angle> | <zero> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatex",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "rotateY()",
-        "value": "rotateY( [ <angle> | <zero> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatey",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "rotateZ()",
-        "value": "rotateZ( [ <angle> | <zero> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatez",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "perspective()",
-        "value": "perspective( [ <length [0,∞]> | none ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-perspective",
-        "type": "function",
-        "values": [
-          {
-            "name": "none",
-            "prose": "perspective() = perspective( [ <length [0,∞]> | none ] )",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-func-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
       }
     ]
   },
@@ -13895,83 +13972,6 @@
         "href": "https://drafts.csswg.org/css-text-4/#typedef-spacing-trim",
         "type": "type",
         "value": "space-all | normal | space-first | trim-start | trim-both | trim-all",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
-  "css-transitions-2": {
-    "spec": {
-      "title": "CSS Transitions Module Level 2",
-      "url": "https://drafts.csswg.org/css-transitions-2/"
-    },
-    "properties": [
-      {
-        "name": "transition-behavior",
-        "href": "https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior",
-        "value": "<transition-behavior-value>#",
-        "initial": "normal",
-        "appliesTo": "All elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "transition-behavior",
-          "transitionBehavior"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [
-      {
-        "name": "@starting-style",
-        "prose": "The @starting-style rule is a grouping rule. The style rules inside it are used to establish styles to transition from, if the previous style change event did not establish a before-change style for the element whose styles are being computed.",
-        "href": "https://drafts.csswg.org/css-transitions-2/#at-ruledef-starting-style",
-        "descriptors": [],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<transition-behavior-value>",
-        "value": "normal | allow-discrete",
-        "href": "https://drafts.csswg.org/css-transitions-2/#typedef-transition-behavior-value",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<single-transition>",
-        "value": "[ none | <single-transition-property> ] || <time> || <easing-function> || <time> || <transition-behavior-value>",
-        "href": "https://drafts.csswg.org/css-transitions-2/#single-transition",
-        "type": "type",
         "compatibility": {
           "supported": false,
           "browsers": 0,
