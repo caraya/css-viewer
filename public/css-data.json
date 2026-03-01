@@ -106,6 +106,10 @@
           "WebkitTextStroke",
           "webkitTextStroke"
         ],
+        "longhands": [
+          "-webkit-text-stroke-width",
+          "-webkit-text-stroke-color"
+        ],
         "compatibility": {
           "supported": true,
           "browsers": 3,
@@ -330,6 +334,17 @@
           "webkitAnimation"
         ],
         "value": "<single-animation>#",
+        "longhands": [
+          "animation-name",
+          "animation-duration",
+          "animation-timing-function",
+          "animation-delay",
+          "animation-iteration-count",
+          "animation-direction",
+          "animation-fill-mode",
+          "animation-play-state",
+          "animation-timeline"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -474,6 +489,12 @@
           "webkitBorderRadius"
         ],
         "value": "<length-percentage [0,∞]>{1,4} [ / <length-percentage [0,∞]>{1,4} ]?",
+        "longhands": [
+          "border-top-left-radius",
+          "border-top-right-radius",
+          "border-bottom-right-radius",
+          "border-bottom-left-radius"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -490,6 +511,13 @@
           "webkitBoxShadow"
         ],
         "value": "<spread-shadow>#",
+        "longhands": [
+          "box-shadow-color",
+          "box-shadow-offset",
+          "box-shadow-blur",
+          "box-shadow-spread",
+          "box-shadow-position"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -522,6 +550,11 @@
           "webkitFlex"
         ],
         "value": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]",
+        "longhands": [
+          "flex-grow",
+          "flex-shrink",
+          "flex-basis"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -570,6 +603,10 @@
           "webkitFlexFlow"
         ],
         "value": "<'flex-direction'> || <'flex-wrap'>",
+        "longhands": [
+          "flex-direction",
+          "flex-wrap"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -666,6 +703,16 @@
           "webkitMask"
         ],
         "value": "<mask-layer>#",
+        "longhands": [
+          "mask-image",
+          "mask-position",
+          "mask-size",
+          "mask-repeat",
+          "mask-origin",
+          "mask-clip",
+          "mask-composite",
+          "mask-mode"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -682,6 +729,14 @@
           "webkitMaskBoxImage"
         ],
         "value": "<'mask-border-source'> || <'mask-border-slice'> [ / <'mask-border-width'>? [ / <'mask-border-outset'> ]? ]? || <'mask-border-repeat'> || <'mask-border-mode'>",
+        "longhands": [
+          "mask-border-source",
+          "mask-border-slice",
+          "mask-border-width",
+          "mask-border-outset",
+          "mask-border-repeat",
+          "mask-border-mode"
+        ],
         "compatibility": {
           "supported": true,
           "browsers": 2,
@@ -1060,6 +1115,13 @@
           "webkitTransition"
         ],
         "value": "<single-transition>#",
+        "longhands": [
+          "transition-property",
+          "transition-duration",
+          "transition-timing-function",
+          "transition-delay",
+          "transition-behavior"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -1232,127 +1294,6 @@
       }
     ]
   },
-  "css-images-5": {
-    "spec": {
-      "title": "CSS Images Module Level 5",
-      "url": "https://drafts.csswg.org/css-images-5/"
-    },
-    "properties": [
-      {
-        "name": "object-view-box",
-        "href": "https://drafts.csswg.org/css-images-5/#propdef-object-view-box",
-        "value": "none | <basic-shape-rect>",
-        "initial": "none",
-        "appliesTo": "replaced elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "specified keyword, or computed <basic-shape> function",
-        "canonicalOrder": "per grammar",
-        "animationType": "as <basic-shape> if possible, otherwise discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The element does not have a view box.",
-            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<basic-shape-rect>",
-            "prose": "If the element does not have both a natural width and a natural height, this value has no effect, similar to none. Otherwise, specifies a view box for the element. First, resolve the <basic-shape-rect> against a reference box formed by the element’s natural sizes to obtain the element’s view box. For all purposes, the element is now treated as having natural sizes equal to the view box’s width and height. If the element had a natural aspect ratio, it’s now treated as instead having the same ratio as the view box. Further adjustments to the size/position of the element’s contents, such as object-position or object-fit, are similarly performed on the view box instead. When the element is painted, its contents are scaled and translated such that the element’s contents retain the same position and size, relative to the view box’s final size and position, that they had when the view box was determined (above). Have not yet defined what happens if the view box is zero-area. It’s an error case, so precise behavior isn’t important; just need to see what impls want to do about it.",
-            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-basic-shape-rect",
-            "type": "value",
-            "value": "<basic-shape-rect>"
-          }
-        ],
-        "styleDeclaration": [
-          "object-view-box",
-          "objectViewBox"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": false
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": []
-  },
-  "css-gcpm-4": {
-    "spec": {
-      "title": "CSS Generated Content for Paged Media Module Level 4",
-      "url": "https://drafts.csswg.org/css-gcpm-4/"
-    },
-    "properties": [
-      {
-        "name": "copy-into",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into",
-        "value": "none | [ [ <custom-ident> <content-level>] [, <custom-ident> <content-level>]* ]?",
-        "initial": "none",
-        "appliesTo": "all elements and pseudo-elements, but not ::first-line or ::first-letter.",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "styleDeclaration": [
-          "copy-into",
-          "copyInto"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [
-      {
-        "name": ":nth-of-page()",
-        "value": ":nth-of-page(n)",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-nth-of-page-n"
-      },
-      {
-        "name": ":first-of-page",
-        "prose": "Same as :nth-of-page(n), but where n = 1 (it is the first matched element on the page).",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-first-of-page",
-        "value": ":first-of-page"
-      },
-      {
-        "name": ":last-of-page",
-        "prose": "The element is the last matched element on the page.",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-last-of-page",
-        "value": ":last-of-page"
-      },
-      {
-        "name": ":start-of-page",
-        "prose": "The element is the first matched element on the page, and neither it nor its ancestors have any previous siblings that appear on the page.",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-start-of-page",
-        "value": ":start-of-page"
-      }
-    ],
-    "values": [
-      {
-        "name": "<content-level>",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#typedef-content-level",
-        "type": "type",
-        "value": "element | content | text | <attr()> | <counter>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
   "css-color-6": {
     "spec": {
       "title": "CSS Color Module Level 6",
@@ -1437,6 +1378,127 @@
         }
       }
     ]
+  },
+  "css-gcpm-4": {
+    "spec": {
+      "title": "CSS Generated Content for Paged Media Module Level 4",
+      "url": "https://drafts.csswg.org/css-gcpm-4/"
+    },
+    "properties": [
+      {
+        "name": "copy-into",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into",
+        "value": "none | [ [ <custom-ident> <content-level>] [, <custom-ident> <content-level>]* ]?",
+        "initial": "none",
+        "appliesTo": "all elements and pseudo-elements, but not ::first-line or ::first-letter.",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "styleDeclaration": [
+          "copy-into",
+          "copyInto"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [
+      {
+        "name": ":nth-of-page()",
+        "value": ":nth-of-page(n)",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-nth-of-page-n"
+      },
+      {
+        "name": ":first-of-page",
+        "prose": "Same as :nth-of-page(n), but where n = 1 (it is the first matched element on the page).",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-first-of-page",
+        "value": ":first-of-page"
+      },
+      {
+        "name": ":last-of-page",
+        "prose": "The element is the last matched element on the page.",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-last-of-page",
+        "value": ":last-of-page"
+      },
+      {
+        "name": ":start-of-page",
+        "prose": "The element is the first matched element on the page, and neither it nor its ancestors have any previous siblings that appear on the page.",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-start-of-page",
+        "value": ":start-of-page"
+      }
+    ],
+    "values": [
+      {
+        "name": "<content-level>",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#typedef-content-level",
+        "type": "type",
+        "value": "element | content | text | <attr()> | <counter>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
+  "css-images-5": {
+    "spec": {
+      "title": "CSS Images Module Level 5",
+      "url": "https://drafts.csswg.org/css-images-5/"
+    },
+    "properties": [
+      {
+        "name": "object-view-box",
+        "href": "https://drafts.csswg.org/css-images-5/#propdef-object-view-box",
+        "value": "none | <basic-shape-rect>",
+        "initial": "none",
+        "appliesTo": "replaced elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified keyword, or computed <basic-shape> function",
+        "canonicalOrder": "per grammar",
+        "animationType": "as <basic-shape> if possible, otherwise discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The element does not have a view box.",
+            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<basic-shape-rect>",
+            "prose": "If the element does not have both a natural width and a natural height, this value has no effect, similar to none. Otherwise, specifies a view box for the element. First, resolve the <basic-shape-rect> against a reference box formed by the element’s natural sizes to obtain the element’s view box. For all purposes, the element is now treated as having natural sizes equal to the view box’s width and height. If the element had a natural aspect ratio, it’s now treated as instead having the same ratio as the view box. Further adjustments to the size/position of the element’s contents, such as object-position or object-fit, are similarly performed on the view box instead. When the element is painted, its contents are scaled and translated such that the element’s contents retain the same position and size, relative to the view box’s final size and position, that they had when the view box was determined (above). Have not yet defined what happens if the view box is zero-area. It’s an error case, so precise behavior isn’t important; just need to see what impls want to do about it.",
+            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-basic-shape-rect",
+            "type": "value",
+            "value": "<basic-shape-rect>"
+          }
+        ],
+        "styleDeclaration": [
+          "object-view-box",
+          "objectViewBox"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": []
   },
   "css-shapes-2": {
     "spec": {
@@ -1530,6 +1592,44 @@
           "supported": false,
           "browsers": 0,
           "flagged": false
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": []
+  },
+  "filter-effects-2": {
+    "spec": {
+      "title": "Filter Effects Module Level 2",
+      "url": "https://drafts.csswg.org/filter-effects-2/"
+    },
+    "properties": [
+      {
+        "name": "backdrop-filter",
+        "href": "https://drafts.csswg.org/filter-effects-2/#propdef-backdrop-filter",
+        "value": "none | <filter-value-list>",
+        "initial": "none",
+        "appliesTo": "All elements. In SVG, it applies to container elements without the defs element and all graphics elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "see prose in Filter Effects 1 § 14. Animation of Filters.",
+        "media": "visual",
+        "styleDeclaration": [
+          "backdrop-filter",
+          "backdropFilter"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
         }
       }
     ],
@@ -1639,44 +1739,6 @@
         }
       }
     ]
-  },
-  "filter-effects-2": {
-    "spec": {
-      "title": "Filter Effects Module Level 2",
-      "url": "https://drafts.csswg.org/filter-effects-2/"
-    },
-    "properties": [
-      {
-        "name": "backdrop-filter",
-        "href": "https://drafts.csswg.org/filter-effects-2/#propdef-backdrop-filter",
-        "value": "none | <filter-value-list>",
-        "initial": "none",
-        "appliesTo": "All elements. In SVG, it applies to container elements without the defs element and all graphics elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "see prose in Filter Effects 1 § 14. Animation of Filters.",
-        "media": "visual",
-        "styleDeclaration": [
-          "backdrop-filter",
-          "backdropFilter"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": []
   },
   "fullscreen": {
     "spec": {
@@ -2422,6 +2484,10 @@
           "timeline-trigger-range",
           "timelineTriggerRange"
         ],
+        "longhands": [
+          "timeline-trigger-range-start",
+          "timeline-trigger-range-end"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -2493,6 +2559,10 @@
         "styleDeclaration": [
           "timeline-trigger-exit-range",
           "timelineTriggerExitRange"
+        ],
+        "longhands": [
+          "timeline-trigger-exit-range-start",
+          "timeline-trigger-exit-range-end"
         ],
         "compatibility": {
           "supported": false,
@@ -2583,6 +2653,12 @@
         "styleDeclaration": [
           "timeline-trigger",
           "timelineTrigger"
+        ],
+        "longhands": [
+          "timeline-trigger-name",
+          "timeline-trigger-source",
+          "timeline-trigger-range",
+          "timeline-trigger-exit-range"
         ],
         "compatibility": {
           "supported": false,
@@ -3380,6 +3456,10 @@
           "background-position",
           "backgroundPosition"
         ],
+        "longhands": [
+          "background-position-x",
+          "background-position-y"
+        ],
         "compatibility": {
           "supported": true,
           "browsers": 3,
@@ -3556,6 +3636,16 @@
         "canonicalOrder": "per grammar",
         "styleDeclaration": [
           "background"
+        ],
+        "longhands": [
+          "background-image",
+          "background-position",
+          "background-size",
+          "background-repeat",
+          "background-attachment",
+          "background-origin",
+          "background-clip",
+          "background-color"
         ],
         "compatibility": {
           "supported": true,
@@ -4441,6 +4531,59 @@
         "type": "value",
         "value": "alpha",
         "for": "hsl()"
+      }
+    ]
+  },
+  "css-cascade-6": {
+    "spec": {
+      "title": "CSS Cascading and Inheritance Module Level 6",
+      "url": "https://drafts.csswg.org/css-cascade-6/"
+    },
+    "properties": [],
+    "atrules": [
+      {
+        "name": "@scope",
+        "prose": "Scoped styles are described in CSS using the @scope block at-rule, which declares a scoping root and optional scoping limits associated with a set of style rules.",
+        "href": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-scope",
+        "descriptors": [],
+        "value": "@scope [(<scope-start>)]? [to (<scope-end>)]? { <block-contents> }",
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<scope-start>",
+        "prose": "<scope-start> is a <selector-list> selector used to identify the scoping root(s).",
+        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-start",
+        "type": "type",
+        "value": "<selector-list>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<scope-end>",
+        "prose": "<scope-end> is a <selector-list> selector used to identify any scoping limits.",
+        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-end",
+        "type": "type",
+        "value": "<selector-list>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       }
     ]
   },
@@ -6442,39 +6585,20 @@
     ],
     "note": "Current work is being done in css-color-4, but the recommendation is css-color-3."
   },
-  "css-cascade-6": {
+  "css-conditional-4": {
     "spec": {
-      "title": "CSS Cascading and Inheritance Module Level 6",
-      "url": "https://drafts.csswg.org/css-cascade-6/"
+      "title": "CSS Conditional Rules Module Level 4",
+      "url": "https://drafts.csswg.org/css-conditional-4/"
     },
     "properties": [],
-    "atrules": [
-      {
-        "name": "@scope",
-        "prose": "Scoped styles are described in CSS using the @scope block at-rule, which declares a scoping root and optional scoping limits associated with a set of style rules.",
-        "href": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-scope",
-        "descriptors": [],
-        "value": "@scope [(<scope-start>)]? [to (<scope-end>)]? { <block-contents> }",
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
+    "atrules": [],
     "selectors": [],
     "values": [
       {
-        "name": "<scope-start>",
-        "prose": "<scope-start> is a <selector-list> selector used to identify the scoping root(s).",
-        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-start",
+        "name": "<supports-feature>",
+        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-feature",
         "type": "type",
-        "value": "<selector-list>",
+        "value": "<supports-selector-fn> | <supports-decl>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -6482,11 +6606,10 @@
         }
       },
       {
-        "name": "<scope-end>",
-        "prose": "<scope-end> is a <selector-list> selector used to identify any scoping limits.",
-        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-end",
+        "name": "<supports-selector-fn>",
+        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-selector-fn",
         "type": "type",
-        "value": "<selector-list>",
+        "value": "selector( <complex-selector> )",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -6612,6 +6735,10 @@
         "canonicalOrder": "per grammar",
         "styleDeclaration": [
           "container"
+        ],
+        "longhands": [
+          "container-name",
+          "container-type"
         ],
         "compatibility": {
           "supported": true,
@@ -7355,39 +7482,6 @@
         "prose": "Where <supports-condition-name> is an <extension-name> that defines the name of the supports query.",
         "href": "https://drafts.csswg.org/css-conditional-5/#typedef-supports-condition-name",
         "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
-  "css-conditional-4": {
-    "spec": {
-      "title": "CSS Conditional Rules Module Level 4",
-      "url": "https://drafts.csswg.org/css-conditional-4/"
-    },
-    "properties": [],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<supports-feature>",
-        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-feature",
-        "type": "type",
-        "value": "<supports-selector-fn> | <supports-decl>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<supports-selector-fn>",
-        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-selector-fn",
-        "type": "type",
-        "value": "selector( <complex-selector> )",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -8673,534 +8767,6 @@
       }
     ]
   },
-  "css-overflow-4": {
-    "spec": {
-      "title": "CSS Overflow Module Level 4",
-      "url": "https://drafts.csswg.org/css-overflow-4/"
-    },
-    "properties": [
-      {
-        "name": "overflow-clip-margin-top",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-top",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "the computed <length> and a <visual-box> keyword",
-        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
-        "canonicalOrder": "per grammar",
-        "logicalPropertyGroup": "overflow-clip-margin",
-        "styleDeclaration": [
-          "overflow-clip-margin-top",
-          "overflowClipMarginTop"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "overflow-clip-margin-right",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-right",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "the computed <length> and a <visual-box> keyword",
-        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
-        "canonicalOrder": "per grammar",
-        "logicalPropertyGroup": "overflow-clip-margin",
-        "styleDeclaration": [
-          "overflow-clip-margin-right",
-          "overflowClipMarginRight"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "overflow-clip-margin-bottom",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-bottom",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "the computed <length> and a <visual-box> keyword",
-        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
-        "canonicalOrder": "per grammar",
-        "logicalPropertyGroup": "overflow-clip-margin",
-        "styleDeclaration": [
-          "overflow-clip-margin-bottom",
-          "overflowClipMarginBottom"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "overflow-clip-margin-left",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-left",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "the computed <length> and a <visual-box> keyword",
-        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
-        "canonicalOrder": "per grammar",
-        "logicalPropertyGroup": "overflow-clip-margin",
-        "styleDeclaration": [
-          "overflow-clip-margin-left",
-          "overflowClipMarginLeft"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "overflow-clip-margin-block-start",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-start",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "the computed <length> and a <visual-box> keyword",
-        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
-        "canonicalOrder": "per grammar",
-        "logicalPropertyGroup": "overflow-clip-margin",
-        "styleDeclaration": [
-          "overflow-clip-margin-block-start",
-          "overflowClipMarginBlockStart"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "overflow-clip-margin-inline-start",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-start",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "the computed <length> and a <visual-box> keyword",
-        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
-        "canonicalOrder": "per grammar",
-        "logicalPropertyGroup": "overflow-clip-margin",
-        "styleDeclaration": [
-          "overflow-clip-margin-inline-start",
-          "overflowClipMarginInlineStart"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "overflow-clip-margin-block-end",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-end",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "the computed <length> and a <visual-box> keyword",
-        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
-        "canonicalOrder": "per grammar",
-        "logicalPropertyGroup": "overflow-clip-margin",
-        "styleDeclaration": [
-          "overflow-clip-margin-block-end",
-          "overflowClipMarginBlockEnd"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "overflow-clip-margin-inline-end",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-end",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "the computed <length> and a <visual-box> keyword",
-        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
-        "canonicalOrder": "per grammar",
-        "logicalPropertyGroup": "overflow-clip-margin",
-        "styleDeclaration": [
-          "overflow-clip-margin-inline-end",
-          "overflowClipMarginInlineEnd"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "overflow-clip-margin",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "values": [
-          {
-            "name": "<visual-box>",
-            "prose": "Specifies the box edge to use as the overflow clip edge origin, i.e. when the specified offset is zero. If omitted, defaults to padding-box on non-replaced elements, or content-box on replaced elements. Application of overflow-clip-margin to replaced elements is still being worked out. [Issue #7144]",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-overflow-clip-margin-visual-box",
-            "type": "value",
-            "value": "<visual-box>"
-          },
-          {
-            "name": "<length [0,∞]>",
-            "prose": "The specified offset dictates how much the overflow clip edge is expanded from the specified box edge Negative values are invalid. Defaults to zero if omitted.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-overflow-clip-margin-length-0",
-            "type": "value",
-            "value": "<length [0,∞]>"
-          }
-        ],
-        "styleDeclaration": [
-          "overflow-clip-margin",
-          "overflowClipMargin"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 2,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": false
-          }
-        }
-      },
-      {
-        "name": "overflow-clip-margin-inline",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "styleDeclaration": [
-          "overflow-clip-margin-inline",
-          "overflowClipMarginInline"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "overflow-clip-margin-block",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block",
-        "value": "<visual-box> || <length [0,∞]>",
-        "initial": "0px",
-        "appliesTo": "boxes to which overflow applies",
-        "inherited": "no",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "styleDeclaration": [
-          "overflow-clip-margin-block",
-          "overflowClipMarginBlock"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "text-overflow",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-text-overflow",
-        "value": "[ clip | ellipsis | <string> | fade | <fade()> ]{1,2}",
-        "initial": "clip",
-        "appliesTo": "block containers",
-        "inherited": "no",
-        "percentages": "refer to the width of the line box",
-        "computedValue": "as specified, with lengths made absolute",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value type",
-        "values": [
-          {
-            "name": "clip",
-            "prose": "Clip inline content that overflows its block container element. Characters may be only partially rendered.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#overflow-clip",
-            "type": "value",
-            "value": "clip"
-          },
-          {
-            "name": "ellipsis",
-            "prose": "Render an ellipsis character (U+2026) to represent clipped inline content. Implementations may substitute a more language, script, or writing-mode appropriate ellipsis character, or three dots \"...\" if the ellipsis character is unavailable.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#overflow-ellipsis",
-            "type": "value",
-            "value": "ellipsis"
-          },
-          {
-            "name": "fade()",
-            "value": "fade( [ <length-percentage> ] )",
-            "href": "https://drafts.csswg.org/css-overflow-4/#funcdef-text-overflow-fade",
-            "type": "function"
-          },
-          {
-            "name": "fade",
-            "prose": "Same as fade(), but the distance over which the fading effect is applied is determined by the UA. 1em is suggested as a reasonable value.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-text-overflow-fade",
-            "type": "value",
-            "value": "fade"
-          }
-        ],
-        "styleDeclaration": [
-          "text-overflow",
-          "textOverflow"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "block-ellipsis",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-block-ellipsis",
-        "value": "no-ellipsis | auto | <string>",
-        "initial": "no-ellipsis",
-        "appliesTo": "block containers",
-        "inherited": "yes",
-        "percentages": "N/A",
-        "computedValue": "specified value",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "no-ellipsis",
-            "prose": "The rendering is unaffected.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-block-ellipsis-no-ellipsis",
-            "type": "value",
-            "value": "no-ellipsis"
-          },
-          {
-            "name": "auto",
-            "prose": "Render an ellipsis character (U+2026)—​or a more typographically-appropriate equivalent—​as the block overflow ellipsis at the end of the affected line box. UAs should use the conventions of the content language, writing system, and writing mode to determine the most appropriate ellipsis string.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-block-ellipsis-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "<string>",
-            "prose": "Render the specified string as the block overflow ellipsis at the end of the affected line box. The UA may truncate this string if it is absurdly long. When set to the empty string, the behavior is identical to the no-ellipsis value.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-block-ellipsis-string",
-            "type": "value",
-            "value": "<string>"
-          }
-        ],
-        "styleDeclaration": [
-          "block-ellipsis",
-          "blockEllipsis"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "line-clamp",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp",
-        "value": "none | [<integer [1,∞]> || <'block-ellipsis'>] -webkit-legacy?",
-        "initial": "none",
-        "appliesTo": "see individual properties",
-        "inherited": "see individual properties",
-        "percentages": "N/A",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "values": [
-          {
-            "name": "none",
-            "prose": "Sets max-lines to none, continue to auto, and block-ellipsis to no-ellipsis.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-line-clamp-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<integer [1,∞]>",
-            "prose": "Sets continue to collapse if either or both values are specified, unless the -webkit-legacy keyword is also specified. Sets max-lines to the specified <integer> or to none if omitted, and block-ellipsis to other component of the value if specified or to auto if omitted.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-line-clamp-integer-1",
-            "type": "value",
-            "value": "<integer [1,∞]>"
-          },
-          {
-            "name": "<block-ellipsis>",
-            "prose": "Sets continue to collapse if either or both values are specified, unless the -webkit-legacy keyword is also specified. Sets max-lines to the specified <integer> or to none if omitted, and block-ellipsis to other component of the value if specified or to auto if omitted.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-line-clamp-block-ellipsis",
-            "type": "value",
-            "value": "<block-ellipsis>"
-          },
-          {
-            "name": "-webkit-legacy",
-            "prose": "Sets continue to -webkit-legacy.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-line-clamp--webkit-legacy",
-            "type": "value",
-            "value": "-webkit-legacy"
-          }
-        ],
-        "styleDeclaration": [
-          "line-clamp",
-          "lineClamp"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "-webkit-line-clamp",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp",
-        "value": "none | <integer [1,∞]>",
-        "initial": "none",
-        "appliesTo": "see individual properties",
-        "inherited": "see individual properties",
-        "percentages": "N/A",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "styleDeclaration": [
-          "-webkit-line-clamp",
-          "WebkitLineClamp",
-          "webkitLineClamp"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "continue",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-continue",
-        "value": "auto | discard | collapse | -webkit-legacy",
-        "initial": "auto",
-        "appliesTo": "block containers and multicol containers",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "specified keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "-webkit-legacy",
-            "prose": "The -webkit-legacy value behaves identically to collapse, except that it only takes effect if the specified value of the display property is -webkit-box or -webkit-inline-box and the value of the -webkit-box-orient property is vertical.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-continue--webkit-legacy",
-            "type": "value",
-            "value": "-webkit-legacy"
-          },
-          {
-            "name": "auto",
-            "prose": "If the box has more content than can fit, the excess content is handled according to the usual rules.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-continue-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "collapse",
-            "prose": "If the box is a block container, then it must establish an independent formatting context that also becomes a line-clamp container. This causes all content after the clamp point to be visually hidden, and to not be taken into account for the box’s automatic block size. If the box is a multicol container, the behavior is the same as auto.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-continue-collapse",
-            "type": "value",
-            "value": "collapse"
-          },
-          {
-            "name": "discard",
-            "prose": "The box must establish an independent formatting context and becomes a fragmentation container that captures region breaks, if it is not already. [CSS-BREAK-3] Content after the first region break is not rendered. See § 5.3.2 Discarding Content for further details. continue: discard is meant to generalize and replace the region-fragment property from [CSS-REGIONS-1]. Once it is sufficiently stable in this specification, region-fragment should be removed from the regions specification in favor of this.",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-continue-discard",
-            "type": "value",
-            "value": "discard"
-          }
-        ],
-        "styleDeclaration": [
-          "continue"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "max-lines",
-        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-max-lines",
-        "value": "none | <integer [1,∞]>",
-        "initial": "none",
-        "appliesTo": "block containers which are also either line-clamp containers or fragmentation containers that capture region breaks",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "the keyword none or an integer",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value type",
-        "values": [
-          {
-            "name": "none",
-            "prose": "If the value of max-lines is not none, then, given a computed value of N:",
-            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-max-lines-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "max-lines",
-          "maxLines"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": []
-  },
   "css-overflow-5": {
     "spec": {
       "title": "CSS Overflow Module Level 5",
@@ -9470,6 +9036,558 @@
         }
       }
     ]
+  },
+  "css-overflow-4": {
+    "spec": {
+      "title": "CSS Overflow Module Level 4",
+      "url": "https://drafts.csswg.org/css-overflow-4/"
+    },
+    "properties": [
+      {
+        "name": "overflow-clip-margin-top",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-top",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "canonicalOrder": "per grammar",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "styleDeclaration": [
+          "overflow-clip-margin-top",
+          "overflowClipMarginTop"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "overflow-clip-margin-right",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-right",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "canonicalOrder": "per grammar",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "styleDeclaration": [
+          "overflow-clip-margin-right",
+          "overflowClipMarginRight"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "overflow-clip-margin-bottom",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-bottom",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "canonicalOrder": "per grammar",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "styleDeclaration": [
+          "overflow-clip-margin-bottom",
+          "overflowClipMarginBottom"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "overflow-clip-margin-left",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-left",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "canonicalOrder": "per grammar",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "styleDeclaration": [
+          "overflow-clip-margin-left",
+          "overflowClipMarginLeft"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "overflow-clip-margin-block-start",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-start",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "canonicalOrder": "per grammar",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "styleDeclaration": [
+          "overflow-clip-margin-block-start",
+          "overflowClipMarginBlockStart"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "overflow-clip-margin-inline-start",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-start",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "canonicalOrder": "per grammar",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "styleDeclaration": [
+          "overflow-clip-margin-inline-start",
+          "overflowClipMarginInlineStart"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "overflow-clip-margin-block-end",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-end",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "canonicalOrder": "per grammar",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "styleDeclaration": [
+          "overflow-clip-margin-block-end",
+          "overflowClipMarginBlockEnd"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "overflow-clip-margin-inline-end",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-end",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "canonicalOrder": "per grammar",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "styleDeclaration": [
+          "overflow-clip-margin-inline-end",
+          "overflowClipMarginInlineEnd"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "overflow-clip-margin",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "values": [
+          {
+            "name": "<visual-box>",
+            "prose": "Specifies the box edge to use as the overflow clip edge origin, i.e. when the specified offset is zero. If omitted, defaults to padding-box on non-replaced elements, or content-box on replaced elements. Application of overflow-clip-margin to replaced elements is still being worked out. [Issue #7144]",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-overflow-clip-margin-visual-box",
+            "type": "value",
+            "value": "<visual-box>"
+          },
+          {
+            "name": "<length [0,∞]>",
+            "prose": "The specified offset dictates how much the overflow clip edge is expanded from the specified box edge Negative values are invalid. Defaults to zero if omitted.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-overflow-clip-margin-length-0",
+            "type": "value",
+            "value": "<length [0,∞]>"
+          }
+        ],
+        "styleDeclaration": [
+          "overflow-clip-margin",
+          "overflowClipMargin"
+        ],
+        "longhands": [
+          "overflow-clip-margin-top",
+          "overflow-clip-margin-right",
+          "overflow-clip-margin-bottom",
+          "overflow-clip-margin-left"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 2,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": false
+          }
+        }
+      },
+      {
+        "name": "overflow-clip-margin-inline",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "styleDeclaration": [
+          "overflow-clip-margin-inline",
+          "overflowClipMarginInline"
+        ],
+        "longhands": [
+          "overflow-clip-margin-inline-start",
+          "overflow-clip-margin-inline-end"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "overflow-clip-margin-block",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block",
+        "value": "<visual-box> || <length [0,∞]>",
+        "initial": "0px",
+        "appliesTo": "boxes to which overflow applies",
+        "inherited": "no",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "styleDeclaration": [
+          "overflow-clip-margin-block",
+          "overflowClipMarginBlock"
+        ],
+        "longhands": [
+          "overflow-clip-margin-block-start",
+          "overflow-clip-margin-block-end"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "text-overflow",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-text-overflow",
+        "value": "[ clip | ellipsis | <string> | fade | <fade()> ]{1,2}",
+        "initial": "clip",
+        "appliesTo": "block containers",
+        "inherited": "no",
+        "percentages": "refer to the width of the line box",
+        "computedValue": "as specified, with lengths made absolute",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value type",
+        "values": [
+          {
+            "name": "clip",
+            "prose": "Clip inline content that overflows its block container element. Characters may be only partially rendered.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#overflow-clip",
+            "type": "value",
+            "value": "clip"
+          },
+          {
+            "name": "ellipsis",
+            "prose": "Render an ellipsis character (U+2026) to represent clipped inline content. Implementations may substitute a more language, script, or writing-mode appropriate ellipsis character, or three dots \"...\" if the ellipsis character is unavailable.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#overflow-ellipsis",
+            "type": "value",
+            "value": "ellipsis"
+          },
+          {
+            "name": "fade()",
+            "value": "fade( [ <length-percentage> ] )",
+            "href": "https://drafts.csswg.org/css-overflow-4/#funcdef-text-overflow-fade",
+            "type": "function"
+          },
+          {
+            "name": "fade",
+            "prose": "Same as fade(), but the distance over which the fading effect is applied is determined by the UA. 1em is suggested as a reasonable value.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-text-overflow-fade",
+            "type": "value",
+            "value": "fade"
+          }
+        ],
+        "styleDeclaration": [
+          "text-overflow",
+          "textOverflow"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "block-ellipsis",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-block-ellipsis",
+        "value": "no-ellipsis | auto | <string>",
+        "initial": "no-ellipsis",
+        "appliesTo": "block containers",
+        "inherited": "yes",
+        "percentages": "N/A",
+        "computedValue": "specified value",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "no-ellipsis",
+            "prose": "The rendering is unaffected.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-block-ellipsis-no-ellipsis",
+            "type": "value",
+            "value": "no-ellipsis"
+          },
+          {
+            "name": "auto",
+            "prose": "Render an ellipsis character (U+2026)—​or a more typographically-appropriate equivalent—​as the block overflow ellipsis at the end of the affected line box. UAs should use the conventions of the content language, writing system, and writing mode to determine the most appropriate ellipsis string.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-block-ellipsis-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "<string>",
+            "prose": "Render the specified string as the block overflow ellipsis at the end of the affected line box. The UA may truncate this string if it is absurdly long. When set to the empty string, the behavior is identical to the no-ellipsis value.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-block-ellipsis-string",
+            "type": "value",
+            "value": "<string>"
+          }
+        ],
+        "styleDeclaration": [
+          "block-ellipsis",
+          "blockEllipsis"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "line-clamp",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp",
+        "value": "none | [<integer [1,∞]> || <'block-ellipsis'>] -webkit-legacy?",
+        "initial": "none",
+        "appliesTo": "see individual properties",
+        "inherited": "see individual properties",
+        "percentages": "N/A",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "values": [
+          {
+            "name": "none",
+            "prose": "Sets max-lines to none, continue to auto, and block-ellipsis to no-ellipsis.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-line-clamp-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<integer [1,∞]>",
+            "prose": "Sets continue to collapse if either or both values are specified, unless the -webkit-legacy keyword is also specified. Sets max-lines to the specified <integer> or to none if omitted, and block-ellipsis to other component of the value if specified or to auto if omitted.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-line-clamp-integer-1",
+            "type": "value",
+            "value": "<integer [1,∞]>"
+          },
+          {
+            "name": "<block-ellipsis>",
+            "prose": "Sets continue to collapse if either or both values are specified, unless the -webkit-legacy keyword is also specified. Sets max-lines to the specified <integer> or to none if omitted, and block-ellipsis to other component of the value if specified or to auto if omitted.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-line-clamp-block-ellipsis",
+            "type": "value",
+            "value": "<block-ellipsis>"
+          },
+          {
+            "name": "-webkit-legacy",
+            "prose": "Sets continue to -webkit-legacy.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-line-clamp--webkit-legacy",
+            "type": "value",
+            "value": "-webkit-legacy"
+          }
+        ],
+        "styleDeclaration": [
+          "line-clamp",
+          "lineClamp"
+        ],
+        "longhands": [
+          "max-lines",
+          "block-ellipsis",
+          "continue"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "-webkit-line-clamp",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp",
+        "value": "none | <integer [1,∞]>",
+        "initial": "none",
+        "appliesTo": "see individual properties",
+        "inherited": "see individual properties",
+        "percentages": "N/A",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "styleDeclaration": [
+          "-webkit-line-clamp",
+          "WebkitLineClamp",
+          "webkitLineClamp"
+        ],
+        "longhands": [
+          "max-lines",
+          "block-ellipsis",
+          "continue"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "continue",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-continue",
+        "value": "auto | discard | collapse | -webkit-legacy",
+        "initial": "auto",
+        "appliesTo": "block containers and multicol containers",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "specified keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "-webkit-legacy",
+            "prose": "The -webkit-legacy value behaves identically to collapse, except that it only takes effect if the specified value of the display property is -webkit-box or -webkit-inline-box and the value of the -webkit-box-orient property is vertical.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-continue--webkit-legacy",
+            "type": "value",
+            "value": "-webkit-legacy"
+          },
+          {
+            "name": "auto",
+            "prose": "If the box has more content than can fit, the excess content is handled according to the usual rules.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-continue-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "collapse",
+            "prose": "If the box is a block container, then it must establish an independent formatting context that also becomes a line-clamp container. This causes all content after the clamp point to be visually hidden, and to not be taken into account for the box’s automatic block size. If the box is a multicol container, the behavior is the same as auto.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-continue-collapse",
+            "type": "value",
+            "value": "collapse"
+          },
+          {
+            "name": "discard",
+            "prose": "The box must establish an independent formatting context and becomes a fragmentation container that captures region breaks, if it is not already. [CSS-BREAK-3] Content after the first region break is not rendered. See § 5.3.2 Discarding Content for further details. continue: discard is meant to generalize and replace the region-fragment property from [CSS-REGIONS-1]. Once it is sufficiently stable in this specification, region-fragment should be removed from the regions specification in favor of this.",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-continue-discard",
+            "type": "value",
+            "value": "discard"
+          }
+        ],
+        "styleDeclaration": [
+          "continue"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "max-lines",
+        "href": "https://drafts.csswg.org/css-overflow-4/#propdef-max-lines",
+        "value": "none | <integer [1,∞]>",
+        "initial": "none",
+        "appliesTo": "block containers which are also either line-clamp containers or fragmentation containers that capture region breaks",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "the keyword none or an integer",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value type",
+        "values": [
+          {
+            "name": "none",
+            "prose": "If the value of max-lines is not none, then, given a computed value of N:",
+            "href": "https://drafts.csswg.org/css-overflow-4/#valdef-max-lines-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "max-lines",
+          "maxLines"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": []
   },
   "css-position-4": {
     "spec": {
@@ -10192,6 +10310,10 @@
           "contain-intrinsic-size",
           "containIntrinsicSize"
         ],
+        "longhands": [
+          "contain-intrinsic-width",
+          "contain-intrinsic-height"
+        ],
         "compatibility": {
           "supported": true,
           "browsers": 3,
@@ -10886,6 +11008,917 @@
       }
     ]
   },
+  "css-text-decor-4": {
+    "spec": {
+      "title": "CSS Text Decoration Module Level 4",
+      "url": "https://drafts.csswg.org/css-text-decor-4/"
+    },
+    "properties": [
+      {
+        "name": "text-decoration-line",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-line",
+        "value": "none | [ underline || overline || line-through || blink ] | spelling-error | grammar-error",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no (but see prose, above)",
+        "percentages": "n/a",
+        "computedValue": "specified keyword(s)",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "Neither produces nor inhibits text decoration.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "underline",
+            "prose": "Each line of text is underlined.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-underline",
+            "type": "value",
+            "value": "underline"
+          },
+          {
+            "name": "overline",
+            "prose": "Each line of text has a line over it (i.e. on the opposite side from an underline).",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-overline",
+            "type": "value",
+            "value": "overline"
+          },
+          {
+            "name": "line-through",
+            "prose": "Each line of text has a line through the middle.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-line-through",
+            "type": "value",
+            "value": "line-through"
+          },
+          {
+            "name": "blink",
+            "prose": "The text blinks (alternates between visible and invisible). Conforming user agents may simply not blink the text. Note that not blinking the text is one technique to satisfy checkpoint 3.3 of WAI-UAAG. This value is deprecated in favor of Animations [CSS3-ANIMATIONS].",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-blink",
+            "type": "value",
+            "value": "blink"
+          },
+          {
+            "name": "spelling-error",
+            "prose": "This value indicates the type of text decoration used by the user agent to highlight spelling mistakes. Its appearance is UA-defined, and may be platform-dependent.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-spelling-error",
+            "type": "value",
+            "value": "spelling-error"
+          },
+          {
+            "name": "grammar-error",
+            "prose": "This value indicates the type of text decoration used by the user agent to highlight grammar mistakes. Its appearance is UA defined, and may be platform-dependent.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-grammar-error",
+            "type": "value",
+            "value": "grammar-error"
+          }
+        ],
+        "styleDeclaration": [
+          "text-decoration-line",
+          "textDecorationLine"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-decoration-style",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-style",
+        "value": "solid | double | dotted | dashed | wavy",
+        "initial": "solid",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "wavy",
+            "prose": "Values have the same meaning as for the border-style properties [CSS-BACKGROUNDS-3]. wavy indicates a wavy line.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-style-wavy",
+            "type": "value",
+            "value": "wavy"
+          }
+        ],
+        "styleDeclaration": [
+          "text-decoration-style",
+          "textDecorationStyle"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-decoration-color",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-color",
+        "value": "<color>",
+        "initial": "currentcolor",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "computed color",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value type",
+        "styleDeclaration": [
+          "text-decoration-color",
+          "textDecorationColor"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-decoration-thickness",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-thickness",
+        "value": "auto | from-font | <length-percentage>",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "The UA chooses an appropriate thickness for text decoration lines; see below.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-thickness-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "from-font",
+            "prose": "If the first available font has metrics indicating a preferred underline width, use that width, otherwise behaves as auto.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-thickness-from-font",
+            "type": "value",
+            "value": "from-font"
+          },
+          {
+            "name": "<length-percentage>",
+            "prose": "A length value specifies the thickness of text decoration lines as a fixed length. A percentage value specifies the thickness of text decoration lines as a percentage of 1em. The UA should round the actual value to the nearest integer device pixel, and ensure it is at least one device pixel.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-thickness-length-percentage",
+            "type": "value",
+            "value": "<length-percentage>"
+          }
+        ],
+        "styleDeclaration": [
+          "text-decoration-thickness",
+          "textDecorationThickness"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-decoration",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration",
+        "value": "<'text-decoration-line'> || <'text-decoration-thickness'> || <'text-decoration-style'> || <'text-decoration-color'>",
+        "initial": "see individual properties",
+        "appliesTo": "see individual properties",
+        "inherited": "see individual properties",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "styleDeclaration": [
+          "text-decoration",
+          "textDecoration"
+        ],
+        "longhands": [
+          "text-decoration-line",
+          "text-decoration-thickness",
+          "text-decoration-style",
+          "text-decoration-color"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-underline-position",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-position",
+        "value": "auto | [ from-font | under ] || [ left | right ]",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "yes",
+        "percentages": "n/a",
+        "computedValue": "specified keyword(s)",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "The user agent may use any algorithm to determine the underline’s position; however it must be placed at or under the alphabetic baseline. A typical “alphabetic” underline is positioned just below the alphabetic baseline",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#underline-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "from-font",
+            "prose": "If the first available font has metrics indicating a preferred underline offset, use that offset, otherwise behaves as auto.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-underline-position-from-font",
+            "type": "value",
+            "value": "from-font"
+          },
+          {
+            "name": "under",
+            "prose": "The underline is positioned under the element’s text content. In this case the underline usually does not cross the descenders. (This is sometimes called “accounting” underline.) This value can be combined with left or right if a particular side is preferred in vertical typographic modes. text-underline-position: under Because text-underline-position inherits, and is not reset by the text-decoration shorthand, the following example switches the document to use under underlining, which can be more appropriate for writing systems with long, complicated descenders. It is also often useful for mathematical or chemical texts that use many subscripts. :root { text-underline-position: under; }",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#underline-under",
+            "type": "value",
+            "value": "under"
+          },
+          {
+            "name": "left",
+            "prose": "In vertical typographic modes, the underline is aligned as for under, except it is always aligned to the left edge of the text. If this causes the underline to be drawn on the \"over\" side of the text, then an overline also switches sides and is drawn on the \"under\" side.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#underline-left",
+            "type": "value",
+            "value": "left"
+          },
+          {
+            "name": "right",
+            "prose": "In vertical typographic modes, the underline is aligned as for under, except it is always aligned to the right edge of the text. If this causes the underline to be drawn on the \"over\" side of the text, then an overline also switches sides and is drawn on the \"under\" side.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#underline-right",
+            "type": "value",
+            "value": "right"
+          }
+        ],
+        "styleDeclaration": [
+          "text-underline-position",
+          "textUnderlinePosition"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-underline-offset",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-offset",
+        "value": "auto | <length-percentage>",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "yes",
+        "percentages": "N/A",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "The UA chooses an appropriate offset for underlines. However, this offset must be zero if the computed value of text-underline-position is from-font and the UA was able to extract an appropriate metric to use from the font.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-underline-offset-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "<length-percentage>",
+            "prose": "A length value specifies the offset of underlines as a fixed length. A percentage value specifies the offset of underlines as a percentage of 1em.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-underline-offset-length-percentage",
+            "type": "value",
+            "value": "<length-percentage>"
+          }
+        ],
+        "styleDeclaration": [
+          "text-underline-offset",
+          "textUnderlineOffset"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-decoration-inset",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-inset",
+        "value": "<length>{1,2} | auto",
+        "initial": "0",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "specified keyword or absolute length",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value",
+        "values": [
+          {
+            "name": "<length>",
+            "prose": "Adjusts the start or end endpoint of the affected line decorations. Positive values move the endpoint inward (trimming), negative values move it outward (extending). The following example offsets an extra thick underline 1em endwards with respect to the text h1 { text-decoration: underline 0.3em rgba(36,148,187,0.25); text-decoration-inset: 1em -1em; }",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-inset-length",
+            "type": "value",
+            "value": "<length>"
+          },
+          {
+            "name": "auto",
+            "prose": "The UA chooses an inset amount that ensures that if two identical underlined elements appear side-by-side they do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.) text-decoration-inset: auto for <u>石井</u><u>艾俐俐</u>",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-inset-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "text-decoration-inset",
+          "textDecorationInset"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": false,
+            "firefox": true,
+            "safari": false
+          }
+        }
+      },
+      {
+        "name": "text-decoration-skip",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip",
+        "value": "none | auto",
+        "initial": "See individual properties",
+        "appliesTo": "all elements",
+        "inherited": "yes",
+        "percentages": "N/A",
+        "computedValue": "See individual properties",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The text-decoration-skip property and its sub-properties (text-decoration-skip-self, text-decoration-skip-box, text-decoration-skip-spaces, text-decoration-skip-ink) control interruptions in line decorations for which the element or an ancestor is the decorating box. The none value sets all sub-properties to none, and the auto value sets all sub-properties to their initial values.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "auto",
+            "prose": "The text-decoration-skip property and its sub-properties (text-decoration-skip-self, text-decoration-skip-box, text-decoration-skip-spaces, text-decoration-skip-ink) control interruptions in line decorations for which the element or an ancestor is the decorating box. The none value sets all sub-properties to none, and the auto value sets all sub-properties to their initial values.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "text-decoration-skip",
+          "textDecorationSkip"
+        ],
+        "longhands": [
+          "text-decoration-skip-self",
+          "text-decoration-skip-box",
+          "text-decoration-skip-spaces",
+          "text-decoration-skip-ink"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 2,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-decoration-skip-self",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-self",
+        "value": "auto | skip-all | [ skip-underline || skip-overline || skip-line-through ] | no-skip",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "specified keyword(s) except for skip-all, see below",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "Skip this element (its entire margin box) if it is an atomic inline (such as an image or inline-block).",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "skip-all",
+            "prose": "Skip this element (its entire margin box) unconditionally. Don’t draw across it, don’t propagate to it.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-skip-all",
+            "type": "value",
+            "value": "skip-all"
+          },
+          {
+            "name": "skip-underline",
+            "prose": "Skip this element (its entire margin box) unconditionally when drawing ancestor underlines.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-skip-underline",
+            "type": "value",
+            "value": "skip-underline"
+          },
+          {
+            "name": "skip-overline",
+            "prose": "Skip this element (its entire margin box) unconditionally when drawing ancestor overlines.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-skip-overline",
+            "type": "value",
+            "value": "skip-overline"
+          },
+          {
+            "name": "skip-line-through",
+            "prose": "Skip this element (its entire margin box) unconditionally when drawing ancestor line-throughs.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-skip-line-through",
+            "type": "value",
+            "value": "skip-line-through"
+          },
+          {
+            "name": "no-skip",
+            "prose": "Line decorations from ancestor decorating boxes are applied to this box unconditionally: drawn across it as if it were text if it is an atomic inline, or propagated to it according to the usual rules if it is not.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-no-skip",
+            "type": "value",
+            "value": "no-skip"
+          }
+        ],
+        "styleDeclaration": [
+          "text-decoration-skip-self",
+          "textDecorationSkipSelf"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "text-decoration-skip-box",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-box",
+        "value": "none | all",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "yes",
+        "percentages": "N/A",
+        "computedValue": "specified keyword(s)",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "Skip nothing: line decorations from ancestor decorating boxes are drawn from margin edge to margin edge.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-box-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "all",
+            "prose": "When drawing text decoration lines applied to an ancestor decorating box, skip over the box’s own margin, border, and padding areas and only draw line decorations within its content area. This value only has an effect for decorations imposed by an ancestor; a decorating box never draws over its own box decoration.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-box-all",
+            "type": "value",
+            "value": "all"
+          }
+        ],
+        "styleDeclaration": [
+          "text-decoration-skip-box",
+          "textDecorationSkipBox"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "text-decoration-skip-spaces",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-spaces",
+        "value": "none | all | [ start || end ]",
+        "initial": "start end",
+        "appliesTo": "all elements",
+        "inherited": "yes",
+        "percentages": "N/A",
+        "computedValue": "specified keyword(s)",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "Spacers are not skipped. They are decorated just like any other character.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-spaces-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "all",
+            "prose": "Skip all spacers and all word separators plus any adjacent letter-spacing or word-spacing.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-spaces-all",
+            "type": "value",
+            "value": "all"
+          },
+          {
+            "name": "start",
+            "prose": "Skip all spacers, plus any adjacent letter-spacing or word-spacing, when located at the start of the line.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-spaces-start",
+            "type": "value",
+            "value": "start"
+          },
+          {
+            "name": "end",
+            "prose": "Skip all spacers, plus any adjacent letter-spacing or word-spacing, when located at the end of the line.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-spaces-end",
+            "type": "value",
+            "value": "end"
+          }
+        ],
+        "styleDeclaration": [
+          "text-decoration-skip-spaces",
+          "textDecorationSkipSpaces"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "text-decoration-skip-ink",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-ink",
+        "value": "auto | none | all",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "yes",
+        "percentages": "N/A",
+        "computedValue": "specified keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "UAs may interrupt underlines and overlines where the line would cross glyph ink and to some distance to either side of the glyph outline. UAs should consider the script of the text (see note below) when determining whether to apply ink-skipping behavior to a given range of content.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-ink-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "all",
+            "prose": "UAs must interrupt underlines and overlines where the line would cross glyph ink and to some distance to either side of the glyph outline.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-ink-all",
+            "type": "value",
+            "value": "all"
+          },
+          {
+            "name": "none",
+            "prose": "UA must draw continuous underlines and overlines, without interruptions when they cross over a glyph.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-ink-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "text-decoration-skip-ink",
+          "textDecorationSkipInk"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-emphasis-style",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-style",
+        "value": "none | [ [ filled | open ] || [ dot | circle | double-circle | triangle | sesame ] ] | <string>",
+        "initial": "none",
+        "appliesTo": "text",
+        "inherited": "yes",
+        "percentages": "n/a",
+        "computedValue": "the keyword none, a pair of keywords representing the shape and fill, or a string",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "No emphasis marks.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "filled",
+            "prose": "The shape is filled with solid color.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-filled",
+            "type": "value",
+            "value": "filled"
+          },
+          {
+            "name": "dot",
+            "prose": "Display small circles as marks. The filled dot is U+2022 '•', and the open dot is U+25E6 '◦'.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-dot",
+            "type": "value",
+            "value": "dot"
+          },
+          {
+            "name": "circle",
+            "prose": "Display large circles as marks. The filled circle is U+25CF '●', and the open circle is U+25CB '○'.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-circle",
+            "type": "value",
+            "value": "circle"
+          },
+          {
+            "name": "double-circle",
+            "prose": "Display double circles as marks. The filled double-circle is U+25C9 '◉', and the open double-circle is U+25CE '◎'.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-double-circle",
+            "type": "value",
+            "value": "double-circle"
+          },
+          {
+            "name": "triangle",
+            "prose": "Display triangles as marks. The filled triangle is U+25B2 '▲', and the open triangle is U+25B3 '△'.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-triangle",
+            "type": "value",
+            "value": "triangle"
+          },
+          {
+            "name": "sesame",
+            "prose": "Display sesames as marks. The filled sesame is U+FE45 '﹅', and the open sesame is U+FE46 '﹆'.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-sesame",
+            "type": "value",
+            "value": "sesame"
+          },
+          {
+            "name": "<string>",
+            "prose": "Display the given string as marks. Authors should not specify more than one character in <string>. The UA may truncate or ignore strings consisting of more than one grapheme cluster.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-string",
+            "type": "value",
+            "value": "<string>"
+          }
+        ],
+        "styleDeclaration": [
+          "text-emphasis-style",
+          "textEmphasisStyle"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-emphasis-color",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-color",
+        "value": "<color>",
+        "initial": "currentcolor",
+        "appliesTo": "text",
+        "inherited": "yes",
+        "percentages": "n/a",
+        "computedValue": "computed color",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value type",
+        "styleDeclaration": [
+          "text-emphasis-color",
+          "textEmphasisColor"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-emphasis",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis",
+        "value": "<'text-emphasis-style'> || <'text-emphasis-color'>",
+        "initial": "see individual properties",
+        "appliesTo": "see individual properties",
+        "inherited": "see individual properties",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "styleDeclaration": [
+          "text-emphasis",
+          "textEmphasis"
+        ],
+        "longhands": [
+          "text-emphasis-style",
+          "text-emphasis-color"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-emphasis-position",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-position",
+        "value": "[ over | under ] && [ right | left ]?",
+        "initial": "over right",
+        "appliesTo": "text",
+        "inherited": "yes",
+        "percentages": "n/a",
+        "computedValue": "specified keyword(s)",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "over",
+            "prose": "Draw marks over the text in horizontal typographic modes.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-position-over",
+            "type": "value",
+            "value": "over"
+          },
+          {
+            "name": "under",
+            "prose": "Draw marks under the text in horizontal typographic modes.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-position-under",
+            "type": "value",
+            "value": "under"
+          },
+          {
+            "name": "right",
+            "prose": "Draw marks to the right of the text in vertical typographic modes.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-position-right",
+            "type": "value",
+            "value": "right"
+          },
+          {
+            "name": "left",
+            "prose": "Draw marks to the left of the text in vertical typographic modes.",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-position-left",
+            "type": "value",
+            "value": "left"
+          }
+        ],
+        "styleDeclaration": [
+          "text-emphasis-position",
+          "textEmphasisPosition"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "text-emphasis-skip",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-skip",
+        "value": "spaces || punctuation || symbols || narrow",
+        "initial": "spaces punctuation",
+        "appliesTo": "text",
+        "inherited": "yes",
+        "percentages": "N/A",
+        "computedValue": "specified keyword(s)",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "spaces",
+            "prose": "Skip word separators or other characters belonging to the Unicode separator category (Z*). (But note that emphasis marks are drawn for a space that combines with any combining characters.)",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-skip-spaces",
+            "type": "value",
+            "value": "spaces"
+          },
+          {
+            "name": "punctuation",
+            "prose": "Skip punctuation. Punctuation in this definition includes characters belonging to the Unicode P* category that are not defined as symbols (see below).",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-skip-punctuation",
+            "type": "value",
+            "value": "punctuation"
+          },
+          {
+            "name": "symbols",
+            "prose": "Skip symbols. Symbols in this definition includes all typographic character units belonging to the Unicode S* general category as well as any which are NFKD-equivalent [UAX15] to the following characters from the Unicode Po category: # U+0023 NUMBER SIGN % U+0025 PERCENT SIGN ‰ U+2030 PER MILLE SIGN ‱ U+2031 PER TEN THOUSAND SIGN ٪ U+066A ARABIC PERCENT SIGN ؉ U+0609 ARABIC-INDIC PER MILLE SIGN ؊ U+060A ARABIC-INDIC PER TEN THOUSAND SIGN & U+0026 AMPERSAND ⁊ U+204A TIRONIAN SIGN ET @ U+0040 COMMERCIAL AT § U+00A7 SECTION SIGN ¶ U+00B6 PILCROW SIGN ⁋ U+204B REVERSED PILCROW SIGN ⁓ U+2053 SWUNG DASH 〽️ U+303D PART ALTERNATION MARK",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-skip-symbols",
+            "type": "value",
+            "value": "symbols"
+          },
+          {
+            "name": "narrow",
+            "prose": "Skip characters where the East_Asian_Width property [UAX11] of the Unicode database [UAX44] is not F (Fullwidth) or W (Wide).",
+            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-skip-narrow",
+            "type": "value",
+            "value": "narrow"
+          }
+        ],
+        "styleDeclaration": [
+          "text-emphasis-skip",
+          "textEmphasisSkip"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "text-shadow",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-shadow",
+        "value": "none | <shadow>#",
+        "initial": "none",
+        "appliesTo": "text",
+        "inherited": "yes",
+        "percentages": "n/a",
+        "computedValue": "either the keyword none or a list, each item consisting of four absolute lengths plus a computed color and optionally also an inset keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "as shadow list",
+        "styleDeclaration": [
+          "text-shadow",
+          "textShadow"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": [],
+    "warnings": [
+      {
+        "msg": "Dangling value",
+        "name": "open",
+        "prose": "The shape is hollow.",
+        "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-text-emphasis-open",
+        "type": "value",
+        "value": "open",
+        "for": "text-text-emphasis"
+      }
+    ]
+  },
   "css-text-4": {
     "spec": {
       "title": "CSS Text Module Level 4",
@@ -11060,6 +12093,10 @@
         "styleDeclaration": [
           "white-space",
           "whiteSpace"
+        ],
+        "longhands": [
+          "white-space-collapse",
+          "text-wrap-mode"
         ],
         "compatibility": {
           "supported": true,
@@ -11498,6 +12535,10 @@
         "styleDeclaration": [
           "text-wrap",
           "textWrap"
+        ],
+        "longhands": [
+          "text-wrap-mode",
+          "text-wrap-style"
         ],
         "compatibility": {
           "supported": true,
@@ -12024,6 +13065,10 @@
           "text-align",
           "textAlign"
         ],
+        "longhands": [
+          "text-align-all",
+          "text-align-last"
+        ],
         "compatibility": {
           "supported": true,
           "browsers": 3,
@@ -12544,6 +13589,10 @@
           "text-spacing",
           "textSpacing"
         ],
+        "longhands": [
+          "text-spacing-trim",
+          "text-autospace"
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -12694,901 +13743,6 @@
           "browsers": 0,
           "flagged": false
         }
-      }
-    ]
-  },
-  "css-text-decor-4": {
-    "spec": {
-      "title": "CSS Text Decoration Module Level 4",
-      "url": "https://drafts.csswg.org/css-text-decor-4/"
-    },
-    "properties": [
-      {
-        "name": "text-decoration-line",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-line",
-        "value": "none | [ underline || overline || line-through || blink ] | spelling-error | grammar-error",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no (but see prose, above)",
-        "percentages": "n/a",
-        "computedValue": "specified keyword(s)",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "Neither produces nor inhibits text decoration.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "underline",
-            "prose": "Each line of text is underlined.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-underline",
-            "type": "value",
-            "value": "underline"
-          },
-          {
-            "name": "overline",
-            "prose": "Each line of text has a line over it (i.e. on the opposite side from an underline).",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-overline",
-            "type": "value",
-            "value": "overline"
-          },
-          {
-            "name": "line-through",
-            "prose": "Each line of text has a line through the middle.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-line-through",
-            "type": "value",
-            "value": "line-through"
-          },
-          {
-            "name": "blink",
-            "prose": "The text blinks (alternates between visible and invisible). Conforming user agents may simply not blink the text. Note that not blinking the text is one technique to satisfy checkpoint 3.3 of WAI-UAAG. This value is deprecated in favor of Animations [CSS3-ANIMATIONS].",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-blink",
-            "type": "value",
-            "value": "blink"
-          },
-          {
-            "name": "spelling-error",
-            "prose": "This value indicates the type of text decoration used by the user agent to highlight spelling mistakes. Its appearance is UA-defined, and may be platform-dependent.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-spelling-error",
-            "type": "value",
-            "value": "spelling-error"
-          },
-          {
-            "name": "grammar-error",
-            "prose": "This value indicates the type of text decoration used by the user agent to highlight grammar mistakes. Its appearance is UA defined, and may be platform-dependent.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-line-grammar-error",
-            "type": "value",
-            "value": "grammar-error"
-          }
-        ],
-        "styleDeclaration": [
-          "text-decoration-line",
-          "textDecorationLine"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-decoration-style",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-style",
-        "value": "solid | double | dotted | dashed | wavy",
-        "initial": "solid",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "specified keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "wavy",
-            "prose": "Values have the same meaning as for the border-style properties [CSS-BACKGROUNDS-3]. wavy indicates a wavy line.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-style-wavy",
-            "type": "value",
-            "value": "wavy"
-          }
-        ],
-        "styleDeclaration": [
-          "text-decoration-style",
-          "textDecorationStyle"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-decoration-color",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-color",
-        "value": "<color>",
-        "initial": "currentcolor",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "computed color",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value type",
-        "styleDeclaration": [
-          "text-decoration-color",
-          "textDecorationColor"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-decoration-thickness",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-thickness",
-        "value": "auto | from-font | <length-percentage>",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "as specified, with <length-percentage> values computed",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "The UA chooses an appropriate thickness for text decoration lines; see below.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-thickness-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "from-font",
-            "prose": "If the first available font has metrics indicating a preferred underline width, use that width, otherwise behaves as auto.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-thickness-from-font",
-            "type": "value",
-            "value": "from-font"
-          },
-          {
-            "name": "<length-percentage>",
-            "prose": "A length value specifies the thickness of text decoration lines as a fixed length. A percentage value specifies the thickness of text decoration lines as a percentage of 1em. The UA should round the actual value to the nearest integer device pixel, and ensure it is at least one device pixel.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-thickness-length-percentage",
-            "type": "value",
-            "value": "<length-percentage>"
-          }
-        ],
-        "styleDeclaration": [
-          "text-decoration-thickness",
-          "textDecorationThickness"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-decoration",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration",
-        "value": "<'text-decoration-line'> || <'text-decoration-thickness'> || <'text-decoration-style'> || <'text-decoration-color'>",
-        "initial": "see individual properties",
-        "appliesTo": "see individual properties",
-        "inherited": "see individual properties",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "styleDeclaration": [
-          "text-decoration",
-          "textDecoration"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-underline-position",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-position",
-        "value": "auto | [ from-font | under ] || [ left | right ]",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "yes",
-        "percentages": "n/a",
-        "computedValue": "specified keyword(s)",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "The user agent may use any algorithm to determine the underline’s position; however it must be placed at or under the alphabetic baseline. A typical “alphabetic” underline is positioned just below the alphabetic baseline",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#underline-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "from-font",
-            "prose": "If the first available font has metrics indicating a preferred underline offset, use that offset, otherwise behaves as auto.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-underline-position-from-font",
-            "type": "value",
-            "value": "from-font"
-          },
-          {
-            "name": "under",
-            "prose": "The underline is positioned under the element’s text content. In this case the underline usually does not cross the descenders. (This is sometimes called “accounting” underline.) This value can be combined with left or right if a particular side is preferred in vertical typographic modes. text-underline-position: under Because text-underline-position inherits, and is not reset by the text-decoration shorthand, the following example switches the document to use under underlining, which can be more appropriate for writing systems with long, complicated descenders. It is also often useful for mathematical or chemical texts that use many subscripts. :root { text-underline-position: under; }",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#underline-under",
-            "type": "value",
-            "value": "under"
-          },
-          {
-            "name": "left",
-            "prose": "In vertical typographic modes, the underline is aligned as for under, except it is always aligned to the left edge of the text. If this causes the underline to be drawn on the \"over\" side of the text, then an overline also switches sides and is drawn on the \"under\" side.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#underline-left",
-            "type": "value",
-            "value": "left"
-          },
-          {
-            "name": "right",
-            "prose": "In vertical typographic modes, the underline is aligned as for under, except it is always aligned to the right edge of the text. If this causes the underline to be drawn on the \"over\" side of the text, then an overline also switches sides and is drawn on the \"under\" side.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#underline-right",
-            "type": "value",
-            "value": "right"
-          }
-        ],
-        "styleDeclaration": [
-          "text-underline-position",
-          "textUnderlinePosition"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-underline-offset",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-offset",
-        "value": "auto | <length-percentage>",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "yes",
-        "percentages": "N/A",
-        "computedValue": "as specified, with <length-percentage> values computed",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "The UA chooses an appropriate offset for underlines. However, this offset must be zero if the computed value of text-underline-position is from-font and the UA was able to extract an appropriate metric to use from the font.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-underline-offset-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "<length-percentage>",
-            "prose": "A length value specifies the offset of underlines as a fixed length. A percentage value specifies the offset of underlines as a percentage of 1em.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-underline-offset-length-percentage",
-            "type": "value",
-            "value": "<length-percentage>"
-          }
-        ],
-        "styleDeclaration": [
-          "text-underline-offset",
-          "textUnderlineOffset"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-decoration-inset",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-inset",
-        "value": "<length>{1,2} | auto",
-        "initial": "0",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "specified keyword or absolute length",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value",
-        "values": [
-          {
-            "name": "<length>",
-            "prose": "Adjusts the start or end endpoint of the affected line decorations. Positive values move the endpoint inward (trimming), negative values move it outward (extending). The following example offsets an extra thick underline 1em endwards with respect to the text h1 { text-decoration: underline 0.3em rgba(36,148,187,0.25); text-decoration-inset: 1em -1em; }",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-inset-length",
-            "type": "value",
-            "value": "<length>"
-          },
-          {
-            "name": "auto",
-            "prose": "The UA chooses an inset amount that ensures that if two identical underlined elements appear side-by-side they do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.) text-decoration-inset: auto for <u>石井</u><u>艾俐俐</u>",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-inset-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "text-decoration-inset",
-          "textDecorationInset"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": false,
-            "firefox": true,
-            "safari": false
-          }
-        }
-      },
-      {
-        "name": "text-decoration-skip",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip",
-        "value": "none | auto",
-        "initial": "See individual properties",
-        "appliesTo": "all elements",
-        "inherited": "yes",
-        "percentages": "N/A",
-        "computedValue": "See individual properties",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The text-decoration-skip property and its sub-properties (text-decoration-skip-self, text-decoration-skip-box, text-decoration-skip-spaces, text-decoration-skip-ink) control interruptions in line decorations for which the element or an ancestor is the decorating box. The none value sets all sub-properties to none, and the auto value sets all sub-properties to their initial values.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "auto",
-            "prose": "The text-decoration-skip property and its sub-properties (text-decoration-skip-self, text-decoration-skip-box, text-decoration-skip-spaces, text-decoration-skip-ink) control interruptions in line decorations for which the element or an ancestor is the decorating box. The none value sets all sub-properties to none, and the auto value sets all sub-properties to their initial values.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "text-decoration-skip",
-          "textDecorationSkip"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 2,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-decoration-skip-self",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-self",
-        "value": "auto | skip-all | [ skip-underline || skip-overline || skip-line-through ] | no-skip",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "specified keyword(s) except for skip-all, see below",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "Skip this element (its entire margin box) if it is an atomic inline (such as an image or inline-block).",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "skip-all",
-            "prose": "Skip this element (its entire margin box) unconditionally. Don’t draw across it, don’t propagate to it.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-skip-all",
-            "type": "value",
-            "value": "skip-all"
-          },
-          {
-            "name": "skip-underline",
-            "prose": "Skip this element (its entire margin box) unconditionally when drawing ancestor underlines.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-skip-underline",
-            "type": "value",
-            "value": "skip-underline"
-          },
-          {
-            "name": "skip-overline",
-            "prose": "Skip this element (its entire margin box) unconditionally when drawing ancestor overlines.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-skip-overline",
-            "type": "value",
-            "value": "skip-overline"
-          },
-          {
-            "name": "skip-line-through",
-            "prose": "Skip this element (its entire margin box) unconditionally when drawing ancestor line-throughs.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-skip-line-through",
-            "type": "value",
-            "value": "skip-line-through"
-          },
-          {
-            "name": "no-skip",
-            "prose": "Line decorations from ancestor decorating boxes are applied to this box unconditionally: drawn across it as if it were text if it is an atomic inline, or propagated to it according to the usual rules if it is not.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-self-no-skip",
-            "type": "value",
-            "value": "no-skip"
-          }
-        ],
-        "styleDeclaration": [
-          "text-decoration-skip-self",
-          "textDecorationSkipSelf"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "text-decoration-skip-box",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-box",
-        "value": "none | all",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "yes",
-        "percentages": "N/A",
-        "computedValue": "specified keyword(s)",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "Skip nothing: line decorations from ancestor decorating boxes are drawn from margin edge to margin edge.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-box-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "all",
-            "prose": "When drawing text decoration lines applied to an ancestor decorating box, skip over the box’s own margin, border, and padding areas and only draw line decorations within its content area. This value only has an effect for decorations imposed by an ancestor; a decorating box never draws over its own box decoration.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-box-all",
-            "type": "value",
-            "value": "all"
-          }
-        ],
-        "styleDeclaration": [
-          "text-decoration-skip-box",
-          "textDecorationSkipBox"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "text-decoration-skip-spaces",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-spaces",
-        "value": "none | all | [ start || end ]",
-        "initial": "start end",
-        "appliesTo": "all elements",
-        "inherited": "yes",
-        "percentages": "N/A",
-        "computedValue": "specified keyword(s)",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "Spacers are not skipped. They are decorated just like any other character.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-spaces-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "all",
-            "prose": "Skip all spacers and all word separators plus any adjacent letter-spacing or word-spacing.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-spaces-all",
-            "type": "value",
-            "value": "all"
-          },
-          {
-            "name": "start",
-            "prose": "Skip all spacers, plus any adjacent letter-spacing or word-spacing, when located at the start of the line.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-spaces-start",
-            "type": "value",
-            "value": "start"
-          },
-          {
-            "name": "end",
-            "prose": "Skip all spacers, plus any adjacent letter-spacing or word-spacing, when located at the end of the line.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-spaces-end",
-            "type": "value",
-            "value": "end"
-          }
-        ],
-        "styleDeclaration": [
-          "text-decoration-skip-spaces",
-          "textDecorationSkipSpaces"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "text-decoration-skip-ink",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-ink",
-        "value": "auto | none | all",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "yes",
-        "percentages": "N/A",
-        "computedValue": "specified keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "UAs may interrupt underlines and overlines where the line would cross glyph ink and to some distance to either side of the glyph outline. UAs should consider the script of the text (see note below) when determining whether to apply ink-skipping behavior to a given range of content.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-ink-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "all",
-            "prose": "UAs must interrupt underlines and overlines where the line would cross glyph ink and to some distance to either side of the glyph outline.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-ink-all",
-            "type": "value",
-            "value": "all"
-          },
-          {
-            "name": "none",
-            "prose": "UA must draw continuous underlines and overlines, without interruptions when they cross over a glyph.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-decoration-skip-ink-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "text-decoration-skip-ink",
-          "textDecorationSkipInk"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-emphasis-style",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-style",
-        "value": "none | [ [ filled | open ] || [ dot | circle | double-circle | triangle | sesame ] ] | <string>",
-        "initial": "none",
-        "appliesTo": "text",
-        "inherited": "yes",
-        "percentages": "n/a",
-        "computedValue": "the keyword none, a pair of keywords representing the shape and fill, or a string",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "No emphasis marks.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "filled",
-            "prose": "The shape is filled with solid color.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-filled",
-            "type": "value",
-            "value": "filled"
-          },
-          {
-            "name": "dot",
-            "prose": "Display small circles as marks. The filled dot is U+2022 '•', and the open dot is U+25E6 '◦'.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-dot",
-            "type": "value",
-            "value": "dot"
-          },
-          {
-            "name": "circle",
-            "prose": "Display large circles as marks. The filled circle is U+25CF '●', and the open circle is U+25CB '○'.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-circle",
-            "type": "value",
-            "value": "circle"
-          },
-          {
-            "name": "double-circle",
-            "prose": "Display double circles as marks. The filled double-circle is U+25C9 '◉', and the open double-circle is U+25CE '◎'.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-double-circle",
-            "type": "value",
-            "value": "double-circle"
-          },
-          {
-            "name": "triangle",
-            "prose": "Display triangles as marks. The filled triangle is U+25B2 '▲', and the open triangle is U+25B3 '△'.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-triangle",
-            "type": "value",
-            "value": "triangle"
-          },
-          {
-            "name": "sesame",
-            "prose": "Display sesames as marks. The filled sesame is U+FE45 '﹅', and the open sesame is U+FE46 '﹆'.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-sesame",
-            "type": "value",
-            "value": "sesame"
-          },
-          {
-            "name": "<string>",
-            "prose": "Display the given string as marks. Authors should not specify more than one character in <string>. The UA may truncate or ignore strings consisting of more than one grapheme cluster.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-style-string",
-            "type": "value",
-            "value": "<string>"
-          }
-        ],
-        "styleDeclaration": [
-          "text-emphasis-style",
-          "textEmphasisStyle"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-emphasis-color",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-color",
-        "value": "<color>",
-        "initial": "currentcolor",
-        "appliesTo": "text",
-        "inherited": "yes",
-        "percentages": "n/a",
-        "computedValue": "computed color",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value type",
-        "styleDeclaration": [
-          "text-emphasis-color",
-          "textEmphasisColor"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-emphasis",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis",
-        "value": "<'text-emphasis-style'> || <'text-emphasis-color'>",
-        "initial": "see individual properties",
-        "appliesTo": "see individual properties",
-        "inherited": "see individual properties",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "styleDeclaration": [
-          "text-emphasis",
-          "textEmphasis"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-emphasis-position",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-position",
-        "value": "[ over | under ] && [ right | left ]?",
-        "initial": "over right",
-        "appliesTo": "text",
-        "inherited": "yes",
-        "percentages": "n/a",
-        "computedValue": "specified keyword(s)",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "over",
-            "prose": "Draw marks over the text in horizontal typographic modes.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-position-over",
-            "type": "value",
-            "value": "over"
-          },
-          {
-            "name": "under",
-            "prose": "Draw marks under the text in horizontal typographic modes.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-position-under",
-            "type": "value",
-            "value": "under"
-          },
-          {
-            "name": "right",
-            "prose": "Draw marks to the right of the text in vertical typographic modes.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-position-right",
-            "type": "value",
-            "value": "right"
-          },
-          {
-            "name": "left",
-            "prose": "Draw marks to the left of the text in vertical typographic modes.",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-position-left",
-            "type": "value",
-            "value": "left"
-          }
-        ],
-        "styleDeclaration": [
-          "text-emphasis-position",
-          "textEmphasisPosition"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "text-emphasis-skip",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-skip",
-        "value": "spaces || punctuation || symbols || narrow",
-        "initial": "spaces punctuation",
-        "appliesTo": "text",
-        "inherited": "yes",
-        "percentages": "N/A",
-        "computedValue": "specified keyword(s)",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "spaces",
-            "prose": "Skip word separators or other characters belonging to the Unicode separator category (Z*). (But note that emphasis marks are drawn for a space that combines with any combining characters.)",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-skip-spaces",
-            "type": "value",
-            "value": "spaces"
-          },
-          {
-            "name": "punctuation",
-            "prose": "Skip punctuation. Punctuation in this definition includes characters belonging to the Unicode P* category that are not defined as symbols (see below).",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-skip-punctuation",
-            "type": "value",
-            "value": "punctuation"
-          },
-          {
-            "name": "symbols",
-            "prose": "Skip symbols. Symbols in this definition includes all typographic character units belonging to the Unicode S* general category as well as any which are NFKD-equivalent [UAX15] to the following characters from the Unicode Po category: # U+0023 NUMBER SIGN % U+0025 PERCENT SIGN ‰ U+2030 PER MILLE SIGN ‱ U+2031 PER TEN THOUSAND SIGN ٪ U+066A ARABIC PERCENT SIGN ؉ U+0609 ARABIC-INDIC PER MILLE SIGN ؊ U+060A ARABIC-INDIC PER TEN THOUSAND SIGN & U+0026 AMPERSAND ⁊ U+204A TIRONIAN SIGN ET @ U+0040 COMMERCIAL AT § U+00A7 SECTION SIGN ¶ U+00B6 PILCROW SIGN ⁋ U+204B REVERSED PILCROW SIGN ⁓ U+2053 SWUNG DASH 〽️ U+303D PART ALTERNATION MARK",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-skip-symbols",
-            "type": "value",
-            "value": "symbols"
-          },
-          {
-            "name": "narrow",
-            "prose": "Skip characters where the East_Asian_Width property [UAX11] of the Unicode database [UAX44] is not F (Fullwidth) or W (Wide).",
-            "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-emphasis-skip-narrow",
-            "type": "value",
-            "value": "narrow"
-          }
-        ],
-        "styleDeclaration": [
-          "text-emphasis-skip",
-          "textEmphasisSkip"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "text-shadow",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-shadow",
-        "value": "none | <shadow>#",
-        "initial": "none",
-        "appliesTo": "text",
-        "inherited": "yes",
-        "percentages": "n/a",
-        "computedValue": "either the keyword none or a list, each item consisting of four absolute lengths plus a computed color and optionally also an inset keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "as shadow list",
-        "styleDeclaration": [
-          "text-shadow",
-          "textShadow"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [],
-    "warnings": [
-      {
-        "msg": "Dangling value",
-        "name": "open",
-        "prose": "The shape is hollow.",
-        "href": "https://drafts.csswg.org/css-text-decor-4/#valdef-text-text-emphasis-open",
-        "type": "value",
-        "value": "open",
-        "for": "text-text-emphasis"
       }
     ]
   },
