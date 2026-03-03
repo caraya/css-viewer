@@ -7,7 +7,14 @@ export default defineConfig({
   build: {
     sourcemap: true,
   },
-  plugins: [react(), sonda()],
+  plugins: [
+    sonda({
+      filename: "sondaReport[index].html",
+      gzip: true,
+      brotli: true,
+    }),
+    react()
+  ],
   server: {
     port: 2509,
   },
