@@ -1,7 +1,7 @@
 {
   "type": "crawl",
   "title": "Reffy crawl",
-  "date": "2026-03-28T18:51:21.470Z",
+  "date": "2026-04-04T18:51:46.830Z",
   "options": {
     "useCrawl": "curated",
     "output": "curated",
@@ -34,7 +34,7 @@
     "crawled": 733,
     "errors": 2
   },
-  "crawler": "reffy-20.0.14",
+  "crawler": "reffy-20.0.15",
   "results": [
     {
       "url": "https://aomediacodec.github.io/afgs1-spec/",
@@ -487,11 +487,11 @@
       ],
       "crawled": "https://compression.spec.whatwg.org/",
       "crawlCacheInfo": {
-        "lastModified": "Sun, 15 Mar 2026 09:10:17 GMT"
+        "lastModified": "Thu, 02 Apr 2026 12:56:03 GMT"
       },
       "generator": "bikeshed",
-      "date": "15 March 2026",
-      "revision": "bdc36f284b56e926f031f4e5e73b0ce6fe35b417",
+      "date": "2 April 2026",
+      "revision": "32d7cf5eb8564686b6880bf6e663bcccb24f50d4",
       "algorithms": "algorithms/compression.json",
       "links": "links/compression.json",
       "refs": "refs/compression.json",
@@ -809,9 +809,9 @@
       ],
       "crawled": "https://httpwg.org/http-extensions/draft-ietf-httpbis-layered-cookies.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 01:30:03 GMT"
+        "lastModified": "Fri, 03 Apr 2026 20:58:48 GMT"
       },
-      "date": "26 March 2026",
+      "date": "3 April 2026",
       "algorithms": "algorithms/layered-cookies.json",
       "links": "links/layered-cookies.json",
       "refs": "refs/layered-cookies.json",
@@ -858,9 +858,9 @@
       ],
       "crawled": "https://httpwg.org/http-extensions/draft-ietf-httpbis-no-vary-search.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 01:30:03 GMT"
+        "lastModified": "Fri, 03 Apr 2026 20:58:48 GMT"
       },
-      "date": "26 March 2026",
+      "date": "3 April 2026",
       "algorithms": "algorithms/no-vary-search.json",
       "links": "links/no-vary-search.json",
       "refs": "refs/no-vary-search.json",
@@ -907,9 +907,9 @@
       ],
       "crawled": "https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 01:30:03 GMT"
+        "lastModified": "Fri, 03 Apr 2026 20:58:48 GMT"
       },
-      "date": "26 March 2026",
+      "date": "3 April 2026",
       "algorithms": "algorithms/rfc6265bis.json",
       "links": "links/rfc6265bis.json",
       "refs": "refs/rfc6265bis.json",
@@ -956,9 +956,9 @@
       ],
       "crawled": "https://httpwg.org/http-extensions/draft-ietf-httpbis-unencoded-digest.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 01:30:03 GMT"
+        "lastModified": "Fri, 03 Apr 2026 20:58:48 GMT"
       },
-      "date": "26 March 2026",
+      "date": "3 April 2026",
       "links": "links/unencoded-digest.json",
       "refs": "refs/unencoded-digest.json",
       "headings": "headings/unencoded-digest.json",
@@ -1184,11 +1184,11 @@
       ],
       "crawled": "https://drafts.csswg.org/animation-triggers-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "3 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/animation-triggers-1.json",
       "refs": "refs/animation-triggers-1.json",
       "css": "css/animation-triggers.json",
@@ -1241,11 +1241,11 @@
       ],
       "crawled": "https://drafts.csswg.org/compositing-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "13 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/compositing-2.json",
       "links": "links/compositing-2.json",
       "refs": "refs/compositing-2.json",
@@ -1304,11 +1304,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-6/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "11 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-color-6.json",
       "refs": "refs/css-color-6.json",
       "css": "css/css-color-6.json",
@@ -1359,11 +1359,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-conditional-values-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "12 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-conditional-values-1.json",
       "refs": "refs/css-conditional-values-1.json",
       "dfns": "dfns/css-conditional-values-1.json",
@@ -1413,11 +1413,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-extensions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "5 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-extensions-1.json",
       "refs": "refs/css-extensions-1.json",
       "css": "css/css-extensions.json",
@@ -1475,11 +1475,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-gcpm-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "24 January 2024",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-gcpm-4.json",
       "refs": "refs/css-gcpm-4.json",
       "css": "css/css-gcpm-4.json",
@@ -1518,9 +1518,9 @@
         "sourcePath": "css-image-animation-1/Overview.bs",
         "filename": "index.html"
       },
-      "title": "CSS Image Animation",
+      "title": "CSS Image Animation Module Level 1",
       "source": "spec",
-      "shortTitle": "CSS Image Animation",
+      "shortTitle": "CSS Image Animation 1",
       "categories": [
         "browser"
       ],
@@ -1530,11 +1530,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-image-animation-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
-      "date": "16 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "date": "31 March 2026",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-image-animation-1.json",
       "refs": "refs/css-image-animation-1.json",
       "css": "css/css-image-animation.json",
@@ -1592,11 +1592,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-images-5/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "22 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-images-5.json",
       "refs": "refs/css-images-5.json",
       "css": "css/css-images-5.json",
@@ -1647,11 +1647,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-link-params-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "12 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-link-params-1.json",
       "refs": "refs/css-link-params-1.json",
       "css": "css/css-link-params.json",
@@ -1702,11 +1702,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-navigation-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "12 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-navigation-1.json",
       "links": "links/css-navigation-1.json",
       "refs": "refs/css-navigation-1.json",
@@ -1765,11 +1765,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-page-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "30 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-page-4.json",
       "refs": "refs/css-page-4.json",
       "dfns": "dfns/css-page-4.json",
@@ -1829,11 +1829,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-shadow-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "27 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-shadow-1.json",
       "links": "links/css-shadow-1.json",
       "refs": "refs/css-shadow-1.json",
@@ -1894,11 +1894,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-shapes-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "22 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-shapes-2.json",
       "links": "links/css-shapes-2.json",
       "refs": "refs/css-shapes-2.json",
@@ -1956,11 +1956,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-size-adjust-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "14 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-size-adjust-1.json",
       "refs": "refs/css-size-adjust-1.json",
       "css": "css/css-size-adjust.json",
@@ -2018,11 +2018,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-variables-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "5 May 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-variables-2.json",
       "links": "links/css-variables-2.json",
       "refs": "refs/css-variables-2.json",
@@ -2075,11 +2075,11 @@
       ],
       "crawled": "https://drafts.csswg.org/filter-effects-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "23 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/filter-effects-2.json",
       "links": "links/filter-effects-2.json",
       "refs": "refs/filter-effects-2.json",
@@ -2131,11 +2131,11 @@
       ],
       "crawled": "https://drafts.csswg.org/pointer-animations-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "11 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/pointer-animations-1.json",
       "links": "links/pointer-animations-1.json",
       "refs": "refs/pointer-animations-1.json",
@@ -2255,11 +2255,11 @@
       ],
       "crawled": "https://fetch.spec.whatwg.org/",
       "crawlCacheInfo": {
-        "lastModified": "Sun, 15 Mar 2026 09:02:47 GMT"
+        "lastModified": "Wed, 01 Apr 2026 13:51:58 GMT"
       },
       "generator": "bikeshed",
-      "date": "15 March 2026",
-      "revision": "1ef6c8b56799978915c421a1d396160dbdd85f1e",
+      "date": "1 April 2026",
+      "revision": "dfdd250b1d6d70da31810fae35e4802631ded6b7",
       "algorithms": "algorithms/fetch.json",
       "links": "links/fetch.json",
       "refs": "refs/fetch.json",
@@ -2318,7 +2318,7 @@
       "dfns": "dfns/fido-v2.1.json",
       "headings": "headings/fido-v2.1.json",
       "ids": "ids/fido-v2.1.json",
-      "error": "Error: Switch option without <dd> found: authorized, the authenticator sets the minPinLength return value to the current minimum PIN length value.\n        \nhttps://fidoalliance.org/specs/fido-v2.1-ps-20210615/reffy/scripts/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/extract-algorithms.mjs:550:19\nArray.map (<anonymous>)\nserializeSteps (https://fidoalliance.org/specs/fido-v2.1-ps-20210615/reffy/scripts/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/extract-algorithms.mjs:544:53)\n    at evaluate (evaluate at processSpecification (file:///home/runner/work/webref/webref/node_modules/reffy/src/lib/util.js:663:36), <anonymous>:6:28)\n    at #evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:388:19)\n    at async ExecutionContext.evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:274:16)\n    at async IsolatedWorld.evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/IsolatedWorld.js:97:16)\n    at async CdpFrame.evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/api/Frame.js:359:20)\n    at async CdpPage.evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/api/Page.js:826:20)\n    at async processSpecification (file:///home/runner/work/webref/webref/node_modules/reffy/src/lib/util.js:663:25)\n    at async crawlSpec (file:///home/runner/work/webref/webref/node_modules/reffy/src/lib/specs-crawler.js:109:22)\n    at async processSpec (file:///home/runner/work/webref/webref/node_modules/reffy/src/lib/specs-crawler.js:452:22)\n    at async ThrottledQueue.runThrottled (file:///home/runner/work/webref/webref/node_modules/reffy/src/lib/throttled-queue.js:78:22)",
+      "error": "Error: Switch option without <dd> found: authorized, the authenticator sets the minPinLength return value to the current minimum PIN length value.\n        \nhttps://fidoalliance.org/specs/fido-v2.1-ps-20210615/reffy/scripts/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/extract-algorithms.mjs:550:19\nArray.map (<anonymous>)\nserializeSteps (https://fidoalliance.org/specs/fido-v2.1-ps-20210615/reffy/scripts/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/extract-algorithms.mjs:544:53)\n    at evaluate (evaluate at processSpecification (file:///home/runner/work/webref/webref/node_modules/reffy/src/lib/util.js:663:36), <anonymous>:6:28)\n    at #evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:388:19)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at process.processImmediate (node:internal/timers:454:9)\n    at async ExecutionContext.evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:274:16)\n    at async IsolatedWorld.evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/IsolatedWorld.js:97:16)\n    at async CdpFrame.evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/api/Frame.js:359:20)\n    at async CdpPage.evaluate (file:///home/runner/work/webref/webref/node_modules/puppeteer-core/lib/esm/puppeteer/api/Page.js:826:20)\n    at async processSpecification (file:///home/runner/work/webref/webref/node_modules/reffy/src/lib/util.js:663:25)\n    at async crawlSpec (file:///home/runner/work/webref/webref/node_modules/reffy/src/lib/specs-crawler.js:109:22)",
       "idlparsed": "idlparsed/fido-v2.1.json"
     },
     {
@@ -2615,9 +2615,9 @@
       ],
       "crawled": "https://html.spec.whatwg.org/multipage/",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 25 Mar 2026 09:21:46 GMT"
+        "lastModified": "Wed, 01 Apr 2026 13:31:11 GMT"
       },
-      "date": "25 March 2026",
+      "date": "1 April 2026",
       "algorithms": "algorithms/html.json",
       "links": "links/html.json",
       "refs": "refs/html.json",
@@ -2810,8 +2810,8 @@
       "organization": "W3C",
       "groups": [
         {
-          "name": "Immersive Web Community Group",
-          "url": "https://www.w3.org/community/immersive-web/"
+          "name": "Immersive Web Working Group",
+          "url": "https://www.w3.org/immersive-web/"
         }
       ],
       "nightly": {
@@ -2840,10 +2840,11 @@
       ],
       "crawled": "https://immersive-web.github.io/plane-detection/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 29 Jan 2026 11:18:43 GMT"
+        "lastModified": "Mon, 30 Mar 2026 18:03:00 GMT"
       },
       "generator": "bikeshed",
-      "date": "29 January 2026",
+      "date": "30 March 2026",
+      "revision": "394f13ee76d31f3885eb1237777cf2ecb1b87cbc",
       "algorithms": "algorithms/webxr-plane-detection.json",
       "links": "links/webxr-plane-detection.json",
       "refs": "refs/webxr-plane-detection.json",
@@ -6356,7 +6357,7 @@
       "series": {
         "shortname": "ecmascript",
         "currentSpecification": "ecmascript",
-        "title": "ECMAScript® 2026 Language Specification",
+        "title": "ECMAScript® 2027 Language Specification",
         "shortTitle": "ECMAScript",
         "nightlyUrl": "https://tc39.es/ecma262/multipage/"
       },
@@ -6425,7 +6426,7 @@
         ],
         "filename": "index.html"
       },
-      "title": "ECMAScript® 2026 Language Specification",
+      "title": "ECMAScript® 2027 Language Specification",
       "source": "spec",
       "categories": [
         "browser"
@@ -6436,9 +6437,9 @@
       ],
       "crawled": "https://tc39.es/ecma262/multipage/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 20:24:43 GMT"
+        "lastModified": "Sat, 04 Apr 2026 05:10:21 GMT"
       },
-      "date": "27 March 2026",
+      "date": "4 April 2026",
       "links": "links/ecmascript.json",
       "refs": "refs/ecmascript.json",
       "dfns": "dfns/ecmascript.json",
@@ -6490,9 +6491,9 @@
       ],
       "crawled": "https://tc39.es/ecma402/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 24 Mar 2026 05:38:57 GMT"
+        "lastModified": "Wed, 01 Apr 2026 14:44:56 GMT"
       },
-      "date": "24 March 2026",
+      "date": "1 April 2026",
       "links": "links/ecma-402.json",
       "refs": "refs/ecma-402.json",
       "dfns": "dfns/ecma-402.json",
@@ -7330,9 +7331,9 @@
       ],
       "crawled": "https://tc39.es/proposal-temporal/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 24 Mar 2026 17:32:11 GMT"
+        "lastModified": "Fri, 03 Apr 2026 16:26:05 GMT"
       },
-      "date": "24 March 2026",
+      "date": "3 April 2026",
       "links": "links/tc39-temporal.json",
       "dfns": "dfns/tc39-temporal.json",
       "headings": "headings/tc39-temporal.json",
@@ -7436,11 +7437,11 @@
       ],
       "crawled": "https://url.spec.whatwg.org/",
       "crawlCacheInfo": {
-        "lastModified": "Sun, 15 Mar 2026 09:22:59 GMT"
+        "lastModified": "Tue, 31 Mar 2026 13:12:01 GMT"
       },
       "generator": "bikeshed",
-      "date": "15 March 2026",
-      "revision": "8f0372b95d3cefde807efe662999f46968034867",
+      "date": "31 March 2026",
+      "revision": "dc66b3bba025b76ecba0f5f2a323a600c0c74a84",
       "algorithms": "algorithms/url.json",
       "links": "links/url.json",
       "refs": "refs/url.json",
@@ -7667,7 +7668,7 @@
       ],
       "crawled": "https://w3c.github.io/data-shapes/shacl12-cs/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 14:30:49 GMT"
+        "lastModified": "Fri, 03 Apr 2026 06:45:40 GMT"
       },
       "generator": "respec",
       "date": "04 August 2025",
@@ -7714,10 +7715,10 @@
       ],
       "crawled": "https://w3c.github.io/data-shapes/shacl12-profiling/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 14:30:49 GMT"
+        "lastModified": "Fri, 03 Apr 2026 06:45:40 GMT"
       },
       "generator": "respec",
-      "date": "26 March 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/shacl12-profiling.json",
       "links": "links/shacl12-profiling.json",
       "refs": "refs/shacl12-profiling.json",
@@ -7763,10 +7764,10 @@
       ],
       "crawled": "https://w3c.github.io/data-shapes/shacl12-ui/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 14:30:49 GMT"
+        "lastModified": "Fri, 03 Apr 2026 06:45:40 GMT"
       },
       "generator": "respec",
-      "date": "26 March 2026",
+      "date": "03 April 2026",
       "links": "links/shacl12-ui.json",
       "refs": "refs/shacl12-ui.json",
       "dfns": "dfns/shacl12-ui.json",
@@ -8028,10 +8029,10 @@
       ],
       "crawled": "https://w3c.github.io/mathml-aam/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Mar 2026 17:05:12 GMT"
+        "lastModified": "Thu, 02 Apr 2026 17:11:12 GMT"
       },
       "generator": "respec",
-      "date": "23 March 2026",
+      "date": "02 April 2026",
       "links": "links/mathml-aam.json",
       "refs": "refs/mathml-aam.json",
       "headings": "headings/mathml-aam.json",
@@ -8294,10 +8295,10 @@
       ],
       "crawled": "https://w3c.github.io/pdf-aam/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Mar 2026 17:05:18 GMT"
+        "lastModified": "Thu, 02 Apr 2026 17:10:59 GMT"
       },
       "generator": "respec",
-      "date": "23 March 2026",
+      "date": "02 April 2026",
       "links": "links/pdf-aam.json",
       "refs": "refs/pdf-aam.json",
       "dfns": "dfns/pdf-aam.json",
@@ -10745,11 +10746,11 @@
       ],
       "crawled": "https://wicg.github.io/client-hints-infrastructure/",
       "crawlCacheInfo": {
-        "lastModified": "Sat, 14 Mar 2026 00:29:48 GMT"
+        "lastModified": "Tue, 31 Mar 2026 09:04:14 GMT"
       },
       "generator": "bikeshed",
-      "date": "14 March 2026",
-      "revision": "6150bc01d9b557c88c95211653a335601e1c83af",
+      "date": "31 March 2026",
+      "revision": "fc52071266216c0eeb41f3d56fa6c95cd89f3caa",
       "algorithms": "algorithms/client-hints-infrastructure.json",
       "links": "links/client-hints-infrastructure.json",
       "refs": "refs/client-hints-infrastructure.json",
@@ -10778,7 +10779,7 @@
       ],
       "nightly": {
         "url": "https://wicg.github.io/container-timing/",
-        "status": "Editor's Draft",
+        "status": "Draft Community Group Report",
         "alternateUrls": [],
         "repository": "https://github.com/WICG/container-timing",
         "sourcePath": "index.bs",
@@ -10796,11 +10797,11 @@
       ],
       "crawled": "https://wicg.github.io/container-timing/",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 18 Feb 2026 15:54:34 GMT"
+        "lastModified": "Thu, 02 Apr 2026 12:00:01 GMT"
       },
       "generator": "bikeshed",
-      "date": "18 February 2026",
-      "revision": "8b79920a1c82b0da386411b620c9a9d5c56ea629",
+      "date": "2 April 2026",
+      "revision": "92efdb57f24c69a109165e181f30612f10453325",
       "algorithms": "algorithms/container-timing.json",
       "links": "links/container-timing.json",
       "refs": "refs/container-timing.json",
@@ -13069,11 +13070,11 @@
       ],
       "crawled": "https://wicg.github.io/PEPC/geolocation-element.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Feb 2026 15:43:37 GMT"
+        "lastModified": "Thu, 02 Apr 2026 15:15:29 GMT"
       },
       "generator": "bikeshed",
-      "date": "26 February 2026",
-      "revision": "774477b2661c25d15b938604c65eaf7a29273c6b",
+      "date": "2 April 2026",
+      "revision": "3c5e80d636886cdf180d919767c5c5ffc286929d",
       "algorithms": "algorithms/geolocation-element.json",
       "links": "links/geolocation-element.json",
       "refs": "refs/geolocation-element.json",
@@ -14755,10 +14756,10 @@
       ],
       "crawled": "https://wicg.github.io/webcrypto-modern-algos/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 16:33:01 GMT"
+        "lastModified": "Sun, 29 Mar 2026 13:17:56 GMT"
       },
       "generator": "respec",
-      "date": "26 March 2026",
+      "date": "29 March 2026",
       "algorithms": "algorithms/webcrypto-modern-algos.json",
       "links": "links/webcrypto-modern-algos.json",
       "refs": "refs/webcrypto-modern-algos.json",
@@ -15168,9 +15169,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc2397",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 01:40:09 GMT"
+        "lastModified": "Fri, 03 Apr 2026 01:51:02 GMT"
       },
-      "date": "27 March 2026",
+      "date": "3 April 2026",
       "links": "links/rfc2397.json",
       "headings": "headings/rfc2397.json",
       "ids": "ids/rfc2397.json",
@@ -15215,9 +15216,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc4120",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 04:11:43 GMT"
+        "lastModified": "Thu, 02 Apr 2026 04:58:43 GMT"
       },
-      "date": "26 March 2026",
+      "date": "2 April 2026",
       "links": "links/rfc4120.json",
       "headings": "headings/rfc4120.json",
       "ids": "ids/rfc4120.json",
@@ -15416,9 +15417,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc6386",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 00:58:26 GMT"
+        "lastModified": "Fri, 03 Apr 2026 00:59:13 GMT"
       },
-      "date": "27 March 2026",
+      "date": "3 April 2026",
       "links": "links/rfc6386.json",
       "headings": "headings/rfc6386.json",
       "ids": "ids/rfc6386.json",
@@ -15463,9 +15464,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc6454",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 21:08:16 GMT"
+        "lastModified": "Fri, 03 Apr 2026 21:11:26 GMT"
       },
-      "date": "27 March 2026",
+      "date": "3 April 2026",
       "links": "links/rfc6454.json",
       "headings": "headings/rfc6454.json",
       "ids": "ids/rfc6454.json",
@@ -15510,9 +15511,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc6455",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 24 Mar 2026 22:32:36 GMT"
+        "lastModified": "Tue, 31 Mar 2026 22:42:57 GMT"
       },
-      "date": "24 March 2026",
+      "date": "31 March 2026",
       "links": "links/rfc6455.json",
       "headings": "headings/rfc6455.json",
       "ids": "ids/rfc6455.json",
@@ -15557,9 +15558,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc6797",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 00:33:09 GMT"
+        "lastModified": "Fri, 03 Apr 2026 00:36:38 GMT"
       },
-      "date": "27 March 2026",
+      "date": "3 April 2026",
       "links": "links/rfc6797.json",
       "headings": "headings/rfc6797.json",
       "ids": "ids/rfc6797.json",
@@ -15604,9 +15605,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc7034",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 17:21:02 GMT"
+        "lastModified": "Thu, 02 Apr 2026 17:47:55 GMT"
       },
-      "date": "26 March 2026",
+      "date": "2 April 2026",
       "links": "links/rfc7034.json",
       "headings": "headings/rfc7034.json",
       "ids": "ids/rfc7034.json",
@@ -15651,9 +15652,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc7239",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 25 Mar 2026 00:46:28 GMT"
+        "lastModified": "Wed, 01 Apr 2026 01:05:31 GMT"
       },
-      "date": "25 March 2026",
+      "date": "1 April 2026",
       "links": "links/rfc7239.json",
       "headings": "headings/rfc7239.json",
       "ids": "ids/rfc7239.json",
@@ -15750,9 +15751,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc7469",
       "crawlCacheInfo": {
-        "lastModified": "Sat, 28 Mar 2026 10:52:20 GMT"
+        "lastModified": "Sat, 04 Apr 2026 12:12:02 GMT"
       },
-      "date": "28 March 2026",
+      "date": "4 April 2026",
       "links": "links/rfc7469.json",
       "headings": "headings/rfc7469.json",
       "ids": "ids/rfc7469.json",
@@ -15797,9 +15798,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc7578",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Mar 2026 09:36:52 GMT"
+        "lastModified": "Mon, 30 Mar 2026 09:47:00 GMT"
       },
-      "date": "23 March 2026",
+      "date": "30 March 2026",
       "links": "links/rfc7578.json",
       "headings": "headings/rfc7578.json",
       "ids": "ids/rfc7578.json",
@@ -16048,9 +16049,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc7932",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 25 Mar 2026 19:06:21 GMT"
+        "lastModified": "Wed, 01 Apr 2026 19:12:28 GMT"
       },
-      "date": "25 March 2026",
+      "date": "1 April 2026",
       "links": "links/rfc7932.json",
       "headings": "headings/rfc7932.json",
       "ids": "ids/rfc7932.json",
@@ -16301,9 +16302,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc8610",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 05:24:54 GMT"
+        "lastModified": "Fri, 03 Apr 2026 05:43:19 GMT"
       },
-      "date": "27 March 2026",
+      "date": "3 April 2026",
       "links": "links/rfc8610.json",
       "dfns": "dfns/rfc8610.json",
       "headings": "headings/rfc8610.json",
@@ -16349,9 +16350,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc8878",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 13:19:55 GMT"
+        "lastModified": "Sun, 29 Mar 2026 20:30:55 GMT"
       },
-      "date": "27 March 2026",
+      "date": "29 March 2026",
       "links": "links/rfc8878.json",
       "refs": "refs/rfc8878.json",
       "headings": "headings/rfc8878.json",
@@ -16708,9 +16709,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc9163",
       "crawlCacheInfo": {
-        "lastModified": "Sat, 28 Mar 2026 00:54:26 GMT"
+        "lastModified": "Sat, 04 Apr 2026 00:54:49 GMT"
       },
-      "date": "28 March 2026",
+      "date": "4 April 2026",
       "algorithms": "algorithms/rfc9163.json",
       "links": "links/rfc9163.json",
       "refs": "refs/rfc9163.json",
@@ -16917,9 +16918,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc9649",
       "crawlCacheInfo": {
-        "lastModified": "Sun, 22 Mar 2026 20:02:42 GMT"
+        "lastModified": "Sun, 29 Mar 2026 22:39:03 GMT"
       },
-      "date": "22 March 2026",
+      "date": "29 March 2026",
       "algorithms": "algorithms/rfc9649.json",
       "links": "links/rfc9649.json",
       "refs": "refs/rfc9649.json",
@@ -16966,9 +16967,9 @@
       ],
       "crawled": "https://www.rfc-editor.org/rfc/rfc9659",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 08:54:53 GMT"
+        "lastModified": "Thu, 02 Apr 2026 10:49:07 GMT"
       },
-      "date": "26 March 2026",
+      "date": "2 April 2026",
       "links": "links/rfc9659.json",
       "refs": "refs/rfc9659.json",
       "headings": "headings/rfc9659.json",
@@ -17397,11 +17398,11 @@
       ],
       "crawled": "https://w3c.github.io/accname/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Mar 2026 17:06:47 GMT"
+        "lastModified": "Thu, 02 Apr 2026 17:11:57 GMT"
       },
       "generator": "respec",
-      "date": "23 March 2026",
-      "revision": "0e04d6cae1ff9c1851e6dc8dba2cf7da0ec0862e",
+      "date": "02 April 2026",
+      "revision": "412f3d87c53fa488854d5ff165cad72b67f77738",
       "algorithms": "algorithms/accname-1.2.json",
       "links": "links/accname-1.2.json",
       "refs": "refs/accname-1.2.json",
@@ -18511,11 +18512,11 @@
       ],
       "crawled": "https://drafts.csswg.org/compositing-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "12 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/compositing-1.json",
       "links": "links/compositing-1.json",
       "refs": "refs/compositing-1.json",
@@ -18705,11 +18706,11 @@
       ],
       "crawled": "https://w3c.github.io/core-aam/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Mar 2026 17:06:36 GMT"
+        "lastModified": "Thu, 02 Apr 2026 17:11:42 GMT"
       },
       "generator": "respec",
-      "date": "23 March 2026",
-      "revision": "0e04d6cae1ff9c1851e6dc8dba2cf7da0ec0862e",
+      "date": "02 April 2026",
+      "revision": "412f3d87c53fa488854d5ff165cad72b67f77738",
       "algorithms": "algorithms/core-aam-1.2.json",
       "links": "links/core-aam-1.2.json",
       "refs": "refs/core-aam-1.2.json",
@@ -18906,11 +18907,11 @@
       ],
       "crawled": "https://w3c.github.io/webappsec-csp/",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 11 Mar 2026 12:47:54 GMT"
+        "lastModified": "Wed, 01 Apr 2026 13:53:38 GMT"
       },
       "generator": "bikeshed",
-      "date": "11 March 2026",
-      "revision": "3a5e59598ad2853a5f4f2337066481b2cdf24c17",
+      "date": "1 April 2026",
+      "revision": "7845c09ef1e0f3ef149f262f0509e8db0e040f77",
       "algorithms": "algorithms/CSP3.json",
       "links": "links/CSP3.json",
       "refs": "refs/CSP3.json",
@@ -18971,11 +18972,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-2022/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "21 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-2022.json",
       "refs": "refs/css-2022.json",
       "dfns": "dfns/css-2022.json",
@@ -19033,11 +19034,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-2023/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "21 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-2023.json",
       "refs": "refs/css-2023.json",
       "dfns": "dfns/css-2023.json",
@@ -19095,11 +19096,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-2024/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "21 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-2024.json",
       "refs": "refs/css-2024.json",
       "dfns": "dfns/css-2024.json",
@@ -19156,11 +19157,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-2025/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "21 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-2025.json",
       "refs": "refs/css-2025.json",
       "dfns": "dfns/css-2025.json",
@@ -19223,11 +19224,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-align-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "4 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-align-3.json",
       "links": "links/css-align-3.json",
       "refs": "refs/css-align-3.json",
@@ -19293,11 +19294,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-anchor-position-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
-      "date": "27 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "date": "3 April 2026",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-anchor-position-1.json",
       "links": "links/css-anchor-position-1.json",
       "refs": "refs/css-anchor-position-1.json",
@@ -19364,11 +19365,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-anchor-position-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "24 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-anchor-position-2.json",
       "refs": "refs/css-anchor-position-2.json",
       "css": "css/css-anchor-position-2.json",
@@ -19500,11 +19501,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-animations-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "23 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-animations-1.json",
       "refs": "refs/css-animations-1.json",
       "events": "events/css-animations-1.json",
@@ -19571,11 +19572,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-animations-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "3 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-animations-2.json",
       "links": "links/css-animations-2.json",
       "refs": "refs/css-animations-2.json",
@@ -19643,11 +19644,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-backgrounds-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "16 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-backgrounds-3.json",
       "links": "links/css-backgrounds-3.json",
       "refs": "refs/css-backgrounds-3.json",
@@ -19712,11 +19713,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-backgrounds-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "16 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-backgrounds-4.json",
       "refs": "refs/css-backgrounds-4.json",
       "css": "css/css-backgrounds-4.json",
@@ -19780,11 +19781,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-borders-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "26 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-borders-4.json",
       "links": "links/css-borders-4.json",
       "refs": "refs/css-borders-4.json",
@@ -19850,11 +19851,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-box-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "24 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-box-3.json",
       "refs": "refs/css-box-3.json",
       "dfns": "dfns/css-box-3.json",
@@ -19917,11 +19918,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-box-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "21 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-box-4.json",
       "refs": "refs/css-box-4.json",
       "css": "css/css-box.json",
@@ -19986,11 +19987,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-break-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "22 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-break-3.json",
       "refs": "refs/css-break-3.json",
       "dfns": "dfns/css-break-3.json",
@@ -20053,11 +20054,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-break-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "22 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-break-4.json",
       "refs": "refs/css-break-4.json",
       "css": "css/css-break.json",
@@ -20121,11 +20122,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-cascade-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "9 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-cascade-3.json",
       "refs": "refs/css-cascade-3.json",
       "dfns": "dfns/css-cascade-3.json",
@@ -20190,11 +20191,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-cascade-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "27 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-cascade-4.json",
       "links": "links/css-cascade-4.json",
       "refs": "refs/css-cascade-4.json",
@@ -20259,11 +20260,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-cascade-5/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "27 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-cascade-5.json",
       "refs": "refs/css-cascade-5.json",
       "idl": "idl/css-cascade.idl",
@@ -20329,11 +20330,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-cascade-6/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "26 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-cascade-6.json",
       "refs": "refs/css-cascade-6.json",
       "idl": "idl/css-cascade-6.idl",
@@ -20399,7 +20400,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "date": "18 January 2022",
       "links": "links/css-color-3.json",
@@ -20466,11 +20467,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
-      "date": "26 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "date": "31 March 2026",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-color-4.json",
       "links": "links/css-color-4.json",
       "refs": "refs/css-color-4.json",
@@ -20536,11 +20537,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-5/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "25 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-color-5.json",
       "links": "links/css-color-5.json",
       "refs": "refs/css-color-5.json",
@@ -20607,11 +20608,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-adjust-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "11 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-color-adjust-1.json",
       "links": "links/css-color-adjust-1.json",
       "refs": "refs/css-color-adjust-1.json",
@@ -20679,11 +20680,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-color-hdr-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "3 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-color-hdr-1.json",
       "links": "links/css-color-hdr-1.json",
       "refs": "refs/css-color-hdr-1.json",
@@ -20749,11 +20750,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-conditional-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "7 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-conditional-3.json",
       "links": "links/css-conditional-3.json",
       "refs": "refs/css-conditional-3.json",
@@ -20821,11 +20822,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-conditional-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "22 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-conditional-4.json",
       "refs": "refs/css-conditional-4.json",
       "css": "css/css-conditional-4.json",
@@ -20889,11 +20890,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-conditional-5/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "27 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-conditional-5.json",
       "links": "links/css-conditional-5.json",
       "refs": "refs/css-conditional-5.json",
@@ -20960,11 +20961,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-contain-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "7 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-contain-1.json",
       "links": "links/css-contain-1.json",
       "refs": "refs/css-contain-1.json",
@@ -21030,11 +21031,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-contain-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "22 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-contain-2.json",
       "links": "links/css-contain-2.json",
       "refs": "refs/css-contain-2.json",
@@ -21102,11 +21103,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-contain-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "22 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-contain-3.json",
       "refs": "refs/css-contain-3.json",
       "headings": "headings/css-contain-3.json",
@@ -21168,11 +21169,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-content-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "9 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-content-3.json",
       "links": "links/css-content-3.json",
       "refs": "refs/css-content-3.json",
@@ -21237,11 +21238,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-counter-styles-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "13 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-counter-styles-3.json",
       "links": "links/css-counter-styles-3.json",
       "refs": "refs/css-counter-styles-3.json",
@@ -21309,11 +21310,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-display-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "5 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-display-3.json",
       "refs": "refs/css-display-3.json",
       "dfns": "dfns/css-display-3.json",
@@ -21376,11 +21377,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-display-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "18 January 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-display-4.json",
       "refs": "refs/css-display-4.json",
       "css": "css/css-display.json",
@@ -21445,11 +21446,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-easing-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "16 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-easing-1.json",
       "links": "links/css-easing-1.json",
       "refs": "refs/css-easing-1.json",
@@ -21513,11 +21514,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-easing-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "23 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-easing-2.json",
       "links": "links/css-easing-2.json",
       "refs": "refs/css-easing-2.json",
@@ -21582,11 +21583,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-env-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "12 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-env-1.json",
       "links": "links/css-env-1.json",
       "refs": "refs/css-env-1.json",
@@ -21651,11 +21652,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-flexbox-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "9 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-flexbox-1.json",
       "links": "links/css-flexbox-1.json",
       "refs": "refs/css-flexbox-1.json",
@@ -21720,11 +21721,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-font-loading-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "12 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-font-loading-3.json",
       "links": "links/css-font-loading-3.json",
       "refs": "refs/css-font-loading-3.json",
@@ -21794,11 +21795,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-fonts-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "3 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-fonts-4.json",
       "links": "links/css-fonts-4.json",
       "refs": "refs/css-fonts-4.json",
@@ -21865,11 +21866,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-fonts-5/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "3 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-fonts-5.json",
       "refs": "refs/css-fonts-5.json",
       "idl": "idl/css-fonts-5.idl",
@@ -21929,11 +21930,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-forms-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "17 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-forms-1.json",
       "refs": "refs/css-forms-1.json",
       "css": "css/css-forms.json",
@@ -21997,11 +21998,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-gaps-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
-      "date": "23 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "date": "3 April 2026",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-gaps-1.json",
       "links": "links/css-gaps-1.json",
       "refs": "refs/css-gaps-1.json",
@@ -22067,11 +22068,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-gcpm-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "23 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-gcpm-3.json",
       "refs": "refs/css-gcpm-3.json",
       "css": "css/css-gcpm.json",
@@ -22135,11 +22136,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-grid-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "7 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-grid-1.json",
       "links": "links/css-grid-1.json",
       "refs": "refs/css-grid-1.json",
@@ -22205,11 +22206,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-grid-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "7 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-grid-2.json",
       "links": "links/css-grid-2.json",
       "refs": "refs/css-grid-2.json",
@@ -22274,11 +22275,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-grid-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "9 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-grid-3.json",
       "links": "links/css-grid-3.json",
       "refs": "refs/css-grid-3.json",
@@ -22343,11 +22344,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-highlight-api-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "9 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-highlight-api-1.json",
       "links": "links/css-highlight-api-1.json",
       "refs": "refs/css-highlight-api-1.json",
@@ -22414,11 +22415,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-images-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "15 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-images-3.json",
       "links": "links/css-images-3.json",
       "refs": "refs/css-images-3.json",
@@ -22484,11 +22485,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-images-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "23 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-images-4.json",
       "links": "links/css-images-4.json",
       "refs": "refs/css-images-4.json",
@@ -22555,11 +22556,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-inline-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "5 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-inline-3.json",
       "links": "links/css-inline-3.json",
       "refs": "refs/css-inline-3.json",
@@ -22686,11 +22687,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-line-grid-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "7 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-line-grid-1.json",
       "refs": "refs/css-line-grid-1.json",
       "css": "css/css-line-grid.json",
@@ -22754,11 +22755,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-lists-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "6 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-lists-3.json",
       "links": "links/css-lists-3.json",
       "refs": "refs/css-lists-3.json",
@@ -22823,11 +22824,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-logical-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "12 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-logical-1.json",
       "refs": "refs/css-logical-1.json",
       "css": "css/css-logical.json",
@@ -22885,11 +22886,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-masking-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "12 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-masking-1.json",
       "links": "links/css-masking-1.json",
       "refs": "refs/css-masking-1.json",
@@ -22957,11 +22958,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-mixins-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "24 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-mixins-1.json",
       "links": "links/css-mixins-1.json",
       "refs": "refs/css-mixins-1.json",
@@ -23029,11 +23030,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-multicol-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "16 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-multicol-1.json",
       "refs": "refs/css-multicol-1.json",
       "dfns": "dfns/css-multicol-1.json",
@@ -23096,11 +23097,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-multicol-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "16 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-multicol-2.json",
       "refs": "refs/css-multicol-2.json",
       "css": "css/css-multicol.json",
@@ -23164,11 +23165,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-namespaces-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "25 October 2024",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-namespaces-3.json",
       "refs": "refs/css-namespaces-3.json",
       "css": "css/css-namespaces.json",
@@ -23226,11 +23227,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-nav-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "24 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-nav-1.json",
       "links": "links/css-nav-1.json",
       "refs": "refs/css-nav-1.json",
@@ -23298,11 +23299,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-nesting-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "5 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-nesting-1.json",
       "refs": "refs/css-nesting-1.json",
       "idl": "idl/css-nesting.idl",
@@ -23369,11 +23370,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-overflow-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "6 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-overflow-3.json",
       "refs": "refs/css-overflow-3.json",
       "css": "css/css-overflow.json",
@@ -23438,11 +23439,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-overflow-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "17 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-overflow-4.json",
       "refs": "refs/css-overflow-4.json",
       "css": "css/css-overflow-4.json",
@@ -23506,11 +23507,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-overflow-5/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "17 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-overflow-5.json",
       "links": "links/css-overflow-5.json",
       "refs": "refs/css-overflow-5.json",
@@ -23575,11 +23576,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-overscroll-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "5 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-overscroll-1.json",
       "refs": "refs/css-overscroll-1.json",
       "css": "css/css-overscroll.json",
@@ -23644,11 +23645,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-page-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "3 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-page-3.json",
       "links": "links/css-page-3.json",
       "refs": "refs/css-page-3.json",
@@ -23707,11 +23708,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-page-floats-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "22 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-page-floats-3.json",
       "links": "links/css-page-floats-3.json",
       "refs": "refs/css-page-floats-3.json",
@@ -23845,11 +23846,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-position-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "9 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-position-3.json",
       "links": "links/css-position-3.json",
       "refs": "refs/css-position-3.json",
@@ -23914,11 +23915,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-position-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "25 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-position-4.json",
       "links": "links/css-position-4.json",
       "refs": "refs/css-position-4.json",
@@ -24051,11 +24052,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-pseudo-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "3 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-pseudo-4.json",
       "links": "links/css-pseudo-4.json",
       "refs": "refs/css-pseudo-4.json",
@@ -24116,11 +24117,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-regions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "18 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-regions-1.json",
       "refs": "refs/css-regions-1.json",
       "idl": "idl/css-regions.idl",
@@ -24186,11 +24187,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-rhythm-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "12 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-rhythm-1.json",
       "refs": "refs/css-rhythm-1.json",
       "css": "css/css-rhythm.json",
@@ -24254,11 +24255,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-round-display-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "26 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-round-display-1.json",
       "refs": "refs/css-round-display-1.json",
       "css": "css/css-round-display.json",
@@ -24322,11 +24323,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-ruby-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "26 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-ruby-1.json",
       "links": "links/css-ruby-1.json",
       "refs": "refs/css-ruby-1.json",
@@ -24391,11 +24392,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-scroll-anchoring-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "30 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-scroll-anchoring-1.json",
       "links": "links/css-scroll-anchoring-1.json",
       "refs": "refs/css-scroll-anchoring-1.json",
@@ -24461,11 +24462,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-scroll-snap-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "26 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-scroll-snap-1.json",
       "links": "links/css-scroll-snap-1.json",
       "refs": "refs/css-scroll-snap-1.json",
@@ -24530,11 +24531,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-scroll-snap-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "1 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-scroll-snap-2.json",
       "links": "links/css-scroll-snap-2.json",
       "refs": "refs/css-scroll-snap-2.json",
@@ -24601,11 +24602,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-scrollbars-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "8 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-scrollbars-1.json",
       "refs": "refs/css-scrollbars-1.json",
       "css": "css/css-scrollbars.json",
@@ -24670,11 +24671,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-shapes-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "16 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-shapes-1.json",
       "refs": "refs/css-shapes-1.json",
       "css": "css/css-shapes.json",
@@ -24739,11 +24740,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-sizing-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "15 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-sizing-3.json",
       "links": "links/css-sizing-3.json",
       "refs": "refs/css-sizing-3.json",
@@ -24808,11 +24809,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-sizing-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "26 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-sizing-4.json",
       "refs": "refs/css-sizing-4.json",
       "css": "css/css-sizing-4.json",
@@ -24876,11 +24877,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-speech-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "22 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-speech-1.json",
       "refs": "refs/css-speech-1.json",
       "css": "css/css-speech.json",
@@ -24942,7 +24943,7 @@
       ],
       "crawled": "https://drafts.csswg.org/css-style-attr/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "date": "10 April 2015",
       "links": "links/css-style-attr.json",
@@ -25008,11 +25009,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-syntax-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "15 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-syntax-3.json",
       "links": "links/css-syntax-3.json",
       "refs": "refs/css-syntax-3.json",
@@ -25077,11 +25078,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-tables-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "12 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-tables-3.json",
       "links": "links/css-tables-3.json",
       "refs": "refs/css-tables-3.json",
@@ -25147,11 +25148,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-text-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "6 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-text-3.json",
       "links": "links/css-text-3.json",
       "refs": "refs/css-text-3.json",
@@ -25216,11 +25217,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-text-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "29 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-text-4.json",
       "links": "links/css-text-4.json",
       "refs": "refs/css-text-4.json",
@@ -25286,11 +25287,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-text-decor-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "16 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-text-decor-3.json",
       "refs": "refs/css-text-decor-3.json",
       "css": "css/css-text-decor.json",
@@ -25354,11 +25355,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-text-decor-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "4 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-text-decor-4.json",
       "refs": "refs/css-text-decor-4.json",
       "css": "css/css-text-decor-4.json",
@@ -25423,11 +25424,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-transforms-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "30 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-transforms-1.json",
       "links": "links/css-transforms-1.json",
       "refs": "refs/css-transforms-1.json",
@@ -25492,11 +25493,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-transforms-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "30 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-transforms-2.json",
       "links": "links/css-transforms-2.json",
       "refs": "refs/css-transforms-2.json",
@@ -25562,11 +25563,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-transitions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "6 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-transitions-1.json",
       "links": "links/css-transitions-1.json",
       "refs": "refs/css-transitions-1.json",
@@ -25634,11 +25635,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-transitions-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "4 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-transitions-2.json",
       "links": "links/css-transitions-2.json",
       "refs": "refs/css-transitions-2.json",
@@ -25773,11 +25774,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-ui-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
-      "date": "16 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "date": "2 April 2026",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-ui-3.json",
       "links": "links/css-ui-3.json",
       "refs": "refs/css-ui-3.json",
@@ -25842,11 +25843,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-ui-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "15 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-ui-4.json",
       "links": "links/css-ui-4.json",
       "refs": "refs/css-ui-4.json",
@@ -25913,11 +25914,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-values-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "7 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-values-3.json",
       "refs": "refs/css-values-3.json",
       "dfns": "dfns/css-values-3.json",
@@ -25982,11 +25983,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-values-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "6 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-values-4.json",
       "links": "links/css-values-4.json",
       "refs": "refs/css-values-4.json",
@@ -26051,11 +26052,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-values-5/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "27 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-values-5.json",
       "links": "links/css-values-5.json",
       "refs": "refs/css-values-5.json",
@@ -26121,11 +26122,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-variables-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "5 May 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-variables-1.json",
       "links": "links/css-variables-1.json",
       "refs": "refs/css-variables-1.json",
@@ -26190,11 +26191,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-view-transitions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "16 February 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-view-transitions-1.json",
       "links": "links/css-view-transitions-1.json",
       "refs": "refs/css-view-transitions-1.json",
@@ -26258,11 +26259,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-view-transitions-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "9 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-view-transitions-2.json",
       "links": "links/css-view-transitions-2.json",
       "refs": "refs/css-view-transitions-2.json",
@@ -26331,11 +26332,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-viewport/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "15 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-viewport-1.json",
       "links": "links/css-viewport-1.json",
       "refs": "refs/css-viewport-1.json",
@@ -26402,11 +26403,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-will-change-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "29 April 2022",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-will-change-1.json",
       "refs": "refs/css-will-change-1.json",
       "css": "css/css-will-change.json",
@@ -26471,11 +26472,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-writing-modes-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "18 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/css-writing-modes-3.json",
       "refs": "refs/css-writing-modes-3.json",
       "dfns": "dfns/css-writing-modes-3.json",
@@ -26539,11 +26540,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-writing-modes-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "20 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css-writing-modes-4.json",
       "links": "links/css-writing-modes-4.json",
       "refs": "refs/css-writing-modes-4.json",
@@ -26639,11 +26640,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "30 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/CSS2.json",
       "links": "links/CSS2.json",
       "refs": "refs/CSS2.json",
@@ -26708,11 +26709,11 @@
       ],
       "crawled": "https://drafts.csswg.org/css-exclusions-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "22 October 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/css3-exclusions.json",
       "links": "links/css3-exclusions.json",
       "refs": "refs/css3-exclusions.json",
@@ -26777,11 +26778,11 @@
       ],
       "crawled": "https://drafts.csswg.org/cssom-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "23 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/cssom-1.json",
       "links": "links/cssom-1.json",
       "refs": "refs/cssom-1.json",
@@ -26848,11 +26849,11 @@
       ],
       "crawled": "https://drafts.csswg.org/cssom-view-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
-      "date": "18 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "date": "3 April 2026",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/cssom-view-1.json",
       "links": "links/cssom-view-1.json",
       "refs": "refs/cssom-view-1.json",
@@ -27089,18 +27090,20 @@
       ],
       "crawled": "https://www.w3.org/TR/device-memory/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 07:49:19 GMT"
+        "lastModified": "Mon, 30 Mar 2026 11:13:23 GMT"
       },
       "generator": "bikeshed",
-      "date": "27 March 2026",
-      "revision": "cb8b856a3ee593ab5d131d88786ae18d44c5d0cd",
+      "date": "30 March 2026",
+      "revision": "f2a13e314a87cd9901848abc015e57d765e1bf13",
       "algorithms": "algorithms/device-memory-1.json",
       "links": "links/device-memory-1.json",
       "refs": "refs/device-memory-1.json",
+      "idl": "idl/device-memory.idl",
       "dfns": "dfns/device-memory-1.json",
       "headings": "headings/device-memory-1.json",
       "ids": "ids/device-memory-1.json",
-      "cddl": []
+      "cddl": [],
+      "idlparsed": "idlparsed/device-memory-1.json"
     },
     {
       "url": "https://www.w3.org/TR/device-posture/",
@@ -27267,10 +27270,10 @@
       ],
       "crawled": "https://w3c.github.io/did-resolution/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 14:50:38 GMT"
+        "lastModified": "Sun, 29 Mar 2026 23:45:15 GMT"
       },
       "generator": "respec",
-      "date": "27 March 2026",
+      "date": "29 March 2026",
       "algorithms": "algorithms/did-resolution.json",
       "links": "links/did-resolution.json",
       "refs": "refs/did-resolution.json",
@@ -28202,10 +28205,10 @@
       ],
       "crawled": "https://w3c.github.io/epub-specs/epub33/core/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 24 Mar 2026 15:11:29 GMT"
+        "lastModified": "Fri, 03 Apr 2026 09:26:02 GMT"
       },
       "generator": "respec",
-      "date": "24 March 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/epub-33.json",
       "links": "links/epub-33.json",
       "refs": "refs/epub-33.json",
@@ -28260,10 +28263,10 @@
       ],
       "crawled": "https://w3c.github.io/epub-specs/epub34/authoring/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 24 Mar 2026 15:11:29 GMT"
+        "lastModified": "Fri, 03 Apr 2026 09:26:02 GMT"
       },
       "generator": "respec",
-      "date": "24 March 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/epub-34.json",
       "links": "links/epub-34.json",
       "refs": "refs/epub-34.json",
@@ -28320,10 +28323,10 @@
       ],
       "crawled": "https://w3c.github.io/epub-specs/epub34/a11y/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 24 Mar 2026 15:11:29 GMT"
+        "lastModified": "Fri, 03 Apr 2026 09:26:02 GMT"
       },
       "generator": "respec",
-      "date": "24 March 2026",
+      "date": "03 April 2026",
       "links": "links/epub-a11y-12.json",
       "refs": "refs/epub-a11y-12.json",
       "dfns": "dfns/epub-a11y-12.json",
@@ -28376,10 +28379,10 @@
       ],
       "crawled": "https://w3c.github.io/epub-specs/epub33/rs/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 24 Mar 2026 15:11:29 GMT"
+        "lastModified": "Fri, 03 Apr 2026 09:26:02 GMT"
       },
       "generator": "respec",
-      "date": "24 March 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/epub-rs-33.json",
       "links": "links/epub-rs-33.json",
       "refs": "refs/epub-rs-33.json",
@@ -28433,10 +28436,10 @@
       ],
       "crawled": "https://w3c.github.io/epub-specs/epub34/rs/",
       "crawlCacheInfo": {
-        "lastModified": "Tue, 24 Mar 2026 15:11:29 GMT"
+        "lastModified": "Fri, 03 Apr 2026 09:26:02 GMT"
       },
       "generator": "respec",
-      "date": "24 March 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/epub-rs-34.json",
       "links": "links/epub-rs-34.json",
       "refs": "refs/epub-rs-34.json",
@@ -28610,11 +28613,11 @@
       ],
       "crawled": "https://w3c-fedid.github.io/FedCM/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 20 Feb 2026 16:02:50 GMT"
+        "lastModified": "Thu, 02 Apr 2026 17:24:20 GMT"
       },
       "generator": "bikeshed",
-      "date": "20 February 2026",
-      "revision": "b3383dcc5b72edd87e50e59f3c0e2d4da18a7176",
+      "date": "2 April 2026",
+      "revision": "fa2a08f6cc8963f36ee7ad3d991abb8a08e87712",
       "algorithms": "algorithms/fedcm-1.json",
       "links": "links/fedcm-1.json",
       "refs": "refs/fedcm-1.json",
@@ -28809,11 +28812,11 @@
       ],
       "crawled": "https://drafts.csswg.org/fill-stroke-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "4 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/fill-stroke-3.json",
       "links": "links/fill-stroke-3.json",
       "refs": "refs/fill-stroke-3.json",
@@ -28873,11 +28876,11 @@
       ],
       "crawled": "https://drafts.csswg.org/filter-effects-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "3 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/filter-effects-1.json",
       "links": "links/filter-effects-1.json",
       "refs": "refs/filter-effects-1.json",
@@ -29100,7 +29103,7 @@
       ],
       "release": {
         "url": "https://www.w3.org/TR/geolocation/",
-        "status": "Recommendation",
+        "status": "Candidate Recommendation Snapshot",
         "filename": "Overview.html"
       },
       "nightly": {
@@ -29189,11 +29192,11 @@
       ],
       "crawled": "https://drafts.csswg.org/geometry-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "12 December 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/geometry-1.json",
       "links": "links/geometry-1.json",
       "refs": "refs/geometry-1.json",
@@ -29252,10 +29255,10 @@
       ],
       "crawled": "https://w3c.github.io/gpc/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 19 Feb 2026 13:49:25 GMT"
+        "lastModified": "Fri, 03 Apr 2026 00:57:05 GMT"
       },
       "generator": "respec",
-      "date": "19 February 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/gpc.json",
       "links": "links/gpc.json",
       "refs": "refs/gpc.json",
@@ -29318,10 +29321,10 @@
       ],
       "crawled": "https://w3c.github.io/graphics-aam/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Mar 2026 17:05:19 GMT"
+        "lastModified": "Thu, 02 Apr 2026 17:11:19 GMT"
       },
       "generator": "respec",
-      "date": "23 March 2026",
+      "date": "02 April 2026",
       "links": "links/graphics-aam-1.0.json",
       "refs": "refs/graphics-aam-1.0.json",
       "headings": "headings/graphics-aam-1.0.json",
@@ -29577,11 +29580,11 @@
       ],
       "crawled": "https://w3c.github.io/html-aam/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Mar 2026 17:06:38 GMT"
+        "lastModified": "Thu, 02 Apr 2026 17:11:52 GMT"
       },
       "generator": "respec",
-      "date": "23 March 2026",
-      "revision": "263010181209b36a429c47de7eccada902914077",
+      "date": "02 April 2026",
+      "revision": "412f3d87c53fa488854d5ff165cad72b67f77738",
       "algorithms": "algorithms/html-aam-1.0.json",
       "links": "links/html-aam-1.0.json",
       "refs": "refs/html-aam-1.0.json",
@@ -30423,10 +30426,10 @@
       ],
       "crawled": "https://w3c.github.io/json-ld-syntax/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 19 Dec 2025 14:13:58 GMT"
+        "lastModified": "Thu, 02 Apr 2026 13:58:53 GMT"
       },
       "generator": "respec",
-      "date": "19 December 2025",
+      "date": "02 April 2026",
       "links": "links/json-ld11.json",
       "refs": "refs/json-ld11.json",
       "dfns": "dfns/json-ld11.json",
@@ -31317,7 +31320,7 @@
       ],
       "crawled": "https://drafts.csswg.org/mediaqueries-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "date": "14 May 2024",
       "links": "links/mediaqueries-3.json",
@@ -31383,11 +31386,11 @@
       ],
       "crawled": "https://drafts.csswg.org/mediaqueries-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "24 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/mediaqueries-4.json",
       "refs": "refs/mediaqueries-4.json",
       "css": "css/mediaqueries.json",
@@ -31451,11 +31454,11 @@
       ],
       "crawled": "https://drafts.csswg.org/mediaqueries-5/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "24 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/mediaqueries-5.json",
       "links": "links/mediaqueries-5.json",
       "refs": "refs/mediaqueries-5.json",
@@ -31878,11 +31881,11 @@
       ],
       "crawled": "https://drafts.csswg.org/motion-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "23 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/motion-1.json",
       "links": "links/motion-1.json",
       "refs": "refs/motion-1.json",
@@ -34041,10 +34044,10 @@
       ],
       "crawled": "https://w3c.github.io/rdf-concepts/spec/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 09:17:59 GMT"
+        "lastModified": "Fri, 03 Apr 2026 14:36:44 GMT"
       },
       "generator": "respec",
-      "date": "27 March 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/rdf12-concepts.json",
       "links": "links/rdf12-concepts.json",
       "refs": "refs/rdf12-concepts.json",
@@ -34153,10 +34156,10 @@
       ],
       "crawled": "https://w3c.github.io/rdf-n-triples/spec/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 16:22:24 GMT"
+        "lastModified": "Thu, 02 Apr 2026 11:38:10 GMT"
       },
       "generator": "respec",
-      "date": "26 March 2026",
+      "date": "02 April 2026",
       "links": "links/rdf12-n-triples.json",
       "refs": "refs/rdf12-n-triples.json",
       "dfns": "dfns/rdf12-n-triples.json",
@@ -34262,10 +34265,10 @@
       ],
       "crawled": "https://w3c.github.io/rdf-semantics/spec/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 16:20:48 GMT"
+        "lastModified": "Thu, 02 Apr 2026 16:26:31 GMT"
       },
       "generator": "respec",
-      "date": "26 March 2026",
+      "date": "02 April 2026",
       "algorithms": "algorithms/rdf12-semantics.json",
       "links": "links/rdf12-semantics.json",
       "refs": "refs/rdf12-semantics.json",
@@ -34373,10 +34376,10 @@
       ],
       "crawled": "https://w3c.github.io/rdf-turtle/spec/",
       "crawlCacheInfo": {
-        "lastModified": "Sat, 28 Mar 2026 12:54:36 GMT"
+        "lastModified": "Fri, 03 Apr 2026 16:44:41 GMT"
       },
       "generator": "respec",
-      "date": "28 March 2026",
+      "date": "03 April 2026",
       "links": "links/rdf12-turtle.json",
       "refs": "refs/rdf12-turtle.json",
       "dfns": "dfns/rdf12-turtle.json",
@@ -34759,11 +34762,11 @@
       ],
       "crawled": "https://drafts.csswg.org/resize-observer-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "1 January 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/resize-observer-1.json",
       "links": "links/resize-observer-1.json",
       "refs": "refs/resize-observer-1.json",
@@ -35093,11 +35096,11 @@
       ],
       "crawled": "https://drafts.csswg.org/scroll-animations-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:16 GMT"
       },
       "generator": "bikeshed",
       "date": "10 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/scroll-animations-1.json",
       "links": "links/scroll-animations-1.json",
       "refs": "refs/scroll-animations-1.json",
@@ -35360,7 +35363,7 @@
       ],
       "crawled": "https://drafts.csswg.org/selectors-3/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "date": "30 January 2018",
       "links": "links/selectors-3.json",
@@ -35427,11 +35430,11 @@
       ],
       "crawled": "https://drafts.csswg.org/selectors-4/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
-      "date": "24 March 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "date": "31 March 2026",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/selectors-4.json",
       "links": "links/selectors-4.json",
       "refs": "refs/selectors-4.json",
@@ -35496,11 +35499,11 @@
       ],
       "crawled": "https://drafts.csswg.org/selectors-5/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "16 February 2026",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/selectors-5.json",
       "refs": "refs/selectors-5.json",
       "css": "css/selectors-5.json",
@@ -35686,10 +35689,10 @@
       ],
       "crawled": "https://w3c.github.io/data-shapes/shacl12-core/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 14:30:49 GMT"
+        "lastModified": "Fri, 03 Apr 2026 06:45:40 GMT"
       },
       "generator": "respec",
-      "date": "26 March 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/shacl12-core.json",
       "links": "links/shacl12-core.json",
       "refs": "refs/shacl12-core.json",
@@ -35742,10 +35745,10 @@
       ],
       "crawled": "https://w3c.github.io/data-shapes/shacl12-node-expr/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 14:30:49 GMT"
+        "lastModified": "Fri, 03 Apr 2026 06:45:40 GMT"
       },
       "generator": "respec",
-      "date": "26 March 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/shacl12-node-expr.json",
       "links": "links/shacl12-node-expr.json",
       "refs": "refs/shacl12-node-expr.json",
@@ -35801,10 +35804,10 @@
       ],
       "crawled": "https://w3c.github.io/data-shapes/shacl12-rules/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 14:30:49 GMT"
+        "lastModified": "Fri, 03 Apr 2026 06:45:40 GMT"
       },
       "generator": "respec",
-      "date": "26 March 2026",
+      "date": "03 April 2026",
       "links": "links/shacl12-rules.json",
       "refs": "refs/shacl12-rules.json",
       "dfns": "dfns/shacl12-rules.json",
@@ -35856,10 +35859,10 @@
       ],
       "crawled": "https://w3c.github.io/data-shapes/shacl12-sparql/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 14:30:49 GMT"
+        "lastModified": "Fri, 03 Apr 2026 06:45:40 GMT"
       },
       "generator": "respec",
-      "date": "26 March 2026",
+      "date": "03 April 2026",
       "algorithms": "algorithms/shacl12-sparql.json",
       "links": "links/shacl12-sparql.json",
       "refs": "refs/shacl12-sparql.json",
@@ -35912,10 +35915,10 @@
       ],
       "crawled": "https://w3c.github.io/sparql-entailment/spec/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 14 Aug 2025 16:49:20 GMT"
+        "lastModified": "Thu, 02 Apr 2026 16:31:56 GMT"
       },
       "generator": "respec",
-      "date": "14 August 2025",
+      "date": "02 April 2026",
       "algorithms": "algorithms/sparql12-entailment.json",
       "links": "links/sparql12-entailment.json",
       "refs": "refs/sparql12-entailment.json",
@@ -36534,11 +36537,11 @@
       ],
       "crawled": "https://w3c.github.io/svg-aam/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Mar 2026 17:06:14 GMT"
+        "lastModified": "Thu, 02 Apr 2026 17:11:32 GMT"
       },
       "generator": "respec",
-      "date": "23 March 2026",
-      "revision": "0e04d6cae1ff9c1851e6dc8dba2cf7da0ec0862e",
+      "date": "02 April 2026",
+      "revision": "412f3d87c53fa488854d5ff165cad72b67f77738",
       "algorithms": "algorithms/svg-aam-1.0.json",
       "links": "links/svg-aam-1.0.json",
       "refs": "refs/svg-aam-1.0.json",
@@ -36727,7 +36730,7 @@
         "title": "Scalable Vector Graphics (SVG)",
         "shortTitle": "SVG",
         "releaseUrl": "https://www.w3.org/TR/SVG/",
-        "nightlyUrl": "https://svgwg.org/svg2-draft/"
+        "nightlyUrl": "https://w3c.github.io/svgwg/svg2-draft/"
       },
       "seriesVersion": "1.1",
       "seriesNext": "SVG2",
@@ -36868,9 +36871,48 @@
         "title": "Scalable Vector Graphics (SVG)",
         "shortTitle": "SVG",
         "releaseUrl": "https://www.w3.org/TR/SVG/",
-        "nightlyUrl": "https://svgwg.org/svg2-draft/"
+        "nightlyUrl": "https://w3c.github.io/svgwg/svg2-draft/"
       },
       "seriesVersion": "2",
+      "nightly": {
+        "url": "https://w3c.github.io/svgwg/svg2-draft/",
+        "status": "Editor's Draft",
+        "alternateUrls": [
+          "https://svgwg.org/svg2-draft/"
+        ],
+        "repository": "https://github.com/w3c/svgwg",
+        "sourcePath": "master/Overview.html",
+        "pages": [
+          "https://w3c.github.io/svgwg/svg2-draft/intro.html",
+          "https://w3c.github.io/svgwg/svg2-draft/conform.html",
+          "https://w3c.github.io/svgwg/svg2-draft/render.html",
+          "https://w3c.github.io/svgwg/svg2-draft/types.html",
+          "https://w3c.github.io/svgwg/svg2-draft/struct.html",
+          "https://w3c.github.io/svgwg/svg2-draft/styling.html",
+          "https://w3c.github.io/svgwg/svg2-draft/geometry.html",
+          "https://w3c.github.io/svgwg/svg2-draft/coords.html",
+          "https://w3c.github.io/svgwg/svg2-draft/paths.html",
+          "https://w3c.github.io/svgwg/svg2-draft/shapes.html",
+          "https://w3c.github.io/svgwg/svg2-draft/text.html",
+          "https://w3c.github.io/svgwg/svg2-draft/embedded.html",
+          "https://w3c.github.io/svgwg/svg2-draft/painting.html",
+          "https://w3c.github.io/svgwg/svg2-draft/pservers.html",
+          "https://w3c.github.io/svgwg/svg2-draft/interact.html",
+          "https://w3c.github.io/svgwg/svg2-draft/linking.html",
+          "https://w3c.github.io/svgwg/svg2-draft/idl.html",
+          "https://w3c.github.io/svgwg/svg2-draft/implnote.html",
+          "https://w3c.github.io/svgwg/svg2-draft/access.html",
+          "https://w3c.github.io/svgwg/svg2-draft/animate.html",
+          "https://w3c.github.io/svgwg/svg2-draft/refs.html",
+          "https://w3c.github.io/svgwg/svg2-draft/eltindex.html",
+          "https://w3c.github.io/svgwg/svg2-draft/attindex.html",
+          "https://w3c.github.io/svgwg/svg2-draft/propidx.html",
+          "https://w3c.github.io/svgwg/svg2-draft/idlindex.html",
+          "https://w3c.github.io/svgwg/svg2-draft/mimereg.html",
+          "https://w3c.github.io/svgwg/svg2-draft/changes.html"
+        ],
+        "filename": "Overview.html"
+      },
       "seriesPrevious": "SVG11",
       "organization": "W3C",
       "groups": [
@@ -36913,43 +36955,6 @@
         ],
         "filename": "Overview.html"
       },
-      "nightly": {
-        "url": "https://svgwg.org/svg2-draft/",
-        "status": "Editor's Draft",
-        "alternateUrls": [],
-        "repository": "https://github.com/w3c/svgwg",
-        "sourcePath": "master/Overview.html",
-        "pages": [
-          "https://svgwg.org/svg2-draft/intro.html",
-          "https://svgwg.org/svg2-draft/conform.html",
-          "https://svgwg.org/svg2-draft/render.html",
-          "https://svgwg.org/svg2-draft/types.html",
-          "https://svgwg.org/svg2-draft/struct.html",
-          "https://svgwg.org/svg2-draft/styling.html",
-          "https://svgwg.org/svg2-draft/geometry.html",
-          "https://svgwg.org/svg2-draft/coords.html",
-          "https://svgwg.org/svg2-draft/paths.html",
-          "https://svgwg.org/svg2-draft/shapes.html",
-          "https://svgwg.org/svg2-draft/text.html",
-          "https://svgwg.org/svg2-draft/embedded.html",
-          "https://svgwg.org/svg2-draft/painting.html",
-          "https://svgwg.org/svg2-draft/pservers.html",
-          "https://svgwg.org/svg2-draft/interact.html",
-          "https://svgwg.org/svg2-draft/linking.html",
-          "https://svgwg.org/svg2-draft/idl.html",
-          "https://svgwg.org/svg2-draft/implnote.html",
-          "https://svgwg.org/svg2-draft/access.html",
-          "https://svgwg.org/svg2-draft/animate.html",
-          "https://svgwg.org/svg2-draft/refs.html",
-          "https://svgwg.org/svg2-draft/eltindex.html",
-          "https://svgwg.org/svg2-draft/attindex.html",
-          "https://svgwg.org/svg2-draft/propidx.html",
-          "https://svgwg.org/svg2-draft/idlindex.html",
-          "https://svgwg.org/svg2-draft/mimereg.html",
-          "https://svgwg.org/svg2-draft/changes.html"
-        ],
-        "filename": "Overview.html"
-      },
       "title": "Scalable Vector Graphics (SVG) 2",
       "source": "w3c",
       "shortTitle": "SVG 2",
@@ -36965,15 +36970,15 @@
       },
       "versions": [
         "https://www.w3.org/TR/SVG2/",
-        "https://svgwg.org/svg2-draft/",
+        "https://w3c.github.io/svgwg/svg2-draft/",
         "https://www.w3.org/TR/SVG/",
         "https://www.w3.org/TR/SVG11/"
       ],
-      "crawled": "https://svgwg.org/svg2-draft/",
+      "crawled": "https://w3c.github.io/svgwg/svg2-draft/",
       "crawlCacheInfo": {
-        "lastModified": "Sun, 14 Sep 2025 00:27:27 GMT"
+        "lastModified": "Fri, 03 Apr 2026 07:21:07 GMT"
       },
-      "date": "14 September 2025",
+      "date": "03 April 2026",
       "algorithms": "algorithms/SVG2.json",
       "links": "links/SVG2.json",
       "refs": "refs/SVG2.json",
@@ -37438,10 +37443,10 @@
       ],
       "crawled": "https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 12 Mar 2026 16:03:17 GMT"
+        "lastModified": "Fri, 03 Apr 2026 20:25:06 GMT"
       },
       "generator": "respec",
-      "date": "12 March 2026",
+      "date": "03 April 2026",
       "links": "links/ttml-imsc1.3.json",
       "refs": "refs/ttml-imsc1.3.json",
       "dfns": "dfns/ttml-imsc1.3.json",
@@ -37892,7 +37897,7 @@
       ],
       "release": {
         "url": "https://www.w3.org/TR/vc-confidence-method/",
-        "status": "First Public Working Draft",
+        "status": "Working Draft",
         "filename": "Overview.html"
       },
       "nightly": {
@@ -37914,10 +37919,10 @@
       ],
       "crawled": "https://w3c.github.io/vc-confidence-method/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Feb 2026 08:05:02 GMT"
+        "lastModified": "Sat, 04 Apr 2026 04:04:17 GMT"
       },
       "generator": "respec",
-      "date": "30 October 2025",
+      "date": "04 April 2026",
       "links": "links/vc-confidence-method.json",
       "refs": "refs/vc-confidence-method.json",
       "dfns": "dfns/vc-confidence-method.json",
@@ -38024,10 +38029,10 @@
       ],
       "crawled": "https://w3c.github.io/vc-data-model/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 20 Mar 2026 13:57:42 GMT"
+        "lastModified": "Thu, 02 Apr 2026 12:26:23 GMT"
       },
       "generator": "respec",
-      "date": "20 March 2026",
+      "date": "02 April 2026",
       "algorithms": "algorithms/vc-data-model-2.0.json",
       "links": "links/vc-data-model-2.0.json",
       "refs": "refs/vc-data-model-2.0.json",
@@ -38353,10 +38358,10 @@
       ],
       "crawled": "https://w3c.github.io/vc-render-method/",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 25 Mar 2026 17:20:58 GMT"
+        "lastModified": "Sat, 04 Apr 2026 04:06:05 GMT"
       },
       "generator": "respec",
-      "date": "25 March 2026",
+      "date": "04 April 2026",
       "algorithms": "algorithms/vc-render-method.json",
       "links": "links/vc-render-method.json",
       "refs": "refs/vc-render-method.json",
@@ -39016,11 +39021,11 @@
       ],
       "crawled": "https://webassembly.github.io/spec/core/bikeshed/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 10:58:27 GMT"
+        "lastModified": "Fri, 03 Apr 2026 08:24:00 GMT"
       },
       "generator": "bikeshed",
-      "date": "26 March 2026",
-      "revision": "072bd0dc5c965120a111a67fa1849c0378f9a600",
+      "date": "3 April 2026",
+      "revision": "55741de8e941e504fc86ee1f83496c913d719205",
       "algorithms": "algorithms/wasm-core-2.json",
       "links": "links/wasm-core-2.json",
       "refs": "refs/wasm-core-2.json",
@@ -39089,11 +39094,11 @@
       ],
       "crawled": "https://webassembly.github.io/spec/js-api/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 10:58:27 GMT"
+        "lastModified": "Fri, 03 Apr 2026 08:24:00 GMT"
       },
       "generator": "bikeshed",
-      "date": "26 March 2026",
-      "revision": "072bd0dc5c965120a111a67fa1849c0378f9a600",
+      "date": "3 April 2026",
+      "revision": "55741de8e941e504fc86ee1f83496c913d719205",
       "algorithms": "algorithms/wasm-js-api-2.json",
       "links": "links/wasm-js-api-2.json",
       "refs": "refs/wasm-js-api-2.json",
@@ -39156,11 +39161,11 @@
       ],
       "crawled": "https://webassembly.github.io/spec/web-api/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 26 Mar 2026 10:58:27 GMT"
+        "lastModified": "Fri, 03 Apr 2026 08:24:00 GMT"
       },
       "generator": "bikeshed",
-      "date": "26 March 2026",
-      "revision": "072bd0dc5c965120a111a67fa1849c0378f9a600",
+      "date": "3 April 2026",
+      "revision": "55741de8e941e504fc86ee1f83496c913d719205",
       "algorithms": "algorithms/wasm-web-api-2.json",
       "links": "links/wasm-web-api-2.json",
       "refs": "refs/wasm-web-api-2.json",
@@ -39273,10 +39278,10 @@
       ],
       "crawled": "https://w3c.github.io/wcag/guidelines/22/",
       "crawlCacheInfo": {
-        "lastModified": "Mon, 23 Mar 2026 18:18:20 GMT"
+        "lastModified": "Sat, 04 Apr 2026 11:44:48 GMT"
       },
       "generator": "respec",
-      "date": "23 March 2026",
+      "date": "04 April 2026",
       "links": "links/WCAG22.json",
       "refs": "refs/WCAG22.json",
       "dfns": "dfns/WCAG22.json",
@@ -39340,11 +39345,11 @@
       ],
       "crawled": "https://drafts.csswg.org/web-animations-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "24 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/web-animations-1.json",
       "links": "links/web-animations-1.json",
       "refs": "refs/web-animations-1.json",
@@ -39411,11 +39416,11 @@
       ],
       "crawled": "https://drafts.csswg.org/web-animations-2/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:14 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "24 November 2025",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "algorithms": "algorithms/web-animations-2.json",
       "links": "links/web-animations-2.json",
       "refs": "refs/web-animations-2.json",
@@ -39817,11 +39822,11 @@
       ],
       "crawled": "https://w3c.github.io/webauthn/",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 25 Feb 2026 19:41:59 GMT"
+        "lastModified": "Thu, 02 Apr 2026 19:32:04 GMT"
       },
       "generator": "bikeshed",
-      "date": "25 February 2026",
-      "revision": "1be5e031981abea966dd2a9401f43261ba48cf86",
+      "date": "2 April 2026",
+      "revision": "d39bceea0924aff08094716de92a36012aa08aaf",
       "algorithms": "algorithms/webauthn-3.json",
       "links": "links/webauthn-3.json",
       "refs": "refs/webauthn-3.json",
@@ -40957,11 +40962,11 @@
       ],
       "crawled": "https://w3c.github.io/webdriver/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 19 Mar 2026 15:18:07 GMT"
+        "lastModified": "Wed, 01 Apr 2026 07:46:07 GMT"
       },
       "generator": "respec",
-      "date": "19 March 2026",
-      "revision": "1d4b69147a6b0e87f6d2402e608a1501113d3bf2",
+      "date": "01 April 2026",
+      "revision": "370aeff6ecddb86241c0929b5f6b86f076da6eab",
       "algorithms": "algorithms/webdriver2.json",
       "links": "links/webdriver2.json",
       "refs": "refs/webdriver2.json",
@@ -41542,10 +41547,10 @@
       ],
       "crawled": "https://w3c.github.io/webrtc-pc/",
       "crawlCacheInfo": {
-        "lastModified": "Thu, 12 Mar 2026 16:01:38 GMT"
+        "lastModified": "Wed, 01 Apr 2026 23:56:55 GMT"
       },
       "generator": "respec",
-      "date": "12 March 2026",
+      "date": "01 April 2026",
       "algorithms": "algorithms/webrtc.json",
       "links": "links/webrtc.json",
       "refs": "refs/webrtc.json",
@@ -41608,11 +41613,11 @@
       ],
       "crawled": "https://w3c.github.io/webtransport/",
       "crawlCacheInfo": {
-        "lastModified": "Wed, 25 Mar 2026 14:26:48 GMT"
+        "lastModified": "Wed, 01 Apr 2026 15:00:57 GMT"
       },
       "generator": "bikeshed",
-      "date": "25 March 2026",
-      "revision": "9e493e61a38741f9355eadee934da697eac3a04d",
+      "date": "1 April 2026",
+      "revision": "c05f125de6049649da75a386f20b83276df71dd6",
       "algorithms": "algorithms/webtransport.json",
       "links": "links/webtransport.json",
       "refs": "refs/webtransport.json",
@@ -43096,11 +43101,11 @@
       ],
       "crawled": "https://drafts.csswg.org/selectors-nonelement-1/",
       "crawlCacheInfo": {
-        "lastModified": "Fri, 27 Mar 2026 23:03:13 GMT"
+        "lastModified": "Fri, 03 Apr 2026 22:00:17 GMT"
       },
       "generator": "bikeshed",
       "date": "24 January 2024",
-      "revision": "c04dc2a819f94089df03bf3db868b06680300c88",
+      "revision": "58b32c87f321e41eb90d735d8f224a673a3642a6",
       "links": "links/selectors-nonelement-1.json",
       "refs": "refs/selectors-nonelement-1.json",
       "dfns": "dfns/selectors-nonelement-1.json",
