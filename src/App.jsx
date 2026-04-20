@@ -2,147 +2,147 @@ import { useState, useEffect } from 'react';
 import { useCssData } from './hooks/useCssData';
 
 const OFFICIAL_SPECS = [
-  { 
-    name: "CSS Level 2, latest revision", 
-    url: "https://www.w3.org/TR/CSS2/", 
+  {
+    name: "CSS Level 2, latest revision",
+    url: "https://www.w3.org/TR/CSS2/",
     code: "CSS2",
     description: "This defines the core of CSS, parts of which are overridden by later specifications. We recommend in particular reading Chapter 2, which introduces some of the basic concepts of CSS and its design principles."
   },
-  { 
-    name: "CSS Syntax Module Level 3", 
-    url: "https://www.w3.org/TR/css-syntax-3/", 
+  {
+    name: "CSS Syntax Module Level 3",
+    url: "https://www.w3.org/TR/css-syntax-3/",
     code: "CSS-SYNTAX-3",
     description: "Replaces CSS2§4.1, CSS2§4.2, CSS2§4.4, and CSS2§G, redefining how CSS is parsed."
   },
-  { 
-    name: "CSS Style Attributes", 
-    url: "https://www.w3.org/TR/css-style-attr/", 
+  {
+    name: "CSS Style Attributes",
+    url: "https://www.w3.org/TR/css-style-attr/",
     code: "CSS-STYLE-ATTR",
     description: "Defines how CSS declarations can be embedded in markup attributes."
   },
-  { 
-    name: "Media Queries Level 3", 
-    url: "https://www.w3.org/TR/css3-mediaqueries/", 
+  {
+    name: "Media Queries Level 3",
+    url: "https://www.w3.org/TR/css3-mediaqueries/",
     code: "CSS3-MEDIAQUERIES",
     description: "Replaces CSS2§7.3 and expands on the syntax for media-specific styles."
   },
-  { 
-    name: "CSS Conditional Rules Module Level 3", 
-    url: "https://www.w3.org/TR/css-conditional-3/", 
+  {
+    name: "CSS Conditional Rules Module Level 3",
+    url: "https://www.w3.org/TR/css-conditional-3/",
     code: "CSS-CONDITIONAL-3",
     description: "Extends and supersedes CSS2§7.2, updating the definition of ‘@media’ rules to allow nesting and introducing the ‘@supports’ rule for feature-support queries."
   },
-  { 
-    name: "Selectors Level 3", 
-    url: "https://www.w3.org/TR/selectors-3/", 
+  {
+    name: "Selectors Level 3",
+    url: "https://www.w3.org/TR/selectors-3/",
     code: "SELECTORS-3",
     description: "Replaces CSS2§5 and CSS2§6.4.3, defining an extended range of selectors."
   },
-  { 
-    name: "CSS Namespaces Module Level 3", 
-    url: "https://www.w3.org/TR/css-namespaces/", 
+  {
+    name: "CSS Namespaces Module Level 3",
+    url: "https://www.w3.org/TR/css-namespaces/",
     code: "CSS3-NAMESPACE",
     description: "Introduces an ‘@namespace’ rule to allow namespace-prefixed selectors."
   },
-  { 
-    name: "CSS Cascading and Inheritance Level 4", 
-    url: "https://www.w3.org/TR/css-cascade-4/", 
+  {
+    name: "CSS Cascading and Inheritance Level 4",
+    url: "https://www.w3.org/TR/css-cascade-4/",
     code: "CSS-CASCADE-4",
     description: "Extends and supersedes CSS2§1.4.3 and CSS2§6, as well as [CSS-CASCADE-3]. Describes how to collate style rules and assign values to all properties on all elements. By way of cascading and inheritance, values are propagated for all properties on all elements."
   },
-  { 
-    name: "CSS Values and Units Module Level 3", 
-    url: "https://www.w3.org/TR/css-values-3/", 
+  {
+    name: "CSS Values and Units Module Level 3",
+    url: "https://www.w3.org/TR/css-values-3/",
     code: "CSS-VALUES-3",
     description: "Extends and supersedes CSS2§1.4.2.1, CSS2§4.3, and CSS2§A.2.1–3, defining CSS’s property definition syntax and expanding its set of units."
   },
-  { 
-    name: "CSS Custom Properties for Cascading Variables Module Level 1", 
-    url: "https://www.w3.org/TR/css-variables-1/", 
+  {
+    name: "CSS Custom Properties for Cascading Variables Module Level 1",
+    url: "https://www.w3.org/TR/css-variables-1/",
     code: "CSS-VARIABLES-1",
     description: "Introduces cascading variables as a new primitive value type that is accepted by all CSS properties, and custom properties for defining them."
   },
-  { 
-    name: "CSS Box Model Module Level 3", 
-    url: "https://www.w3.org/TR/css-box-3/", 
+  {
+    name: "CSS Box Model Module Level 3",
+    url: "https://www.w3.org/TR/css-box-3/",
     code: "CSS-BOX-3",
     description: "Replaces CSS2§8.1, §8.2, §8.3 (but not §8.3.1), and §8.4."
   },
-  { 
-    name: "CSS Color Module Level 4", 
-    url: "https://www.w3.org/TR/css-color-4/", 
+  {
+    name: "CSS Color Module Level 4",
+    url: "https://www.w3.org/TR/css-color-4/",
     code: "CSS-COLOR-4",
     description: "Extends and supersedes CSS2§4.3.6, CSS2§14.1, and CSS2§18.2, also extends and supersedes [CSS-COLOR-3], introducing an extended range of color spaces beyond sRGB, extended color values, and CSS Object Model extensions for color. Also defines the ‘opacity’ property."
   },
-  { 
-    name: "CSS Backgrounds and Borders Module Level 3", 
-    url: "https://www.w3.org/TR/css-backgrounds-3/", 
+  {
+    name: "CSS Backgrounds and Borders Module Level 3",
+    url: "https://www.w3.org/TR/css-backgrounds-3/",
     code: "CSS-BACKGROUNDS-3",
     description: "Extends and supersedes CSS2§8.5 and CSS2§14.2, providing more control of backgrounds and borders, including layered background images, image borders, and drop shadows."
   },
-  { 
-    name: "CSS Images Module Level 3", 
-    url: "https://www.w3.org/TR/css-images-3/", 
+  {
+    name: "CSS Images Module Level 3",
+    url: "https://www.w3.org/TR/css-images-3/",
     code: "CSS-IMAGES-3",
     description: "Redefines and incorporates the external 2D image value type, introduces native 2D gradients, and adds additional controls for replaced element sizing and rendering."
   },
-  { 
-    name: "CSS Fonts Module Level 3", 
-    url: "https://www.w3.org/TR/css-fonts-3/", 
+  {
+    name: "CSS Fonts Module Level 3",
+    url: "https://www.w3.org/TR/css-fonts-3/",
     code: "CSS-FONTS-3",
     description: "Extends and supersedes CSS2§15 and provides more control over font choice and feature selection."
   },
-  { 
-    name: "CSS Writing Modes Level 3", 
-    url: "https://www.w3.org/TR/css-writing-modes-3/", 
+  {
+    name: "CSS Writing Modes Level 3",
+    url: "https://www.w3.org/TR/css-writing-modes-3/",
     code: "CSS-WRITING-MODES-3",
     description: "Defines CSS support for various international writing modes, such as left-to-right (e.g. Latin or Indic), right-to-left (e.g. Hebrew or Arabic), bidirectional (e.g. mixed Latin and Arabic) and vertical (e.g. Asian scripts). Replaces and extends CSS2§8.6 and §9.10."
   },
-  { 
-    name: "CSS Multi-column Layout Module Level 1", 
-    url: "https://www.w3.org/TR/css-multicol-1/", 
+  {
+    name: "CSS Multi-column Layout Module Level 1",
+    url: "https://www.w3.org/TR/css-multicol-1/",
     code: "CSS-MULTICOL-1",
     description: "Introduces multi-column flows to CSS layout."
   },
-  { 
-    name: "CSS Flexible Box Layout Module Level 1", 
-    url: "https://www.w3.org/TR/css-flexbox-1/", 
+  {
+    name: "CSS Flexible Box Layout Module Level 1",
+    url: "https://www.w3.org/TR/css-flexbox-1/",
     code: "CSS-FLEXBOX-1",
     description: "Introduces a flexible linear layout model for CSS."
   },
-  { 
-    name: "CSS Basic User Interface Module Level 3", 
-    url: "https://www.w3.org/TR/css-ui-3/", 
+  {
+    name: "CSS Basic User Interface Module Level 3",
+    url: "https://www.w3.org/TR/css-ui-3/",
     code: "CSS-UI-3",
     description: "Extends and supersedes CSS2§18.1 and CSS2§18.4, defining ‘cursor’, ‘outline’, and several new CSS features that also enhance the user interface."
   },
-  { 
-    name: "CSS Containment Module Level 1", 
-    url: "https://www.w3.org/TR/css-contain-1/", 
+  {
+    name: "CSS Containment Module Level 1",
+    url: "https://www.w3.org/TR/css-contain-1/",
     code: "CSS-CONTAIN-1",
     description: "Introduces the ‘contain’ property, which enforces the independent CSS processing of an element’s subtree in order to enable heavy optimizations by user agents when used well."
   },
-  { 
-    name: "CSS Transforms Module Level 1", 
-    url: "https://www.w3.org/TR/css-transforms-1/", 
+  {
+    name: "CSS Transforms Module Level 1",
+    url: "https://www.w3.org/TR/css-transforms-1/",
     code: "CSS-TRANSFORMS-1",
     description: "Introduces coordinate-based graphical transformations to CSS."
   },
-  { 
-    name: "Compositing and Blending Level 1", 
-    url: "https://www.w3.org/TR/compositing-1/", 
+  {
+    name: "Compositing and Blending Level 1",
+    url: "https://www.w3.org/TR/compositing-1/",
     code: "COMPOSITING",
     description: "Defines the compositing and blending of overlaid content and introduces features to control their modes."
   },
-  { 
-    name: "CSS Easing Functions Level 1", 
-    url: "https://www.w3.org/TR/css-easing-1/", 
+  {
+    name: "CSS Easing Functions Level 1",
+    url: "https://www.w3.org/TR/css-easing-1/",
     code: "CSS-EASING-1",
     description: "Describes a way for authors to define a transformation that controls the rate of change of some value. Applied to animations, such transformations can be used to produce animations that mimic physical phenomena such as momentum or to cause the animation to move in discrete steps producing robot-like movement."
   },
-  { 
-    name: "CSS Counter Styles Level 3", 
-    url: "https://www.w3.org/TR/css-counter-styles-3/", 
+  {
+    name: "CSS Counter Styles Level 3",
+    url: "https://www.w3.org/TR/css-counter-styles-3/",
     code: "CSS-COUNTER-STYLES-3",
     description: "Introduces the ‘@counter-style’ rule, which allows authors to define their own custom counter styles for use with CSS list-marker and generated-content counters [CSS-LISTS-3]. It also predefines a set of common counter styles, including the ones present in CSS2 and CSS2.1."
   }
@@ -151,13 +151,13 @@ const OFFICIAL_SPECS = [
 function App() {
   const { data, loading, error } = useCssData();
   const [search, setSearch] = useState('');
-  
+
   // Initialize view from hash if present
   const [view, setView] = useState(() => {
     const hash = typeof window !== 'undefined' ? window.location.hash.slice(1) : '';
     return ['properties', 'specs', 'browser-support', 'definition'].includes(hash) ? hash : 'properties';
   });
-  
+
   const [category, setCategory] = useState('all'); // 'all', 'property', 'value', 'function', 'at-rule'
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationEnabled, setPaginationEnabled] = useState(true);
@@ -204,7 +204,7 @@ function App() {
 
   const itemsToDisplay = view === 'properties' ? filteredItems : supportedItems;
   const totalPages = Math.ceil(itemsToDisplay.length / ITEMS_PER_PAGE);
-  const currentItems = paginationEnabled 
+  const currentItems = paginationEnabled
       ? itemsToDisplay.slice(
           (currentPage - 1) * ITEMS_PER_PAGE,
           currentPage * ITEMS_PER_PAGE
@@ -228,8 +228,8 @@ function App() {
       setCurrentPage(1);
   };
 
-  const completedSpecs = data.specsData.results.filter(spec => 
-      spec.release && 
+  const completedSpecs = data.specsData.results.filter(spec =>
+      spec.release &&
       spec.release.status === 'Recommendation' &&
       spec.groups &&
       spec.groups.some(g => g.name === 'Cascading Style Sheets (CSS) Working Group')
@@ -240,25 +240,25 @@ function App() {
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-3xl font-bold">CSS Reference</h1>
         <div className="space-x-2">
-            <button 
+            <button
                 className={`px-4 py-2 rounded ${view === 'properties' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
                 onClick={() => handleViewChange('properties')}
             >
                 Properties
             </button>
-            <button 
+            <button
                 className={`px-4 py-2 rounded ${view === 'browser-support' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
                 onClick={() => handleViewChange('browser-support')}
             >
                 Browser Support
             </button>
-            <button 
+            <button
                 className={`px-4 py-2 rounded ${view === 'specs' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
                 onClick={() => handleViewChange('specs')}
             >
                 Completed Specs
             </button>
-            <button 
+            <button
                 className={`px-4 py-2 rounded ${view === 'definition' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
                 onClick={() => handleViewChange('definition')}
             >
@@ -266,7 +266,7 @@ function App() {
             </button>
         </div>
       </div>
-      
+
       {view === 'properties' && (
         <>
             <div className="bg-gray-50 border border-gray-200 rounded p-4 mb-6 text-sm text-gray-700">
@@ -299,8 +299,8 @@ function App() {
                     value={search}
                     onChange={handleSearchChange}
                 />
-                <select 
-                    value={category} 
+                <select
+                    value={category}
                     onChange={(e) => handleCategoryChange(e.target.value)}
                     className="p-2 border rounded bg-white"
                 >
@@ -355,9 +355,9 @@ function App() {
                         </p>
                     )}
                     {item.href ? (
-                        <a 
-                            href={item.href} 
-                            target="_blank" 
+                        <a
+                            href={item.href}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-500 hover:underline text-sm mt-2 block"
                         >
@@ -371,7 +371,7 @@ function App() {
                 </div>
                 ))}
             </div>
-            
+
             {filteredItems.length === 0 && (
                 <p className="text-center text-gray-500 mt-8">No items found matching "{search}"</p>
             )}
@@ -401,8 +401,8 @@ function App() {
       )}
 
       {view === 'browser-support' && (
-        <>  
-            
+        <>
+
             <div>
               <h2 className="text-2xl mb-4">Browser Supported Features</h2>
               <p className="mb-4 text-gray-700">
@@ -421,8 +421,8 @@ function App() {
                     value={search}
                     onChange={handleSearchChange}
                 />
-                <select 
-                    value={category} 
+                <select
+                    value={category}
                     onChange={(e) => handleCategoryChange(e.target.value)}
                     className="p-2 border rounded bg-white"
                 >
@@ -458,7 +458,7 @@ function App() {
                         {item.type}
                     </span>
                     <h2 className="text-xl font-semibold text-blue-600 pr-16">{item.name}</h2>
-                    
+
                     <div className="mt-4 flex space-x-2">
                         {['chrome', 'firefox', 'safari'].map(browser => {
                             const isSupported = item.compatibility.support[browser];
@@ -476,10 +476,10 @@ function App() {
                             ⚠️ Implemented behind a flag
                         </p>
                     )}
-                    
-                    <a 
-                        href={item.href} 
-                        target="_blank" 
+
+                    <a
+                        href={item.href}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-500 hover:underline text-sm mt-4 block"
                     >
@@ -540,9 +540,9 @@ function App() {
                       <div key={index} className="border p-4 rounded shadow">
                           <h2 className="text-xl font-semibold">{spec.title || spec.shortname}</h2>
                           <p className="text-sm text-gray-500 mb-2">{spec.release.status}</p>
-                          <a 
-                              href={spec.release.url} 
-                              target="_blank" 
+                          <a
+                              href={spec.release.url}
+                              target="_blank"
                               rel="noopener noreferrer"
                               className="text-blue-500 hover:underline"
                           >
@@ -566,6 +566,9 @@ function App() {
                           This profile includes only specifications that the CSS Working Group considers stable and for which they have enough implementation experience that they are sure of that stability.
                       </p>
                   </blockquote>
+                    <p className="mb-4 text-800">
+                      However, any consideration of a future version of CSS should also include an analysis of the specification in the <a href="https://www.w3.org/TR/css-2026/#reliable-cr " target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">Reliable Candidate Recommendations</a> section. While these specifications are have not yet reached the recommendation stage, they have been implemented in multiple browsers and are likely to be included in the official defintion of CSS in the near
+                    </p>
                   <p className="text-800">
                       As of 2025, Cascading Style Sheets (CSS) is defined by the specifications listed in the official snapshot.
                   </p>
@@ -580,9 +583,9 @@ function App() {
                               <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded text-gray-600">
                                   {spec.code}
                               </span>
-                              <a 
-                                  href={spec.url} 
-                                  target="_blank" 
+                              <a
+                                  href={spec.url}
+                                  target="_blank"
                                   rel="noopener noreferrer"
                                   className="text-blue-600 hover:underline text-sm"
                               >
