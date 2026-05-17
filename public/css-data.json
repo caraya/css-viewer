@@ -1301,6 +1301,74 @@
       }
     ]
   },
+  "css-gcpm-4": {
+    "spec": {
+      "title": "CSS Generated Content for Paged Media Module Level 4",
+      "url": "https://drafts.csswg.org/css-gcpm-4/"
+    },
+    "properties": [
+      {
+        "name": "copy-into",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into",
+        "value": "none | [ [ <custom-ident> <content-level>] [, <custom-ident> <content-level>]* ]?",
+        "initial": "none",
+        "appliesTo": "all elements and pseudo-elements, but not ::first-line or ::first-letter.",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "styleDeclaration": [
+          "copy-into",
+          "copyInto"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [
+      {
+        "name": ":nth-of-page()",
+        "value": ":nth-of-page(n)",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-nth-of-page-n"
+      },
+      {
+        "name": ":first-of-page",
+        "prose": "Same as :nth-of-page(n), but where n = 1 (it is the first matched element on the page).",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-first-of-page",
+        "value": ":first-of-page"
+      },
+      {
+        "name": ":last-of-page",
+        "prose": "The element is the last matched element on the page.",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-last-of-page",
+        "value": ":last-of-page"
+      },
+      {
+        "name": ":start-of-page",
+        "prose": "The element is the first matched element on the page, and neither it nor its ancestors have any previous siblings that appear on the page.",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-start-of-page",
+        "value": ":start-of-page"
+      }
+    ],
+    "values": [
+      {
+        "name": "<content-level>",
+        "href": "https://drafts.csswg.org/css-gcpm-4/#typedef-content-level",
+        "type": "type",
+        "value": "element | content | text | <attr()> | <counter>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
   "css-images-5": {
     "spec": {
       "title": "CSS Images Module Level 5",
@@ -1470,74 +1538,6 @@
         "href": "https://drafts.csswg.org/css-color-6/#funcdef-color-layers",
         "type": "function",
         "value": "color-layers([ <blend-mode>, ]? <color># )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
-  "css-gcpm-4": {
-    "spec": {
-      "title": "CSS Generated Content for Paged Media Module Level 4",
-      "url": "https://drafts.csswg.org/css-gcpm-4/"
-    },
-    "properties": [
-      {
-        "name": "copy-into",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into",
-        "value": "none | [ [ <custom-ident> <content-level>] [, <custom-ident> <content-level>]* ]?",
-        "initial": "none",
-        "appliesTo": "all elements and pseudo-elements, but not ::first-line or ::first-letter.",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "styleDeclaration": [
-          "copy-into",
-          "copyInto"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [
-      {
-        "name": ":nth-of-page()",
-        "value": ":nth-of-page(n)",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-nth-of-page-n"
-      },
-      {
-        "name": ":first-of-page",
-        "prose": "Same as :nth-of-page(n), but where n = 1 (it is the first matched element on the page).",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-first-of-page",
-        "value": ":first-of-page"
-      },
-      {
-        "name": ":last-of-page",
-        "prose": "The element is the last matched element on the page.",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-last-of-page",
-        "value": ":last-of-page"
-      },
-      {
-        "name": ":start-of-page",
-        "prose": "The element is the first matched element on the page, and neither it nor its ancestors have any previous siblings that appear on the page.",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#selectordef-start-of-page",
-        "value": ":start-of-page"
-      }
-    ],
-    "values": [
-      {
-        "name": "<content-level>",
-        "href": "https://drafts.csswg.org/css-gcpm-4/#typedef-content-level",
-        "type": "type",
-        "value": "element | content | text | <attr()> | <counter>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -3934,6 +3934,15 @@
         "value": "<light-dark-color> | <light-dark-image>",
         "href": "https://drafts.csswg.org/css-color-5/#funcdef-light-dark",
         "type": "function",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The none keyword computes to image(transparent) (a fully transparent image with no natural size).",
+            "href": "https://drafts.csswg.org/css-color-5/#valdef-light-dark-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
         "compatibility": {
           "supported": true,
           "browsers": 3,
@@ -7720,118 +7729,6 @@
       }
     ]
   },
-  "css-grid-3": {
-    "spec": {
-      "title": "CSS Grid Layout Module Level 3",
-      "url": "https://drafts.csswg.org/css-grid-3/"
-    },
-    "properties": [
-      {
-        "name": "display",
-        "newValues": "grid-lanes | inline-grid-lanes",
-        "values": [
-          {
-            "name": "grid-lanes",
-            "prose": "This value causes an element to generate a block-level grid lanes container box.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-grid-lanes",
-            "type": "value",
-            "value": "grid-lanes"
-          },
-          {
-            "name": "inline-grid-lanes",
-            "prose": "This value causes an element to generate an inline-level grid lanes container box.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-inline-grid-lanes",
-            "type": "value",
-            "value": "inline-grid-lanes"
-          }
-        ],
-        "styleDeclaration": [
-          "display"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-grid-3/#propdef-display"
-      },
-      {
-        "name": "flow-tolerance",
-        "href": "https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance",
-        "value": "normal | <length-percentage [0,∞]> | infinite",
-        "initial": "normal",
-        "appliesTo": "grid lanes containers",
-        "inherited": "no",
-        "percentages": "relative to the grid-axis content box size of the grid lanes container",
-        "computedValue": "a computed <length-percentage> value",
-        "canonicalOrder": "per grammar",
-        "animationType": "as length",
-        "values": [
-          {
-            "name": "<length-percentage>",
-            "prose": "Specifies the tie threshold for the grid lanes container. Placement positions are considered to be equally good (“tied”) if they are within the specified distance from the shortest position.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-length-percentage",
-            "type": "value",
-            "value": "<length-percentage>"
-          },
-          {
-            "name": "normal",
-            "prose": "Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-normal",
-            "type": "value",
-            "value": "normal"
-          },
-          {
-            "name": "infinite",
-            "prose": "Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-infinite",
-            "type": "value",
-            "value": "infinite"
-          }
-        ],
-        "styleDeclaration": [
-          "flow-tolerance",
-          "flowTolerance"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<auto-repeat>",
-        "href": "https://drafts.csswg.org/css-grid-3/#typedef-auto-repeat",
-        "type": "type",
-        "value": "repeat( [ auto-fill | auto-fit ] , [ <line-names>? <track-size> ]+ <line-names>? )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "warnings": [
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The initial value of this property is normal, which determines the orientation from the grid-template-* properties:",
-        "href": "https://drafts.csswg.org/css-grid-3/#valdef-grid-auto-flow-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "grid-auto-flow"
-      }
-    ]
-  },
   "css-images-4": {
     "spec": {
       "title": "CSS Images Module Level 4",
@@ -8349,6 +8246,461 @@
         "msg": "Missing definition",
         "name": "<radial-size>",
         "value": "<radial-extent>{1,2} | <length-percentage [0,∞]>{1,2}"
+      }
+    ]
+  },
+  "css-grid-3": {
+    "spec": {
+      "title": "CSS Grid Layout Module Level 3",
+      "url": "https://drafts.csswg.org/css-grid-3/"
+    },
+    "properties": [
+      {
+        "name": "display",
+        "newValues": "grid-lanes | inline-grid-lanes",
+        "values": [
+          {
+            "name": "grid-lanes",
+            "prose": "This value causes an element to generate a block-level grid lanes container box.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-grid-lanes",
+            "type": "value",
+            "value": "grid-lanes"
+          },
+          {
+            "name": "inline-grid-lanes",
+            "prose": "This value causes an element to generate an inline-level grid lanes container box.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-inline-grid-lanes",
+            "type": "value",
+            "value": "inline-grid-lanes"
+          }
+        ],
+        "styleDeclaration": [
+          "display"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-grid-3/#propdef-display"
+      },
+      {
+        "name": "flow-tolerance",
+        "href": "https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance",
+        "value": "normal | <length-percentage [0,∞]> | infinite",
+        "initial": "normal",
+        "appliesTo": "grid lanes containers",
+        "inherited": "no",
+        "percentages": "relative to the grid-axis content box size of the grid lanes container",
+        "computedValue": "a computed <length-percentage> value",
+        "canonicalOrder": "per grammar",
+        "animationType": "as length",
+        "values": [
+          {
+            "name": "<length-percentage>",
+            "prose": "Specifies the tie threshold for the grid lanes container. Placement positions are considered to be equally good (“tied”) if they are within the specified distance from the shortest position.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-length-percentage",
+            "type": "value",
+            "value": "<length-percentage>"
+          },
+          {
+            "name": "normal",
+            "prose": "Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-normal",
+            "type": "value",
+            "value": "normal"
+          },
+          {
+            "name": "infinite",
+            "prose": "Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-infinite",
+            "type": "value",
+            "value": "infinite"
+          }
+        ],
+        "styleDeclaration": [
+          "flow-tolerance",
+          "flowTolerance"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<auto-repeat>",
+        "href": "https://drafts.csswg.org/css-grid-3/#typedef-auto-repeat",
+        "type": "type",
+        "value": "repeat( [ auto-fill | auto-fit ] , [ <line-names>? <track-size> ]+ <line-names>? )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "msg": "Dangling value",
+        "name": "normal",
+        "prose": "The initial value of this property is normal, which determines the orientation from the grid-template-* properties:",
+        "href": "https://drafts.csswg.org/css-grid-3/#valdef-grid-auto-flow-normal",
+        "type": "value",
+        "value": "normal",
+        "for": "grid-auto-flow"
+      }
+    ]
+  },
+  "css-position-4": {
+    "spec": {
+      "title": "CSS Positioned Layout Module Level 4",
+      "url": "https://drafts.csswg.org/css-position-4/"
+    },
+    "properties": [
+      {
+        "name": "overlay",
+        "href": "https://drafts.csswg.org/css-position-4/#propdef-overlay",
+        "value": "none | auto",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "see prose",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The element isn’t rendered in the top layer.",
+            "href": "https://drafts.csswg.org/css-position-4/#valdef-overlay-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "auto",
+            "prose": "The element is rendered in the top layer if it is in the top layer. Rather than generating boxes as part of its normal position in the document, it generates boxes as a sibling of the root element, rendered \"above\" it.",
+            "href": "https://drafts.csswg.org/css-position-4/#valdef-overlay-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "overlay"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [
+      {
+        "name": "::backdrop",
+        "prose": "Each element rendered in the top layer has a ::backdrop pseudo-element, for which it is the originating element.",
+        "href": "https://drafts.csswg.org/css-position-4/#selectordef-backdrop",
+        "value": "::backdrop"
+      }
+    ],
+    "values": []
+  },
+  "css-overflow-5": {
+    "spec": {
+      "title": "CSS Overflow Module Level 5",
+      "url": "https://drafts.csswg.org/css-overflow-5/"
+    },
+    "properties": [
+      {
+        "name": "scroll-target-group",
+        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-target-group",
+        "value": "none | auto",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified value",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The element does not establish a scroll marker group container.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-target-group-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "auto",
+            "prose": "The element establishes a scroll marker group container forming a scroll marker group containing all of the scroll marker elements for which this is the nearest ancestor scroll marker group container.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-target-group-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "scroll-target-group",
+          "scrollTargetGroup"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      },
+      {
+        "name": "scroll-marker-group",
+        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-marker-group",
+        "value": "none | [ [ before | after ] || [ links | tabs ] ]",
+        "initial": "none",
+        "appliesTo": "scroll containers",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified keyword(s)",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The scroll container does not create a '::scroll-marker-group' pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "before",
+            "prose": "The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the first child of the originating element. Otherwise, its box is an immediate preceding sibling to its originating element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-before",
+            "type": "value",
+            "value": "before"
+          },
+          {
+            "name": "after",
+            "prose": "The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the last child of the originating element. Otherwise, its box is an immediate following sibling to its originating element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-after",
+            "type": "value",
+            "value": "after"
+          },
+          {
+            "name": "links",
+            "prose": "The generated ::scroll-marker-group operates in \"links\" mode, functioning like a navigation list. This is the default mode if omitted.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-links",
+            "type": "value",
+            "value": "links"
+          },
+          {
+            "name": "tabs",
+            "prose": "The generated ::scroll-marker-group operates in \"tabs\" mode, functioning like a tablist.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-tabs",
+            "type": "value",
+            "value": "tabs"
+          }
+        ],
+        "styleDeclaration": [
+          "scroll-marker-group",
+          "scrollMarkerGroup"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      },
+      {
+        "name": "continue",
+        "newValues": "overflow | paginate | fragments",
+        "initial": "auto",
+        "appliesTo": "block containers [CSS2], flex containers [CSS3-FLEXBOX], and grid containers [CSS3-GRID-LAYOUT]",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "see below",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "overflow",
+            "prose": "Content that doesn’t fit overflows, according to the overflow property",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-overflow",
+            "type": "value",
+            "value": "overflow"
+          },
+          {
+            "name": "paginate",
+            "prose": "Content that doesn’t fit paginates. This creates a paginated view inside the element similar to the way that 'overflow: scroll' creates a scrollable view. See paginated overflow",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-paginate",
+            "type": "value",
+            "value": "paginate"
+          },
+          {
+            "name": "fragments",
+            "prose": "content that doesn’t fit causes the element to copy itself and continue laying out. See fragment overflow.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-fragments",
+            "type": "value",
+            "value": "fragments"
+          }
+        ],
+        "styleDeclaration": [
+          "continue"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        },
+        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-continue"
+      }
+    ],
+    "atrules": [],
+    "selectors": [
+      {
+        "name": "::scroll-marker-group",
+        "prose": "The ::scroll-marker-group fully styleable pseudo-element is generated by a scroll container element having a computed scroll-marker-group property that is not none.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker-group",
+        "value": "::scroll-marker-group"
+      },
+      {
+        "name": "::scroll-marker",
+        "prose": "When the computed content value of a ::scroll-marker pseudo-element is not none and its nearest ancestor scroll container scroll container has a computed scroll-marker-group property that is not none, the pseudo-element generates a box attached as a child of the ::scroll-marker-group pseudo-element’s generated box on its nearest ancestor scroll container. These boxes are added in the tree order of their originating element.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker",
+        "value": "::scroll-marker"
+      },
+      {
+        "name": ":target-current",
+        "prose": "Exactly one scroll marker within each scroll marker group is determined to be active at a time. Such \"active\" scroll markers match the :target-current pseudo-class.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-current",
+        "value": ":target-current"
+      },
+      {
+        "name": ":target-before",
+        "prose": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-before",
+        "value": ":target-before"
+      },
+      {
+        "name": ":target-after",
+        "prose": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-after",
+        "value": ":target-after"
+      },
+      {
+        "name": "::scroll-button()",
+        "value": "::scroll-button( '*' | <scroll-button-direction> )",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-button---scroll-button-direction"
+      },
+      {
+        "name": "::nth-fragment()",
+        "prose": "The ::nth-fragment() pseudo-element is a pseudo-element that describes some of the fragment boxes generated by an element. The argument to the pseudo-element takes the same syntax as the argument to the :nth-child() pseudo-class defined in [SELECT], and has the same meaning except that the number is relative to fragment boxes generated by the element instead of siblings of the element.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-nth-fragment"
+      }
+    ],
+    "values": [
+      {
+        "name": "<scroll-button-direction>",
+        "prose": "The four ::scroll-button() pseudo-elements are individually selected by the selector’s argument. A * arguments selects all four ::scroll-button()s; otherwise the selected pseudo-element is determined by the <scroll-button-direction> value:",
+        "href": "https://drafts.csswg.org/css-overflow-5/#typedef-scroll-button-direction",
+        "type": "type",
+        "values": [
+          {
+            "name": "up",
+            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-up",
+            "type": "value",
+            "value": "up"
+          },
+          {
+            "name": "down",
+            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-down",
+            "type": "value",
+            "value": "down"
+          },
+          {
+            "name": "left",
+            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-left",
+            "type": "value",
+            "value": "left"
+          },
+          {
+            "name": "right",
+            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-right",
+            "type": "value",
+            "value": "right"
+          },
+          {
+            "name": "block-start",
+            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-block-start",
+            "type": "value",
+            "value": "block-start"
+          },
+          {
+            "name": "block-end",
+            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-block-end",
+            "type": "value",
+            "value": "block-end"
+          },
+          {
+            "name": "inline-start",
+            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-inline-start",
+            "type": "value",
+            "value": "inline-start"
+          },
+          {
+            "name": "inline-end",
+            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-inline-end",
+            "type": "value",
+            "value": "inline-end"
+          },
+          {
+            "name": "prev",
+            "prose": "Selects either the block-start or inline-start ::scroll-button(), whichever’s axis has more \"scrollable pages\" in the originating element: the originating element’s scrollable overflow height divided by its scrollport height, or the same but for widths. If both dimensions are equally sized, selects the block-start ::scroll-button(). For example, say the originating element was 800px wide and 500px tall, while its scrollable overflow area was 1200px wide and 1000px tall. The horizontal scrolling thus represents 1.5 \"pages\" (1200/800), while the vertical scrolling represents 2 \"pages\" (1000/500), so (assuming the element is in English) the ::scroll-button(prev) selector would select the block-start button.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-prev",
+            "type": "value",
+            "value": "prev"
+          },
+          {
+            "name": "next",
+            "prose": "Identical to prev, except it selects the block-end or inline-end ::scroll-button() instead.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-next",
+            "type": "value",
+            "value": "next"
+          }
+        ],
+        "value": "up | down | left | right | block-start | block-end | inline-start | inline-end | prev | next",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       }
     ]
   },
@@ -8904,349 +9256,6 @@
     "selectors": [],
     "values": []
   },
-  "css-overflow-5": {
-    "spec": {
-      "title": "CSS Overflow Module Level 5",
-      "url": "https://drafts.csswg.org/css-overflow-5/"
-    },
-    "properties": [
-      {
-        "name": "scroll-target-group",
-        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-target-group",
-        "value": "none | auto",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "specified value",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The element does not establish a scroll marker group container.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-target-group-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "auto",
-            "prose": "The element establishes a scroll marker group container forming a scroll marker group containing all of the scroll marker elements for which this is the nearest ancestor scroll marker group container.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-target-group-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "scroll-target-group",
-          "scrollTargetGroup"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": false
-          }
-        }
-      },
-      {
-        "name": "scroll-marker-group",
-        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-marker-group",
-        "value": "none | [ [ before | after ] || [ links | tabs ] ]",
-        "initial": "none",
-        "appliesTo": "scroll containers",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "specified keyword(s)",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The scroll container does not create a '::scroll-marker-group' pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "before",
-            "prose": "The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the first child of the originating element. Otherwise, its box is an immediate preceding sibling to its originating element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-before",
-            "type": "value",
-            "value": "before"
-          },
-          {
-            "name": "after",
-            "prose": "The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the last child of the originating element. Otherwise, its box is an immediate following sibling to its originating element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-after",
-            "type": "value",
-            "value": "after"
-          },
-          {
-            "name": "links",
-            "prose": "The generated ::scroll-marker-group operates in \"links\" mode, functioning like a navigation list. This is the default mode if omitted.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-links",
-            "type": "value",
-            "value": "links"
-          },
-          {
-            "name": "tabs",
-            "prose": "The generated ::scroll-marker-group operates in \"tabs\" mode, functioning like a tablist.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-tabs",
-            "type": "value",
-            "value": "tabs"
-          }
-        ],
-        "styleDeclaration": [
-          "scroll-marker-group",
-          "scrollMarkerGroup"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": false
-          }
-        }
-      },
-      {
-        "name": "continue",
-        "newValues": "overflow | paginate | fragments",
-        "initial": "auto",
-        "appliesTo": "block containers [CSS2], flex containers [CSS3-FLEXBOX], and grid containers [CSS3-GRID-LAYOUT]",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "see below",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "overflow",
-            "prose": "Content that doesn’t fit overflows, according to the overflow property",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-overflow",
-            "type": "value",
-            "value": "overflow"
-          },
-          {
-            "name": "paginate",
-            "prose": "Content that doesn’t fit paginates. This creates a paginated view inside the element similar to the way that 'overflow: scroll' creates a scrollable view. See paginated overflow",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-paginate",
-            "type": "value",
-            "value": "paginate"
-          },
-          {
-            "name": "fragments",
-            "prose": "content that doesn’t fit causes the element to copy itself and continue laying out. See fragment overflow.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-fragments",
-            "type": "value",
-            "value": "fragments"
-          }
-        ],
-        "styleDeclaration": [
-          "continue"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        },
-        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-continue"
-      }
-    ],
-    "atrules": [],
-    "selectors": [
-      {
-        "name": "::scroll-marker-group",
-        "prose": "The ::scroll-marker-group fully styleable pseudo-element is generated by a scroll container element having a computed scroll-marker-group property that is not none.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker-group",
-        "value": "::scroll-marker-group"
-      },
-      {
-        "name": "::scroll-marker",
-        "prose": "When the computed content value of a ::scroll-marker pseudo-element is not none and its nearest ancestor scroll container scroll container has a computed scroll-marker-group property that is not none, the pseudo-element generates a box attached as a child of the ::scroll-marker-group pseudo-element’s generated box on its nearest ancestor scroll container. These boxes are added in the tree order of their originating element.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker",
-        "value": "::scroll-marker"
-      },
-      {
-        "name": ":target-current",
-        "prose": "Exactly one scroll marker within each scroll marker group is determined to be active at a time. Such \"active\" scroll markers match the :target-current pseudo-class.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-current",
-        "value": ":target-current"
-      },
-      {
-        "name": ":target-before",
-        "prose": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-before",
-        "value": ":target-before"
-      },
-      {
-        "name": ":target-after",
-        "prose": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-after",
-        "value": ":target-after"
-      },
-      {
-        "name": "::scroll-button()",
-        "value": "::scroll-button( '*' | <scroll-button-direction> )",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-button---scroll-button-direction"
-      },
-      {
-        "name": "::nth-fragment()",
-        "prose": "The ::nth-fragment() pseudo-element is a pseudo-element that describes some of the fragment boxes generated by an element. The argument to the pseudo-element takes the same syntax as the argument to the :nth-child() pseudo-class defined in [SELECT], and has the same meaning except that the number is relative to fragment boxes generated by the element instead of siblings of the element.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-nth-fragment"
-      }
-    ],
-    "values": [
-      {
-        "name": "<scroll-button-direction>",
-        "prose": "The four ::scroll-button() pseudo-elements are individually selected by the selector’s argument. A * arguments selects all four ::scroll-button()s; otherwise the selected pseudo-element is determined by the <scroll-button-direction> value:",
-        "href": "https://drafts.csswg.org/css-overflow-5/#typedef-scroll-button-direction",
-        "type": "type",
-        "values": [
-          {
-            "name": "up",
-            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-up",
-            "type": "value",
-            "value": "up"
-          },
-          {
-            "name": "down",
-            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-down",
-            "type": "value",
-            "value": "down"
-          },
-          {
-            "name": "left",
-            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-left",
-            "type": "value",
-            "value": "left"
-          },
-          {
-            "name": "right",
-            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-right",
-            "type": "value",
-            "value": "right"
-          },
-          {
-            "name": "block-start",
-            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-block-start",
-            "type": "value",
-            "value": "block-start"
-          },
-          {
-            "name": "block-end",
-            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-block-end",
-            "type": "value",
-            "value": "block-end"
-          },
-          {
-            "name": "inline-start",
-            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-inline-start",
-            "type": "value",
-            "value": "inline-start"
-          },
-          {
-            "name": "inline-end",
-            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-inline-end",
-            "type": "value",
-            "value": "inline-end"
-          },
-          {
-            "name": "prev",
-            "prose": "Selects either the block-start or inline-start ::scroll-button(), whichever’s axis has more \"scrollable pages\" in the originating element: the originating element’s scrollable overflow height divided by its scrollport height, or the same but for widths. If both dimensions are equally sized, selects the block-start ::scroll-button(). For example, say the originating element was 800px wide and 500px tall, while its scrollable overflow area was 1200px wide and 1000px tall. The horizontal scrolling thus represents 1.5 \"pages\" (1200/800), while the vertical scrolling represents 2 \"pages\" (1000/500), so (assuming the element is in English) the ::scroll-button(prev) selector would select the block-start button.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-prev",
-            "type": "value",
-            "value": "prev"
-          },
-          {
-            "name": "next",
-            "prose": "Identical to prev, except it selects the block-end or inline-end ::scroll-button() instead.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-next",
-            "type": "value",
-            "value": "next"
-          }
-        ],
-        "value": "up | down | left | right | block-start | block-end | inline-start | inline-end | prev | next",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
-  "css-position-4": {
-    "spec": {
-      "title": "CSS Positioned Layout Module Level 4",
-      "url": "https://drafts.csswg.org/css-position-4/"
-    },
-    "properties": [
-      {
-        "name": "overlay",
-        "href": "https://drafts.csswg.org/css-position-4/#propdef-overlay",
-        "value": "none | auto",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "see prose",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The element isn’t rendered in the top layer.",
-            "href": "https://drafts.csswg.org/css-position-4/#valdef-overlay-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "auto",
-            "prose": "The element is rendered in the top layer if it is in the top layer. Rather than generating boxes as part of its normal position in the document, it generates boxes as a sibling of the root element, rendered \"above\" it.",
-            "href": "https://drafts.csswg.org/css-position-4/#valdef-overlay-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "overlay"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": false
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [
-      {
-        "name": "::backdrop",
-        "prose": "Each element rendered in the top layer has a ::backdrop pseudo-element, for which it is the originating element.",
-        "href": "https://drafts.csswg.org/css-position-4/#selectordef-backdrop",
-        "value": "::backdrop"
-      }
-    ],
-    "values": []
-  },
   "css-scroll-snap-2": {
     "spec": {
       "title": "CSS Scroll Snap Module Level 2",
@@ -9330,835 +9339,6 @@
       }
     ],
     "values": []
-  },
-  "css-sizing-4": {
-    "spec": {
-      "title": "CSS Box Sizing Module Level 4",
-      "url": "https://drafts.csswg.org/css-sizing-4/"
-    },
-    "properties": [
-      {
-        "name": "width",
-        "newValues": "stretch | fit-content | contain",
-        "values": [
-          {
-            "name": "stretch",
-            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-            "type": "value",
-            "value": "stretch"
-          },
-          {
-            "name": "fit-content",
-            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-            "type": "value",
-            "value": "fit-content"
-          },
-          {
-            "name": "contain",
-            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-            "type": "value",
-            "value": "contain"
-          }
-        ],
-        "styleDeclaration": [
-          "width"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-width"
-      },
-      {
-        "name": "height",
-        "newValues": "stretch | fit-content | contain",
-        "values": [
-          {
-            "name": "stretch",
-            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-            "type": "value",
-            "value": "stretch"
-          },
-          {
-            "name": "fit-content",
-            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-            "type": "value",
-            "value": "fit-content"
-          },
-          {
-            "name": "contain",
-            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-            "type": "value",
-            "value": "contain"
-          }
-        ],
-        "styleDeclaration": [
-          "height"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-height"
-      },
-      {
-        "name": "min-width",
-        "newValues": "stretch | fit-content | contain",
-        "values": [
-          {
-            "name": "stretch",
-            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-            "type": "value",
-            "value": "stretch"
-          },
-          {
-            "name": "fit-content",
-            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-            "type": "value",
-            "value": "fit-content"
-          },
-          {
-            "name": "contain",
-            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-            "type": "value",
-            "value": "contain"
-          }
-        ],
-        "styleDeclaration": [
-          "min-width",
-          "minWidth"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-min-width"
-      },
-      {
-        "name": "min-height",
-        "newValues": "stretch | fit-content | contain",
-        "values": [
-          {
-            "name": "stretch",
-            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-            "type": "value",
-            "value": "stretch"
-          },
-          {
-            "name": "fit-content",
-            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-            "type": "value",
-            "value": "fit-content"
-          },
-          {
-            "name": "contain",
-            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-            "type": "value",
-            "value": "contain"
-          }
-        ],
-        "styleDeclaration": [
-          "min-height",
-          "minHeight"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-min-height"
-      },
-      {
-        "name": "max-width",
-        "newValues": "stretch | fit-content | contain",
-        "values": [
-          {
-            "name": "stretch",
-            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-            "type": "value",
-            "value": "stretch"
-          },
-          {
-            "name": "fit-content",
-            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-            "type": "value",
-            "value": "fit-content"
-          },
-          {
-            "name": "contain",
-            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-            "type": "value",
-            "value": "contain"
-          }
-        ],
-        "styleDeclaration": [
-          "max-width",
-          "maxWidth"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-max-width"
-      },
-      {
-        "name": "max-height",
-        "newValues": "stretch | fit-content | contain",
-        "values": [
-          {
-            "name": "stretch",
-            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-            "type": "value",
-            "value": "stretch"
-          },
-          {
-            "name": "fit-content",
-            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-            "type": "value",
-            "value": "fit-content"
-          },
-          {
-            "name": "contain",
-            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-            "type": "value",
-            "value": "contain"
-          }
-        ],
-        "styleDeclaration": [
-          "max-height",
-          "maxHeight"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-max-height"
-      },
-      {
-        "name": "aspect-ratio",
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-aspect-ratio",
-        "value": "auto || <ratio>",
-        "initial": "auto",
-        "appliesTo": "all elements except inline boxes and internal ruby or table boxes",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "specified keyword or a pair of numbers",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "Replaced elements with a natural aspect ratio use that aspect ratio; otherwise the box has no preferred aspect ratio. Size calculations involving the aspect ratio work with the content box dimensions always.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-aspect-ratio-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "<ratio>",
-            "prose": "The box’s preferred aspect ratio is the specified ratio of width / height. Size calculations involving the aspect ratio work with the dimensions of the box specified by box-sizing. If the <ratio> is degenerate, the property instead behaves as auto.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-aspect-ratio-ratio",
-            "type": "value",
-            "value": "<ratio>"
-          },
-          {
-            "name": "auto && <ratio>",
-            "prose": "If both auto and a <ratio> are specified together, the preferred aspect ratio is the specified ratio of width / height unless it is a replaced element with a natural aspect ratio, in which case that aspect ratio is used instead. In all cases, size calculations involving the aspect ratio work with the content box dimensions always. If the <ratio> is degenerate, the property instead behaves as auto.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-aspect-ratio-auto--ratio",
-            "type": "value",
-            "value": "auto && <ratio>"
-          }
-        ],
-        "styleDeclaration": [
-          "aspect-ratio",
-          "aspectRatio"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "contain-intrinsic-width",
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-width",
-        "value": "auto? [ none | <length [0,∞]> ]",
-        "initial": "none",
-        "appliesTo": "elements with size containment",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified, with <length> values computed",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value type",
-        "logicalPropertyGroup": "contain-intrinsic-size",
-        "values": [
-          {
-            "name": "none",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<length>",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
-            "type": "value",
-            "value": "<length>"
-          },
-          {
-            "name": "auto",
-            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "contain-intrinsic-width",
-          "containIntrinsicWidth"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "contain-intrinsic-height",
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-height",
-        "value": "auto? [ none | <length [0,∞]> ]",
-        "initial": "none",
-        "appliesTo": "elements with size containment",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified, with <length> values computed",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value type",
-        "logicalPropertyGroup": "contain-intrinsic-size",
-        "values": [
-          {
-            "name": "none",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<length>",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
-            "type": "value",
-            "value": "<length>"
-          },
-          {
-            "name": "auto",
-            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "contain-intrinsic-height",
-          "containIntrinsicHeight"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "contain-intrinsic-block-size",
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-block-size",
-        "value": "auto? [ none | <length [0,∞]> ]",
-        "initial": "none",
-        "appliesTo": "elements with size containment",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified, with <length> values computed",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value type",
-        "logicalPropertyGroup": "contain-intrinsic-size",
-        "values": [
-          {
-            "name": "none",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<length>",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
-            "type": "value",
-            "value": "<length>"
-          },
-          {
-            "name": "auto",
-            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "contain-intrinsic-block-size",
-          "containIntrinsicBlockSize"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "contain-intrinsic-inline-size",
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-inline-size",
-        "value": "auto? [ none | <length [0,∞]> ]",
-        "initial": "none",
-        "appliesTo": "elements with size containment",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified, with <length> values computed",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value type",
-        "logicalPropertyGroup": "contain-intrinsic-size",
-        "values": [
-          {
-            "name": "none",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<length>",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
-            "type": "value",
-            "value": "<length>"
-          },
-          {
-            "name": "auto",
-            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "contain-intrinsic-inline-size",
-          "containIntrinsicInlineSize"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "contain-intrinsic-size",
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-size",
-        "value": "[ auto? [ none | <length [0,∞]> ] ]{1,2}",
-        "initial": "see individual properties",
-        "appliesTo": "see individual properties",
-        "inherited": "see individual properties",
-        "percentages": "see individual properties",
-        "computedValue": "see individual properties",
-        "animationType": "see individual properties",
-        "canonicalOrder": "per grammar",
-        "values": [
-          {
-            "name": "none",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<length>",
-            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
-            "type": "value",
-            "value": "<length>"
-          },
-          {
-            "name": "auto",
-            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "contain-intrinsic-size",
-          "containIntrinsicSize"
-        ],
-        "longhands": [
-          "contain-intrinsic-width",
-          "contain-intrinsic-height"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "frame-sizing",
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-frame-sizing",
-        "value": "auto | content-width | content-height | content-block-size | content-inline-size",
-        "initial": "auto",
-        "appliesTo": "replaced elements (but see below for details)",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "The element’s internal layout intrinsic size, if any, is ignored.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "content-width",
-            "prose": "If the element has an internal layout intrinsic size, its intrinsic size takes the corresponding dimension (either width or height) from the internal layout intrinsic size. (The other dimension is determined normally.) Logical directions resolve based on the writing mode of the element. (Not the embedded document.)",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-content-width",
-            "type": "value",
-            "value": "content-width"
-          },
-          {
-            "name": "content-height",
-            "prose": "If the element has an internal layout intrinsic size, its intrinsic size takes the corresponding dimension (either width or height) from the internal layout intrinsic size. (The other dimension is determined normally.) Logical directions resolve based on the writing mode of the element. (Not the embedded document.)",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-content-height",
-            "type": "value",
-            "value": "content-height"
-          },
-          {
-            "name": "content-block-size",
-            "prose": "If the element has an internal layout intrinsic size, its intrinsic size takes the corresponding dimension (either width or height) from the internal layout intrinsic size. (The other dimension is determined normally.) Logical directions resolve based on the writing mode of the element. (Not the embedded document.)",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-content-block-size",
-            "type": "value",
-            "value": "content-block-size"
-          },
-          {
-            "name": "content-inline-size",
-            "prose": "If the element has an internal layout intrinsic size, its intrinsic size takes the corresponding dimension (either width or height) from the internal layout intrinsic size. (The other dimension is determined normally.) Logical directions resolve based on the writing mode of the element. (Not the embedded document.)",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-content-inline-size",
-            "type": "value",
-            "value": "content-inline-size"
-          }
-        ],
-        "styleDeclaration": [
-          "frame-sizing",
-          "frameSizing"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "min-intrinsic-sizing",
-        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-min-intrinsic-sizing",
-        "value": "legacy | zero-if-scroll || zero-if-extrinsic",
-        "initial": "legacy",
-        "appliesTo": "all elements except inline boxes",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "legacy",
-            "prose": "The box’s min-content contribution is handled as normal.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-min-intrinsic-sizing-legacy",
-            "type": "value",
-            "value": "legacy"
-          },
-          {
-            "name": "zero-if-scroll",
-            "prose": "The box’s min-content contribution is “compressed” if it is a scroll container.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-min-intrinsic-sizing-zero-if-scroll",
-            "type": "value",
-            "value": "zero-if-scroll"
-          },
-          {
-            "name": "zero-if-extrinsic",
-            "prose": "The box’s min-content contribution is “compressed” if has an extrinsic preferred or maximum size.",
-            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-min-intrinsic-sizing-zero-if-extrinsic",
-            "type": "value",
-            "value": "zero-if-extrinsic"
-          }
-        ],
-        "styleDeclaration": [
-          "min-intrinsic-sizing",
-          "minIntrinsicSizing"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [],
-    "warnings": [
-      {
-        "msg": "Dangling value",
-        "name": "stretch",
-        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-        "type": "value",
-        "value": "stretch",
-        "for": "inline-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "stretch",
-        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-        "type": "value",
-        "value": "stretch",
-        "for": "block-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "stretch",
-        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-        "type": "value",
-        "value": "stretch",
-        "for": "min-inline-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "stretch",
-        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-        "type": "value",
-        "value": "stretch",
-        "for": "min-block-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "stretch",
-        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-        "type": "value",
-        "value": "stretch",
-        "for": "max-inline-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "stretch",
-        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
-        "type": "value",
-        "value": "stretch",
-        "for": "max-block-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "fit-content",
-        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-        "type": "value",
-        "value": "fit-content",
-        "for": "inline-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "fit-content",
-        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-        "type": "value",
-        "value": "fit-content",
-        "for": "block-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "fit-content",
-        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-        "type": "value",
-        "value": "fit-content",
-        "for": "min-inline-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "fit-content",
-        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-        "type": "value",
-        "value": "fit-content",
-        "for": "min-block-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "fit-content",
-        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-        "type": "value",
-        "value": "fit-content",
-        "for": "max-inline-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "fit-content",
-        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
-        "type": "value",
-        "value": "fit-content",
-        "for": "max-block-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "contain",
-        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-        "type": "value",
-        "value": "contain",
-        "for": "inline-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "contain",
-        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-        "type": "value",
-        "value": "contain",
-        "for": "block-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "contain",
-        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-        "type": "value",
-        "value": "contain",
-        "for": "min-inline-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "contain",
-        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-        "type": "value",
-        "value": "contain",
-        "for": "min-block-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "contain",
-        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-        "type": "value",
-        "value": "contain",
-        "for": "max-inline-size"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "contain",
-        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
-        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
-        "type": "value",
-        "value": "contain",
-        "for": "max-block-size"
-      }
-    ]
   },
   "css-text-4": {
     "spec": {
@@ -12059,6 +11239,835 @@
       }
     ]
   },
+  "css-sizing-4": {
+    "spec": {
+      "title": "CSS Box Sizing Module Level 4",
+      "url": "https://drafts.csswg.org/css-sizing-4/"
+    },
+    "properties": [
+      {
+        "name": "width",
+        "newValues": "stretch | fit-content | contain",
+        "values": [
+          {
+            "name": "stretch",
+            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+            "type": "value",
+            "value": "stretch"
+          },
+          {
+            "name": "fit-content",
+            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+            "type": "value",
+            "value": "fit-content"
+          },
+          {
+            "name": "contain",
+            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+            "type": "value",
+            "value": "contain"
+          }
+        ],
+        "styleDeclaration": [
+          "width"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-width"
+      },
+      {
+        "name": "height",
+        "newValues": "stretch | fit-content | contain",
+        "values": [
+          {
+            "name": "stretch",
+            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+            "type": "value",
+            "value": "stretch"
+          },
+          {
+            "name": "fit-content",
+            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+            "type": "value",
+            "value": "fit-content"
+          },
+          {
+            "name": "contain",
+            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+            "type": "value",
+            "value": "contain"
+          }
+        ],
+        "styleDeclaration": [
+          "height"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-height"
+      },
+      {
+        "name": "min-width",
+        "newValues": "stretch | fit-content | contain",
+        "values": [
+          {
+            "name": "stretch",
+            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+            "type": "value",
+            "value": "stretch"
+          },
+          {
+            "name": "fit-content",
+            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+            "type": "value",
+            "value": "fit-content"
+          },
+          {
+            "name": "contain",
+            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+            "type": "value",
+            "value": "contain"
+          }
+        ],
+        "styleDeclaration": [
+          "min-width",
+          "minWidth"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-min-width"
+      },
+      {
+        "name": "min-height",
+        "newValues": "stretch | fit-content | contain",
+        "values": [
+          {
+            "name": "stretch",
+            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+            "type": "value",
+            "value": "stretch"
+          },
+          {
+            "name": "fit-content",
+            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+            "type": "value",
+            "value": "fit-content"
+          },
+          {
+            "name": "contain",
+            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+            "type": "value",
+            "value": "contain"
+          }
+        ],
+        "styleDeclaration": [
+          "min-height",
+          "minHeight"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-min-height"
+      },
+      {
+        "name": "max-width",
+        "newValues": "stretch | fit-content | contain",
+        "values": [
+          {
+            "name": "stretch",
+            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+            "type": "value",
+            "value": "stretch"
+          },
+          {
+            "name": "fit-content",
+            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+            "type": "value",
+            "value": "fit-content"
+          },
+          {
+            "name": "contain",
+            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+            "type": "value",
+            "value": "contain"
+          }
+        ],
+        "styleDeclaration": [
+          "max-width",
+          "maxWidth"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-max-width"
+      },
+      {
+        "name": "max-height",
+        "newValues": "stretch | fit-content | contain",
+        "values": [
+          {
+            "name": "stretch",
+            "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+            "type": "value",
+            "value": "stretch"
+          },
+          {
+            "name": "fit-content",
+            "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+            "type": "value",
+            "value": "fit-content"
+          },
+          {
+            "name": "contain",
+            "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+            "type": "value",
+            "value": "contain"
+          }
+        ],
+        "styleDeclaration": [
+          "max-height",
+          "maxHeight"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-max-height"
+      },
+      {
+        "name": "aspect-ratio",
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-aspect-ratio",
+        "value": "auto || <ratio>",
+        "initial": "auto",
+        "appliesTo": "all elements except inline boxes and internal ruby or table boxes",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified keyword or a pair of numbers",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "Replaced elements with a natural aspect ratio use that aspect ratio; otherwise the box has no preferred aspect ratio. Size calculations involving the aspect ratio work with the content box dimensions always.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-aspect-ratio-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "<ratio>",
+            "prose": "The box’s preferred aspect ratio is the specified ratio of width / height. Size calculations involving the aspect ratio work with the dimensions of the box specified by box-sizing. If the <ratio> is degenerate, the property instead behaves as auto.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-aspect-ratio-ratio",
+            "type": "value",
+            "value": "<ratio>"
+          },
+          {
+            "name": "auto && <ratio>",
+            "prose": "If both auto and a <ratio> are specified together, the preferred aspect ratio is the specified ratio of width / height unless it is a replaced element with a natural aspect ratio, in which case that aspect ratio is used instead. In all cases, size calculations involving the aspect ratio work with the content box dimensions always. If the <ratio> is degenerate, the property instead behaves as auto.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-aspect-ratio-auto--ratio",
+            "type": "value",
+            "value": "auto && <ratio>"
+          }
+        ],
+        "styleDeclaration": [
+          "aspect-ratio",
+          "aspectRatio"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "contain-intrinsic-width",
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-width",
+        "value": "auto? [ none | <length [0,∞]> ]",
+        "initial": "none",
+        "appliesTo": "elements with size containment",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified, with <length> values computed",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value type",
+        "logicalPropertyGroup": "contain-intrinsic-size",
+        "values": [
+          {
+            "name": "none",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<length>",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
+            "type": "value",
+            "value": "<length>"
+          },
+          {
+            "name": "auto",
+            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "contain-intrinsic-width",
+          "containIntrinsicWidth"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "contain-intrinsic-height",
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-height",
+        "value": "auto? [ none | <length [0,∞]> ]",
+        "initial": "none",
+        "appliesTo": "elements with size containment",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified, with <length> values computed",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value type",
+        "logicalPropertyGroup": "contain-intrinsic-size",
+        "values": [
+          {
+            "name": "none",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<length>",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
+            "type": "value",
+            "value": "<length>"
+          },
+          {
+            "name": "auto",
+            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "contain-intrinsic-height",
+          "containIntrinsicHeight"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "contain-intrinsic-block-size",
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-block-size",
+        "value": "auto? [ none | <length [0,∞]> ]",
+        "initial": "none",
+        "appliesTo": "elements with size containment",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified, with <length> values computed",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value type",
+        "logicalPropertyGroup": "contain-intrinsic-size",
+        "values": [
+          {
+            "name": "none",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<length>",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
+            "type": "value",
+            "value": "<length>"
+          },
+          {
+            "name": "auto",
+            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "contain-intrinsic-block-size",
+          "containIntrinsicBlockSize"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "contain-intrinsic-inline-size",
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-inline-size",
+        "value": "auto? [ none | <length [0,∞]> ]",
+        "initial": "none",
+        "appliesTo": "elements with size containment",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified, with <length> values computed",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value type",
+        "logicalPropertyGroup": "contain-intrinsic-size",
+        "values": [
+          {
+            "name": "none",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<length>",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
+            "type": "value",
+            "value": "<length>"
+          },
+          {
+            "name": "auto",
+            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "contain-intrinsic-inline-size",
+          "containIntrinsicInlineSize"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "contain-intrinsic-size",
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-size",
+        "value": "[ auto? [ none | <length [0,∞]> ] ]{1,2}",
+        "initial": "see individual properties",
+        "appliesTo": "see individual properties",
+        "inherited": "see individual properties",
+        "percentages": "see individual properties",
+        "computedValue": "see individual properties",
+        "animationType": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "values": [
+          {
+            "name": "none",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<length>",
+            "prose": "If no other contain-intrinsic-size value (such as auto) is providing an explicit intrinsic inner size, the corresponding axis either doesn’t have an explicit intrinsic inner size (if none is specified) or has an explicit intrinsic inner size of the specified <length>.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-length",
+            "type": "value",
+            "value": "<length>"
+          },
+          {
+            "name": "auto",
+            "prose": "If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-contain-intrinsic-width-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "contain-intrinsic-size",
+          "containIntrinsicSize"
+        ],
+        "longhands": [
+          "contain-intrinsic-width",
+          "contain-intrinsic-height"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "frame-sizing",
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-frame-sizing",
+        "value": "auto | content-width | content-height | content-block-size | content-inline-size",
+        "initial": "auto",
+        "appliesTo": "replaced elements (but see below for details)",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "The element’s internal layout intrinsic size, if any, is ignored.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "content-width",
+            "prose": "If the element has an internal layout intrinsic size, its intrinsic size takes the corresponding dimension (either width or height) from the internal layout intrinsic size. (The other dimension is determined normally.) Logical directions resolve based on the writing mode of the element. (Not the embedded document.)",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-content-width",
+            "type": "value",
+            "value": "content-width"
+          },
+          {
+            "name": "content-height",
+            "prose": "If the element has an internal layout intrinsic size, its intrinsic size takes the corresponding dimension (either width or height) from the internal layout intrinsic size. (The other dimension is determined normally.) Logical directions resolve based on the writing mode of the element. (Not the embedded document.)",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-content-height",
+            "type": "value",
+            "value": "content-height"
+          },
+          {
+            "name": "content-block-size",
+            "prose": "If the element has an internal layout intrinsic size, its intrinsic size takes the corresponding dimension (either width or height) from the internal layout intrinsic size. (The other dimension is determined normally.) Logical directions resolve based on the writing mode of the element. (Not the embedded document.)",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-content-block-size",
+            "type": "value",
+            "value": "content-block-size"
+          },
+          {
+            "name": "content-inline-size",
+            "prose": "If the element has an internal layout intrinsic size, its intrinsic size takes the corresponding dimension (either width or height) from the internal layout intrinsic size. (The other dimension is determined normally.) Logical directions resolve based on the writing mode of the element. (Not the embedded document.)",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-frame-sizing-content-inline-size",
+            "type": "value",
+            "value": "content-inline-size"
+          }
+        ],
+        "styleDeclaration": [
+          "frame-sizing",
+          "frameSizing"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "min-intrinsic-sizing",
+        "href": "https://drafts.csswg.org/css-sizing-4/#propdef-min-intrinsic-sizing",
+        "value": "legacy | zero-if-scroll || zero-if-extrinsic",
+        "initial": "legacy",
+        "appliesTo": "all elements except inline boxes",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "legacy",
+            "prose": "The box’s min-content contribution is handled as normal.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-min-intrinsic-sizing-legacy",
+            "type": "value",
+            "value": "legacy"
+          },
+          {
+            "name": "zero-if-scroll",
+            "prose": "The box’s min-content contribution is “compressed” if it is a scroll container.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-min-intrinsic-sizing-zero-if-scroll",
+            "type": "value",
+            "value": "zero-if-scroll"
+          },
+          {
+            "name": "zero-if-extrinsic",
+            "prose": "The box’s min-content contribution is “compressed” if has an extrinsic preferred or maximum size.",
+            "href": "https://drafts.csswg.org/css-sizing-4/#valdef-min-intrinsic-sizing-zero-if-extrinsic",
+            "type": "value",
+            "value": "zero-if-extrinsic"
+          }
+        ],
+        "styleDeclaration": [
+          "min-intrinsic-sizing",
+          "minIntrinsicSizing"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": [],
+    "warnings": [
+      {
+        "msg": "Dangling value",
+        "name": "stretch",
+        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+        "type": "value",
+        "value": "stretch",
+        "for": "inline-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "stretch",
+        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+        "type": "value",
+        "value": "stretch",
+        "for": "block-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "stretch",
+        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+        "type": "value",
+        "value": "stretch",
+        "for": "min-inline-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "stretch",
+        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+        "type": "value",
+        "value": "stretch",
+        "for": "min-block-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "stretch",
+        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+        "type": "value",
+        "value": "stretch",
+        "for": "max-inline-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "stretch",
+        "prose": "Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-stretch",
+        "type": "value",
+        "value": "stretch",
+        "for": "max-block-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "fit-content",
+        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+        "type": "value",
+        "value": "fit-content",
+        "for": "inline-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "fit-content",
+        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+        "type": "value",
+        "value": "fit-content",
+        "for": "block-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "fit-content",
+        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+        "type": "value",
+        "value": "fit-content",
+        "for": "min-inline-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "fit-content",
+        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+        "type": "value",
+        "value": "fit-content",
+        "for": "min-block-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "fit-content",
+        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+        "type": "value",
+        "value": "fit-content",
+        "for": "max-inline-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "fit-content",
+        "prose": "Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content",
+        "type": "value",
+        "value": "fit-content",
+        "for": "max-block-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "contain",
+        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+        "type": "value",
+        "value": "contain",
+        "for": "inline-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "contain",
+        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+        "type": "value",
+        "value": "contain",
+        "for": "block-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "contain",
+        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+        "type": "value",
+        "value": "contain",
+        "for": "min-inline-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "contain",
+        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+        "type": "value",
+        "value": "contain",
+        "for": "min-block-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "contain",
+        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+        "type": "value",
+        "value": "contain",
+        "for": "max-inline-size"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "contain",
+        "prose": "If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.",
+        "href": "https://drafts.csswg.org/css-sizing-4/#valdef-width-contain",
+        "type": "value",
+        "value": "contain",
+        "for": "max-block-size"
+      }
+    ]
+  },
   "css-transitions-2": {
     "spec": {
       "title": "CSS Transitions Module Level 2",
@@ -12128,6 +12137,476 @@
         "value": "[ none | <single-transition-property> ] || <time> || <easing-function> || <time> || <transition-behavior-value>",
         "href": "https://drafts.csswg.org/css-transitions-2/#single-transition",
         "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
+  "css-transforms-2": {
+    "spec": {
+      "title": "CSS Transforms Module Level 2",
+      "url": "https://drafts.csswg.org/css-transforms-2/"
+    },
+    "properties": [
+      {
+        "name": "translate",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-translate",
+        "value": "none | <length-percentage> [ <length-percentage> <length>? ]?",
+        "initial": "none",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "relative to the width of the reference box (for the first value) or the height (for the second value)",
+        "computedValue": "the keyword none or a pair of computed <length-percentage> values and an absolute length",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value, but see below for none",
+        "values": [
+          {
+            "name": "none",
+            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "translate"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "rotate",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-rotate",
+        "value": "none | <angle> | [ x | y | z | <number>{3} ] && <angle>",
+        "initial": "none",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "the keyword none, or an <angle> with an axis consisting of a list of three <number>s",
+        "canonicalOrder": "per grammar",
+        "animationType": "as SLERP, but see below for none",
+        "values": [
+          {
+            "name": "x",
+            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-x",
+            "type": "value",
+            "value": "x"
+          },
+          {
+            "name": "y",
+            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-y",
+            "type": "value",
+            "value": "y"
+          },
+          {
+            "name": "z",
+            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-z",
+            "type": "value",
+            "value": "z"
+          },
+          {
+            "name": "none",
+            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "rotate"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "scale",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-scale",
+        "value": "none | [ <number> | <percentage> ]{1,3}",
+        "initial": "none",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "the keyword none, or a list of 3 <number>s",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value, but see below for none",
+        "values": [
+          {
+            "name": "none",
+            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "scale"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "transform-style",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-transform-style",
+        "value": "flat | preserve-3d",
+        "initial": "flat",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "specified keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "usedValue": "flat if a grouping property is present, specified keyword otherwise",
+        "styleDeclaration": [
+          "transform-style",
+          "transformStyle"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "perspective",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective",
+        "value": "none | <length [0,∞]>",
+        "initial": "none",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "the keyword none or an absolute length",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value",
+        "values": [
+          {
+            "name": "<length [0,∞]>",
+            "prose": "Distance to the center of projection. Verify that projection is the distance to the center of projection. As very small <length> values can produce bizarre rendering results and stress the numerical accuracy of transform calculations, values less than 1px must be treated as 1px for rendering purposes. (This clamping does not affect the underlying value, so perspective: 0; in a stylesheet will still serialize back as 0.)",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-length-0",
+            "type": "value",
+            "value": "<length [0,∞]>"
+          },
+          {
+            "name": "none",
+            "prose": "No perspective transform is applied. The effect is mathematically similar to an infinite <length> value. All objects appear to be flat on the canvas.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
+        "styleDeclaration": [
+          "perspective"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "perspective-origin",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective-origin",
+        "value": "<position>",
+        "initial": "50% 50%",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "refer to the size of the reference box",
+        "computedValue": "see background-position",
+        "canonicalOrder": "per grammar",
+        "animationType": "by computed value",
+        "values": [
+          {
+            "name": "<percentage>",
+            "prose": "A percentage for the horizontal perspective offset is relative to the width of the reference box. A percentage for the vertical offset is relative to height of the reference box. The value for the horizontal and vertical offset represent an offset from the top left corner of the reference box.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-percentage",
+            "type": "value",
+            "value": "<percentage>"
+          },
+          {
+            "name": "<length>",
+            "prose": "A length value gives a fixed length as the offset. The value for the horizontal and vertical offset represent an offset from the top left corner of the reference box.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-length",
+            "type": "value",
+            "value": "<length>"
+          },
+          {
+            "name": "top",
+            "prose": "Computes to 0% for the vertical position if one or two values are given, otherwise specifies the top edge as the origin for the next offset.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-top",
+            "type": "value",
+            "value": "top"
+          },
+          {
+            "name": "right",
+            "prose": "Computes to 100% for the horizontal position if one or two values are given, otherwise specifies the right edge as the origin for the next offset.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-right",
+            "type": "value",
+            "value": "right"
+          },
+          {
+            "name": "bottom",
+            "prose": "Computes to 100% for the vertical position if one or two values are given, otherwise specifies the bottom edge as the origin for the next offset.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-bottom",
+            "type": "value",
+            "value": "bottom"
+          },
+          {
+            "name": "left",
+            "prose": "Computes to 0% for the horizontal position if one or two values are given, otherwise specifies the left edge as the origin for the next offset.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-left",
+            "type": "value",
+            "value": "left"
+          },
+          {
+            "name": "center",
+            "prose": "Computes to 50% (left 50%) for the horizontal position if the horizontal position is not otherwise specified, or 50% (top 50%) for the vertical position if it is.",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-center",
+            "type": "value",
+            "value": "center"
+          }
+        ],
+        "styleDeclaration": [
+          "perspective-origin",
+          "perspectiveOrigin"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "backface-visibility",
+        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-backface-visibility",
+        "value": "visible | hidden",
+        "initial": "visible",
+        "appliesTo": "transformable elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "specified keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "styleDeclaration": [
+          "backface-visibility",
+          "backfaceVisibility"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<transform-function>",
+        "prose": "The value of the transform property is a list of <transform-function>. The set of allowed transform functions is given below. Wherever <angle> is used in this specification, a <number> that is equal to zero is also allowed, which is treated the same as an angle of zero degrees. A percentage for horizontal translations is relative to the width of the reference box. A percentage for vertical translations is relative to the height of the reference box. A percentage in a scale function is equivalent to a number, and serializes as a number in specified values. For example, scale3d(50%, 100%, 150%) serializes as scale3d(0.5, 1, 1.5).",
+        "href": "https://drafts.csswg.org/css-transforms-2/#typedef-transform-function",
+        "type": "type",
+        "value": "<scale3d()> | <scale()> | <scaleX()> | <scaleY()> | <scaleZ()> | <translate3d()> | <translate()> | <translateX()> | <translateY()> | <translateZ()> | <rotate3d()> | <rotate()> | <rotateX()> | <rotateY()> | <rotateZ()> | <skew()> | <skewX()> | <skewY()> | <matrix3d()> | <matrix()> | <perspective()>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "scale()",
+        "value": "scale( [ <number> | <percentage> ]#{1,2} )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scale",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "scaleX()",
+        "value": "scaleX( [ <number> | <percentage> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scalex",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "scaleY()",
+        "value": "scaleY( [ <number> | <percentage> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scaley",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "matrix3d()",
+        "value": "matrix3d( <number>#{16} )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-matrix3d",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "translate3d()",
+        "value": "translate3d( <length-percentage> , <length-percentage> , <length> )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-translate3d",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "translateZ()",
+        "value": "translateZ( <length> )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-translatez",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "scale3d()",
+        "value": "scale3d( [ <number> | <percentage> ]#{3} )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scale3d",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "scaleZ()",
+        "value": "scaleZ( [ <number> | <percentage> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scalez",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "rotate3d()",
+        "value": "rotate3d( <number> , <number> , <number> , [ <angle> | <zero> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotate3d",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "rotateX()",
+        "value": "rotateX( [ <angle> | <zero> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatex",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "rotateY()",
+        "value": "rotateY( [ <angle> | <zero> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatey",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "rotateZ()",
+        "value": "rotateZ( [ <angle> | <zero> ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatez",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "perspective()",
+        "value": "perspective( [ <length [0,∞]> | none ] )",
+        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-perspective",
+        "type": "function",
+        "values": [
+          {
+            "name": "none",
+            "prose": "perspective() = perspective( [ <length [0,∞]> | none ] )",
+            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-func-none",
+            "type": "value",
+            "value": "none"
+          }
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -13051,476 +13530,6 @@
         "type": "value",
         "value": "open",
         "for": "text-text-emphasis"
-      }
-    ]
-  },
-  "css-transforms-2": {
-    "spec": {
-      "title": "CSS Transforms Module Level 2",
-      "url": "https://drafts.csswg.org/css-transforms-2/"
-    },
-    "properties": [
-      {
-        "name": "translate",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-translate",
-        "value": "none | <length-percentage> [ <length-percentage> <length>? ]?",
-        "initial": "none",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "relative to the width of the reference box (for the first value) or the height (for the second value)",
-        "computedValue": "the keyword none or a pair of computed <length-percentage> values and an absolute length",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value, but see below for none",
-        "values": [
-          {
-            "name": "none",
-            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "translate"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "rotate",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-rotate",
-        "value": "none | <angle> | [ x | y | z | <number>{3} ] && <angle>",
-        "initial": "none",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "the keyword none, or an <angle> with an axis consisting of a list of three <number>s",
-        "canonicalOrder": "per grammar",
-        "animationType": "as SLERP, but see below for none",
-        "values": [
-          {
-            "name": "x",
-            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-x",
-            "type": "value",
-            "value": "x"
-          },
-          {
-            "name": "y",
-            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-y",
-            "type": "value",
-            "value": "y"
-          },
-          {
-            "name": "z",
-            "prose": "The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-rotate-z",
-            "type": "value",
-            "value": "z"
-          },
-          {
-            "name": "none",
-            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "rotate"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "scale",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-scale",
-        "value": "none | [ <number> | <percentage> ]{1,3}",
-        "initial": "none",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "the keyword none, or a list of 3 <number>s",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value, but see below for none",
-        "values": [
-          {
-            "name": "none",
-            "prose": "All three properties accept (and default to) the value none, which produces no transform at all. In particular, this value does not trigger the creation of a stacking context or containing block for all descendants, while all other values (including “identity” transforms like translate: 0px) create a stacking context and containing block for all descendants, per usual for transforms.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-translate-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "scale"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "transform-style",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-transform-style",
-        "value": "flat | preserve-3d",
-        "initial": "flat",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "specified keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "usedValue": "flat if a grouping property is present, specified keyword otherwise",
-        "styleDeclaration": [
-          "transform-style",
-          "transformStyle"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "perspective",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective",
-        "value": "none | <length [0,∞]>",
-        "initial": "none",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "the keyword none or an absolute length",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value",
-        "values": [
-          {
-            "name": "<length [0,∞]>",
-            "prose": "Distance to the center of projection. Verify that projection is the distance to the center of projection. As very small <length> values can produce bizarre rendering results and stress the numerical accuracy of transform calculations, values less than 1px must be treated as 1px for rendering purposes. (This clamping does not affect the underlying value, so perspective: 0; in a stylesheet will still serialize back as 0.)",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-length-0",
-            "type": "value",
-            "value": "<length [0,∞]>"
-          },
-          {
-            "name": "none",
-            "prose": "No perspective transform is applied. The effect is mathematically similar to an infinite <length> value. All objects appear to be flat on the canvas.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "styleDeclaration": [
-          "perspective"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "perspective-origin",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective-origin",
-        "value": "<position>",
-        "initial": "50% 50%",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "refer to the size of the reference box",
-        "computedValue": "see background-position",
-        "canonicalOrder": "per grammar",
-        "animationType": "by computed value",
-        "values": [
-          {
-            "name": "<percentage>",
-            "prose": "A percentage for the horizontal perspective offset is relative to the width of the reference box. A percentage for the vertical offset is relative to height of the reference box. The value for the horizontal and vertical offset represent an offset from the top left corner of the reference box.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-percentage",
-            "type": "value",
-            "value": "<percentage>"
-          },
-          {
-            "name": "<length>",
-            "prose": "A length value gives a fixed length as the offset. The value for the horizontal and vertical offset represent an offset from the top left corner of the reference box.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-length",
-            "type": "value",
-            "value": "<length>"
-          },
-          {
-            "name": "top",
-            "prose": "Computes to 0% for the vertical position if one or two values are given, otherwise specifies the top edge as the origin for the next offset.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-top",
-            "type": "value",
-            "value": "top"
-          },
-          {
-            "name": "right",
-            "prose": "Computes to 100% for the horizontal position if one or two values are given, otherwise specifies the right edge as the origin for the next offset.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-right",
-            "type": "value",
-            "value": "right"
-          },
-          {
-            "name": "bottom",
-            "prose": "Computes to 100% for the vertical position if one or two values are given, otherwise specifies the bottom edge as the origin for the next offset.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-bottom",
-            "type": "value",
-            "value": "bottom"
-          },
-          {
-            "name": "left",
-            "prose": "Computes to 0% for the horizontal position if one or two values are given, otherwise specifies the left edge as the origin for the next offset.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-left",
-            "type": "value",
-            "value": "left"
-          },
-          {
-            "name": "center",
-            "prose": "Computes to 50% (left 50%) for the horizontal position if the horizontal position is not otherwise specified, or 50% (top 50%) for the vertical position if it is.",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-origin-center",
-            "type": "value",
-            "value": "center"
-          }
-        ],
-        "styleDeclaration": [
-          "perspective-origin",
-          "perspectiveOrigin"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "backface-visibility",
-        "href": "https://drafts.csswg.org/css-transforms-2/#propdef-backface-visibility",
-        "value": "visible | hidden",
-        "initial": "visible",
-        "appliesTo": "transformable elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "specified keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "styleDeclaration": [
-          "backface-visibility",
-          "backfaceVisibility"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<transform-function>",
-        "prose": "The value of the transform property is a list of <transform-function>. The set of allowed transform functions is given below. Wherever <angle> is used in this specification, a <number> that is equal to zero is also allowed, which is treated the same as an angle of zero degrees. A percentage for horizontal translations is relative to the width of the reference box. A percentage for vertical translations is relative to the height of the reference box. A percentage in a scale function is equivalent to a number, and serializes as a number in specified values. For example, scale3d(50%, 100%, 150%) serializes as scale3d(0.5, 1, 1.5).",
-        "href": "https://drafts.csswg.org/css-transforms-2/#typedef-transform-function",
-        "type": "type",
-        "value": "<scale3d()> | <scale()> | <scaleX()> | <scaleY()> | <scaleZ()> | <translate3d()> | <translate()> | <translateX()> | <translateY()> | <translateZ()> | <rotate3d()> | <rotate()> | <rotateX()> | <rotateY()> | <rotateZ()> | <skew()> | <skewX()> | <skewY()> | <matrix3d()> | <matrix()> | <perspective()>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scale()",
-        "value": "scale( [ <number> | <percentage> ]#{1,2} )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scale",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scaleX()",
-        "value": "scaleX( [ <number> | <percentage> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scalex",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scaleY()",
-        "value": "scaleY( [ <number> | <percentage> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scaley",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "matrix3d()",
-        "value": "matrix3d( <number>#{16} )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-matrix3d",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "translate3d()",
-        "value": "translate3d( <length-percentage> , <length-percentage> , <length> )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-translate3d",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "translateZ()",
-        "value": "translateZ( <length> )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-translatez",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scale3d()",
-        "value": "scale3d( [ <number> | <percentage> ]#{3} )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scale3d",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "scaleZ()",
-        "value": "scaleZ( [ <number> | <percentage> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-scalez",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "rotate3d()",
-        "value": "rotate3d( <number> , <number> , <number> , [ <angle> | <zero> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotate3d",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "rotateX()",
-        "value": "rotateX( [ <angle> | <zero> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatex",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "rotateY()",
-        "value": "rotateY( [ <angle> | <zero> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatey",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "rotateZ()",
-        "value": "rotateZ( [ <angle> | <zero> ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-rotatez",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "perspective()",
-        "value": "perspective( [ <length [0,∞]> | none ] )",
-        "href": "https://drafts.csswg.org/css-transforms-2/#funcdef-perspective",
-        "type": "function",
-        "values": [
-          {
-            "name": "none",
-            "prose": "perspective() = perspective( [ <length [0,∞]> | none ] )",
-            "href": "https://drafts.csswg.org/css-transforms-2/#valdef-perspective-func-none",
-            "type": "value",
-            "value": "none"
-          }
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
       }
     ]
   },
@@ -15410,15 +15419,38 @@
             "values": [
               {
                 "name": "light",
-                "prose": "Indicates that user has expressed the preference for a page that has a light theme (dark text on light background), or has not expressed an active preference (and thus should receive the \"web default\" of a light theme).",
+                "prose": "Indicates that the page color scheme is a light color scheme (dark text on light background).",
                 "href": "https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-color-scheme-light",
                 "type": "value",
                 "value": "light"
               },
               {
                 "name": "dark",
-                "prose": "Indicates that user has expressed the preference for a page that has a dark theme (light text on dark background).",
+                "prose": "Indicates that the page color scheme is a dark color scheme (light text on dark background).",
                 "href": "https://drafts.csswg.org/mediaqueries-5/#valdef-media-prefers-color-scheme-dark",
+                "type": "value",
+                "value": "dark"
+              }
+            ]
+          },
+          {
+            "name": "ua-color-scheme",
+            "href": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-ua-color-scheme",
+            "for": "@media",
+            "value": "light | dark",
+            "type": "discrete",
+            "values": [
+              {
+                "name": "light",
+                "prose": "Indicates that the user’s preferred color scheme is a light color scheme (dark text on light background), or that the user has no preference. (If the user has not expressed an active preference, they will also receive the \"web default\" of a light theme).",
+                "href": "https://drafts.csswg.org/mediaqueries-5/#valdef-media-ua-color-scheme-light",
+                "type": "value",
+                "value": "light"
+              },
+              {
+                "name": "dark",
+                "prose": "Indicates that the user’s preferred color scheme is a dark color scheme (light text on dark background).",
+                "href": "https://drafts.csswg.org/mediaqueries-5/#valdef-media-ua-color-scheme-dark",
                 "type": "value",
                 "value": "dark"
               }
