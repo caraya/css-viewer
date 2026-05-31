@@ -1301,6 +1301,98 @@
       }
     ]
   },
+  "css-images-5": {
+    "spec": {
+      "title": "CSS Images Module Level 5",
+      "url": "https://drafts.csswg.org/css-images-5/"
+    },
+    "properties": [
+      {
+        "name": "object-view-box",
+        "href": "https://drafts.csswg.org/css-images-5/#propdef-object-view-box",
+        "value": "none | <basic-shape-rect>",
+        "initial": "none",
+        "appliesTo": "replaced elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified keyword, or computed <basic-shape> function",
+        "canonicalOrder": "per grammar",
+        "animationType": "as <basic-shape> if possible, otherwise discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The element does not have a view box.",
+            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<basic-shape-rect>",
+            "prose": "If the element does not have both a natural width and a natural height, this value has no effect, similar to none. Otherwise, specifies a view box for the element. First, resolve the <basic-shape-rect> against a reference box formed by the element’s natural sizes to obtain the element’s view box. For all purposes, the element is now treated as having natural sizes equal to the view box’s width and height. If the element had a natural aspect ratio, it’s now treated as instead having the same ratio as the view box. Further adjustments to the size/position of the element’s contents, such as object-position or object-fit, are similarly performed on the view box instead. When the element is painted, its contents are scaled and translated such that the element’s contents retain the same position and size, relative to the view box’s final size and position, that they had when the view box was determined (above). Have not yet defined what happens if the view box is zero-area. It’s an error case, so precise behavior isn’t important; just need to see what impls want to do about it.",
+            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-basic-shape-rect",
+            "type": "value",
+            "value": "<basic-shape-rect>"
+          }
+        ],
+        "styleDeclaration": [
+          "object-view-box",
+          "objectViewBox"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": [
+      {
+        "name": "image()",
+        "value": "image( <image-tags>? [ <image-src>? , <color>? ]! )",
+        "href": "https://drafts.csswg.org/css-images-5/#funcdef-image",
+        "type": "function",
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "<image-tags>",
+        "href": "https://drafts.csswg.org/css-images-5/#typedef-image-tags",
+        "type": "type",
+        "value": "[ ltr | rtl ]",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<image-src>",
+        "href": "https://drafts.csswg.org/css-images-5/#typedef-image-src",
+        "type": "type",
+        "value": "[ <url> | <string> ]",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
   "css-gcpm-4": {
     "spec": {
       "title": "CSS Generated Content for Paged Media Module Level 4",
@@ -1454,63 +1546,28 @@
       }
     ]
   },
-  "css-images-5": {
+  "filter-effects-2": {
     "spec": {
-      "title": "CSS Images Module Level 5",
-      "url": "https://drafts.csswg.org/css-images-5/"
+      "title": "Filter Effects Module Level 2",
+      "url": "https://drafts.csswg.org/filter-effects-2/"
     },
     "properties": [
       {
-        "name": "object-view-box",
-        "href": "https://drafts.csswg.org/css-images-5/#propdef-object-view-box",
-        "value": "none | <basic-shape-rect>",
+        "name": "backdrop-filter",
+        "href": "https://drafts.csswg.org/filter-effects-2/#propdef-backdrop-filter",
+        "value": "none | <filter-value-list>",
         "initial": "none",
-        "appliesTo": "replaced elements",
+        "appliesTo": "All elements. In SVG, it applies to container elements without the defs element and all graphics elements",
         "inherited": "no",
         "percentages": "n/a",
-        "computedValue": "specified keyword, or computed <basic-shape> function",
+        "computedValue": "as specified",
         "canonicalOrder": "per grammar",
-        "animationType": "as <basic-shape> if possible, otherwise discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The element does not have a view box.",
-            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<basic-shape-rect>",
-            "prose": "If the element does not have both a natural width and a natural height, this value has no effect, similar to none. Otherwise, specifies a view box for the element. First, resolve the <basic-shape-rect> against a reference box formed by the element’s natural sizes to obtain the element’s view box. For all purposes, the element is now treated as having natural sizes equal to the view box’s width and height. If the element had a natural aspect ratio, it’s now treated as instead having the same ratio as the view box. Further adjustments to the size/position of the element’s contents, such as object-position or object-fit, are similarly performed on the view box instead. When the element is painted, its contents are scaled and translated such that the element’s contents retain the same position and size, relative to the view box’s final size and position, that they had when the view box was determined (above). Have not yet defined what happens if the view box is zero-area. It’s an error case, so precise behavior isn’t important; just need to see what impls want to do about it.",
-            "href": "https://drafts.csswg.org/css-images-5/#valdef-object-view-box-basic-shape-rect",
-            "type": "value",
-            "value": "<basic-shape-rect>"
-          }
-        ],
+        "animationType": "see prose in Filter Effects 1 § 14. Animation of Filters.",
+        "media": "visual",
         "styleDeclaration": [
-          "object-view-box",
-          "objectViewBox"
+          "backdrop-filter",
+          "backdropFilter"
         ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": false
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "image()",
-        "value": "image( <image-tags>? [ <image-src>? , <color>? ]! )",
-        "href": "https://drafts.csswg.org/css-images-5/#funcdef-image",
-        "type": "function",
         "compatibility": {
           "supported": true,
           "browsers": 3,
@@ -1521,30 +1578,11 @@
             "safari": true
           }
         }
-      },
-      {
-        "name": "<image-tags>",
-        "href": "https://drafts.csswg.org/css-images-5/#typedef-image-tags",
-        "type": "type",
-        "value": "[ ltr | rtl ]",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<image-src>",
-        "href": "https://drafts.csswg.org/css-images-5/#typedef-image-src",
-        "type": "type",
-        "value": "[ <url> | <string> ]",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
       }
-    ]
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": []
   },
   "css-shapes-2": {
     "spec": {
@@ -1638,44 +1676,6 @@
           "supported": false,
           "browsers": 0,
           "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": []
-  },
-  "filter-effects-2": {
-    "spec": {
-      "title": "Filter Effects Module Level 2",
-      "url": "https://drafts.csswg.org/filter-effects-2/"
-    },
-    "properties": [
-      {
-        "name": "backdrop-filter",
-        "href": "https://drafts.csswg.org/filter-effects-2/#propdef-backdrop-filter",
-        "value": "none | <filter-value-list>",
-        "initial": "none",
-        "appliesTo": "All elements. In SVG, it applies to container elements without the defs element and all graphics elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "see prose in Filter Effects 1 § 14. Animation of Filters.",
-        "media": "visual",
-        "styleDeclaration": [
-          "backdrop-filter",
-          "backdropFilter"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
         }
       }
     ],
@@ -1910,458 +1910,6 @@
           "browsers": 0,
           "flagged": false
         }
-      }
-    ]
-  },
-  "css-anchor-position-2": {
-    "spec": {
-      "title": "CSS Anchor Positioning Module Level 2",
-      "url": "https://drafts.csswg.org/css-anchor-position-2/"
-    },
-    "properties": [],
-    "atrules": [
-      {
-        "name": "@container",
-        "descriptors": [
-          {
-            "name": "fallback",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#descdef-container-fallback",
-            "for": "@container",
-            "value": "none | [ [<dashed-ident> || <try-tactic>] | <position-area-query> ]",
-            "type": "discrete",
-            "values": [
-              {
-                "name": "none",
-                "prose": "The anchored container does not have any position-try-fallbacks applied.",
-                "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-container-fallback-none",
-                "type": "value",
-                "value": "none"
-              }
-            ]
-          }
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-anchor-position-2/#at-ruledef-container"
-      }
-    ],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<anchored-query>",
-        "href": "https://drafts.csswg.org/css-anchor-position-2/#typedef-anchored-query",
-        "type": "type",
-        "value": "not <anchored-in-parens> | <anchored-in-parens> [ [ and <anchored-in-parens> ]* | [ or <anchored-in-parens> ]* ] | <anchored-feature>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<anchored-in-parens>",
-        "href": "https://drafts.csswg.org/css-anchor-position-2/#typedef-anchored-in-parens",
-        "type": "type",
-        "value": "( <anchored-query> ) | ( <anchored-feature> ) | <general-enclosed>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<position-area-query>",
-        "href": "https://drafts.csswg.org/css-anchor-position-2/#typedef-position-area-query",
-        "type": "type",
-        "value": "[ [ left | center | right | span-left | span-right | x-start | x-end | span-x-start | span-x-end | self-x-start | self-x-end | span-self-x-start | span-self-x-end | span-all | any ] || [ top | center | bottom | span-top | span-bottom | y-start | y-end | span-y-start | span-y-end | self-y-start | self-y-end | span-self-y-start | span-self-y-end | span-all | any ] | [ block-start | center | block-end | span-block-start | span-block-end | span-all | any ] || [ inline-start | center | inline-end | span-inline-start | span-inline-end | span-all | any ] | [ self-block-start | center | self-block-end | span-self-block-start | span-self-block-end | span-all | any ] || [ self-inline-start | center | self-inline-end | span-self-inline-start | span-self-inline-end | span-all | any ] | [ start | center | end | span-start | span-end | span-all | any ]{1,2} | [ self-start | center | self-end | span-self-start | span-self-end | span-all | any ]{1,2} ]",
-        "values": [
-          {
-            "name": "any",
-            "prose": "any can be used for one or both of the axes. It is ambiguous about which axis it refers to, and is handled like other ambiguous keywords for '<position-area>' such as start or center when it comes to assigning axis and duplicating single keyword values.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-any",
-            "type": "value",
-            "value": "any"
-          },
-          {
-            "name": "start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-start",
-            "type": "value",
-            "value": "start"
-          },
-          {
-            "name": "end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-end",
-            "type": "value",
-            "value": "end"
-          },
-          {
-            "name": "self-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-start",
-            "type": "value",
-            "value": "self-start"
-          },
-          {
-            "name": "self-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-end",
-            "type": "value",
-            "value": "self-end"
-          },
-          {
-            "name": "top",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-top",
-            "type": "value",
-            "value": "top"
-          },
-          {
-            "name": "bottom",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-bottom",
-            "type": "value",
-            "value": "bottom"
-          },
-          {
-            "name": "left",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-left",
-            "type": "value",
-            "value": "left"
-          },
-          {
-            "name": "right",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-right",
-            "type": "value",
-            "value": "right"
-          },
-          {
-            "name": "y-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-y-start",
-            "type": "value",
-            "value": "y-start"
-          },
-          {
-            "name": "y-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-y-end",
-            "type": "value",
-            "value": "y-end"
-          },
-          {
-            "name": "self-y-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-y-start",
-            "type": "value",
-            "value": "self-y-start"
-          },
-          {
-            "name": "self-y-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-y-end",
-            "type": "value",
-            "value": "self-y-end"
-          },
-          {
-            "name": "x-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-x-start",
-            "type": "value",
-            "value": "x-start"
-          },
-          {
-            "name": "x-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-x-end",
-            "type": "value",
-            "value": "x-end"
-          },
-          {
-            "name": "self-x-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-x-start",
-            "type": "value",
-            "value": "self-x-start"
-          },
-          {
-            "name": "self-x-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-x-end",
-            "type": "value",
-            "value": "self-x-end"
-          },
-          {
-            "name": "block-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-block-start",
-            "type": "value",
-            "value": "block-start"
-          },
-          {
-            "name": "block-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-block-end",
-            "type": "value",
-            "value": "block-end"
-          },
-          {
-            "name": "self-block-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-block-start",
-            "type": "value",
-            "value": "self-block-start"
-          },
-          {
-            "name": "self-block-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-block-end",
-            "type": "value",
-            "value": "self-block-end"
-          },
-          {
-            "name": "inline-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-inline-start",
-            "type": "value",
-            "value": "inline-start"
-          },
-          {
-            "name": "inline-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-inline-end",
-            "type": "value",
-            "value": "inline-end"
-          },
-          {
-            "name": "self-inline-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-inline-start",
-            "type": "value",
-            "value": "self-inline-start"
-          },
-          {
-            "name": "self-inline-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-inline-end",
-            "type": "value",
-            "value": "self-inline-end"
-          },
-          {
-            "name": "center",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-center",
-            "type": "value",
-            "value": "center"
-          },
-          {
-            "name": "span-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-start",
-            "type": "value",
-            "value": "span-start"
-          },
-          {
-            "name": "span-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-end",
-            "type": "value",
-            "value": "span-end"
-          },
-          {
-            "name": "span-self-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-start",
-            "type": "value",
-            "value": "span-self-start"
-          },
-          {
-            "name": "span-self-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-end",
-            "type": "value",
-            "value": "span-self-end"
-          },
-          {
-            "name": "span-top",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-top",
-            "type": "value",
-            "value": "span-top"
-          },
-          {
-            "name": "span-bottom",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-bottom",
-            "type": "value",
-            "value": "span-bottom"
-          },
-          {
-            "name": "span-left",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-left",
-            "type": "value",
-            "value": "span-left"
-          },
-          {
-            "name": "span-right",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-right",
-            "type": "value",
-            "value": "span-right"
-          },
-          {
-            "name": "span-y-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-y-start",
-            "type": "value",
-            "value": "span-y-start"
-          },
-          {
-            "name": "span-y-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-y-end",
-            "type": "value",
-            "value": "span-y-end"
-          },
-          {
-            "name": "span-self-y-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-y-start",
-            "type": "value",
-            "value": "span-self-y-start"
-          },
-          {
-            "name": "span-self-y-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-y-end",
-            "type": "value",
-            "value": "span-self-y-end"
-          },
-          {
-            "name": "span-x-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-x-start",
-            "type": "value",
-            "value": "span-x-start"
-          },
-          {
-            "name": "span-x-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-x-end",
-            "type": "value",
-            "value": "span-x-end"
-          },
-          {
-            "name": "span-self-x-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-x-start",
-            "type": "value",
-            "value": "span-self-x-start"
-          },
-          {
-            "name": "span-self-x-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-x-end",
-            "type": "value",
-            "value": "span-self-x-end"
-          },
-          {
-            "name": "span-block-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-block-start",
-            "type": "value",
-            "value": "span-block-start"
-          },
-          {
-            "name": "span-block-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-block-end",
-            "type": "value",
-            "value": "span-block-end"
-          },
-          {
-            "name": "span-self-block-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-block-start",
-            "type": "value",
-            "value": "span-self-block-start"
-          },
-          {
-            "name": "span-self-block-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-block-end",
-            "type": "value",
-            "value": "span-self-block-end"
-          },
-          {
-            "name": "span-inline-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-inline-start",
-            "type": "value",
-            "value": "span-inline-start"
-          },
-          {
-            "name": "span-inline-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-inline-end",
-            "type": "value",
-            "value": "span-inline-end"
-          },
-          {
-            "name": "span-self-inline-start",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-inline-start",
-            "type": "value",
-            "value": "span-self-inline-start"
-          },
-          {
-            "name": "span-self-inline-end",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-inline-end",
-            "type": "value",
-            "value": "span-self-inline-end"
-          },
-          {
-            "name": "span-all",
-            "prose": "See respective definitions for '<position-area>'.",
-            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-all",
-            "type": "value",
-            "value": "span-all"
-          }
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "warnings": [
-      {
-        "msg": "Missing definition",
-        "name": "<query-in-parens>",
-        "value": "... | anchored( <anchored-query> )"
-      },
-      {
-        "msg": "Dangling value",
-        "name": "anchored",
-        "prose": "Establishes a query container for container queries, allowing for descendants of an anchor positioned element to be styled based on certain features of the anchoring. (Currently, limited to which of the position-try-fallbacks are applied, if any.) The anchored container-type applies style containment to the query container.",
-        "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-container-type-anchored",
-        "type": "value",
-        "value": "anchored",
-        "for": "container-type"
       }
     ]
   },
@@ -3261,6 +2809,458 @@
           "browsers": 0,
           "flagged": false
         }
+      }
+    ]
+  },
+  "css-anchor-position-2": {
+    "spec": {
+      "title": "CSS Anchor Positioning Module Level 2",
+      "url": "https://drafts.csswg.org/css-anchor-position-2/"
+    },
+    "properties": [],
+    "atrules": [
+      {
+        "name": "@container",
+        "descriptors": [
+          {
+            "name": "fallback",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#descdef-container-fallback",
+            "for": "@container",
+            "value": "none | [ [<dashed-ident> || <try-tactic>] | <position-area-query> ]",
+            "type": "discrete",
+            "values": [
+              {
+                "name": "none",
+                "prose": "The anchored container does not have any position-try-fallbacks applied.",
+                "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-container-fallback-none",
+                "type": "value",
+                "value": "none"
+              }
+            ]
+          }
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-anchor-position-2/#at-ruledef-container"
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<anchored-query>",
+        "href": "https://drafts.csswg.org/css-anchor-position-2/#typedef-anchored-query",
+        "type": "type",
+        "value": "not <anchored-in-parens> | <anchored-in-parens> [ [ and <anchored-in-parens> ]* | [ or <anchored-in-parens> ]* ] | <anchored-feature>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<anchored-in-parens>",
+        "href": "https://drafts.csswg.org/css-anchor-position-2/#typedef-anchored-in-parens",
+        "type": "type",
+        "value": "( <anchored-query> ) | ( <anchored-feature> ) | <general-enclosed>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<position-area-query>",
+        "href": "https://drafts.csswg.org/css-anchor-position-2/#typedef-position-area-query",
+        "type": "type",
+        "value": "[ [ left | center | right | span-left | span-right | x-start | x-end | span-x-start | span-x-end | self-x-start | self-x-end | span-self-x-start | span-self-x-end | span-all | any ] || [ top | center | bottom | span-top | span-bottom | y-start | y-end | span-y-start | span-y-end | self-y-start | self-y-end | span-self-y-start | span-self-y-end | span-all | any ] | [ block-start | center | block-end | span-block-start | span-block-end | span-all | any ] || [ inline-start | center | inline-end | span-inline-start | span-inline-end | span-all | any ] | [ self-block-start | center | self-block-end | span-self-block-start | span-self-block-end | span-all | any ] || [ self-inline-start | center | self-inline-end | span-self-inline-start | span-self-inline-end | span-all | any ] | [ start | center | end | span-start | span-end | span-all | any ]{1,2} | [ self-start | center | self-end | span-self-start | span-self-end | span-all | any ]{1,2} ]",
+        "values": [
+          {
+            "name": "any",
+            "prose": "any can be used for one or both of the axes. It is ambiguous about which axis it refers to, and is handled like other ambiguous keywords for '<position-area>' such as start or center when it comes to assigning axis and duplicating single keyword values.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-any",
+            "type": "value",
+            "value": "any"
+          },
+          {
+            "name": "start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-start",
+            "type": "value",
+            "value": "start"
+          },
+          {
+            "name": "end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-end",
+            "type": "value",
+            "value": "end"
+          },
+          {
+            "name": "self-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-start",
+            "type": "value",
+            "value": "self-start"
+          },
+          {
+            "name": "self-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-end",
+            "type": "value",
+            "value": "self-end"
+          },
+          {
+            "name": "top",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-top",
+            "type": "value",
+            "value": "top"
+          },
+          {
+            "name": "bottom",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-bottom",
+            "type": "value",
+            "value": "bottom"
+          },
+          {
+            "name": "left",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-left",
+            "type": "value",
+            "value": "left"
+          },
+          {
+            "name": "right",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-right",
+            "type": "value",
+            "value": "right"
+          },
+          {
+            "name": "y-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-y-start",
+            "type": "value",
+            "value": "y-start"
+          },
+          {
+            "name": "y-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-y-end",
+            "type": "value",
+            "value": "y-end"
+          },
+          {
+            "name": "self-y-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-y-start",
+            "type": "value",
+            "value": "self-y-start"
+          },
+          {
+            "name": "self-y-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-y-end",
+            "type": "value",
+            "value": "self-y-end"
+          },
+          {
+            "name": "x-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-x-start",
+            "type": "value",
+            "value": "x-start"
+          },
+          {
+            "name": "x-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-x-end",
+            "type": "value",
+            "value": "x-end"
+          },
+          {
+            "name": "self-x-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-x-start",
+            "type": "value",
+            "value": "self-x-start"
+          },
+          {
+            "name": "self-x-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-x-end",
+            "type": "value",
+            "value": "self-x-end"
+          },
+          {
+            "name": "block-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-block-start",
+            "type": "value",
+            "value": "block-start"
+          },
+          {
+            "name": "block-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-block-end",
+            "type": "value",
+            "value": "block-end"
+          },
+          {
+            "name": "self-block-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-block-start",
+            "type": "value",
+            "value": "self-block-start"
+          },
+          {
+            "name": "self-block-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-block-end",
+            "type": "value",
+            "value": "self-block-end"
+          },
+          {
+            "name": "inline-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-inline-start",
+            "type": "value",
+            "value": "inline-start"
+          },
+          {
+            "name": "inline-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-inline-end",
+            "type": "value",
+            "value": "inline-end"
+          },
+          {
+            "name": "self-inline-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-inline-start",
+            "type": "value",
+            "value": "self-inline-start"
+          },
+          {
+            "name": "self-inline-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-self-inline-end",
+            "type": "value",
+            "value": "self-inline-end"
+          },
+          {
+            "name": "center",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-center",
+            "type": "value",
+            "value": "center"
+          },
+          {
+            "name": "span-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-start",
+            "type": "value",
+            "value": "span-start"
+          },
+          {
+            "name": "span-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-end",
+            "type": "value",
+            "value": "span-end"
+          },
+          {
+            "name": "span-self-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-start",
+            "type": "value",
+            "value": "span-self-start"
+          },
+          {
+            "name": "span-self-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-end",
+            "type": "value",
+            "value": "span-self-end"
+          },
+          {
+            "name": "span-top",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-top",
+            "type": "value",
+            "value": "span-top"
+          },
+          {
+            "name": "span-bottom",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-bottom",
+            "type": "value",
+            "value": "span-bottom"
+          },
+          {
+            "name": "span-left",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-left",
+            "type": "value",
+            "value": "span-left"
+          },
+          {
+            "name": "span-right",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-right",
+            "type": "value",
+            "value": "span-right"
+          },
+          {
+            "name": "span-y-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-y-start",
+            "type": "value",
+            "value": "span-y-start"
+          },
+          {
+            "name": "span-y-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-y-end",
+            "type": "value",
+            "value": "span-y-end"
+          },
+          {
+            "name": "span-self-y-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-y-start",
+            "type": "value",
+            "value": "span-self-y-start"
+          },
+          {
+            "name": "span-self-y-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-y-end",
+            "type": "value",
+            "value": "span-self-y-end"
+          },
+          {
+            "name": "span-x-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-x-start",
+            "type": "value",
+            "value": "span-x-start"
+          },
+          {
+            "name": "span-x-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-x-end",
+            "type": "value",
+            "value": "span-x-end"
+          },
+          {
+            "name": "span-self-x-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-x-start",
+            "type": "value",
+            "value": "span-self-x-start"
+          },
+          {
+            "name": "span-self-x-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-x-end",
+            "type": "value",
+            "value": "span-self-x-end"
+          },
+          {
+            "name": "span-block-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-block-start",
+            "type": "value",
+            "value": "span-block-start"
+          },
+          {
+            "name": "span-block-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-block-end",
+            "type": "value",
+            "value": "span-block-end"
+          },
+          {
+            "name": "span-self-block-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-block-start",
+            "type": "value",
+            "value": "span-self-block-start"
+          },
+          {
+            "name": "span-self-block-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-block-end",
+            "type": "value",
+            "value": "span-self-block-end"
+          },
+          {
+            "name": "span-inline-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-inline-start",
+            "type": "value",
+            "value": "span-inline-start"
+          },
+          {
+            "name": "span-inline-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-inline-end",
+            "type": "value",
+            "value": "span-inline-end"
+          },
+          {
+            "name": "span-self-inline-start",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-inline-start",
+            "type": "value",
+            "value": "span-self-inline-start"
+          },
+          {
+            "name": "span-self-inline-end",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-self-inline-end",
+            "type": "value",
+            "value": "span-self-inline-end"
+          },
+          {
+            "name": "span-all",
+            "prose": "See respective definitions for '<position-area>'.",
+            "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-position-area-query-span-all",
+            "type": "value",
+            "value": "span-all"
+          }
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "msg": "Missing definition",
+        "name": "<query-in-parens>",
+        "value": "... | anchored( <anchored-query> )"
+      },
+      {
+        "msg": "Dangling value",
+        "name": "anchored",
+        "prose": "Establishes a query container for container queries, allowing for descendants of an anchor positioned element to be styled based on certain features of the anchoring. (Currently, limited to which of the position-try-fallbacks are applied, if any.) The anchored container-type applies style containment to the query container.",
+        "href": "https://drafts.csswg.org/css-anchor-position-2/#valdef-container-type-anchored",
+        "type": "value",
+        "value": "anchored",
+        "for": "container-type"
       }
     ]
   },
@@ -7729,118 +7729,6 @@
       }
     ]
   },
-  "css-grid-3": {
-    "spec": {
-      "title": "CSS Grid Layout Module Level 3",
-      "url": "https://drafts.csswg.org/css-grid-3/"
-    },
-    "properties": [
-      {
-        "name": "display",
-        "newValues": "grid-lanes | inline-grid-lanes",
-        "values": [
-          {
-            "name": "grid-lanes",
-            "prose": "This value causes an element to generate a block-level grid lanes container box.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-grid-lanes",
-            "type": "value",
-            "value": "grid-lanes"
-          },
-          {
-            "name": "inline-grid-lanes",
-            "prose": "This value causes an element to generate an inline-level grid lanes container box.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-inline-grid-lanes",
-            "type": "value",
-            "value": "inline-grid-lanes"
-          }
-        ],
-        "styleDeclaration": [
-          "display"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-grid-3/#propdef-display"
-      },
-      {
-        "name": "flow-tolerance",
-        "href": "https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance",
-        "value": "normal | <length-percentage [0,∞]> | infinite",
-        "initial": "normal",
-        "appliesTo": "grid lanes containers",
-        "inherited": "no",
-        "percentages": "relative to the grid-axis content box size of the grid lanes container",
-        "computedValue": "a computed <length-percentage> value",
-        "canonicalOrder": "per grammar",
-        "animationType": "as length",
-        "values": [
-          {
-            "name": "<length-percentage>",
-            "prose": "Specifies the tie threshold for the grid lanes container. Placement positions are considered to be equally good (“tied”) if they are within the specified distance from the shortest position.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-length-percentage",
-            "type": "value",
-            "value": "<length-percentage>"
-          },
-          {
-            "name": "normal",
-            "prose": "Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-normal",
-            "type": "value",
-            "value": "normal"
-          },
-          {
-            "name": "infinite",
-            "prose": "Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-infinite",
-            "type": "value",
-            "value": "infinite"
-          }
-        ],
-        "styleDeclaration": [
-          "flow-tolerance",
-          "flowTolerance"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<auto-repeat>",
-        "href": "https://drafts.csswg.org/css-grid-3/#typedef-auto-repeat",
-        "type": "type",
-        "value": "repeat( [ auto-fill | auto-fit ] , [ <line-names>? <track-size> ]+ <line-names>? )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "warnings": [
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The initial value of this property is normal, which determines the orientation from the grid-template-* properties:",
-        "href": "https://drafts.csswg.org/css-grid-3/#valdef-grid-auto-flow-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "grid-auto-flow"
-      }
-    ]
-  },
   "css-images-4": {
     "spec": {
       "title": "CSS Images Module Level 4",
@@ -8358,6 +8246,118 @@
         "msg": "Missing definition",
         "name": "<radial-size>",
         "value": "<radial-extent>{1,2} | <length-percentage [0,∞]>{1,2}"
+      }
+    ]
+  },
+  "css-grid-3": {
+    "spec": {
+      "title": "CSS Grid Layout Module Level 3",
+      "url": "https://drafts.csswg.org/css-grid-3/"
+    },
+    "properties": [
+      {
+        "name": "display",
+        "newValues": "grid-lanes | inline-grid-lanes",
+        "values": [
+          {
+            "name": "grid-lanes",
+            "prose": "This value causes an element to generate a block-level grid lanes container box.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-grid-lanes",
+            "type": "value",
+            "value": "grid-lanes"
+          },
+          {
+            "name": "inline-grid-lanes",
+            "prose": "This value causes an element to generate an inline-level grid lanes container box.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-inline-grid-lanes",
+            "type": "value",
+            "value": "inline-grid-lanes"
+          }
+        ],
+        "styleDeclaration": [
+          "display"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-grid-3/#propdef-display"
+      },
+      {
+        "name": "flow-tolerance",
+        "href": "https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance",
+        "value": "normal | <length-percentage [0,∞]> | infinite",
+        "initial": "normal",
+        "appliesTo": "grid lanes containers",
+        "inherited": "no",
+        "percentages": "relative to the grid-axis content box size of the grid lanes container",
+        "computedValue": "a computed <length-percentage> value",
+        "canonicalOrder": "per grammar",
+        "animationType": "as length",
+        "values": [
+          {
+            "name": "<length-percentage>",
+            "prose": "Specifies the tie threshold for the grid lanes container. Placement positions are considered to be equally good (“tied”) if they are within the specified distance from the shortest position.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-length-percentage",
+            "type": "value",
+            "value": "<length-percentage>"
+          },
+          {
+            "name": "normal",
+            "prose": "Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-normal",
+            "type": "value",
+            "value": "normal"
+          },
+          {
+            "name": "infinite",
+            "prose": "Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-infinite",
+            "type": "value",
+            "value": "infinite"
+          }
+        ],
+        "styleDeclaration": [
+          "flow-tolerance",
+          "flowTolerance"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<auto-repeat>",
+        "href": "https://drafts.csswg.org/css-grid-3/#typedef-auto-repeat",
+        "type": "type",
+        "value": "repeat( [ auto-fill | auto-fit ] , [ <line-names>? <track-size> ]+ <line-names>? )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "msg": "Dangling value",
+        "name": "normal",
+        "prose": "The initial value of this property is normal, which determines the orientation from the grid-template-* properties:",
+        "href": "https://drafts.csswg.org/css-grid-3/#valdef-grid-auto-flow-normal",
+        "type": "value",
+        "value": "normal",
+        "for": "grid-auto-flow"
       }
     ]
   },
@@ -11534,7 +11534,7 @@
         "value": "[ none | grow | shrink ] [consistent | per-line | per-line-all]? <percentage>?",
         "initial": "none",
         "appliesTo": "block containers",
-        "inherited": "no",
+        "inherited": "yes",
         "percentages": "N/A",
         "computedValue": "specified keywords or computed <percentage> value",
         "canonicalOrder": "per grammar",
