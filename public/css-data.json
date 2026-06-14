@@ -1301,91 +1301,6 @@
       }
     ]
   },
-  "css-color-6": {
-    "spec": {
-      "title": "CSS Color Module Level 6",
-      "url": "https://drafts.csswg.org/css-color-6/"
-    },
-    "properties": [],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "contrast-color()",
-        "prose": "The contrast-color() functional notation identifies a sufficiently contrasting color against a specified background or foreground color without requiring manual computation.",
-        "href": "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color",
-        "type": "function",
-        "value": "contrast-color( [ [ <color> && [ tbd-fg | tbd-bg ] && <target-contrast>? ] | [ <color> && [ tbd-fg | tbd-bg ] && <target-contrast>, <color># ] ] )",
-        "values": [
-          {
-            "name": "text",
-            "prose": "The tbd-fg and tbd-bg keywords indicate the role of the base color in calculating the contrast: as text against a list of candidate background colors (text) or as a background against a list of candidate text colors. (The effective contrast of a pair of colors depends on their usage.)",
-            "href": "https://drafts.csswg.org/css-color-6/#valdef-contrast-color-text",
-            "type": "value",
-            "value": "text"
-          },
-          {
-            "name": "wcag2",
-            "prose": "The wcag2 keyword and wcag2() functional notations indicate use of the [WCAG21] luminance contrast algorithm. Their syntax is:",
-            "href": "https://drafts.csswg.org/css-color-6/#valdef-contrast-color-wcag2",
-            "type": "value",
-            "value": "wcag2"
-          },
-          {
-            "name": "wcag2()",
-            "prose": "The wcag2 keyword and wcag2() functional notations indicate use of the [WCAG21] luminance contrast algorithm. Their syntax is:",
-            "href": "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color-wcag2",
-            "type": "function"
-          }
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 2,
-          "flagged": false,
-          "support": {
-            "chrome": false,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "<target-contrast>",
-        "prose": "The <target-contrast> argument specifies the contrast algorithm(s) to use. If no color candidates have been provided, <target-contrast> may be omitted, in which case a UA-chosen algorithm is used.",
-        "href": "https://drafts.csswg.org/css-color-6/#typedef-target-contrast",
-        "type": "type",
-        "value": "<wcag2>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<wcag2>",
-        "href": "https://drafts.csswg.org/css-color-6/#typedef-wcag2",
-        "type": "type",
-        "value": "wcag2 | wcag2([<number> | [ aa | aaa ] && large? ])",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "color-layers()",
-        "prose": "The color-layers() functional notation takes an optional <blend-mode> followed by a list of two or more <color> layers.",
-        "href": "https://drafts.csswg.org/css-color-6/#funcdef-color-layers",
-        "type": "function",
-        "value": "color-layers([ <blend-mode>, ]? <color># )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
   "css-images-5": {
     "spec": {
       "title": "CSS Images Module Level 5",
@@ -1546,6 +1461,91 @@
       }
     ]
   },
+  "css-color-6": {
+    "spec": {
+      "title": "CSS Color Module Level 6",
+      "url": "https://drafts.csswg.org/css-color-6/"
+    },
+    "properties": [],
+    "atrules": [],
+    "selectors": [],
+    "values": [
+      {
+        "name": "contrast-color()",
+        "prose": "The contrast-color() functional notation identifies a sufficiently contrasting color against a specified background or foreground color without requiring manual computation.",
+        "href": "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color",
+        "type": "function",
+        "value": "contrast-color( [ [ <color> && [ tbd-fg | tbd-bg ] && <target-contrast>? ] | [ <color> && [ tbd-fg | tbd-bg ] && <target-contrast>, <color># ] ] )",
+        "values": [
+          {
+            "name": "text",
+            "prose": "The tbd-fg and tbd-bg keywords indicate the role of the base color in calculating the contrast: as text against a list of candidate background colors (text) or as a background against a list of candidate text colors. (The effective contrast of a pair of colors depends on their usage.)",
+            "href": "https://drafts.csswg.org/css-color-6/#valdef-contrast-color-text",
+            "type": "value",
+            "value": "text"
+          },
+          {
+            "name": "wcag2",
+            "prose": "The wcag2 keyword and wcag2() functional notations indicate use of the [WCAG21] luminance contrast algorithm. Their syntax is:",
+            "href": "https://drafts.csswg.org/css-color-6/#valdef-contrast-color-wcag2",
+            "type": "value",
+            "value": "wcag2"
+          },
+          {
+            "name": "wcag2()",
+            "prose": "The wcag2 keyword and wcag2() functional notations indicate use of the [WCAG21] luminance contrast algorithm. Their syntax is:",
+            "href": "https://drafts.csswg.org/css-color-6/#funcdef-contrast-color-wcag2",
+            "type": "function"
+          }
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 2,
+          "flagged": false,
+          "support": {
+            "chrome": false,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "<target-contrast>",
+        "prose": "The <target-contrast> argument specifies the contrast algorithm(s) to use. If no color candidates have been provided, <target-contrast> may be omitted, in which case a UA-chosen algorithm is used.",
+        "href": "https://drafts.csswg.org/css-color-6/#typedef-target-contrast",
+        "type": "type",
+        "value": "<wcag2>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<wcag2>",
+        "href": "https://drafts.csswg.org/css-color-6/#typedef-wcag2",
+        "type": "type",
+        "value": "wcag2 | wcag2([<number> | [ aa | aaa ] && large? ])",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "color-layers()",
+        "prose": "The color-layers() functional notation takes an optional <blend-mode> followed by a list of two or more <color> layers.",
+        "href": "https://drafts.csswg.org/css-color-6/#funcdef-color-layers",
+        "type": "function",
+        "value": "color-layers([ <blend-mode>, ]? <color># )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
   "filter-effects-2": {
     "spec": {
       "title": "Filter Effects Module Level 2",
@@ -1577,6 +1577,89 @@
             "firefox": true,
             "safari": true
           }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": []
+  },
+  "css-text-5": {
+    "spec": {
+      "title": "CSS Text Module Level 5",
+      "url": "https://drafts.csswg.org/css-text-5/"
+    },
+    "properties": [
+      {
+        "name": "text-fit",
+        "href": "https://drafts.csswg.org/css-text-5/#propdef-text-fit",
+        "value": "[ none | grow | shrink ] [consistent | per-line | per-line-all]? <percentage>?",
+        "initial": "none",
+        "appliesTo": "block containers",
+        "inherited": "yes",
+        "percentages": "N/A",
+        "computedValue": "specified keywords or computed <percentage> value",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The user agent doesn’t scale inline-level contents to fit to the line box.",
+            "href": "https://drafts.csswg.org/css-text-5/#valdef-text-fit-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "grow",
+            "prose": "The user agent scales up inline-level contents to fit to the line box.",
+            "href": "https://drafts.csswg.org/css-text-5/#valdef-text-fit-grow",
+            "type": "value",
+            "value": "grow"
+          },
+          {
+            "name": "shrink",
+            "prose": "The user agent scales down inline-level contents to fit to the line box.",
+            "href": "https://drafts.csswg.org/css-text-5/#valdef-text-fit-shrink",
+            "type": "value",
+            "value": "shrink"
+          },
+          {
+            "name": "consistent",
+            "prose": "Specifies that all lines in the container are scaled with a single scaling factor. This keyword has no effect if none is specified. If none of consistent, per-line, or per-line-all are specified, consistent is assumed.",
+            "href": "https://drafts.csswg.org/css-text-5/#valdef-text-fit-consistent",
+            "type": "value",
+            "value": "consistent"
+          },
+          {
+            "name": "per-line",
+            "prose": "Specifies that each line is scaled with its own scaling factor. However, the last line of the block and lines that end in a forced break are not scaled. This keyword has no effect if none is specified.",
+            "href": "https://drafts.csswg.org/css-text-5/#valdef-text-fit-per-line",
+            "type": "value",
+            "value": "per-line"
+          },
+          {
+            "name": "per-line-all",
+            "prose": "Specifies that each line is scaled with its own scaling factor, including the last line of the block and lines that end in a forced break. This keyword has no effect if none is specified.",
+            "href": "https://drafts.csswg.org/css-text-5/#valdef-text-fit-per-line-all",
+            "type": "value",
+            "value": "per-line-all"
+          },
+          {
+            "name": "<percentage>",
+            "prose": "Specifies the limit of the scaling factor. If grow is specified and the value is 100% or greater, it is the maximum scaling factor. If shrink is specified and the value is between 0% and 100% inclusive, it is the minimum scaling factor. Otherwise, or if this component is omitted, there is no limit on the scaling factor.",
+            "href": "https://drafts.csswg.org/css-text-5/#valdef-text-fit-percentage",
+            "type": "value",
+            "value": "<percentage>"
+          }
+        ],
+        "styleDeclaration": [
+          "text-fit",
+          "textFit"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
         }
       }
     ],
@@ -2186,6 +2269,182 @@
         "type": "value",
         "value": "anchored",
         "for": "container-type"
+      }
+    ]
+  },
+  "css-animations-2": {
+    "spec": {
+      "title": "CSS Animations Module Level 2",
+      "url": "https://drafts.csswg.org/css-animations-2/"
+    },
+    "properties": [
+      {
+        "name": "animation-duration",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-duration",
+        "value": "[ auto | <time [0s,∞]> ]#",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "list, each item either a time or the keyword auto",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "For time-driven animations, equivalent to 0s. For scroll-driven animations, equivalent to the duration necessary to fill the timeline in consideration of animation-range, animation-delay, and animation-iteration-count. See Scroll-driven Animations § 4.1 Finite Timeline Calculations.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-duration-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "<time [0s,∞]>",
+            "prose": "For time-driven animations, specifies the length of time that an animation takes to complete one cycle. A negative <time> is invalid. For scroll-driven animations, treated as auto.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-duration-time-0s",
+            "type": "value",
+            "value": "<time [0s,∞]>"
+          }
+        ],
+        "styleDeclaration": [
+          "animation-duration",
+          "animationDuration"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "animation-composition",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-composition",
+        "value": "<single-animation-composition>#",
+        "initial": "replace",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "list, each item a keyword as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "animation-composition",
+          "animationComposition"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "animation-timeline",
+        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-timeline",
+        "value": "<single-animation-timeline>#",
+        "initial": "auto",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "animation-timeline",
+          "animationTimeline"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": true,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<single-animation-composition>",
+        "value": "replace | add | accumulate",
+        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation-composition",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<single-animation-timeline>",
+        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation-timeline",
+        "type": "type",
+        "value": "auto | none | <dashed-ident> | <scroll()> | <view()>",
+        "values": [
+          {
+            "name": "auto",
+            "prose": "The animation’s timeline is a DocumentTimeline, more specifically the default document timeline.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-auto",
+            "type": "value",
+            "value": "auto"
+          },
+          {
+            "name": "none",
+            "prose": "The animation is not associated with a timeline.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "<dashed-ident>",
+            "prose": "If a named scroll progress timeline or view progress timeline is in scope on this element, use the referenced timeline as defined in Scroll-driven Animations § Declaring a Named Timeline’s Scope: the timeline-scope property. Otherwise the animation is not associated with a timeline.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-dashed-ident",
+            "type": "value",
+            "value": "<dashed-ident>"
+          },
+          {
+            "name": "<scroll()>",
+            "prose": "Use the scroll progress timeline indicated by the given scroll() function. See Scroll-driven Animations § 2.2.1 The scroll() notation.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-scroll",
+            "type": "value",
+            "value": "<scroll()>"
+          },
+          {
+            "name": "<view()>",
+            "prose": "Use the view progress timeline indicated by the given view() function. See Scroll-driven Animations § 3.3.1 The view() notation.",
+            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-view",
+            "type": "value",
+            "value": "<view()>"
+          }
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<single-animation>",
+        "value": "<'animation-duration'> || <easing-function> || <'animation-delay'> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state> || [ none | <keyframes-name> ] || <single-animation-timeline>",
+        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       }
     ]
   },
@@ -3088,182 +3347,6 @@
       }
     ]
   },
-  "css-animations-2": {
-    "spec": {
-      "title": "CSS Animations Module Level 2",
-      "url": "https://drafts.csswg.org/css-animations-2/"
-    },
-    "properties": [
-      {
-        "name": "animation-duration",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-duration",
-        "value": "[ auto | <time [0s,∞]> ]#",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "list, each item either a time or the keyword auto",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "For time-driven animations, equivalent to 0s. For scroll-driven animations, equivalent to the duration necessary to fill the timeline in consideration of animation-range, animation-delay, and animation-iteration-count. See Scroll-driven Animations § 4.1 Finite Timeline Calculations.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-duration-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "<time [0s,∞]>",
-            "prose": "For time-driven animations, specifies the length of time that an animation takes to complete one cycle. A negative <time> is invalid. For scroll-driven animations, treated as auto.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-duration-time-0s",
-            "type": "value",
-            "value": "<time [0s,∞]>"
-          }
-        ],
-        "styleDeclaration": [
-          "animation-duration",
-          "animationDuration"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "animation-composition",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-composition",
-        "value": "<single-animation-composition>#",
-        "initial": "replace",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "list, each item a keyword as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "animation-composition",
-          "animationComposition"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "animation-timeline",
-        "href": "https://drafts.csswg.org/css-animations-2/#propdef-animation-timeline",
-        "value": "<single-animation-timeline>#",
-        "initial": "auto",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "animation-timeline",
-          "animationTimeline"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": true,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<single-animation-composition>",
-        "value": "replace | add | accumulate",
-        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation-composition",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<single-animation-timeline>",
-        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation-timeline",
-        "type": "type",
-        "value": "auto | none | <dashed-ident> | <scroll()> | <view()>",
-        "values": [
-          {
-            "name": "auto",
-            "prose": "The animation’s timeline is a DocumentTimeline, more specifically the default document timeline.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-auto",
-            "type": "value",
-            "value": "auto"
-          },
-          {
-            "name": "none",
-            "prose": "The animation is not associated with a timeline.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "<dashed-ident>",
-            "prose": "If a named scroll progress timeline or view progress timeline is in scope on this element, use the referenced timeline as defined in Scroll-driven Animations § Declaring a Named Timeline’s Scope: the timeline-scope property. Otherwise the animation is not associated with a timeline.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-dashed-ident",
-            "type": "value",
-            "value": "<dashed-ident>"
-          },
-          {
-            "name": "<scroll()>",
-            "prose": "Use the scroll progress timeline indicated by the given scroll() function. See Scroll-driven Animations § 2.2.1 The scroll() notation.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-scroll",
-            "type": "value",
-            "value": "<scroll()>"
-          },
-          {
-            "name": "<view()>",
-            "prose": "Use the view progress timeline indicated by the given view() function. See Scroll-driven Animations § 3.3.1 The view() notation.",
-            "href": "https://drafts.csswg.org/css-animations-2/#valdef-animation-timeline-view",
-            "type": "value",
-            "value": "<view()>"
-          }
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<single-animation>",
-        "value": "<'animation-duration'> || <easing-function> || <'animation-delay'> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state> || [ none | <keyframes-name> ] || <single-animation-timeline>",
-        "href": "https://drafts.csswg.org/css-animations-2/#typedef-single-animation",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
   "css-color-5": {
     "spec": {
       "title": "CSS Color Module Level 5",
@@ -4028,6 +4111,142 @@
         "type": "value",
         "value": "alpha",
         "for": "hsl()"
+      }
+    ]
+  },
+  "css-cascade-6": {
+    "spec": {
+      "title": "CSS Cascading and Inheritance Module Level 6",
+      "url": "https://drafts.csswg.org/css-cascade-6/"
+    },
+    "properties": [],
+    "atrules": [
+      {
+        "name": "@import",
+        "prose": "The @import rule allows users to import style rules from other style sheets. If an @import rule refers to a valid stylesheet, user agents must treat the contents of the stylesheet as if they were written in place of the @import rule, with two exceptions:",
+        "href": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-import",
+        "descriptors": [],
+        "value": "@import [ <url> | <string> ] [[ layer | layer( <layer-name> ) ] || [ scope | scope( <scope-start> | <scope-boundaries> ) ] || <supports-import-condition>]? <media-import-condition> ;",
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      },
+      {
+        "name": "@scope",
+        "prose": "Scoped styles are described in CSS using the @scope block at-rule, which declares a scoping root and optional scoping limits associated with a set of style rules.",
+        "href": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-scope",
+        "descriptors": [],
+        "value": "@scope <scope-boundaries>? { <block-contents> }",
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<supports-import-condition>",
+        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-supports-import-condition",
+        "type": "type",
+        "value": "supports( [ <supports-condition> | <declaration> ] )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<media-import-condition>",
+        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-media-import-condition",
+        "type": "type",
+        "value": "<media-query-list>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<scope-boundaries>",
+        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-boundaries",
+        "type": "type",
+        "value": "[ [ ( <scope-start> ) ]? [ to ( <scope-end> ) ]? ]!",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<scope-start>",
+        "prose": "<scope-start> is a <selector-list> selector used to identify the scoping root(s).",
+        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-start",
+        "type": "type",
+        "value": "<selector-list>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<scope-end>",
+        "prose": "<scope-end> is a <selector-list> selector used to identify any scoping limits.",
+        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-end",
+        "type": "type",
+        "value": "<selector-list>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
+  "css-conditional-4": {
+    "spec": {
+      "title": "CSS Conditional Rules Module Level 4",
+      "url": "https://drafts.csswg.org/css-conditional-4/"
+    },
+    "properties": [],
+    "atrules": [],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<supports-feature>",
+        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-feature",
+        "type": "type",
+        "value": "<supports-selector-fn> | <supports-decl>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<supports-selector-fn>",
+        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-selector-fn",
+        "type": "type",
+        "value": "selector( <complex-selector> )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       }
     ]
   },
@@ -6029,20 +6248,20 @@
     ],
     "note": "Current work is being done in css-color-4, but the recommendation is css-color-3."
   },
-  "css-conditional-4": {
+  "css-easing-2": {
     "spec": {
-      "title": "CSS Conditional Rules Module Level 4",
-      "url": "https://drafts.csswg.org/css-conditional-4/"
+      "title": "CSS Easing Functions Module Level 2",
+      "url": "https://drafts.csswg.org/css-easing-2/"
     },
     "properties": [],
     "atrules": [],
     "selectors": [],
     "values": [
       {
-        "name": "<supports-feature>",
-        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-feature",
+        "name": "<easing-function>",
+        "href": "https://drafts.csswg.org/css-easing-2/#typedef-easing-function",
         "type": "type",
-        "value": "<supports-selector-fn> | <supports-decl>",
+        "value": "<linear-easing-function> | <cubic-bezier-easing-function> | <step-easing-function>",
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -6050,10 +6269,166 @@
         }
       },
       {
-        "name": "<supports-selector-fn>",
-        "href": "https://drafts.csswg.org/css-conditional-4/#typedef-supports-selector-fn",
+        "name": "<linear-easing-function>",
+        "href": "https://drafts.csswg.org/css-easing-2/#typedef-linear-easing-function",
         "type": "type",
-        "value": "selector( <complex-selector> )",
+        "value": "linear | <linear()>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "linear()",
+        "value": "linear( [ <number> && <percentage>{0,2} ]# )",
+        "href": "https://drafts.csswg.org/css-easing-2/#funcdef-linear",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<cubic-bezier-easing-function>",
+        "href": "https://drafts.csswg.org/css-easing-2/#typedef-cubic-bezier-easing-function",
+        "type": "type",
+        "value": "ease | ease-in | ease-out | ease-in-out | <cubic-bezier()>",
+        "values": [
+          {
+            "name": "ease-in",
+            "prose": "A function that starts slowly and smoothly, then quickly approaches the endpoint with an almost linear curve. Equivalent to cubic-bezier(0.42, 0, 1, 1).",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-cubic-bezier-easing-function-ease-in",
+            "type": "value",
+            "value": "ease-in"
+          },
+          {
+            "name": "ease-out",
+            "prose": "A function that starts quickly with an almost linear curve, then slowly and smoothly approaches the endpoint. Equivalent to cubic-bezier(0, 0, 0.58, 1).",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-cubic-bezier-easing-function-ease-out",
+            "type": "value",
+            "value": "ease-out"
+          },
+          {
+            "name": "ease-in-out",
+            "prose": "A function that starts and ends slowly and smoothly, quickly traversing the middle part. Equivalent to cubic-bezier(0.42, 0, 0.58, 1).",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-cubic-bezier-easing-function-ease-in-out",
+            "type": "value",
+            "value": "ease-in-out"
+          },
+          {
+            "name": "ease",
+            "prose": "Similar to ease-in-out, but with a quicker start and a slower finish. Equivalent to cubic-bezier(0.25, 0.1, 0.25, 1).",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-cubic-bezier-easing-function-ease",
+            "type": "value",
+            "value": "ease"
+          }
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "cubic-bezier()",
+        "value": "cubic-bezier( [ <number [0,1]>, <number> ]#{2} )",
+        "href": "https://drafts.csswg.org/css-easing-2/#funcdef-cubic-bezier",
+        "type": "function",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<step-easing-function>",
+        "href": "https://drafts.csswg.org/css-easing-2/#typedef-step-easing-function",
+        "type": "type",
+        "value": "step-start | step-end | <steps()>",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "steps()",
+        "value": "steps( <integer>, <step-position>?)",
+        "href": "https://drafts.csswg.org/css-easing-2/#funcdef-steps",
+        "type": "function",
+        "values": [
+          {
+            "name": "step-start",
+            "prose": "Jumps from the starting to the ending value at the start of the easing interval. Computes to steps(1, start)",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-easing-function-step-start",
+            "type": "value",
+            "value": "step-start"
+          },
+          {
+            "name": "step-end",
+            "prose": "Jumps from the starting to the ending value at the end of the easing interval. Computes to steps(1, end) Example step easing function keyword values.",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-easing-function-step-end",
+            "type": "value",
+            "value": "step-end"
+          }
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<step-position>",
+        "href": "https://drafts.csswg.org/css-easing-2/#typedef-step-position",
+        "type": "type",
+        "value": "jump-start | jump-end | jump-none | jump-both | start | end",
+        "values": [
+          {
+            "name": "jump-start",
+            "prose": "The first interval has an output progress value of 1/steps, and subsequent intervals rise by 1/steps. (It \"jumps at the start\", with no step returning 0.)",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-jump-start",
+            "type": "value",
+            "value": "jump-start"
+          },
+          {
+            "name": "jump-end",
+            "prose": "The first interval has an output progress value of 0, and subsequent intervals rise by 1/steps. (It \"jumps at the end\", with no step returning 1.)",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-jump-end",
+            "type": "value",
+            "value": "jump-end"
+          },
+          {
+            "name": "jump-none",
+            "prose": "The first interval has an output progress value of 0, and subsequent intervals rise by 1/(steps-1). (It \"never jumps\", with steps returning both 0 and 1.)",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-jump-none",
+            "type": "value",
+            "value": "jump-none"
+          },
+          {
+            "name": "jump-both",
+            "prose": "The first interval has an output progress value of 1/(steps+1), and subsequent intervals rise by 1/(steps+1). (It \"jumps at both ends\", with no steps returning 0 or 1.)",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-jump-both",
+            "type": "value",
+            "value": "jump-both"
+          },
+          {
+            "name": "start",
+            "prose": "Behaves as jump-start.",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-start",
+            "type": "value",
+            "value": "start"
+          },
+          {
+            "name": "end",
+            "prose": "Behaves as jump-end.",
+            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-end",
+            "type": "value",
+            "value": "end"
+          }
+        ],
         "compatibility": {
           "supported": false,
           "browsers": 0,
@@ -7003,410 +7378,6 @@
       }
     ]
   },
-  "css-cascade-6": {
-    "spec": {
-      "title": "CSS Cascading and Inheritance Module Level 6",
-      "url": "https://drafts.csswg.org/css-cascade-6/"
-    },
-    "properties": [],
-    "atrules": [
-      {
-        "name": "@import",
-        "prose": "The @import rule allows users to import style rules from other style sheets. If an @import rule refers to a valid stylesheet, user agents must treat the contents of the stylesheet as if they were written in place of the @import rule, with two exceptions:",
-        "href": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-import",
-        "descriptors": [],
-        "value": "@import [ <url> | <string> ] [[ layer | layer( <layer-name> ) ] || [ scope | scope( <scope-start> | <scope-boundaries> ) ] || <supports-import-condition>]? <media-import-condition> ;",
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      },
-      {
-        "name": "@scope",
-        "prose": "Scoped styles are described in CSS using the @scope block at-rule, which declares a scoping root and optional scoping limits associated with a set of style rules.",
-        "href": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-scope",
-        "descriptors": [],
-        "value": "@scope <scope-boundaries>? { <block-contents> }",
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<supports-import-condition>",
-        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-supports-import-condition",
-        "type": "type",
-        "value": "supports( [ <supports-condition> | <declaration> ] )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<media-import-condition>",
-        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-media-import-condition",
-        "type": "type",
-        "value": "<media-query-list>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<scope-boundaries>",
-        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-boundaries",
-        "type": "type",
-        "value": "[ [ ( <scope-start> ) ]? [ to ( <scope-end> ) ]? ]!",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<scope-start>",
-        "prose": "<scope-start> is a <selector-list> selector used to identify the scoping root(s).",
-        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-start",
-        "type": "type",
-        "value": "<selector-list>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<scope-end>",
-        "prose": "<scope-end> is a <selector-list> selector used to identify any scoping limits.",
-        "href": "https://drafts.csswg.org/css-cascade-6/#typedef-scope-end",
-        "type": "type",
-        "value": "<selector-list>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
-  "css-easing-2": {
-    "spec": {
-      "title": "CSS Easing Functions Module Level 2",
-      "url": "https://drafts.csswg.org/css-easing-2/"
-    },
-    "properties": [],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<easing-function>",
-        "href": "https://drafts.csswg.org/css-easing-2/#typedef-easing-function",
-        "type": "type",
-        "value": "<linear-easing-function> | <cubic-bezier-easing-function> | <step-easing-function>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<linear-easing-function>",
-        "href": "https://drafts.csswg.org/css-easing-2/#typedef-linear-easing-function",
-        "type": "type",
-        "value": "linear | <linear()>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "linear()",
-        "value": "linear( [ <number> && <percentage>{0,2} ]# )",
-        "href": "https://drafts.csswg.org/css-easing-2/#funcdef-linear",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<cubic-bezier-easing-function>",
-        "href": "https://drafts.csswg.org/css-easing-2/#typedef-cubic-bezier-easing-function",
-        "type": "type",
-        "value": "ease | ease-in | ease-out | ease-in-out | <cubic-bezier()>",
-        "values": [
-          {
-            "name": "ease-in",
-            "prose": "A function that starts slowly and smoothly, then quickly approaches the endpoint with an almost linear curve. Equivalent to cubic-bezier(0.42, 0, 1, 1).",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-cubic-bezier-easing-function-ease-in",
-            "type": "value",
-            "value": "ease-in"
-          },
-          {
-            "name": "ease-out",
-            "prose": "A function that starts quickly with an almost linear curve, then slowly and smoothly approaches the endpoint. Equivalent to cubic-bezier(0, 0, 0.58, 1).",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-cubic-bezier-easing-function-ease-out",
-            "type": "value",
-            "value": "ease-out"
-          },
-          {
-            "name": "ease-in-out",
-            "prose": "A function that starts and ends slowly and smoothly, quickly traversing the middle part. Equivalent to cubic-bezier(0.42, 0, 0.58, 1).",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-cubic-bezier-easing-function-ease-in-out",
-            "type": "value",
-            "value": "ease-in-out"
-          },
-          {
-            "name": "ease",
-            "prose": "Similar to ease-in-out, but with a quicker start and a slower finish. Equivalent to cubic-bezier(0.25, 0.1, 0.25, 1).",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-cubic-bezier-easing-function-ease",
-            "type": "value",
-            "value": "ease"
-          }
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "cubic-bezier()",
-        "value": "cubic-bezier( [ <number [0,1]>, <number> ]#{2} )",
-        "href": "https://drafts.csswg.org/css-easing-2/#funcdef-cubic-bezier",
-        "type": "function",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<step-easing-function>",
-        "href": "https://drafts.csswg.org/css-easing-2/#typedef-step-easing-function",
-        "type": "type",
-        "value": "step-start | step-end | <steps()>",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "steps()",
-        "value": "steps( <integer>, <step-position>?)",
-        "href": "https://drafts.csswg.org/css-easing-2/#funcdef-steps",
-        "type": "function",
-        "values": [
-          {
-            "name": "step-start",
-            "prose": "Jumps from the starting to the ending value at the start of the easing interval. Computes to steps(1, start)",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-easing-function-step-start",
-            "type": "value",
-            "value": "step-start"
-          },
-          {
-            "name": "step-end",
-            "prose": "Jumps from the starting to the ending value at the end of the easing interval. Computes to steps(1, end) Example step easing function keyword values.",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-easing-function-step-end",
-            "type": "value",
-            "value": "step-end"
-          }
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<step-position>",
-        "href": "https://drafts.csswg.org/css-easing-2/#typedef-step-position",
-        "type": "type",
-        "value": "jump-start | jump-end | jump-none | jump-both | start | end",
-        "values": [
-          {
-            "name": "jump-start",
-            "prose": "The first interval has an output progress value of 1/steps, and subsequent intervals rise by 1/steps. (It \"jumps at the start\", with no step returning 0.)",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-jump-start",
-            "type": "value",
-            "value": "jump-start"
-          },
-          {
-            "name": "jump-end",
-            "prose": "The first interval has an output progress value of 0, and subsequent intervals rise by 1/steps. (It \"jumps at the end\", with no step returning 1.)",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-jump-end",
-            "type": "value",
-            "value": "jump-end"
-          },
-          {
-            "name": "jump-none",
-            "prose": "The first interval has an output progress value of 0, and subsequent intervals rise by 1/(steps-1). (It \"never jumps\", with steps returning both 0 and 1.)",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-jump-none",
-            "type": "value",
-            "value": "jump-none"
-          },
-          {
-            "name": "jump-both",
-            "prose": "The first interval has an output progress value of 1/(steps+1), and subsequent intervals rise by 1/(steps+1). (It \"jumps at both ends\", with no steps returning 0 or 1.)",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-jump-both",
-            "type": "value",
-            "value": "jump-both"
-          },
-          {
-            "name": "start",
-            "prose": "Behaves as jump-start.",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-start",
-            "type": "value",
-            "value": "start"
-          },
-          {
-            "name": "end",
-            "prose": "Behaves as jump-end.",
-            "href": "https://drafts.csswg.org/css-easing-2/#valdef-step-position-end",
-            "type": "value",
-            "value": "end"
-          }
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
-  "css-grid-3": {
-    "spec": {
-      "title": "CSS Grid Layout Module Level 3",
-      "url": "https://drafts.csswg.org/css-grid-3/"
-    },
-    "properties": [
-      {
-        "name": "display",
-        "newValues": "grid-lanes | inline-grid-lanes",
-        "values": [
-          {
-            "name": "grid-lanes",
-            "prose": "This value causes an element to generate a block-level grid lanes container box.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-grid-lanes",
-            "type": "value",
-            "value": "grid-lanes"
-          },
-          {
-            "name": "inline-grid-lanes",
-            "prose": "This value causes an element to generate an inline-level grid lanes container box.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-inline-grid-lanes",
-            "type": "value",
-            "value": "inline-grid-lanes"
-          }
-        ],
-        "styleDeclaration": [
-          "display"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        },
-        "href": "https://drafts.csswg.org/css-grid-3/#propdef-display"
-      },
-      {
-        "name": "flow-tolerance",
-        "href": "https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance",
-        "value": "normal | <length-percentage [0,∞]> | infinite",
-        "initial": "normal",
-        "appliesTo": "grid lanes containers",
-        "inherited": "no",
-        "percentages": "relative to the grid-axis content box size of the grid lanes container",
-        "computedValue": "a computed <length-percentage> value",
-        "canonicalOrder": "per grammar",
-        "animationType": "as length",
-        "values": [
-          {
-            "name": "<length-percentage>",
-            "prose": "Specifies the tie threshold for the grid lanes container. Placement positions are considered to be equally good (“tied”) if they are within the specified distance from the shortest position.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-length-percentage",
-            "type": "value",
-            "value": "<length-percentage>"
-          },
-          {
-            "name": "normal",
-            "prose": "Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-normal",
-            "type": "value",
-            "value": "normal"
-          },
-          {
-            "name": "infinite",
-            "prose": "Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.",
-            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-infinite",
-            "type": "value",
-            "value": "infinite"
-          }
-        ],
-        "styleDeclaration": [
-          "flow-tolerance",
-          "flowTolerance"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<auto-repeat>",
-        "href": "https://drafts.csswg.org/css-grid-3/#typedef-auto-repeat",
-        "type": "type",
-        "value": "repeat( [ auto-fill | auto-fit ] , [ <line-names>? <track-size> ]+ <line-names>? )",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ],
-    "warnings": [
-      {
-        "msg": "Dangling value",
-        "name": "normal",
-        "prose": "The initial value of this property is normal, which determines the orientation from the grid-template-* properties:",
-        "href": "https://drafts.csswg.org/css-grid-3/#valdef-grid-auto-flow-normal",
-        "type": "value",
-        "value": "normal",
-        "for": "grid-auto-flow"
-      }
-    ]
-  },
   "css-fonts-5": {
     "spec": {
       "title": "CSS Fonts Module Level 5",
@@ -7838,6 +7809,118 @@
         "type": "value",
         "value": "<percentage>",
         "for": "subscript-size-override!!descriptor"
+      }
+    ]
+  },
+  "css-grid-3": {
+    "spec": {
+      "title": "CSS Grid Layout Module Level 3",
+      "url": "https://drafts.csswg.org/css-grid-3/"
+    },
+    "properties": [
+      {
+        "name": "display",
+        "newValues": "grid-lanes | inline-grid-lanes",
+        "values": [
+          {
+            "name": "grid-lanes",
+            "prose": "This value causes an element to generate a block-level grid lanes container box.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-grid-lanes",
+            "type": "value",
+            "value": "grid-lanes"
+          },
+          {
+            "name": "inline-grid-lanes",
+            "prose": "This value causes an element to generate an inline-level grid lanes container box.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-display-inline-grid-lanes",
+            "type": "value",
+            "value": "inline-grid-lanes"
+          }
+        ],
+        "styleDeclaration": [
+          "display"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        },
+        "href": "https://drafts.csswg.org/css-grid-3/#propdef-display"
+      },
+      {
+        "name": "flow-tolerance",
+        "href": "https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance",
+        "value": "normal | <length-percentage [0,∞]> | infinite",
+        "initial": "normal",
+        "appliesTo": "grid lanes containers",
+        "inherited": "no",
+        "percentages": "relative to the grid-axis content box size of the grid lanes container",
+        "computedValue": "a computed <length-percentage> value",
+        "canonicalOrder": "per grammar",
+        "animationType": "as length",
+        "values": [
+          {
+            "name": "<length-percentage>",
+            "prose": "Specifies the tie threshold for the grid lanes container. Placement positions are considered to be equally good (“tied”) if they are within the specified distance from the shortest position.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-length-percentage",
+            "type": "value",
+            "value": "<length-percentage>"
+          },
+          {
+            "name": "normal",
+            "prose": "Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-normal",
+            "type": "value",
+            "value": "normal"
+          },
+          {
+            "name": "infinite",
+            "prose": "Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.",
+            "href": "https://drafts.csswg.org/css-grid-3/#valdef-flow-tolerance-infinite",
+            "type": "value",
+            "value": "infinite"
+          }
+        ],
+        "styleDeclaration": [
+          "flow-tolerance",
+          "flowTolerance"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<auto-repeat>",
+        "href": "https://drafts.csswg.org/css-grid-3/#typedef-auto-repeat",
+        "type": "type",
+        "value": "repeat( [ auto-fill | auto-fit ] , [ <line-names>? <track-size> ]+ <line-names>? )",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "msg": "Dangling value",
+        "name": "normal",
+        "prose": "The initial value of this property is normal, which determines the orientation from the grid-template-* properties:",
+        "href": "https://drafts.csswg.org/css-grid-3/#valdef-grid-auto-flow-normal",
+        "type": "value",
+        "value": "normal",
+        "for": "grid-auto-flow"
       }
     ]
   },
@@ -8358,6 +8441,290 @@
         "msg": "Missing definition",
         "name": "<radial-size>",
         "value": "<radial-extent>{1,2} | <length-percentage [0,∞]>{1,2}"
+      }
+    ]
+  },
+  "css-overflow-5": {
+    "spec": {
+      "title": "CSS Overflow Module Level 5",
+      "url": "https://drafts.csswg.org/css-overflow-5/"
+    },
+    "properties": [
+      {
+        "name": "scroll-target-group",
+        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-target-group",
+        "value": "none | auto",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified value",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The element does not establish a scroll marker group container.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-target-group-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "auto",
+            "prose": "The element establishes a scroll marker group container forming a scroll marker group containing all of the scroll marker elements for which this is the nearest ancestor scroll marker group container.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-target-group-auto",
+            "type": "value",
+            "value": "auto"
+          }
+        ],
+        "styleDeclaration": [
+          "scroll-target-group",
+          "scrollTargetGroup"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      },
+      {
+        "name": "scroll-marker-group",
+        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-marker-group",
+        "value": "none | [ [ before | after ] || [ links | tabs ] ]",
+        "initial": "none",
+        "appliesTo": "scroll containers",
+        "inherited": "no",
+        "percentages": "n/a",
+        "computedValue": "specified keyword(s)",
+        "canonicalOrder": "per grammar",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The scroll container does not create a '::scroll-marker-group' pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "before",
+            "prose": "The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the first child of the originating element. Otherwise, its box is an immediate preceding sibling to its originating element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-before",
+            "type": "value",
+            "value": "before"
+          },
+          {
+            "name": "after",
+            "prose": "The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the last child of the originating element. Otherwise, its box is an immediate following sibling to its originating element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-after",
+            "type": "value",
+            "value": "after"
+          },
+          {
+            "name": "links",
+            "prose": "The generated ::scroll-marker-group operates in \"links\" mode, functioning like a navigation list. This is the default mode if omitted.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-links",
+            "type": "value",
+            "value": "links"
+          },
+          {
+            "name": "tabs",
+            "prose": "The generated ::scroll-marker-group operates in \"tabs\" mode, functioning like a tablist.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-tabs",
+            "type": "value",
+            "value": "tabs"
+          }
+        ],
+        "styleDeclaration": [
+          "scroll-marker-group",
+          "scrollMarkerGroup"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      },
+      {
+        "name": "continue",
+        "newValues": "overflow | paginate | fragments",
+        "initial": "auto",
+        "appliesTo": "block containers [CSS2], flex containers [CSS3-FLEXBOX], and grid containers [CSS3-GRID-LAYOUT]",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "see below",
+        "animationType": "discrete",
+        "values": [
+          {
+            "name": "overflow",
+            "prose": "Content that doesn’t fit overflows, according to the overflow property",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-overflow",
+            "type": "value",
+            "value": "overflow"
+          },
+          {
+            "name": "paginate",
+            "prose": "Content that doesn’t fit paginates. This creates a paginated view inside the element similar to the way that 'overflow: scroll' creates a scrollable view. See paginated overflow",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-paginate",
+            "type": "value",
+            "value": "paginate"
+          },
+          {
+            "name": "fragments",
+            "prose": "content that doesn’t fit causes the element to copy itself and continue laying out. See fragment overflow.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-fragments",
+            "type": "value",
+            "value": "fragments"
+          }
+        ],
+        "styleDeclaration": [
+          "continue"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        },
+        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-continue"
+      }
+    ],
+    "atrules": [],
+    "selectors": [
+      {
+        "name": "::scroll-marker-group",
+        "prose": "The ::scroll-marker-group fully styleable pseudo-element is generated by a scroll container element having a computed scroll-marker-group property that is not none.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker-group",
+        "value": "::scroll-marker-group"
+      },
+      {
+        "name": "::scroll-marker",
+        "prose": "When the computed content value of a ::scroll-marker pseudo-element is not none and its nearest ancestor scroll container scroll container has a computed scroll-marker-group property that is not none, the pseudo-element generates a box attached as a child of the ::scroll-marker-group pseudo-element’s generated box on its nearest ancestor scroll container. These boxes are added in the tree order of their originating element.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker",
+        "value": "::scroll-marker"
+      },
+      {
+        "name": ":target-current",
+        "prose": "Exactly one scroll marker within each scroll marker group is determined to be active at a time. Such \"active\" scroll markers match the :target-current pseudo-class.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-current",
+        "value": ":target-current"
+      },
+      {
+        "name": ":target-before",
+        "prose": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-before",
+        "value": ":target-before"
+      },
+      {
+        "name": ":target-after",
+        "prose": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-after",
+        "value": ":target-after"
+      },
+      {
+        "name": "::scroll-button()",
+        "value": "::scroll-button( '*' | <scroll-button-direction> )",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-button---scroll-button-direction"
+      },
+      {
+        "name": "::nth-fragment()",
+        "prose": "The ::nth-fragment() pseudo-element is a pseudo-element that describes some of the fragment boxes generated by an element. The argument to the pseudo-element takes the same syntax as the argument to the :nth-child() pseudo-class defined in [SELECT], and has the same meaning except that the number is relative to fragment boxes generated by the element instead of siblings of the element.",
+        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-nth-fragment"
+      }
+    ],
+    "values": [
+      {
+        "name": "<scroll-button-direction>",
+        "prose": "The four ::scroll-button() pseudo-elements are individually selected by the selector’s argument. A * arguments selects all four ::scroll-button()s; otherwise the selected pseudo-element is determined by the <scroll-button-direction> value:",
+        "href": "https://drafts.csswg.org/css-overflow-5/#typedef-scroll-button-direction",
+        "type": "type",
+        "values": [
+          {
+            "name": "up",
+            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-up",
+            "type": "value",
+            "value": "up"
+          },
+          {
+            "name": "down",
+            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-down",
+            "type": "value",
+            "value": "down"
+          },
+          {
+            "name": "left",
+            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-left",
+            "type": "value",
+            "value": "left"
+          },
+          {
+            "name": "right",
+            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-right",
+            "type": "value",
+            "value": "right"
+          },
+          {
+            "name": "block-start",
+            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-block-start",
+            "type": "value",
+            "value": "block-start"
+          },
+          {
+            "name": "block-end",
+            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-block-end",
+            "type": "value",
+            "value": "block-end"
+          },
+          {
+            "name": "inline-start",
+            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-inline-start",
+            "type": "value",
+            "value": "inline-start"
+          },
+          {
+            "name": "inline-end",
+            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-inline-end",
+            "type": "value",
+            "value": "inline-end"
+          },
+          {
+            "name": "prev",
+            "prose": "Selects either the block-start or inline-start ::scroll-button(), whichever’s axis has more \"scrollable pages\" in the originating element: the originating element’s scrollable overflow height divided by its scrollport height, or the same but for widths. If both dimensions are equally sized, selects the block-start ::scroll-button(). For example, say the originating element was 800px wide and 500px tall, while its scrollable overflow area was 1200px wide and 1000px tall. The horizontal scrolling thus represents 1.5 \"pages\" (1200/800), while the vertical scrolling represents 2 \"pages\" (1000/500), so (assuming the element is in English) the ::scroll-button(prev) selector would select the block-start button.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-prev",
+            "type": "value",
+            "value": "prev"
+          },
+          {
+            "name": "next",
+            "prose": "Identical to prev, except it selects the block-end or inline-end ::scroll-button() instead.",
+            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-next",
+            "type": "value",
+            "value": "next"
+          }
+        ],
+        "value": "up | down | left | right | block-start | block-end | inline-start | inline-end | prev | next",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
       }
     ]
   },
@@ -8913,290 +9280,6 @@
     "selectors": [],
     "values": []
   },
-  "css-overflow-5": {
-    "spec": {
-      "title": "CSS Overflow Module Level 5",
-      "url": "https://drafts.csswg.org/css-overflow-5/"
-    },
-    "properties": [
-      {
-        "name": "scroll-target-group",
-        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-target-group",
-        "value": "none | auto",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "specified value",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The element does not establish a scroll marker group container.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-target-group-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "auto",
-            "prose": "The element establishes a scroll marker group container forming a scroll marker group containing all of the scroll marker elements for which this is the nearest ancestor scroll marker group container.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-target-group-auto",
-            "type": "value",
-            "value": "auto"
-          }
-        ],
-        "styleDeclaration": [
-          "scroll-target-group",
-          "scrollTargetGroup"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": false
-          }
-        }
-      },
-      {
-        "name": "scroll-marker-group",
-        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-marker-group",
-        "value": "none | [ [ before | after ] || [ links | tabs ] ]",
-        "initial": "none",
-        "appliesTo": "scroll containers",
-        "inherited": "no",
-        "percentages": "n/a",
-        "computedValue": "specified keyword(s)",
-        "canonicalOrder": "per grammar",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The scroll container does not create a '::scroll-marker-group' pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "before",
-            "prose": "The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the first child of the originating element. Otherwise, its box is an immediate preceding sibling to its originating element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-before",
-            "type": "value",
-            "value": "before"
-          },
-          {
-            "name": "after",
-            "prose": "The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the last child of the originating element. Otherwise, its box is an immediate following sibling to its originating element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-after",
-            "type": "value",
-            "value": "after"
-          },
-          {
-            "name": "links",
-            "prose": "The generated ::scroll-marker-group operates in \"links\" mode, functioning like a navigation list. This is the default mode if omitted.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-links",
-            "type": "value",
-            "value": "links"
-          },
-          {
-            "name": "tabs",
-            "prose": "The generated ::scroll-marker-group operates in \"tabs\" mode, functioning like a tablist.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-marker-group-tabs",
-            "type": "value",
-            "value": "tabs"
-          }
-        ],
-        "styleDeclaration": [
-          "scroll-marker-group",
-          "scrollMarkerGroup"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": false
-          }
-        }
-      },
-      {
-        "name": "continue",
-        "newValues": "overflow | paginate | fragments",
-        "initial": "auto",
-        "appliesTo": "block containers [CSS2], flex containers [CSS3-FLEXBOX], and grid containers [CSS3-GRID-LAYOUT]",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "see below",
-        "animationType": "discrete",
-        "values": [
-          {
-            "name": "overflow",
-            "prose": "Content that doesn’t fit overflows, according to the overflow property",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-overflow",
-            "type": "value",
-            "value": "overflow"
-          },
-          {
-            "name": "paginate",
-            "prose": "Content that doesn’t fit paginates. This creates a paginated view inside the element similar to the way that 'overflow: scroll' creates a scrollable view. See paginated overflow",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-paginate",
-            "type": "value",
-            "value": "paginate"
-          },
-          {
-            "name": "fragments",
-            "prose": "content that doesn’t fit causes the element to copy itself and continue laying out. See fragment overflow.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-continue-fragments",
-            "type": "value",
-            "value": "fragments"
-          }
-        ],
-        "styleDeclaration": [
-          "continue"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        },
-        "href": "https://drafts.csswg.org/css-overflow-5/#propdef-continue"
-      }
-    ],
-    "atrules": [],
-    "selectors": [
-      {
-        "name": "::scroll-marker-group",
-        "prose": "The ::scroll-marker-group fully styleable pseudo-element is generated by a scroll container element having a computed scroll-marker-group property that is not none.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker-group",
-        "value": "::scroll-marker-group"
-      },
-      {
-        "name": "::scroll-marker",
-        "prose": "When the computed content value of a ::scroll-marker pseudo-element is not none and its nearest ancestor scroll container scroll container has a computed scroll-marker-group property that is not none, the pseudo-element generates a box attached as a child of the ::scroll-marker-group pseudo-element’s generated box on its nearest ancestor scroll container. These boxes are added in the tree order of their originating element.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker",
-        "value": "::scroll-marker"
-      },
-      {
-        "name": ":target-current",
-        "prose": "Exactly one scroll marker within each scroll marker group is determined to be active at a time. Such \"active\" scroll markers match the :target-current pseudo-class.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-current",
-        "value": ":target-current"
-      },
-      {
-        "name": ":target-before",
-        "prose": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-before",
-        "value": ":target-before"
-      },
-      {
-        "name": ":target-after",
-        "prose": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-after",
-        "value": ":target-after"
-      },
-      {
-        "name": "::scroll-button()",
-        "value": "::scroll-button( '*' | <scroll-button-direction> )",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-button---scroll-button-direction"
-      },
-      {
-        "name": "::nth-fragment()",
-        "prose": "The ::nth-fragment() pseudo-element is a pseudo-element that describes some of the fragment boxes generated by an element. The argument to the pseudo-element takes the same syntax as the argument to the :nth-child() pseudo-class defined in [SELECT], and has the same meaning except that the number is relative to fragment boxes generated by the element instead of siblings of the element.",
-        "href": "https://drafts.csswg.org/css-overflow-5/#selectordef-nth-fragment"
-      }
-    ],
-    "values": [
-      {
-        "name": "<scroll-button-direction>",
-        "prose": "The four ::scroll-button() pseudo-elements are individually selected by the selector’s argument. A * arguments selects all four ::scroll-button()s; otherwise the selected pseudo-element is determined by the <scroll-button-direction> value:",
-        "href": "https://drafts.csswg.org/css-overflow-5/#typedef-scroll-button-direction",
-        "type": "type",
-        "values": [
-          {
-            "name": "up",
-            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-up",
-            "type": "value",
-            "value": "up"
-          },
-          {
-            "name": "down",
-            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-down",
-            "type": "value",
-            "value": "down"
-          },
-          {
-            "name": "left",
-            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-left",
-            "type": "value",
-            "value": "left"
-          },
-          {
-            "name": "right",
-            "prose": "Selects the ::scroll-button() corresponding to the given physical direction.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-right",
-            "type": "value",
-            "value": "right"
-          },
-          {
-            "name": "block-start",
-            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-block-start",
-            "type": "value",
-            "value": "block-start"
-          },
-          {
-            "name": "block-end",
-            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-block-end",
-            "type": "value",
-            "value": "block-end"
-          },
-          {
-            "name": "inline-start",
-            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-inline-start",
-            "type": "value",
-            "value": "inline-start"
-          },
-          {
-            "name": "inline-end",
-            "prose": "Selects the indicated ::scroll-button() pseudo-element.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-inline-end",
-            "type": "value",
-            "value": "inline-end"
-          },
-          {
-            "name": "prev",
-            "prose": "Selects either the block-start or inline-start ::scroll-button(), whichever’s axis has more \"scrollable pages\" in the originating element: the originating element’s scrollable overflow height divided by its scrollport height, or the same but for widths. If both dimensions are equally sized, selects the block-start ::scroll-button(). For example, say the originating element was 800px wide and 500px tall, while its scrollable overflow area was 1200px wide and 1000px tall. The horizontal scrolling thus represents 1.5 \"pages\" (1200/800), while the vertical scrolling represents 2 \"pages\" (1000/500), so (assuming the element is in English) the ::scroll-button(prev) selector would select the block-start button.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-prev",
-            "type": "value",
-            "value": "prev"
-          },
-          {
-            "name": "next",
-            "prose": "Identical to prev, except it selects the block-end or inline-end ::scroll-button() instead.",
-            "href": "https://drafts.csswg.org/css-overflow-5/#valdef-scroll-button-direction-next",
-            "type": "value",
-            "value": "next"
-          }
-        ],
-        "value": "up | down | left | right | block-start | block-end | inline-start | inline-end | prev | next",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      }
-    ]
-  },
   "css-position-4": {
     "spec": {
       "title": "CSS Positioned Layout Module Level 4",
@@ -9252,6 +9335,90 @@
         "prose": "Each element rendered in the top layer has a ::backdrop pseudo-element, for which it is the originating element.",
         "href": "https://drafts.csswg.org/css-position-4/#selectordef-backdrop",
         "value": "::backdrop"
+      }
+    ],
+    "values": []
+  },
+  "css-scroll-snap-2": {
+    "spec": {
+      "title": "CSS Scroll Snap Module Level 2",
+      "url": "https://drafts.csswg.org/css-scroll-snap-2/"
+    },
+    "properties": [
+      {
+        "name": "scroll-initial-target",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#propdef-scroll-initial-target",
+        "value": "none | nearest",
+        "initial": "none",
+        "appliesTo": "all elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "specified keyword",
+        "canonicalOrder": "per grammar",
+        "animationType": "none",
+        "values": [
+          {
+            "name": "none",
+            "prose": "The element is not an initial scroll target.",
+            "href": "https://drafts.csswg.org/css-scroll-snap-2/#valdef-scroll-initial-target-none",
+            "type": "value",
+            "value": "none"
+          },
+          {
+            "name": "nearest",
+            "prose": "The element is potentially an initial scroll target for its nearest scroll container ancestor.",
+            "href": "https://drafts.csswg.org/css-scroll-snap-2/#valdef-scroll-initial-target-nearest",
+            "type": "value",
+            "value": "nearest"
+          }
+        ],
+        "styleDeclaration": [
+          "scroll-initial-target",
+          "scrollInitialTarget"
+        ],
+        "compatibility": {
+          "supported": false,
+          "browsers": 1,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": false,
+            "safari": false
+          }
+        }
+      }
+    ],
+    "atrules": [],
+    "selectors": [
+      {
+        "name": ":snapped",
+        "prose": "The :snapped pseudo-class matches any snap targets, regardless of axis. The longform physical and logical pseudo-class selectors allow for more finite snapped children styling as they can target an individual axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped",
+        "value": ":snapped"
+      },
+      {
+        "name": ":snapped-x",
+        "prose": "Matches the child snapped on the horizontal axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-x",
+        "value": ":snapped-x"
+      },
+      {
+        "name": ":snapped-y",
+        "prose": "Matches the child snapped on the vertical axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-y",
+        "value": ":snapped-y"
+      },
+      {
+        "name": ":snapped-inline",
+        "prose": "Matches the child snapped on the inline axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-inline",
+        "value": ":snapped-inline"
+      },
+      {
+        "name": ":snapped-block",
+        "prose": "Matches the child snapped on the block axis.",
+        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-block",
+        "value": ":snapped-block"
       }
     ],
     "values": []
@@ -10082,167 +10249,6 @@
         "type": "value",
         "value": "contain",
         "for": "max-block-size"
-      }
-    ]
-  },
-  "css-scroll-snap-2": {
-    "spec": {
-      "title": "CSS Scroll Snap Module Level 2",
-      "url": "https://drafts.csswg.org/css-scroll-snap-2/"
-    },
-    "properties": [
-      {
-        "name": "scroll-initial-target",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#propdef-scroll-initial-target",
-        "value": "none | nearest",
-        "initial": "none",
-        "appliesTo": "all elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "specified keyword",
-        "canonicalOrder": "per grammar",
-        "animationType": "none",
-        "values": [
-          {
-            "name": "none",
-            "prose": "The element is not an initial scroll target.",
-            "href": "https://drafts.csswg.org/css-scroll-snap-2/#valdef-scroll-initial-target-none",
-            "type": "value",
-            "value": "none"
-          },
-          {
-            "name": "nearest",
-            "prose": "The element is potentially an initial scroll target for its nearest scroll container ancestor.",
-            "href": "https://drafts.csswg.org/css-scroll-snap-2/#valdef-scroll-initial-target-nearest",
-            "type": "value",
-            "value": "nearest"
-          }
-        ],
-        "styleDeclaration": [
-          "scroll-initial-target",
-          "scrollInitialTarget"
-        ],
-        "compatibility": {
-          "supported": false,
-          "browsers": 1,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": false,
-            "safari": false
-          }
-        }
-      }
-    ],
-    "atrules": [],
-    "selectors": [
-      {
-        "name": ":snapped",
-        "prose": "The :snapped pseudo-class matches any snap targets, regardless of axis. The longform physical and logical pseudo-class selectors allow for more finite snapped children styling as they can target an individual axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped",
-        "value": ":snapped"
-      },
-      {
-        "name": ":snapped-x",
-        "prose": "Matches the child snapped on the horizontal axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-x",
-        "value": ":snapped-x"
-      },
-      {
-        "name": ":snapped-y",
-        "prose": "Matches the child snapped on the vertical axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-y",
-        "value": ":snapped-y"
-      },
-      {
-        "name": ":snapped-inline",
-        "prose": "Matches the child snapped on the inline axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-inline",
-        "value": ":snapped-inline"
-      },
-      {
-        "name": ":snapped-block",
-        "prose": "Matches the child snapped on the block axis.",
-        "href": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-block",
-        "value": ":snapped-block"
-      }
-    ],
-    "values": []
-  },
-  "css-transitions-2": {
-    "spec": {
-      "title": "CSS Transitions Module Level 2",
-      "url": "https://drafts.csswg.org/css-transitions-2/"
-    },
-    "properties": [
-      {
-        "name": "transition-behavior",
-        "href": "https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior",
-        "value": "<transition-behavior-value>#",
-        "initial": "normal",
-        "appliesTo": "All elements",
-        "inherited": "no",
-        "percentages": "N/A",
-        "computedValue": "as specified",
-        "canonicalOrder": "per grammar",
-        "animationType": "not animatable",
-        "styleDeclaration": [
-          "transition-behavior",
-          "transitionBehavior"
-        ],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "atrules": [
-      {
-        "name": "@starting-style",
-        "prose": "The @starting-style rule is a grouping rule. The style rules inside it are used to establish styles to transition from, if the previous style change event did not establish a before-change style for the element whose styles are being computed.",
-        "href": "https://drafts.csswg.org/css-transitions-2/#at-ruledef-starting-style",
-        "descriptors": [],
-        "compatibility": {
-          "supported": true,
-          "browsers": 3,
-          "flagged": false,
-          "support": {
-            "chrome": true,
-            "firefox": true,
-            "safari": true
-          }
-        }
-      }
-    ],
-    "selectors": [],
-    "values": [
-      {
-        "name": "<transition-behavior-value>",
-        "value": "normal | allow-discrete",
-        "href": "https://drafts.csswg.org/css-transitions-2/#typedef-transition-behavior-value",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
-      },
-      {
-        "name": "<single-transition>",
-        "value": "[ none | <single-transition-property> ] || <time> || <easing-function> || <time> || <transition-behavior-value>",
-        "href": "https://drafts.csswg.org/css-transitions-2/#single-transition",
-        "type": "type",
-        "compatibility": {
-          "supported": false,
-          "browsers": 0,
-          "flagged": false
-        }
       }
     ]
   },
@@ -13440,6 +13446,83 @@
       }
     ]
   },
+  "css-transitions-2": {
+    "spec": {
+      "title": "CSS Transitions Module Level 2",
+      "url": "https://drafts.csswg.org/css-transitions-2/"
+    },
+    "properties": [
+      {
+        "name": "transition-behavior",
+        "href": "https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior",
+        "value": "<transition-behavior-value>#",
+        "initial": "normal",
+        "appliesTo": "All elements",
+        "inherited": "no",
+        "percentages": "N/A",
+        "computedValue": "as specified",
+        "canonicalOrder": "per grammar",
+        "animationType": "not animatable",
+        "styleDeclaration": [
+          "transition-behavior",
+          "transitionBehavior"
+        ],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "atrules": [
+      {
+        "name": "@starting-style",
+        "prose": "The @starting-style rule is a grouping rule. The style rules inside it are used to establish styles to transition from, if the previous style change event did not establish a before-change style for the element whose styles are being computed.",
+        "href": "https://drafts.csswg.org/css-transitions-2/#at-ruledef-starting-style",
+        "descriptors": [],
+        "compatibility": {
+          "supported": true,
+          "browsers": 3,
+          "flagged": false,
+          "support": {
+            "chrome": true,
+            "firefox": true,
+            "safari": true
+          }
+        }
+      }
+    ],
+    "selectors": [],
+    "values": [
+      {
+        "name": "<transition-behavior-value>",
+        "value": "normal | allow-discrete",
+        "href": "https://drafts.csswg.org/css-transitions-2/#typedef-transition-behavior-value",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      },
+      {
+        "name": "<single-transition>",
+        "value": "[ none | <single-transition-property> ] || <time> || <easing-function> || <time> || <transition-behavior-value>",
+        "href": "https://drafts.csswg.org/css-transitions-2/#single-transition",
+        "type": "type",
+        "compatibility": {
+          "supported": false,
+          "browsers": 0,
+          "flagged": false
+        }
+      }
+    ]
+  },
   "css-values-5": {
     "spec": {
       "title": "CSS Values and Units Module Level 5",
@@ -13848,10 +13931,19 @@
       },
       {
         "name": "progress()",
-        "prose": "The progress() functional notation represents the proportional distance of a given value (the progress value) from one value (the progress start value) to another value (the progress end value), each represented as a calculation. It is a math function, and can be input into other calculations such as a math function or a mix notation.",
+        "prose": "The progress() functional notation represents the proportional distance of a given value (the progress value) from one value (the progress start value) to another value (the progress end value), each represented as a calculation. It is a math function, and can be input into other calculations such as a math function or a mix notation. The syntax of progress() is:",
         "href": "https://drafts.csswg.org/css-values-5/#funcdef-progress",
         "type": "function",
-        "value": "progress(<calc-sum>, <calc-sum>, <calc-sum>)",
+        "value": "progress(no-clamp? <calc-sum>, <calc-sum>, <calc-sum>)",
+        "values": [
+          {
+            "name": "no-clamp",
+            "prose": "If no-clamp is present, the progress() function can potentially resolve to any number; if omitted (the default), the return value is clamped to the range [0, 1].",
+            "href": "https://drafts.csswg.org/css-values-5/#valdef-progress-no-clamp",
+            "type": "value",
+            "value": "no-clamp"
+          }
+        ],
         "compatibility": {
           "supported": true,
           "browsers": 2,
@@ -14389,14 +14481,14 @@
           },
           {
             "name": "<random-cache-key>",
-            "prose": "The <random-cache-key> specifies the random cache name, allowing it to be explicitly shared (or not) with other uses of random functions. Every random function using the same random cache name will get the same random value; every one using a different random cache name will get unrelated random values. The <dashed-ident> gives the value an explicit name. If omitted, this part of the name is null. element-scoped adds an element-specific identifier to the random cache name, so different elements will get different random values. property-scoped adds the property name the random function is being used on to the random cache name, so different properties will get different random values. Note that shorthand declarations will apply the shorthand property’s name. property-index-scoped adds the property name and the index of the random function among all the random functions used in the same property value to the random cache name, so multiple instances of a random function in the same declaration will each get different random cache names. Note this index is assigned before shorthand expansion. See § 9.4.1 Simplification of <random-key> for how these values resolve. The <random-ua-ident> value, like fixed below, isn’t intended to be specified by authors, but can show up in computed values. It is a <custom-ident> that must start with the prefix ua-, or else it is invalid. When generated automatically by the user agent, it will always be ua-PROPERTY or ua-PROPERTY-INDEX, with the PROPERTY and INDEX parts replaced with a property name or integer index, like ua-margin-3.",
+            "prose": "The <random-cache-key> specifies the random cache name, allowing it to be explicitly shared (or not) with other uses of random functions. Every random function using the same random cache name will get the same random value; every one using a different random cache name will get unrelated random values. The <dashed-ident> gives the value an explicit name. If omitted, this part of the name is null. element-scoped adds an element-specific identifier to the random cache name, so different elements will get different random values. property-scoped adds the property name the random function is being used on to the random cache name, so different properties will get different random values. Note that shorthand declarations will apply the shorthand property’s name. property-index-scoped adds the property name and the index of the random function among all the random functions used in the same property value to the random cache name, so multiple instances of a random function in the same declaration will each get different random cache names. Note this index is assigned before shorthand expansion. See § 9.4.1 Simplification of <random-key> for how these values resolve. The <random-ua-ident> value, like fixed below, isn’t intended to be specified by authors, but can show up in computed values. It is a <custom-ident> that must start with the prefix ua-, or else it is invalid. When generated automatically by the user agent, it follows certain specific patterns; see § 9.4.1 Simplification of <random-key> for details.",
             "href": "https://drafts.csswg.org/css-values-5/#valdef-random-random-cache-key",
             "type": "value",
             "value": "<random-cache-key>"
           },
           {
             "name": "<random-ua-ident>",
-            "prose": "The <random-ua-ident> value, like fixed below, isn’t intended to be specified by authors, but can show up in computed values. It is a <custom-ident> that must start with the prefix ua-, or else it is invalid. When generated automatically by the user agent, it will always be ua-PROPERTY or ua-PROPERTY-INDEX, with the PROPERTY and INDEX parts replaced with a property name or integer index, like ua-margin-3.",
+            "prose": "The <random-ua-ident> value, like fixed below, isn’t intended to be specified by authors, but can show up in computed values. It is a <custom-ident> that must start with the prefix ua-, or else it is invalid. When generated automatically by the user agent, it follows certain specific patterns; see § 9.4.1 Simplification of <random-key> for details.",
             "href": "https://drafts.csswg.org/css-values-5/#valdef-random-random-ua-ident",
             "type": "value",
             "value": "<random-ua-ident>"
