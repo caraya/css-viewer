@@ -19,10 +19,11 @@ A React application that provides a comprehensive view of CSS properties, combin
 ## Features
 
 - **Properties View**: Browse CSS properties, values, functions, and at-rules.
+- **Baseline by Year**: Track and list web and CSS features by the year they achieved **Baseline: Newly Available** status across all core browser engines (Chrome, Edge, Firefox, Safari).
 - **Browser Support**: Filter features based on browser compatibility (Chrome, Firefox, Safari).
 - **Completed Specs**: View a list of W3C Recommendations.
 - **Official Definition**: Explore the official CSS definition based on the latest W3C Snapshot.
-- **Deep Linking**: Share links to specific views (e.g., `/#definition`, `/#browser-support`).
+- **Deep Linking**: Share links to specific views (e.g., `/#baseline`, `/#definition`, `/#browser-support`).
 
 ## Data Preparation
 

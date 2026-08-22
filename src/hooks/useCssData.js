@@ -9,13 +9,15 @@ export function useCssData() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [cssResponse, specsResponse] = await Promise.all([
+        const [cssResponse, specsResponse, baselineResponse] = await Promise.all([
           axios.get('/css-data.json?t=' + Date.now()),
-          axios.get('/specs.json?t=' + Date.now())
+          axios.get('/specs.json?t=' + Date.now()),
+          axios.get('/baseline-data.json?t=' + Date.now()).catch(() => ({ data: [] }))
         ]);
 
         const cssData = cssResponse.data;
         const specsData = specsResponse.data;
+        const baselineFeatures = baselineResponse.data || [];
 
         // Flatten properties, at-rules, etc.
         const properties = [];
@@ -61,7 +63,7 @@ export function useCssData() {
            }
         });
 
-        setData({ cssData, specsData, properties, atRules, values });
+        setData({ cssData, specsData, baselineFeatures, properties, atRules, values });
         setLoading(false);
       } catch (err) {
         console.error(err);

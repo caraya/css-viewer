@@ -4,11 +4,13 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import process from 'node:process';
 import bcd from '@mdn/browser-compat-data' with { type: "json" };
+import { features, groups } from 'web-features';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '../public');
 const OUTPUT_FILE = path.join(DATA_DIR, 'css-data.json');
 const SPECS_FILE = path.join(DATA_DIR, 'specs.json');
+const BASELINE_FILE = path.join(DATA_DIR, 'baseline-data.json');
 
 const BASE_URL = 'https://raw.githubusercontent.com/w3c/webref/curated/ed';
 const SPECS_URL = `${BASE_URL}/index.json`;
@@ -227,6 +229,68 @@ async function fetchData() {
 
     await fs.writeFile(OUTPUT_FILE, JSON.stringify(cssData, null, 2));
     console.log(`Saved CSS data to ${OUTPUT_FILE}`);
+
+    // Process and save Baseline data from web-features
+    console.log('\nProcessing Baseline web features data...');
+    const cssGroups = new Set();
+    for (const [id, grp] of Object.entries(groups)) {
+        if (grp.parent === 'css' || id === 'css') {
+            cssGroups.add(id);
+        }
+    }
+
+    const baselineFeatures = [];
+    for (const [id, feat] of Object.entries(features)) {
+        if (!feat.name || feat.kind === 'moved' || feat.kind === 'split') continue;
+
+        const grps = Array.isArray(feat.group) ? feat.group : (feat.group ? [feat.group] : []);
+        const isCSSGroup = grps.some(g => cssGroups.has(g) || g === 'css' || groups[g]?.parent === 'css');
+        const isCSSCompat = feat.compat_features && feat.compat_features.some(cf => cf.startsWith('css.'));
+        const isCSS = isCSSGroup || isCSSCompat;
+
+        const baseline = feat.status?.baseline;
+        const baselineLowDate = feat.status?.baseline_low_date;
+        const baselineHighDate = feat.status?.baseline_high_date;
+
+        let baselineYear = null;
+        if (baselineLowDate) {
+            const match = baselineLowDate.match(/(\d{4})/);
+            if (match) baselineYear = match[1];
+        }
+
+        const groupLabels = grps.map(g => groups[g]?.name || g);
+
+        baselineFeatures.push({
+            id,
+            name: feat.name,
+            description: feat.description || '',
+            description_html: feat.description_html || '',
+            spec: Array.isArray(feat.spec) ? feat.spec : (feat.spec ? [feat.spec] : []),
+            caniuse: feat.caniuse || null,
+            groups: grps,
+            groupLabels,
+            isCSS,
+            baseline: baseline || false,
+            baseline_low_date: baselineLowDate || null,
+            baseline_high_date: baselineHighDate || null,
+            baseline_year: baselineYear,
+            support: feat.status?.support || {},
+            compat_features: feat.compat_features || []
+        });
+    }
+
+    // Sort features: newly available with dates newest to oldest, then by name
+    baselineFeatures.sort((a, b) => {
+        if (a.baseline_low_date && b.baseline_low_date) {
+            return b.baseline_low_date.localeCompare(a.baseline_low_date);
+        }
+        if (a.baseline_low_date) return -1;
+        if (b.baseline_low_date) return 1;
+        return (a.name || a.id).localeCompare(b.name || b.id);
+    });
+
+    await fs.writeFile(BASELINE_FILE, JSON.stringify(baselineFeatures, null, 2));
+    console.log(`Saved ${baselineFeatures.length} Baseline features to ${BASELINE_FILE}`);
 
   } catch (error) {
     console.error('Error in fetchData:', error);

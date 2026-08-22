@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useCssData } from './hooks/useCssData';
+import { BaselineByYear } from './components/BaselineByYear';
 
 const OFFICIAL_SPECS = [
   {
@@ -155,10 +156,12 @@ function App() {
   // Initialize view from hash if present
   const [view, setView] = useState(() => {
     const hash = typeof window !== 'undefined' ? window.location.hash.slice(1) : '';
-    return ['properties', 'specs', 'browser-support', 'definition'].includes(hash) ? hash : 'properties';
+    if (hash === 'baseline-by-year' || hash === 'baseline') return 'baseline';
+    return ['properties', 'browser-support', 'baseline', 'specs', 'definition'].includes(hash) ? hash : 'properties';
   });
 
   const [category, setCategory] = useState('all'); // 'all', 'property', 'value', 'function', 'at-rule'
+  const [supportFilter, setSupportFilter] = useState('supported'); // 'supported', 'missing-any', 'missing-chrome', 'missing-firefox', 'missing-safari', 'full', 'all'
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationEnabled, setPaginationEnabled] = useState(true);
   const ITEMS_PER_PAGE = 9;
@@ -167,7 +170,9 @@ function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.slice(1);
-      if (['properties', 'specs', 'browser-support', 'definition'].includes(hash)) {
+      if (hash === 'baseline-by-year' || hash === 'baseline') {
+        setView('baseline');
+      } else if (['properties', 'browser-support', 'baseline', 'specs', 'definition'].includes(hash)) {
         setView(hash);
       }
     };
@@ -196,7 +201,22 @@ function App() {
   // Filter for Browser Support View
   const supportedItems = allItems.filter(item => {
     if (view !== 'browser-support') return false;
-    if (!item.compatibility || !item.compatibility.supported) return false;
+
+    const compat = item.compatibility;
+    const support = compat?.support || {};
+    const isSupported = Boolean(compat?.supported);
+    const hasChrome = Boolean(support.chrome);
+    const hasFirefox = Boolean(support.firefox);
+    const hasSafari = Boolean(support.safari);
+    const isMissingAny = !hasChrome || !hasFirefox || !hasSafari;
+
+    if (supportFilter === 'supported' && !isSupported) return false;
+    if (supportFilter === 'missing-any' && !isMissingAny) return false;
+    if (supportFilter === 'missing-chrome' && hasChrome) return false;
+    if (supportFilter === 'missing-firefox' && hasFirefox) return false;
+    if (supportFilter === 'missing-safari' && hasSafari) return false;
+    if (supportFilter === 'full' && (isMissingAny || !isSupported)) return false;
+
     const matchesSearch = item.name.toLowerCase().includes(search.toLowerCase());
     const matchesCategory = category === 'all' || item.type === category;
     return matchesSearch && matchesCategory;
@@ -228,6 +248,11 @@ function App() {
       setCurrentPage(1);
   };
 
+  const handleSupportFilterChange = (newFilter) => {
+      setSupportFilter(newFilter);
+      setCurrentPage(1);
+  };
+
   const completedSpecs = data.specsData.results.filter(spec =>
       spec.release &&
       spec.release.status === 'Recommendation' &&
@@ -237,29 +262,41 @@ function App() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold">CSS Reference</h1>
-        <div className="space-x-2">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+        <div>
+          <h1 className="text-3xl font-bold">CSS Reference</h1>
+          <p className="text-sm text-gray-500 mt-0.5">Explore properties, baseline availability by year, and specification standards</p>
+        </div>
+        <div className="flex flex-wrap gap-2">
             <button
-                className={`px-4 py-2 rounded ${view === 'properties' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+                className={`px-4 py-2 rounded font-medium transition-colors ${view === 'properties' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                 onClick={() => handleViewChange('properties')}
             >
                 Properties
             </button>
             <button
-                className={`px-4 py-2 rounded ${view === 'browser-support' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+                className={`px-4 py-2 rounded font-medium transition-colors ${view === 'browser-support' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                 onClick={() => handleViewChange('browser-support')}
             >
                 Browser Support
             </button>
             <button
-                className={`px-4 py-2 rounded ${view === 'specs' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+                className={`px-4 py-2 rounded font-medium transition-colors flex items-center gap-1.5 ${view === 'baseline' ? 'bg-blue-600 text-white shadow-xs' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
+                onClick={() => handleViewChange('baseline')}
+            >
+                <span>Baseline by Year</span>
+                <span className={`text-xs px-1.5 py-0.5 rounded-full ${view === 'baseline' ? 'bg-blue-800 text-white' : 'bg-blue-100 text-blue-800 font-bold'}`}>
+                  New
+                </span>
+            </button>
+            <button
+                className={`px-4 py-2 rounded font-medium transition-colors ${view === 'specs' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                 onClick={() => handleViewChange('specs')}
             >
                 Completed Specs
             </button>
             <button
-                className={`px-4 py-2 rounded ${view === 'definition' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+                className={`px-4 py-2 rounded font-medium transition-colors ${view === 'definition' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                 onClick={() => handleViewChange('definition')}
             >
                 Official Definition
@@ -402,29 +439,56 @@ function App() {
 
       {view === 'browser-support' && (
         <>
-
-            <div>
-              <h2 className="text-2xl mb-4">Browser Supported Features</h2>
-              <p className="mb-4 text-gray-700">
-                This list shows CSS features that are implemented in at least 2 major browsers (Chrome, Firefox, Safari).
+            <div className="bg-gradient-to-r from-slate-50 to-blue-50 border border-slate-200 rounded-lg p-4 mb-4">
+              <h2 className="text-2xl font-bold text-gray-900 mb-1">Browser Support & Compatibility Gaps</h2>
+              <p className="text-sm text-gray-700 mb-2">
+                Analyze browser support and find interoperability gaps across major browser engines (Chrome, Firefox, Safari).
               </p>
-              <p className="mb-4 text-gray-700">
-                This may be a more rational place to begin analyzing what CSS4 (and follow on versions) should be like. Use the features that are supported as the starting point and then build from there.
-              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600">
+                <span>Total features matching filter: <strong className="text-gray-900">{itemsToDisplay.length}</strong></span>
+                {supportFilter === 'missing-any' && (
+                  <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in at least one major browser</span>
+                )}
+                {supportFilter === 'missing-chrome' && (
+                  <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in Chrome</span>
+                )}
+                {supportFilter === 'missing-firefox' && (
+                  <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in Firefox</span>
+                )}
+                {supportFilter === 'missing-safari' && (
+                  <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in Safari</span>
+                )}
+              </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 mb-4">
+            <div className="flex flex-col md:flex-row gap-3 mb-4 items-stretch md:items-center">
                 <input
                     type="text"
-                    placeholder="Search supported features..."
-                    className="flex-grow p-2 border rounded"
+                    placeholder="Search features (e.g. subgrid, anchor, container)..."
+                    className="flex-grow p-2 text-sm border rounded bg-white"
                     value={search}
                     onChange={handleSearchChange}
                 />
+
+                <select
+                    value={supportFilter}
+                    onChange={(e) => handleSupportFilterChange(e.target.value)}
+                    className="p-2 text-sm border rounded bg-white font-medium text-gray-700"
+                    title="Filter by browser support status"
+                >
+                    <option value="supported">Supported (≥2 browsers)</option>
+                    <option value="missing-any">⚠️ Missing in 1+ browsers</option>
+                    <option value="missing-chrome">Missing in Chrome</option>
+                    <option value="missing-firefox">Missing in Firefox</option>
+                    <option value="missing-safari">Missing in Safari</option>
+                    <option value="full">Full Support (All 3 browsers)</option>
+                    <option value="all">All Features</option>
+                </select>
+
                 <select
                     value={category}
                     onChange={(e) => handleCategoryChange(e.target.value)}
-                    className="p-2 border rounded bg-white"
+                    className="p-2 text-sm border rounded bg-white text-gray-700"
                 >
                     <option value="all">All Categories</option>
                     <option value="property">Properties</option>
@@ -432,7 +496,21 @@ function App() {
                     <option value="function">Functions</option>
                     <option value="at-rule">At-Rules</option>
                 </select>
-                <div className="flex items-center space-x-2 bg-white p-2 border rounded">
+
+                <div className="flex items-center space-x-2 bg-white p-2 border rounded shrink-0">
+                    <input
+                        type="checkbox"
+                        id="missing-flag-toggle"
+                        checked={supportFilter === 'missing-any'}
+                        onChange={(e) => handleSupportFilterChange(e.target.checked ? 'missing-any' : 'supported')}
+                        className="h-4 w-4 text-amber-600 focus:ring-amber-500 rounded"
+                    />
+                    <label htmlFor="missing-flag-toggle" className="text-xs font-semibold text-gray-700 select-none cursor-pointer">
+                        Missing in 1+ Browsers
+                    </label>
+                </div>
+
+                <div className="flex items-center space-x-2 bg-white p-2 border rounded shrink-0">
                     <input
                         type="checkbox"
                         id="pagination-toggle-support"
@@ -440,57 +518,103 @@ function App() {
                         onChange={(e) => setPaginationEnabled(e.target.checked)}
                         className="h-4 w-4 text-blue-600"
                     />
-                    <label htmlFor="pagination-toggle-support" className="text-sm text-gray-700 select-none cursor-pointer">
+                    <label htmlFor="pagination-toggle-support" className="text-xs text-gray-700 select-none cursor-pointer">
                         Pagination
                     </label>
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {currentItems.map((item, index) => (
-                <div key={`${item.spec}-${item.name}-${index}`} className="border p-4 rounded shadow hover:shadow-lg transition relative">
-                    <span className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
-                        item.type === 'property' ? 'bg-blue-100 text-blue-800' :
-                        item.type === 'at-rule' ? 'bg-green-100 text-green-800' :
-                        item.type === 'function' ? 'bg-pink-100 text-pink-800' :
-                        'bg-purple-100 text-purple-800'
-                    }`}>
-                        {item.type}
-                    </span>
-                    <h2 className="text-xl font-semibold text-blue-600 pr-16">{item.name}</h2>
+                {currentItems.map((item, index) => {
+                    const support = item.compatibility?.support || {};
+                    const missingBrowsers = ['chrome', 'firefox', 'safari'].filter(b => !support[b]);
 
-                    <div className="mt-4 flex space-x-2">
-                        {['chrome', 'firefox', 'safari'].map(browser => {
-                            const isSupported = item.compatibility.support[browser];
-                            return (
-                                <div key={browser} className={`flex items-center space-x-1 px-2 py-1 rounded text-xs font-bold ${isSupported ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-400'}`}>
-                                    <span className="capitalize">{browser}</span>
-                                    <span>{isSupported ? '✓' : '✗'}</span>
+                    return (
+                        <div key={`${item.spec}-${item.name}-${index}`} className="border p-4 rounded shadow-sm hover:shadow-md transition relative bg-white flex flex-col justify-between">
+                            <div>
+                                <span className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
+                                    item.type === 'property' ? 'bg-blue-100 text-blue-800' :
+                                    item.type === 'at-rule' ? 'bg-green-100 text-green-800' :
+                                    item.type === 'function' ? 'bg-pink-100 text-pink-800' :
+                                    'bg-purple-100 text-purple-800'
+                                }`}>
+                                    {item.type}
+                                </span>
+                                <h2 className="text-xl font-semibold text-blue-600 pr-16 font-mono">{item.name}</h2>
+                                {item.sourceSpec && (
+                                    <p className="text-xs text-gray-500 mb-2">
+                                        Defined in: <a href={item.sourceSpec.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{item.sourceSpec.title}</a>
+                                    </p>
+                                )}
+
+                                {item.note && (
+                                    <p className="text-xs text-amber-700 bg-amber-50 p-2 rounded mb-2 border border-amber-200">
+                                        <strong>Note:</strong> {item.note}
+                                    </p>
+                                )}
+
+                                {item.value && (
+                                    <p className="text-xs font-mono bg-gray-100 p-1.5 rounded truncate mb-2" title={item.value}>
+                                        {item.value}
+                                    </p>
+                                )}
+
+                                {missingBrowsers.length > 0 && (
+                                    <div className="mb-2">
+                                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+                                            <span>⚠️ Not supported in:</span>
+                                            <span className="capitalize font-bold">{missingBrowsers.join(', ')}</span>
+                                        </span>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div>
+                                <div className="mt-3 flex space-x-2">
+                                    {['chrome', 'firefox', 'safari'].map(browser => {
+                                        const isSupported = support[browser];
+                                        return (
+                                            <div
+                                                key={browser}
+                                                className={`flex items-center space-x-1 px-2 py-1 rounded text-xs font-bold ${
+                                                    isSupported ? 'bg-green-100 text-green-800' : 'bg-red-50 text-red-700 border border-red-200'
+                                                }`}
+                                            >
+                                                <span className="capitalize">{browser}</span>
+                                                <span>{isSupported ? '✓' : '✗'}</span>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
-                            );
-                        })}
-                    </div>
 
-                    {item.compatibility.flagged && (
-                        <p className="text-xs text-orange-600 bg-orange-50 p-1 rounded mt-2 border border-orange-200">
-                            ⚠️ Implemented behind a flag
-                        </p>
-                    )}
+                                {item.compatibility?.flagged && (
+                                    <p className="text-xs text-orange-600 bg-orange-50 p-1 rounded mt-2 border border-orange-200">
+                                        ⚠️ Implemented behind a flag
+                                    </p>
+                                )}
 
-                    <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline text-sm mt-4 block"
-                    >
-                        View in Spec
-                    </a>
-                </div>
-                ))}
+                                {item.href ? (
+                                    <a
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-500 hover:underline text-xs mt-3 block"
+                                    >
+                                        View in Spec ↗
+                                    </a>
+                                ) : (
+                                    <span className="text-gray-400 text-xs mt-3 block cursor-not-allowed" title="Link not available">
+                                        View in Spec (Not Available)
+                                    </span>
+                                )}
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
 
             {itemsToDisplay.length === 0 && (
-                <p className="text-center text-gray-500 mt-8">No supported items found matching "{search}"</p>
+                <p className="text-center text-gray-500 mt-8">No items found matching the current filters and "{search}"</p>
             )}
 
             {itemsToDisplay.length > 0 && paginationEnabled && (
@@ -596,6 +720,10 @@ function App() {
                   ))}
               </div>
           </div>
+      )}
+
+      {view === 'baseline' && (
+          <BaselineByYear baselineFeatures={data.baselineFeatures || []} />
       )}
     </div>
   );
