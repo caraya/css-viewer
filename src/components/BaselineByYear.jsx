@@ -65,13 +65,18 @@ export function BaselineByYear({ baselineFeatures = [] }) {
 
   // Filter features based on year, status, group, search
   const filteredFeatures = useMemo(() => {
+    const trimmedSearch = search.trim().toLowerCase();
+    const isYearQuery = /^\d{4}$/.test(trimmedSearch);
+
     return scopedFeatures.filter(feat => {
       // Must have baseline status
       if (!feat.baseline || !feat.baseline_year) return false;
 
-      // Year filter
+      // Year filter (if searching for a specific 4-digit year, allow matching that year regardless of selected tab)
       if (selectedYear !== 'all' && feat.baseline_year !== selectedYear) {
-        return false;
+        if (!isYearQuery || feat.baseline_year !== trimmedSearch) {
+          return false;
+        }
       }
 
       // Status filter (low = newly available, high = widely available)
@@ -84,14 +89,15 @@ export function BaselineByYear({ baselineFeatures = [] }) {
         return false;
       }
 
-      // Search filter
-      if (search.trim()) {
-        const q = search.toLowerCase();
-        const matchesName = feat.name?.toLowerCase().includes(q);
-        const matchesDesc = feat.description?.toLowerCase().includes(q);
-        const matchesId = feat.id?.toLowerCase().includes(q);
-        const matchesCompat = feat.compat_features?.some(cf => cf.toLowerCase().includes(q));
-        if (!matchesName && !matchesDesc && !matchesId && !matchesCompat) {
+      // Search filter: matches name, description, id, compat keys, or baseline year/date
+      if (trimmedSearch) {
+        const matchesName = feat.name?.toLowerCase().includes(trimmedSearch);
+        const matchesDesc = feat.description?.toLowerCase().includes(trimmedSearch);
+        const matchesId = feat.id?.toLowerCase().includes(trimmedSearch);
+        const matchesCompat = feat.compat_features?.some(cf => cf.toLowerCase().includes(trimmedSearch));
+        const matchesYear = feat.baseline_year?.includes(trimmedSearch) || feat.baseline_low_date?.includes(trimmedSearch);
+
+        if (!matchesName && !matchesDesc && !matchesId && !matchesCompat && !matchesYear) {
           return false;
         }
       }
@@ -114,7 +120,7 @@ export function BaselineByYear({ baselineFeatures = [] }) {
     return grouped;
   }, [selectedYear, filteredFeatures]);
 
-  // Pagination calculations (when not in "all years grouped" view, or for overall list)
+  // Pagination calculations
   const totalPages = Math.ceil(filteredFeatures.length / ITEMS_PER_PAGE) || 1;
   const paginatedFeatures = useMemo(() => {
     if (!paginationEnabled || selectedYear === 'all') {
@@ -180,44 +186,43 @@ export function BaselineByYear({ baselineFeatures = [] }) {
       <article
         key={item.id}
         className="bg-white border border-gray-200 rounded-lg p-5 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
+        aria-labelledby={`feature-${item.id}`}
       >
         <div>
           {/* Header & Badges */}
           <div className="flex items-start justify-between gap-2 mb-2">
-            <h3 className="text-lg font-bold text-blue-700 break-words font-mono">
+            <h3 id={`feature-${item.id}`} className="text-lg font-bold text-blue-700 break-words font-mono">
               {item.name}
             </h3>
 
             {isNewlyAvailable && (
               <span
                 className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300 shrink-0"
-                title={`Newly available as of ${item.baseline_low_date}`}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                Newly Available
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" aria-hidden="true"></span>
+                <span>Newly Available</span>
               </span>
             )}
 
             {isWidelyAvailable && (
               <span
                 className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-300 shrink-0"
-                title={`Widely available (Newly available: ${item.baseline_low_date}, Widely available: ${item.baseline_high_date})`}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-                Widely Available
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-600" aria-hidden="true"></span>
+                <span>Widely Available</span>
               </span>
             )}
           </div>
 
           {/* Baseline Date Pill */}
           {item.baseline_low_date && (
-            <div className="text-xs text-gray-500 mb-3 flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span className="font-medium text-gray-700">
+            <div className="text-xs text-gray-600 mb-3 flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span className="font-semibold text-gray-800">
                 Baseline {item.baseline_year}:
               </span>
-              <span>Became newly available on <strong className="text-gray-800">{formatDate(item.baseline_low_date)}</strong></span>
+              <span>Became newly available on <strong className="text-gray-900">{formatDate(item.baseline_low_date)}</strong></span>
               {item.baseline_high_date && (
-                <span className="text-gray-400">
+                <span className="text-gray-500">
                   • Widely available since {formatDate(item.baseline_high_date)}
                 </span>
               )}
@@ -229,7 +234,7 @@ export function BaselineByYear({ baselineFeatures = [] }) {
 
           {/* Category / Group Badges */}
           {item.groupLabels && item.groupLabels.length > 0 && (
-            <div className="flex flex-wrap gap-1.5 mb-4">
+            <div className="flex flex-wrap gap-1.5 mb-4" aria-label="Categories">
               {item.groupLabels.map((lbl, idx) => (
                 <span
                   key={idx}
@@ -239,7 +244,7 @@ export function BaselineByYear({ baselineFeatures = [] }) {
                 </span>
               ))}
               {item.isCSS && (
-                <span className="px-2 py-0.5 rounded text-xs bg-indigo-50 text-indigo-700 border border-indigo-200 font-medium">
+                <span className="px-2 py-0.5 rounded text-xs bg-indigo-50 text-indigo-700 border border-indigo-200 font-semibold">
                   CSS
                 </span>
               )}
@@ -250,23 +255,27 @@ export function BaselineByYear({ baselineFeatures = [] }) {
         <div>
           {/* Browser Support Row */}
           {item.support && (
-            <div className="bg-gray-50 rounded p-2.5 border border-gray-200 mb-3">
-              <div className="text-xs font-semibold text-gray-600 mb-1.5">Browser Version Added:</div>
+            <div className="bg-gray-50 rounded p-2.5 border border-gray-200 mb-3" aria-label={`Browser versions supporting ${item.name}`}>
+              <div className="text-xs font-semibold text-gray-700 mb-1.5">Browser Version Added:</div>
               <div className="grid grid-cols-4 gap-1 text-center">
                 <div className="bg-white p-1 rounded border border-gray-200 text-xs">
-                  <div className="text-gray-500 text-[10px] uppercase font-bold">Chrome</div>
+                  <div className="text-gray-500 text-[10px] uppercase font-bold" aria-hidden="true">Chrome</div>
+                  <span className="sr-only">Chrome: </span>
                   <div className="font-mono font-bold text-gray-800">{item.support.chrome || '—'}</div>
                 </div>
                 <div className="bg-white p-1 rounded border border-gray-200 text-xs">
-                  <div className="text-gray-500 text-[10px] uppercase font-bold">Edge</div>
+                  <div className="text-gray-500 text-[10px] uppercase font-bold" aria-hidden="true">Edge</div>
+                  <span className="sr-only">Edge: </span>
                   <div className="font-mono font-bold text-gray-800">{item.support.edge || '—'}</div>
                 </div>
                 <div className="bg-white p-1 rounded border border-gray-200 text-xs">
-                  <div className="text-gray-500 text-[10px] uppercase font-bold">Firefox</div>
+                  <div className="text-gray-500 text-[10px] uppercase font-bold" aria-hidden="true">Firefox</div>
+                  <span className="sr-only">Firefox: </span>
                   <div className="font-mono font-bold text-gray-800">{item.support.firefox || '—'}</div>
                 </div>
                 <div className="bg-white p-1 rounded border border-gray-200 text-xs">
-                  <div className="text-gray-500 text-[10px] uppercase font-bold">Safari</div>
+                  <div className="text-gray-500 text-[10px] uppercase font-bold" aria-hidden="true">Safari</div>
+                  <span className="sr-only">Safari: </span>
                   <div className="font-mono font-bold text-gray-800">{item.support.safari || '—'}</div>
                 </div>
               </div>
@@ -283,7 +292,9 @@ export function BaselineByYear({ baselineFeatures = [] }) {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 hover:underline inline-flex items-center gap-0.5 font-medium"
                 >
-                  Specification ↗
+                  <span>Specification</span>
+                  <span aria-hidden="true">↗</span>
+                  <span className="sr-only"> (opens in new window)</span>
                 </a>
               )}
               {item.caniuse && (
@@ -291,18 +302,21 @@ export function BaselineByYear({ baselineFeatures = [] }) {
                   href={`https://caniuse.com/${Array.isArray(item.caniuse) ? item.caniuse[0] : item.caniuse}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-700 hover:text-amber-900 hover:underline inline-flex items-center gap-0.5 font-medium"
+                  className="text-amber-800 hover:text-amber-950 hover:underline inline-flex items-center gap-0.5 font-medium"
                 >
-                  Can I Use ↗
+                  <span>Can I Use</span>
+                  <span aria-hidden="true">↗</span>
+                  <span className="sr-only"> (opens in new window)</span>
                 </a>
               )}
             </div>
 
             {item.compat_features && item.compat_features.length > 0 && (
               <span
-                className="text-gray-400 font-mono text-[11px] truncate max-w-[160px]"
+                className="text-gray-500 font-mono text-[11px] truncate max-w-[160px]"
                 title={item.compat_features.join(', ')}
               >
+                <span className="sr-only">Compatibility key: </span>
                 {item.compat_features[0]}
               </span>
             )}
@@ -314,12 +328,18 @@ export function BaselineByYear({ baselineFeatures = [] }) {
 
   return (
     <div className="space-y-6">
+      {/* Screen Reader Live Region for filter and search results */}
+      <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+        {filteredFeatures.length} {scope === 'css' ? 'CSS' : 'web'} features found for {selectedYear === 'all' ? 'all years' : `year ${selectedYear}`}
+      </div>
+
       {/* Informational Intro Banner */}
-      <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-200 rounded-lg p-5">
+      <section aria-labelledby="baseline-heading" className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-blue-200 rounded-lg p-5">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-              <span>🎯 Baseline Features by Year</span>
+            <h2 id="baseline-heading" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+              <span aria-hidden="true">🎯</span>
+              <span>Baseline Features by Year</span>
             </h2>
             <p className="text-sm text-gray-700 mt-1 max-w-3xl leading-relaxed">
               <strong>Baseline Newly Available</strong> identifies the exact point in time when a web platform feature becomes interoperable across all core modern browser engines (Chrome, Edge, Firefox, and Safari on desktop and mobile).
@@ -344,39 +364,43 @@ export function BaselineByYear({ baselineFeatures = [] }) {
 
         <div className="mt-4 pt-3 border-t border-blue-200/60 flex flex-wrap items-center gap-4 text-xs text-gray-600">
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" aria-hidden="true"></span>
             <span><strong>Newly Available:</strong> Supported across all core browser engines</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-blue-500" aria-hidden="true"></span>
             <span><strong>Widely Available:</strong> Baseline for 30+ months (safe for universal production use)</span>
           </div>
           <a
             href="https://web.dev/baseline"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-700 hover:underline ml-auto font-medium"
+            className="text-blue-700 hover:underline ml-auto font-medium inline-flex items-center gap-0.5"
           >
-            Learn about Web Baseline ↗
+            <span>Learn about Web Baseline</span>
+            <span aria-hidden="true">↗</span>
+            <span className="sr-only"> (opens in new window)</span>
           </a>
         </div>
-      </div>
+      </section>
 
       {/* Year Selector Pills */}
-      <div>
+      <nav aria-label="Baseline Year Selection">
         <div className="flex items-center justify-between mb-2">
-          <label className="text-sm font-bold text-gray-800 uppercase tracking-wide">
+          <span className="text-sm font-bold text-gray-800 uppercase tracking-wide" id="year-select-label">
             Select Baseline Year:
-          </label>
+          </span>
           <span className="text-xs text-gray-500">
             Click a year to view features that became interoperable in that year
           </span>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2" role="group" aria-labelledby="year-select-label">
           <button
             type="button"
             onClick={() => handleYearChange('all')}
+            aria-pressed={selectedYear === 'all'}
+            aria-label={`All years, total ${totalWithBaseline} features`}
             className={`px-3.5 py-1.5 rounded-md text-sm font-semibold transition-colors flex items-center gap-1.5 ${
               selectedYear === 'all'
                 ? 'bg-blue-700 text-white shadow-xs ring-2 ring-blue-700 ring-offset-1'
@@ -397,6 +421,8 @@ export function BaselineByYear({ baselineFeatures = [] }) {
                 key={year}
                 type="button"
                 onClick={() => handleYearChange(year)}
+                aria-pressed={isSelected}
+                aria-label={`Year ${year}, ${count} features`}
                 className={`px-3.5 py-1.5 rounded-md text-sm font-semibold transition-colors flex items-center gap-1.5 ${
                   isSelected
                     ? 'bg-blue-600 text-white shadow-xs ring-2 ring-blue-600 ring-offset-1'
@@ -411,58 +437,98 @@ export function BaselineByYear({ baselineFeatures = [] }) {
             );
           })}
         </div>
-      </div>
+      </nav>
 
       {/* Filter and Search Bar */}
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row gap-3 items-stretch md:items-center">
+      <section aria-label="Feature search and filters" className="bg-gray-50 border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row gap-3 items-stretch md:items-center">
         {/* Search */}
         <div className="flex-grow">
+          <label htmlFor="search-baseline" className="sr-only">
+            Search baseline features by name, keyword, or year
+          </label>
           <input
+            id="search-baseline"
             type="text"
-            placeholder="Search baseline features (e.g. subgrid, :has, color-mix)..."
+            placeholder="Search by feature name, keyword, or year (e.g. 2024, subgrid, :has)..."
             value={search}
             onChange={handleSearchChange}
-            className="w-full p-2 text-sm border border-gray-300 rounded bg-white focus:outline-hidden focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 text-sm border border-gray-300 rounded bg-white"
           />
         </div>
 
+        {/* Year Dropdown */}
+        <div>
+          <label htmlFor="year-select-dropdown" className="sr-only">
+            Filter by Baseline Year
+          </label>
+          <select
+            id="year-select-dropdown"
+            value={selectedYear}
+            onChange={(e) => handleYearChange(e.target.value)}
+            className="w-full md:w-auto p-2 text-sm border border-gray-300 rounded bg-white font-semibold text-gray-800"
+            title="Filter by Baseline year"
+          >
+            <option value="all">All Years ({totalWithBaseline})</option>
+            {years.map(year => (
+              <option key={year} value={year}>
+                Year {year} ({yearCounts[year] || 0})
+              </option>
+            ))}
+          </select>
+        </div>
+
         {/* Scope: CSS only vs All Web Features */}
-        <select
-          value={scope}
-          onChange={(e) => handleScopeChange(e.target.value)}
-          className="p-2 text-sm border border-gray-300 rounded bg-white font-medium text-gray-700"
-          title="Filter by feature scope"
-        >
-          <option value="css">CSS Features Only</option>
-          <option value="all">All Web Platform Features</option>
-        </select>
+        <div>
+          <label htmlFor="scope-select" className="sr-only">
+            Feature Scope
+          </label>
+          <select
+            id="scope-select"
+            value={scope}
+            onChange={(e) => handleScopeChange(e.target.value)}
+            className="w-full md:w-auto p-2 text-sm border border-gray-300 rounded bg-white font-medium text-gray-700"
+          >
+            <option value="css">CSS Features Only</option>
+            <option value="all">All Web Platform Features</option>
+          </select>
+        </div>
 
         {/* Group / Subcategory */}
-        <select
-          value={selectedGroup}
-          onChange={(e) => handleGroupFilterChange(e.target.value)}
-          className="p-2 text-sm border border-gray-300 rounded bg-white text-gray-700 max-w-[200px]"
-          title="Filter by feature category"
-        >
-          <option value="all">All Categories</option>
-          {availableGroups.map(grp => (
-            <option key={grp.id} value={grp.id}>
-              {grp.label}
-            </option>
-          ))}
-        </select>
+        <div>
+          <label htmlFor="group-select" className="sr-only">
+            Category
+          </label>
+          <select
+            id="group-select"
+            value={selectedGroup}
+            onChange={(e) => handleGroupFilterChange(e.target.value)}
+            className="w-full md:w-auto p-2 text-sm border border-gray-300 rounded bg-white text-gray-700 max-w-[200px]"
+          >
+            <option value="all">All Categories</option>
+            {availableGroups.map(grp => (
+              <option key={grp.id} value={grp.id}>
+                {grp.label}
+              </option>
+            ))}
+          </select>
+        </div>
 
         {/* Baseline Status */}
-        <select
-          value={statusFilter}
-          onChange={(e) => handleStatusFilterChange(e.target.value)}
-          className="p-2 text-sm border border-gray-300 rounded bg-white text-gray-700"
-          title="Filter by Baseline status"
-        >
-          <option value="all">All Baseline Statuses</option>
-          <option value="low">Newly Available Only</option>
-          <option value="high">Widely Available Only</option>
-        </select>
+        <div>
+          <label htmlFor="status-select" className="sr-only">
+            Baseline Status
+          </label>
+          <select
+            id="status-select"
+            value={statusFilter}
+            onChange={(e) => handleStatusFilterChange(e.target.value)}
+            className="w-full md:w-auto p-2 text-sm border border-gray-300 rounded bg-white text-gray-700"
+          >
+            <option value="all">All Baseline Statuses</option>
+            <option value="low">Newly Available Only</option>
+            <option value="high">Widely Available Only</option>
+          </select>
+        </div>
 
         {/* Pagination Toggle (only when specific year selected) */}
         {selectedYear !== 'all' && (
@@ -472,14 +538,14 @@ export function BaselineByYear({ baselineFeatures = [] }) {
               id="pagination-toggle-baseline"
               checked={paginationEnabled}
               onChange={(e) => setPaginationEnabled(e.target.checked)}
-              className="h-4 w-4 text-blue-600"
+              className="h-4 w-4 text-blue-600 rounded"
             />
             <label htmlFor="pagination-toggle-baseline" className="text-xs text-gray-700 select-none cursor-pointer">
               Paginate
             </label>
           </div>
         )}
-      </div>
+      </section>
 
       {/* Results Header / Active Filter Summary */}
       <div className="flex items-center justify-between text-sm text-gray-600 border-b border-gray-200 pb-2">
@@ -494,8 +560,8 @@ export function BaselineByYear({ baselineFeatures = [] }) {
       {/* Feature Display */}
       {filteredFeatures.length === 0 ? (
         <div className="text-center py-12 bg-gray-50 border border-gray-200 rounded-lg">
-          <p className="text-gray-500 text-lg mb-2">No features found</p>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-600 text-lg font-semibold mb-2">No features found</p>
+          <p className="text-gray-500 text-sm">
             Try adjusting your search query, selecting a different year, or switching categories.
           </p>
         </div>
@@ -505,10 +571,10 @@ export function BaselineByYear({ baselineFeatures = [] }) {
           {years.filter(year => featuresByYearGrouped[year] && featuresByYearGrouped[year].length > 0).map(year => {
             const yearList = featuresByYearGrouped[year];
             return (
-              <section key={year} className="space-y-4">
+              <section key={year} aria-labelledby={`year-heading-${year}`} className="space-y-4">
                 <div className="flex items-center justify-between border-b-2 border-blue-600 pb-2">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-2xl font-bold text-gray-900">
+                    <h3 id={`year-heading-${year}`} className="text-2xl font-bold text-gray-900">
                       Baseline {year}
                     </h3>
                     <span className="px-2.5 py-0.5 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">
@@ -519,6 +585,7 @@ export function BaselineByYear({ baselineFeatures = [] }) {
                     type="button"
                     onClick={() => handleYearChange(year)}
                     className="text-xs text-blue-600 hover:text-blue-800 hover:underline font-semibold"
+                    aria-label={`View only features from ${year}`}
                   >
                     View only {year} →
                   </button>
@@ -544,25 +611,27 @@ export function BaselineByYear({ baselineFeatures = [] }) {
 
           {/* Pagination Controls */}
           {paginationEnabled && totalPages > 1 && (
-            <div className="flex justify-center items-center space-x-4 mt-8">
+            <nav aria-label="Baseline Features Pagination" className="flex justify-center items-center space-x-4 mt-8">
               <button
                 onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
-                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 text-sm font-medium hover:bg-gray-300 transition-colors"
+                aria-label="Go to previous page"
+                className="px-4 py-2 bg-gray-200 text-gray-800 rounded disabled:opacity-50 text-sm font-medium hover:bg-gray-300 transition-colors"
               >
                 Previous
               </button>
-              <span className="text-sm text-gray-700">
+              <span className="text-sm text-gray-700" aria-current="page">
                 Page {currentPage} of {totalPages}
               </span>
               <button
                 onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                 disabled={currentPage === totalPages}
-                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 text-sm font-medium hover:bg-gray-300 transition-colors"
+                aria-label="Go to next page"
+                className="px-4 py-2 bg-gray-200 text-gray-800 rounded disabled:opacity-50 text-sm font-medium hover:bg-gray-300 transition-colors"
               >
                 Next
               </button>
-            </div>
+            </nav>
           )}
         </div>
       )}

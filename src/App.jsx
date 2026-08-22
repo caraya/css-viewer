@@ -262,27 +262,39 @@ function App() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+      {/* Skip to Main Content Link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-700 focus:text-white focus:rounded-md focus:shadow-lg focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 font-semibold"
+      >
+        Skip to main content
+      </a>
+
+      {/* Header and Main Navigation */}
+      <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
         <div>
           <h1 className="text-3xl font-bold">CSS Reference</h1>
           <p className="text-sm text-gray-500 mt-0.5">Explore properties, baseline availability by year, and specification standards</p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <nav aria-label="Main Navigation" className="flex flex-wrap gap-2">
             <button
                 className={`px-4 py-2 rounded font-medium transition-colors ${view === 'properties' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                 onClick={() => handleViewChange('properties')}
+                aria-current={view === 'properties' ? 'page' : undefined}
             >
                 Properties
             </button>
             <button
                 className={`px-4 py-2 rounded font-medium transition-colors ${view === 'browser-support' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                 onClick={() => handleViewChange('browser-support')}
+                aria-current={view === 'browser-support' ? 'page' : undefined}
             >
                 Browser Support
             </button>
             <button
                 className={`px-4 py-2 rounded font-medium transition-colors flex items-center gap-1.5 ${view === 'baseline' ? 'bg-blue-600 text-white shadow-xs' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                 onClick={() => handleViewChange('baseline')}
+                aria-current={view === 'baseline' ? 'page' : undefined}
             >
                 <span>Baseline by Year</span>
                 <span className={`text-xs px-1.5 py-0.5 rounded-full ${view === 'baseline' ? 'bg-blue-800 text-white' : 'bg-blue-100 text-blue-800 font-bold'}`}>
@@ -292,439 +304,493 @@ function App() {
             <button
                 className={`px-4 py-2 rounded font-medium transition-colors ${view === 'specs' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                 onClick={() => handleViewChange('specs')}
+                aria-current={view === 'specs' ? 'page' : undefined}
             >
                 Completed Specs
             </button>
             <button
                 className={`px-4 py-2 rounded font-medium transition-colors ${view === 'definition' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}
                 onClick={() => handleViewChange('definition')}
+                aria-current={view === 'definition' ? 'page' : undefined}
             >
                 Official Definition
             </button>
-        </div>
-      </div>
+        </nav>
+      </header>
 
-      {view === 'properties' && (
-        <>
-            <div className="bg-gray-50 border border-gray-200 rounded p-4 mb-6 text-sm text-gray-700">
-                <h3 className="font-semibold mb-2 text-gray-900">Definitions:</h3>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <div>
-                        <span className="inline-block px-2 py-1 rounded bg-blue-100 text-blue-800 text-xs font-bold mb-1">Property</span>
-                        <p>A specific stylistic feature that you can modify (e.g., <code>color</code>, <code>font-size</code>).</p>
-                    </div>
-                    <div>
-                        <span className="inline-block px-2 py-1 rounded bg-purple-100 text-purple-800 text-xs font-bold mb-1">Value</span>
-                        <p>The setting or parameter applied to a property (e.g., <code>red</code>, <code>10px</code>, <code>bold</code>).</p>
-                    </div>
-                    <div>
-                        <span className="inline-block px-2 py-1 rounded bg-pink-100 text-pink-800 text-xs font-bold mb-1">Function</span>
-                        <p>A value that takes arguments to compute a result (e.g., <code>rgb()</code>, <code>calc()</code>).</p>
-                    </div>
-                    <div>
-                        <span className="inline-block px-2 py-1 rounded bg-green-100 text-green-800 text-xs font-bold mb-1">At-Rule</span>
-                        <p>A statement that instructs CSS how to behave (e.g., <code>@media</code>, <code>@keyframes</code>).</p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-4 mb-4">
-                <input
-                    type="text"
-                    placeholder="Search properties..."
-                    className="flex-grow p-2 border rounded"
-                    value={search}
-                    onChange={handleSearchChange}
-                />
-                <select
-                    value={category}
-                    onChange={(e) => handleCategoryChange(e.target.value)}
-                    className="p-2 border rounded bg-white"
-                >
-                    <option value="all">All Categories</option>
-                    <option value="property">Properties</option>
-                    <option value="value">Values</option>
-                    <option value="function">Functions</option>
-                    <option value="at-rule">At-Rules</option>
-                </select>
-                <div className="flex items-center space-x-2 bg-white p-2 border rounded">
-                    <input
-                        type="checkbox"
-                        id="pagination-toggle-props"
-                        checked={paginationEnabled}
-                        onChange={(e) => setPaginationEnabled(e.target.checked)}
-                        className="h-4 w-4 text-blue-600"
-                    />
-                    <label htmlFor="pagination-toggle-props" className="text-sm text-gray-700 select-none cursor-pointer">
-                        Pagination
-                    </label>
-                </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {currentItems.map((item, index) => (
-                <div key={`${item.spec}-${item.name}-${index}`} className="border p-4 rounded shadow hover:shadow-lg transition relative">
-                    <span className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
-                        item.type === 'property' ? 'bg-blue-100 text-blue-800' :
-                        item.type === 'at-rule' ? 'bg-green-100 text-green-800' :
-                        item.type === 'function' ? 'bg-pink-100 text-pink-800' :
-                        'bg-purple-100 text-purple-800'
-                    }`}>
-                        {item.type}
-                    </span>
-                    <h2 className="text-xl font-semibold text-blue-600 pr-16">{item.name}</h2>
-                    <p className="text-sm text-gray-500 mb-2">
-                        Defined in: <a href={item.sourceSpec.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{item.sourceSpec.title}</a>
-                    </p>
-                    {item.note && (
-                        <p className="text-xs text-amber-700 bg-amber-50 p-2 rounded mb-2 border border-amber-200">
-                            <strong>Note:</strong> {item.note}
-                        </p>
-                    )}
-                    {item.value && (
-                        <p className="text-sm font-mono bg-gray-100 p-1 rounded truncate" title={item.value}>
-                            {item.value}
-                        </p>
-                    )}
-                    {item.compatibility && item.compatibility.flagged && (
-                        <p className="text-xs text-orange-600 bg-orange-50 p-1 rounded mt-2 border border-orange-200">
-                            ⚠️ Implemented behind a flag
-                        </p>
-                    )}
-                    {item.href ? (
-                        <a
-                            href={item.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-500 hover:underline text-sm mt-2 block"
-                        >
-                            View in Spec
-                        </a>
-                    ) : (
-                        <span className="text-gray-400 text-sm mt-2 block cursor-not-allowed" title="Link not available">
-                            View in Spec (Not Available)
-                        </span>
-                    )}
-                </div>
-                ))}
-            </div>
-
-            {filteredItems.length === 0 && (
-                <p className="text-center text-gray-500 mt-8">No items found matching "{search}"</p>
-            )}
-
-            {filteredItems.length > 0 && paginationEnabled && (
-                <div className="flex justify-center items-center space-x-4 mt-8">
-                    <button
-                        onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                        disabled={currentPage === 1}
-                        className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-                    >
-                        Previous
-                    </button>
-                    <span className="text-gray-700">
-                        Page {currentPage} of {totalPages}
-                    </span>
-                    <button
-                        onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                        disabled={currentPage === totalPages}
-                        className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-                    >
-                        Next
-                    </button>
-                </div>
-            )}
-        </>
-      )}
-
-      {view === 'browser-support' && (
-        <>
-            <div className="bg-gradient-to-r from-slate-50 to-blue-50 border border-slate-200 rounded-lg p-4 mb-4">
-              <h2 className="text-2xl font-bold text-gray-900 mb-1">Browser Support & Compatibility Gaps</h2>
-              <p className="text-sm text-gray-700 mb-2">
-                Analyze browser support and find interoperability gaps across major browser engines (Chrome, Firefox, Safari).
-              </p>
-              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600">
-                <span>Total features matching filter: <strong className="text-gray-900">{itemsToDisplay.length}</strong></span>
-                {supportFilter === 'missing-any' && (
-                  <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in at least one major browser</span>
-                )}
-                {supportFilter === 'missing-chrome' && (
-                  <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in Chrome</span>
-                )}
-                {supportFilter === 'missing-firefox' && (
-                  <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in Firefox</span>
-                )}
-                {supportFilter === 'missing-safari' && (
-                  <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in Safari</span>
-                )}
+      {/* Main Landmark */}
+      <main id="main-content" tabIndex="-1" className="focus:outline-hidden">
+        {view === 'properties' && (
+          <>
+              {/* Screen Reader Live Region */}
+              <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+                {filteredItems.length} properties found
               </div>
-            </div>
 
-            <div className="flex flex-col md:flex-row gap-3 mb-4 items-stretch md:items-center">
-                <input
-                    type="text"
-                    placeholder="Search features (e.g. subgrid, anchor, container)..."
-                    className="flex-grow p-2 text-sm border rounded bg-white"
-                    value={search}
-                    onChange={handleSearchChange}
-                />
-
-                <select
-                    value={supportFilter}
-                    onChange={(e) => handleSupportFilterChange(e.target.value)}
-                    className="p-2 text-sm border rounded bg-white font-medium text-gray-700"
-                    title="Filter by browser support status"
-                >
-                    <option value="supported">Supported (≥2 browsers)</option>
-                    <option value="missing-any">⚠️ Missing in 1+ browsers</option>
-                    <option value="missing-chrome">Missing in Chrome</option>
-                    <option value="missing-firefox">Missing in Firefox</option>
-                    <option value="missing-safari">Missing in Safari</option>
-                    <option value="full">Full Support (All 3 browsers)</option>
-                    <option value="all">All Features</option>
-                </select>
-
-                <select
-                    value={category}
-                    onChange={(e) => handleCategoryChange(e.target.value)}
-                    className="p-2 text-sm border rounded bg-white text-gray-700"
-                >
-                    <option value="all">All Categories</option>
-                    <option value="property">Properties</option>
-                    <option value="value">Values</option>
-                    <option value="function">Functions</option>
-                    <option value="at-rule">At-Rules</option>
-                </select>
-
-                <div className="flex items-center space-x-2 bg-white p-2 border rounded shrink-0">
-                    <input
-                        type="checkbox"
-                        id="missing-flag-toggle"
-                        checked={supportFilter === 'missing-any'}
-                        onChange={(e) => handleSupportFilterChange(e.target.checked ? 'missing-any' : 'supported')}
-                        className="h-4 w-4 text-amber-600 focus:ring-amber-500 rounded"
-                    />
-                    <label htmlFor="missing-flag-toggle" className="text-xs font-semibold text-gray-700 select-none cursor-pointer">
-                        Missing in 1+ Browsers
-                    </label>
-                </div>
-
-                <div className="flex items-center space-x-2 bg-white p-2 border rounded shrink-0">
-                    <input
-                        type="checkbox"
-                        id="pagination-toggle-support"
-                        checked={paginationEnabled}
-                        onChange={(e) => setPaginationEnabled(e.target.checked)}
-                        className="h-4 w-4 text-blue-600"
-                    />
-                    <label htmlFor="pagination-toggle-support" className="text-xs text-gray-700 select-none cursor-pointer">
-                        Pagination
-                    </label>
-                </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {currentItems.map((item, index) => {
-                    const support = item.compatibility?.support || {};
-                    const missingBrowsers = ['chrome', 'firefox', 'safari'].filter(b => !support[b]);
-
-                    return (
-                        <div key={`${item.spec}-${item.name}-${index}`} className="border p-4 rounded shadow-sm hover:shadow-md transition relative bg-white flex flex-col justify-between">
-                            <div>
-                                <span className={`absolute top-2 right-2 text-xs px-2 py-1 rounded ${
-                                    item.type === 'property' ? 'bg-blue-100 text-blue-800' :
-                                    item.type === 'at-rule' ? 'bg-green-100 text-green-800' :
-                                    item.type === 'function' ? 'bg-pink-100 text-pink-800' :
-                                    'bg-purple-100 text-purple-800'
-                                }`}>
-                                    {item.type}
-                                </span>
-                                <h2 className="text-xl font-semibold text-blue-600 pr-16 font-mono">{item.name}</h2>
-                                {item.sourceSpec && (
-                                    <p className="text-xs text-gray-500 mb-2">
-                                        Defined in: <a href={item.sourceSpec.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{item.sourceSpec.title}</a>
-                                    </p>
-                                )}
-
-                                {item.note && (
-                                    <p className="text-xs text-amber-700 bg-amber-50 p-2 rounded mb-2 border border-amber-200">
-                                        <strong>Note:</strong> {item.note}
-                                    </p>
-                                )}
-
-                                {item.value && (
-                                    <p className="text-xs font-mono bg-gray-100 p-1.5 rounded truncate mb-2" title={item.value}>
-                                        {item.value}
-                                    </p>
-                                )}
-
-                                {missingBrowsers.length > 0 && (
-                                    <div className="mb-2">
-                                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">
-                                            <span>⚠️ Not supported in:</span>
-                                            <span className="capitalize font-bold">{missingBrowsers.join(', ')}</span>
-                                        </span>
-                                    </div>
-                                )}
-                            </div>
-
-                            <div>
-                                <div className="mt-3 flex space-x-2">
-                                    {['chrome', 'firefox', 'safari'].map(browser => {
-                                        const isSupported = support[browser];
-                                        return (
-                                            <div
-                                                key={browser}
-                                                className={`flex items-center space-x-1 px-2 py-1 rounded text-xs font-bold ${
-                                                    isSupported ? 'bg-green-100 text-green-800' : 'bg-red-50 text-red-700 border border-red-200'
-                                                }`}
-                                            >
-                                                <span className="capitalize">{browser}</span>
-                                                <span>{isSupported ? '✓' : '✗'}</span>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-
-                                {item.compatibility?.flagged && (
-                                    <p className="text-xs text-orange-600 bg-orange-50 p-1 rounded mt-2 border border-orange-200">
-                                        ⚠️ Implemented behind a flag
-                                    </p>
-                                )}
-
-                                {item.href ? (
-                                    <a
-                                        href={item.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-500 hover:underline text-xs mt-3 block"
-                                    >
-                                        View in Spec ↗
-                                    </a>
-                                ) : (
-                                    <span className="text-gray-400 text-xs mt-3 block cursor-not-allowed" title="Link not available">
-                                        View in Spec (Not Available)
-                                    </span>
-                                )}
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
-
-            {itemsToDisplay.length === 0 && (
-                <p className="text-center text-gray-500 mt-8">No items found matching the current filters and "{search}"</p>
-            )}
-
-            {itemsToDisplay.length > 0 && paginationEnabled && (
-                <div className="flex justify-center items-center space-x-4 mt-8">
-                    <button
-                        onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                        disabled={currentPage === 1}
-                        className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-                    >
-                        Previous
-                    </button>
-                    <span className="text-gray-700">
-                        Page {currentPage} of {totalPages}
-                    </span>
-                    <button
-                        onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                        disabled={currentPage === totalPages}
-                        className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-                    >
-                        Next
-                    </button>
-                </div>
-            )}
-        </>
-      )}
-
-      {view === 'specs' && (
-          <div>
-              <h2 className="text-2xl mb-4">Completed Specifications</h2>
-
-              <p className="mb-4 text-gray-700">
-                  The following specifications have reached "Recommendation" status, meaning they are considered completed.
-                  Note that the search results above may show properties from newer drafts (e.g. Level 4) that extend these recommendations.
-              </p>
-              <p className="mb-4 text-gray-700">
-                This is naive starting point to understanding the current state of CSS. All specifications approved as recommendations by the W3C are ready to use an implement.
-              </p>
-              <p className="mb-4 text-gray-700">
-                However, the landscape of CSS is constantly evolving, with new drafts and proposals emerging regularly and features from editor drafts or candidate recommendations being implemented in browsers before specifications reach full recommendation status so this list is icomplete in terms of practical usage
-              </p>
-              <p className="mb-4 text-gray-700">
-                Even if the list was complete, asking developers to read each specification is not only unrealistic but also inefficient. Many specifications build upon or reference others, leading to redundancy and overlap. A more effective approach would be to provide curated guides or summaries that distill the essential information from these specifications, making it easier for developers to grasp the key concepts and best practices without wading through extensive documentation.
-              </p>
-              <p className="mb-4 text-gray-700">It is also worth noting that W3C specifications are not meant for developers to read but for browser implementers to use when adding features to their engines and for the CSS working group to track progress on standardization.</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {completedSpecs.map((spec, index) => (
-                      <div key={index} className="border p-4 rounded shadow">
-                          <h2 className="text-xl font-semibold">{spec.title || spec.shortname}</h2>
-                          <p className="text-sm text-gray-500 mb-2">{spec.release.status}</p>
-                          <a
-                              href={spec.release.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-500 hover:underline"
-                          >
-                              Read Specification
-                          </a>
+              <section aria-labelledby="definitions-heading" className="bg-gray-50 border border-gray-200 rounded p-4 mb-6 text-sm text-gray-700">
+                  <h2 id="definitions-heading" className="font-semibold mb-2 text-gray-900">CSS Definitions:</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                      <div>
+                          <span className="inline-block px-2 py-1 rounded bg-blue-100 text-blue-800 text-xs font-bold mb-1">Property</span>
+                          <p>A specific stylistic feature that you can modify (e.g., <code>color</code>, <code>font-size</code>).</p>
                       </div>
-                  ))}
-              </div>
-          </div>
-      )}
+                      <div>
+                          <span className="inline-block px-2 py-1 rounded bg-purple-100 text-purple-800 text-xs font-bold mb-1">Value</span>
+                          <p>The setting or parameter applied to a property (e.g., <code>red</code>, <code>10px</code>, <code>bold</code>).</p>
+                      </div>
+                      <div>
+                          <span className="inline-block px-2 py-1 rounded bg-pink-100 text-pink-800 text-xs font-bold mb-1">Function</span>
+                          <p>A value that takes arguments to compute a result (e.g., <code>rgb()</code>, <code>calc()</code>).</p>
+                      </div>
+                      <div>
+                          <span className="inline-block px-2 py-1 rounded bg-green-100 text-green-800 text-xs font-bold mb-1">At-Rule</span>
+                          <p>A statement that instructs CSS how to behave (e.g., <code>@media</code>, <code>@keyframes</code>).</p>
+                      </div>
+                  </div>
+              </section>
 
-      {view === 'definition' && (
-          <div>
-              <div className="mb-8">
-                  <h3 className="text-xl font-bold mb-4 text-900">Cascading Style Sheets (CSS) — The Official Definition</h3>
-                  <p className="mb-4 text-800">
-                      According to the <a href="https://www.w3.org/TR/css-2025/#css-official" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">CSS Snapshot 2025</a>:
-                  </p>
-                  <blockquote className="border-l-4 border-300 pl-4 italic text-800 mb-4">
-                      <p className="mb-2">
-                          This profile includes only specifications that the CSS Working Group considers stable and for which they have enough implementation experience that they are sure of that stability.
-                      </p>
-                  </blockquote>
-                    <p className="mb-4 text-800">
-                      However, any consideration of a future version of CSS should also include an analysis of the specification in the <a href="https://www.w3.org/TR/css-2026/#reliable-cr " target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">Reliable Candidate Recommendations</a> section. While these specifications are have not yet reached the recommendation stage, they have been implemented in multiple browsers and are likely to be included in the official defintion of CSS in the near
-                    </p>
-                  <p className="text-800">
-                      As of 2025, Cascading Style Sheets (CSS) is defined by the specifications listed in the official snapshot.
-                  </p>
-              </div>
+              <section aria-label="Properties search and filters" className="flex flex-col md:flex-row gap-4 mb-4">
+                  <div className="flex-grow">
+                      <label htmlFor="search-props" className="sr-only">Search CSS properties</label>
+                      <input
+                          id="search-props"
+                          type="text"
+                          placeholder="Search properties..."
+                          className="w-full p-2 border rounded"
+                          value={search}
+                          onChange={handleSearchChange}
+                      />
+                  </div>
+                  <div>
+                      <label htmlFor="category-props" className="sr-only">Filter by category</label>
+                      <select
+                          id="category-props"
+                          value={category}
+                          onChange={(e) => handleCategoryChange(e.target.value)}
+                          className="p-2 border rounded bg-white w-full md:w-auto"
+                      >
+                          <option value="all">All Categories</option>
+                          <option value="property">Properties</option>
+                          <option value="value">Values</option>
+                          <option value="function">Functions</option>
+                          <option value="at-rule">At-Rules</option>
+                      </select>
+                  </div>
+                  <div className="flex items-center space-x-2 bg-white p-2 border rounded shrink-0">
+                      <input
+                          type="checkbox"
+                          id="pagination-toggle-props"
+                          checked={paginationEnabled}
+                          onChange={(e) => setPaginationEnabled(e.target.checked)}
+                          className="h-4 w-4 text-blue-600 rounded"
+                      />
+                      <label htmlFor="pagination-toggle-props" className="text-sm text-gray-700 select-none cursor-pointer">
+                          Pagination
+                      </label>
+                  </div>
+              </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {OFFICIAL_SPECS.map((spec, index) => (
-                      <div key={index} className="border p-4 rounded shadow bg-white hover:shadow-md transition">
-                          <h4 className="font-semibold text-lg mb-1">{spec.name}</h4>
-                          <p className="text-sm text-gray-600 mb-3">{spec.description}</p>
-                          <div className="flex justify-between items-center mt-2">
-                              <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded text-gray-600">
-                                  {spec.code}
-                              </span>
+              <section aria-label="CSS Properties List" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {currentItems.map((item, index) => (
+                  <article key={`${item.spec}-${item.name}-${index}`} aria-labelledby={`prop-${item.spec}-${item.name}-${index}`} className="border p-4 rounded shadow-sm hover:shadow-md transition relative bg-white flex flex-col justify-between">
+                      <div>
+                          <span className={`absolute top-2 right-2 text-xs px-2 py-1 rounded font-semibold ${
+                              item.type === 'property' ? 'bg-blue-100 text-blue-800' :
+                              item.type === 'at-rule' ? 'bg-green-100 text-green-800' :
+                              item.type === 'function' ? 'bg-pink-100 text-pink-800' :
+                              'bg-purple-100 text-purple-800'
+                          }`}>
+                              {item.type}
+                          </span>
+                          <h2 id={`prop-${item.spec}-${item.name}-${index}`} className="text-xl font-semibold text-blue-600 pr-16 font-mono">{item.name}</h2>
+                          {item.sourceSpec && (
+                              <p className="text-sm text-gray-500 mb-2">
+                                  Defined in: <a href={item.sourceSpec.url} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-600">{item.sourceSpec.title}<span className="sr-only"> (opens in new tab)</span></a>
+                              </p>
+                          )}
+                          {item.note && (
+                              <p className="text-xs text-amber-700 bg-amber-50 p-2 rounded mb-2 border border-amber-200">
+                                  <strong>Note:</strong> {item.note}
+                              </p>
+                          )}
+                          {item.value && (
+                              <p className="text-sm font-mono bg-gray-100 p-1.5 rounded truncate mb-2" title={item.value}>
+                                  {item.value}
+                              </p>
+                          )}
+                      </div>
+
+                      <div>
+                          {item.compatibility && item.compatibility.flagged && (
+                              <p className="text-xs text-orange-600 bg-orange-50 p-1 rounded mt-2 border border-orange-200">
+                                  ⚠️ Implemented behind a flag
+                              </p>
+                          )}
+                          {item.href ? (
                               <a
-                                  href={spec.url}
+                                  href={item.href}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-blue-600 hover:underline text-sm"
+                                  className="text-blue-500 hover:underline text-sm mt-3 inline-flex items-center gap-0.5"
                               >
-                                  Read Spec
+                                  <span>View in Spec</span>
+                                  <span aria-hidden="true">↗</span>
+                                  <span className="sr-only"> (opens in new tab)</span>
                               </a>
-                          </div>
+                          ) : (
+                              <span className="text-gray-400 text-sm mt-3 block cursor-not-allowed" title="Link not available">
+                                  View in Spec (Not Available)
+                              </span>
+                          )}
                       </div>
+                  </article>
                   ))}
-              </div>
-          </div>
-      )}
+              </section>
 
-      {view === 'baseline' && (
-          <BaselineByYear baselineFeatures={data.baselineFeatures || []} />
-      )}
+              {filteredItems.length === 0 && (
+                  <p className="text-center text-gray-500 mt-8 py-8 bg-gray-50 rounded">No items found matching "{search}"</p>
+              )}
+
+              {filteredItems.length > 0 && paginationEnabled && (
+                  <nav aria-label="Properties Pagination" className="flex justify-center items-center space-x-4 mt-8">
+                      <button
+                          onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                          disabled={currentPage === 1}
+                          aria-label="Go to previous page"
+                          className="px-4 py-2 bg-gray-200 text-gray-800 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors font-medium text-sm"
+                      >
+                          Previous
+                      </button>
+                      <span className="text-gray-700 text-sm" aria-current="page">
+                          Page {currentPage} of {totalPages}
+                      </span>
+                      <button
+                          onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                          disabled={currentPage === totalPages}
+                          aria-label="Go to next page"
+                          className="px-4 py-2 bg-gray-200 text-gray-800 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors font-medium text-sm"
+                      >
+                          Next
+                      </button>
+                  </nav>
+              )}
+          </>
+        )}
+
+        {view === 'browser-support' && (
+          <>
+              {/* Screen Reader Live Region */}
+              <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+                {itemsToDisplay.length} features found for current browser support filters
+              </div>
+
+              <section aria-labelledby="browser-support-heading" className="bg-gradient-to-r from-slate-50 to-blue-50 border border-slate-200 rounded-lg p-4 mb-4">
+                <h2 id="browser-support-heading" className="text-2xl font-bold text-gray-900 mb-1">Browser Support &amp; Compatibility Gaps</h2>
+                <p className="text-sm text-gray-700 mb-2">
+                  Analyze browser support and find interoperability gaps across major browser engines (Chrome, Firefox, Safari).
+                </p>
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600">
+                  <span>Total features matching filter: <strong className="text-gray-900">{itemsToDisplay.length}</strong></span>
+                  {supportFilter === 'missing-any' && (
+                    <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in at least one major browser</span>
+                  )}
+                  {supportFilter === 'missing-chrome' && (
+                    <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in Chrome</span>
+                  )}
+                  {supportFilter === 'missing-firefox' && (
+                    <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in Firefox</span>
+                  )}
+                  {supportFilter === 'missing-safari' && (
+                    <span className="text-amber-800 font-semibold">⚠️ Showing features missing support in Safari</span>
+                  )}
+                </div>
+              </section>
+
+              <section aria-label="Browser support search and filters" className="flex flex-col md:flex-row gap-3 mb-4 items-stretch md:items-center">
+                  <div className="flex-grow">
+                      <label htmlFor="search-support" className="sr-only">Search features</label>
+                      <input
+                          id="search-support"
+                          type="text"
+                          placeholder="Search features (e.g. subgrid, anchor, container)..."
+                          className="w-full p-2 text-sm border rounded bg-white"
+                          value={search}
+                          onChange={handleSearchChange}
+                      />
+                  </div>
+
+                  <div>
+                      <label htmlFor="support-filter" className="sr-only">Filter by browser support status</label>
+                      <select
+                          id="support-filter"
+                          value={supportFilter}
+                          onChange={(e) => handleSupportFilterChange(e.target.value)}
+                          className="w-full md:w-auto p-2 text-sm border rounded bg-white font-medium text-gray-700"
+                      >
+                          <option value="supported">Supported (≥2 browsers)</option>
+                          <option value="missing-any">⚠️ Missing in 1+ browsers</option>
+                          <option value="missing-chrome">Missing in Chrome</option>
+                          <option value="missing-firefox">Missing in Firefox</option>
+                          <option value="missing-safari">Missing in Safari</option>
+                          <option value="full">Full Support (All 3 browsers)</option>
+                          <option value="all">All Features</option>
+                      </select>
+                  </div>
+
+                  <div>
+                      <label htmlFor="category-support" className="sr-only">Filter by category</label>
+                      <select
+                          id="category-support"
+                          value={category}
+                          onChange={(e) => handleCategoryChange(e.target.value)}
+                          className="w-full md:w-auto p-2 text-sm border rounded bg-white text-gray-700"
+                      >
+                          <option value="all">All Categories</option>
+                          <option value="property">Properties</option>
+                          <option value="value">Values</option>
+                          <option value="function">Functions</option>
+                          <option value="at-rule">At-Rules</option>
+                      </select>
+                  </div>
+
+                  <div className="flex items-center space-x-2 bg-white p-2 border rounded shrink-0">
+                      <input
+                          type="checkbox"
+                          id="missing-flag-toggle"
+                          checked={supportFilter === 'missing-any'}
+                          onChange={(e) => handleSupportFilterChange(e.target.checked ? 'missing-any' : 'supported')}
+                          className="h-4 w-4 text-amber-600 focus:ring-amber-500 rounded"
+                      />
+                      <label htmlFor="missing-flag-toggle" className="text-xs font-semibold text-gray-700 select-none cursor-pointer">
+                          Missing in 1+ Browsers
+                      </label>
+                  </div>
+
+                  <div className="flex items-center space-x-2 bg-white p-2 border rounded shrink-0">
+                      <input
+                          type="checkbox"
+                          id="pagination-toggle-support"
+                          checked={paginationEnabled}
+                          onChange={(e) => setPaginationEnabled(e.target.checked)}
+                          className="h-4 w-4 text-blue-600 rounded"
+                      />
+                      <label htmlFor="pagination-toggle-support" className="text-xs text-gray-700 select-none cursor-pointer">
+                          Pagination
+                      </label>
+                  </div>
+              </section>
+
+              <section aria-label="Browser Supported Features List" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {currentItems.map((item, index) => {
+                      const support = item.compatibility?.support || {};
+                      const missingBrowsers = ['chrome', 'firefox', 'safari'].filter(b => !support[b]);
+
+                      return (
+                          <article key={`${item.spec}-${item.name}-${index}`} aria-labelledby={`supp-${item.spec}-${item.name}-${index}`} className="border p-4 rounded shadow-sm hover:shadow-md transition relative bg-white flex flex-col justify-between">
+                              <div>
+                                  <span className={`absolute top-2 right-2 text-xs px-2 py-1 rounded font-semibold ${
+                                      item.type === 'property' ? 'bg-blue-100 text-blue-800' :
+                                      item.type === 'at-rule' ? 'bg-green-100 text-green-800' :
+                                      item.type === 'function' ? 'bg-pink-100 text-pink-800' :
+                                      'bg-purple-100 text-purple-800'
+                                  }`}>
+                                      {item.type}
+                                  </span>
+                                  <h2 id={`supp-${item.spec}-${item.name}-${index}`} className="text-xl font-semibold text-blue-600 pr-16 font-mono">{item.name}</h2>
+                                  {item.sourceSpec && (
+                                      <p className="text-xs text-gray-500 mb-2">
+                                          Defined in: <a href={item.sourceSpec.url} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-600">{item.sourceSpec.title}<span className="sr-only"> (opens in new tab)</span></a>
+                                      </p>
+                                  )}
+
+                                  {item.note && (
+                                      <p className="text-xs text-amber-700 bg-amber-50 p-2 rounded mb-2 border border-amber-200">
+                                          <strong>Note:</strong> {item.note}
+                                      </p>
+                                  )}
+
+                                  {item.value && (
+                                      <p className="text-xs font-mono bg-gray-100 p-1.5 rounded truncate mb-2" title={item.value}>
+                                          {item.value}
+                                      </p>
+                                  )}
+
+                                  {missingBrowsers.length > 0 && (
+                                      <div className="mb-2">
+                                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+                                              <span>⚠️ Not supported in:</span>
+                                              <span className="capitalize font-bold">{missingBrowsers.join(', ')}</span>
+                                          </span>
+                                      </div>
+                                  )}
+                              </div>
+
+                              <div>
+                                  <div className="mt-3 flex space-x-2" aria-label={`Browser compatibility for ${item.name}`}>
+                                      {['chrome', 'firefox', 'safari'].map(browser => {
+                                          const isSupported = support[browser];
+                                          return (
+                                              <div
+                                                  key={browser}
+                                                  className={`flex items-center space-x-1 px-2 py-1 rounded text-xs font-bold ${
+                                                      isSupported ? 'bg-green-100 text-green-800' : 'bg-red-50 text-red-700 border border-red-200'
+                                                  }`}
+                                              >
+                                                  <span className="capitalize">{browser}</span>
+                                                  <span className="sr-only">: {isSupported ? 'Supported' : 'Not supported'}</span>
+                                                  <span aria-hidden="true">{isSupported ? '✓' : '✗'}</span>
+                                              </div>
+                                          );
+                                      })}
+                                  </div>
+
+                                  {item.compatibility?.flagged && (
+                                      <p className="text-xs text-orange-600 bg-orange-50 p-1 rounded mt-2 border border-orange-200">
+                                          ⚠️ Implemented behind a flag
+                                      </p>
+                                  )}
+
+                                  {item.href ? (
+                                      <a
+                                          href={item.href}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="text-blue-500 hover:underline text-xs mt-3 inline-flex items-center gap-0.5"
+                                      >
+                                          <span>View in Spec</span>
+                                          <span aria-hidden="true">↗</span>
+                                          <span className="sr-only"> (opens in new tab)</span>
+                                      </a>
+                                  ) : (
+                                      <span className="text-gray-400 text-xs mt-3 block cursor-not-allowed" title="Link not available">
+                                          View in Spec (Not Available)
+                                      </span>
+                                  )}
+                              </div>
+                          </article>
+                      );
+                  })}
+              </section>
+
+              {itemsToDisplay.length === 0 && (
+                  <p className="text-center text-gray-500 mt-8 py-8 bg-gray-50 rounded">No items found matching the current filters and "{search}"</p>
+              )}
+
+              {itemsToDisplay.length > 0 && paginationEnabled && (
+                  <nav aria-label="Browser Support Pagination" className="flex justify-center items-center space-x-4 mt-8">
+                      <button
+                          onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                          disabled={currentPage === 1}
+                          aria-label="Go to previous page"
+                          className="px-4 py-2 bg-gray-200 text-gray-800 rounded disabled:opacity-50 font-medium text-sm hover:bg-gray-300 transition-colors"
+                      >
+                          Previous
+                      </button>
+                      <span className="text-gray-700 text-sm" aria-current="page">
+                          Page {currentPage} of {totalPages}
+                      </span>
+                      <button
+                          onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                          disabled={currentPage === totalPages}
+                          aria-label="Go to next page"
+                          className="px-4 py-2 bg-gray-200 text-gray-800 rounded disabled:opacity-50 font-medium text-sm hover:bg-gray-300 transition-colors"
+                      >
+                          Next
+                      </button>
+                  </nav>
+              )}
+          </>
+        )}
+
+        {view === 'specs' && (
+            <div>
+                <h2 className="text-2xl font-bold mb-4">Completed Specifications</h2>
+
+                <p className="mb-4 text-gray-700">
+                    The following specifications have reached "Recommendation" status, meaning they are considered completed.
+                    Note that the search results above may show properties from newer drafts (e.g. Level 4) that extend these recommendations.
+                </p>
+                <p className="mb-4 text-gray-700">
+                  This is naive starting point to understanding the current state of CSS. All specifications approved as recommendations by the W3C are ready to use an implement.
+                </p>
+                <p className="mb-4 text-gray-700">
+                  However, the landscape of CSS is constantly evolving, with new drafts and proposals emerging regularly and features from editor drafts or candidate recommendations being implemented in browsers before specifications reach full recommendation status so this list is icomplete in terms of practical usage
+                </p>
+                <p className="mb-4 text-gray-700">
+                  Even if the list was complete, asking developers to read each specification is not only unrealistic but also inefficient. Many specifications build upon or reference others, leading to redundancy and overlap. A more effective approach would be to provide curated guides or summaries that distill the essential information from these specifications, making it easier for developers to grasp the key concepts and best practices without wading through extensive documentation.
+                </p>
+                <p className="mb-4 text-gray-700">It is also worth noting that W3C specifications are not meant for developers to read but for browser implementers to use when adding features to their engines and for the CSS working group to track progress on standardization.</p>
+                <section aria-label="Completed Specifications List" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {completedSpecs.map((spec, index) => (
+                        <article key={index} className="border p-4 rounded shadow-sm bg-white hover:shadow-md transition">
+                            <h3 className="text-xl font-semibold">{spec.title || spec.shortname}</h3>
+                            <p className="text-sm text-gray-500 mb-2">{spec.release.status}</p>
+                            <a
+                                href={spec.release.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:underline inline-flex items-center gap-0.5 text-sm font-medium"
+                            >
+                                <span>Read Specification</span>
+                                <span aria-hidden="true">↗</span>
+                                <span className="sr-only"> (opens in new tab)</span>
+                            </a>
+                        </article>
+                    ))}
+                </section>
+            </div>
+        )}
+
+        {view === 'definition' && (
+            <div>
+                <div className="mb-8">
+                    <h2 className="text-2xl font-bold mb-4 text-gray-900">Cascading Style Sheets (CSS) — The Official Definition</h2>
+                    <p className="mb-4 text-gray-800">
+                        According to the <a href="https://www.w3.org/TR/css-2025/#css-official" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">CSS Snapshot 2025<span className="sr-only"> (opens in new tab)</span></a>:
+                    </p>
+                    <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-800 mb-4">
+                        <p className="mb-2">
+                            This profile includes only specifications that the CSS Working Group considers stable and for which they have enough implementation experience that they are sure of that stability.
+                        </p>
+                    </blockquote>
+                      <p className="mb-4 text-gray-800">
+                        However, any consideration of a future version of CSS should also include an analysis of the specification in the <a href="https://www.w3.org/TR/css-2026/#reliable-cr " target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-600">Reliable Candidate Recommendations<span className="sr-only"> (opens in new tab)</span></a> section. While these specifications are have not yet reached the recommendation stage, they have been implemented in multiple browsers and are likely to be included in the official defintion of CSS in the near
+                      </p>
+                    <p className="text-gray-800">
+                        As of 2025, Cascading Style Sheets (CSS) is defined by the specifications listed in the official snapshot.
+                    </p>
+                </div>
+
+                <section aria-label="Official Specification Profiles" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {OFFICIAL_SPECS.map((spec, index) => (
+                        <article key={index} className="border p-4 rounded shadow-sm bg-white hover:shadow-md transition">
+                            <h3 className="font-semibold text-lg mb-1">{spec.name}</h3>
+                            <p className="text-sm text-gray-600 mb-3">{spec.description}</p>
+                            <div className="flex justify-between items-center mt-2">
+                                <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded text-gray-600">
+                                    {spec.code}
+                                </span>
+                                <a
+                                    href={spec.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:underline text-sm font-medium inline-flex items-center gap-0.5"
+                                >
+                                    <span>Read Spec</span>
+                                    <span aria-hidden="true">↗</span>
+                                    <span className="sr-only"> (opens in new tab)</span>
+                                </a>
+                            </div>
+                        </article>
+                    ))}
+                </section>
+            </div>
+        )}
+
+        {view === 'baseline' && (
+            <BaselineByYear baselineFeatures={data.baselineFeatures || []} />
+        )}
+      </main>
     </div>
   );
 }
